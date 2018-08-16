@@ -1,0 +1,140 @@
+{
+    "buttons":
+    {
+        "singleplayer":
+        {
+            "text" : "menu.singleplayer",
+            "posX" : -60,
+            "posY" : 48,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+        
+        "multiplayer":
+        {
+            "text" : "menu.multiplayer",
+            "posX" : -60,
+            "posY" : 72,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "multiplayer"
+            }
+        },
+        
+        "mods":
+        {
+            "text" : "fml.menu.mods",
+            "posX" : -60,
+            "posY" : 96,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "mods"
+            }
+        },
+            
+        "options":
+        {
+            "text" : "menu.options",
+            "posX" : -60,
+            "posY" : 120,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+
+        "language":
+        {
+            "text" : "Languages",
+            "posX" : -60,
+            "posY" : 144,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "languages"
+            }
+        },
+        
+        "quit":
+        {
+            "text" : "menu.quit",
+            "posX" : -60,
+            "posY" : 168,
+            "width" : 120,
+            "height" : 20,
+            "imageWidth" : 820,
+            "imageHeight" : 190,
+            "texture" : "mainmenu:button.png",
+            "normalTextColor" : 0,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+               
+        "version":
+        {
+            "text" : "1.0.a",
+            "posX" : -18,
+            "posY" : 332,
+            "width" : 60,
+            "height" : 20,
+            "shadow" : false,
+            "action" : 
+            {
+                "type" : "refresh"
+            }
+        }
+    },
+    
+    "other":
+    {
+        "background":
+        {
+            "image" : "mainmenu:background.png",
+            "mode" : "fill"
+        }
+    }
+}

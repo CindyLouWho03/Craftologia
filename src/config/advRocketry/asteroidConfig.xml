@@ -1,0 +1,46 @@
+<Asteroids>
+	<asteroid name="Small Asteroid" distance="10" mass="50" massVariability="0.5" minLevel="0" probability="10" richness="0.2" richnessVariability="0.5">
+		<ore itemStack="minecraft:iron_ore" chance="15" />
+		<ore itemStack="thermalfoundation:ore 5" chance="10" />
+	</asteroid>
+	<asteroid name="Stony Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="1.7" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="nuclearcraft:ore 7" chance="10" />
+	</asteroid>
+	<asteroid name="Medium Asteroid" distance="50" mass="150" massVariability="0.3" minLevel="0" probability="1" richness="0.2" richnessVariability="0.4">
+		<ore itemStack="minecraft:iron_ore" chance="15" />
+		<ore itemStack="minecraft:gold_ore" chance="15" />
+		<ore itemStack="techreborn:ore 13" chance="10" />
+		<ore itemStack="thermalfoundation:ore 5" chance="10" />
+		<ore itemStack="magneticraft:ores 2" chance="10" />
+	</asteroid>
+	<asteroid name="Large Asteroid" distance="200" mass="500" massVariability="0.1" minLevel="0" probability="0.1" richness="0.2" richnessVariability="0.5">
+		<ore itemStack="minecraft:iron_ore" chance="15" />
+		<ore itemStack="minecraft:gold_ore" chance="15" />
+		<ore itemStack="thermalfoundation:ore 5" chance="10" />	
+		<ore itemStack="techreborn:ore2" chance="10" />
+		<ore itemStack="techreborn:ore2 1" chance="10" />
+		<ore itemStack="magneticraft:ores 2" chance="10" />
+		<ore itemStack="mekanism:oreblock" chance="10" />
+		<ore itemStack="techreborn:ore 13" chance="10" />
+		<ore itemStack="techreborn:ore 1" chance="5" />
+		<ore itemStack="libvulpes:ore0 8" chance="5" />
+	</asteroid>
+	<asteroid name="Tungsten Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.75" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="techreborn:ore 8" chance="10" />
+	</asteroid>
+	<asteroid name="Titanium Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.70" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="libvulpes:ore0 8" chance="10" />
+	</asteroid>
+	<asteroid name="Platinum Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.80" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="techreborn:ore 1" chance="10" />
+	</asteroid>
+	<asteroid name="Dilithium Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.2" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="libvulpes:ore0" chance="10" />
+	</asteroid>
+	<asteroid name="Graphite Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.65" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="quantumflux:graphiteore" chance="10" />
+	</asteroid>
+	<asteroid name="Unknown Asteroid" distance="200" mass="25" massVariability="0.5" minLevel="0" probability="0.15" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="contenttweaker:ore2" chance="15" />
+	</asteroid>
+</Asteroids>

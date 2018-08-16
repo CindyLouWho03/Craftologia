@@ -1,0 +1,452 @@
+<!-->
+	<Recipe timeRequired="NUMBER" power="NUMBER">
+		<input>
+			<fluidStack>FLUID NAME SIZE</fluidStack>
+			<itemStack>ITEM_NAME SIZE META</itemStack>
+			<oreDict>OREDICT_NAME SIZE</oreDict>
+        </input>
+		<output>
+			<fluidStack>FLUID_NAME SIZE</fluidStack>
+			<itemStack>ITEM_NAME SIZE META</itemStack>
+			<oreDict>OREDICT_NAME SIZE</oreDict>
+		</output>
+	</Recipe>
+	
+	Can have Multiple In/Outputs
+	Some Machines can only Accept either Fluids or Items
+	
+	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
+	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
+	
+	The "useDefault" attribute will prevent loading of recipes if set to "false"
+<!-->
+
+<Recipes useDefault="false">
+	<Recipe timeRequired="200" power ="40">
+		<input>
+			<oreDict>nuggetInvar 1</oreDict>
+			<oreDict>dustSilicon</oreDict>
+		</input>
+		<output>
+			<itemStack>opencomputers:material 8 6</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="600" power ="80">
+		<input>
+			<oreDict>nuggetInvar 2</oreDict>
+			<itemStack>libvulpes:productsheet 1 4</itemStack>
+			<itemStack>contenttweaker:material2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:material 1 7</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="900" power ="80">
+		<input>
+			<oreDict>nuggetInvar 3</oreDict>
+			<oreDict>dustElectrum</oreDict>
+			<itemStack>libvulpes:productsheet 1 4</itemStack>
+			<itemStack>contenttweaker:material2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:material 1 8</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2400" power ="100">
+		<input>
+			<itemStack>opencomputers:material 1 10</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 2 7</itemStack>
+			<itemStack>opencomputers:material 3 6</itemStack>
+			<itemStack>techreborn:part 2 2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:component</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="3600" power ="100">
+		<input>
+			<itemStack>opencomputers:material 1 10</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 3 8</itemStack>
+			<itemStack>opencomputers:material 4 6</itemStack>
+			<itemStack>techreborn:part 3 2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:component 1 1</itemStack>
+		</output>
+	</Recipe>
+		<Recipe timeRequired="4800" power ="100">
+		<input>
+			<itemStack>opencomputers:material 1 10</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 3 9</itemStack>
+			<itemStack>opencomputers:material 5 6</itemStack>
+			<itemStack>techreborn:part 4 2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:component 1 2</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="80">
+		<input>
+			<itemStack>opencomputers:material 1 4</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 1 7</itemStack>
+			<itemStack>opencomputers:material 2 6</itemStack>
+			<oreDict>nuggetInvar 2</oreDict>
+		</input>
+		<output>
+			<itemStack>opencomputers:component 1 3</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2400" power ="80">
+		<input>
+			<itemStack>opencomputers:material 1 4</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 1 8</itemStack>
+			<itemStack>opencomputers:material 3 6</itemStack>
+			<oreDict>nuggetInvar 3</oreDict>
+		</input>
+		<output>
+			<itemStack>opencomputers:component 1 4</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="3000" power ="80">
+		<input>
+			<itemStack>opencomputers:material 1 4</itemStack>
+			<itemStack>opencomputers:material 1 11</itemStack>
+			<itemStack>opencomputers:material 1 9</itemStack>
+			<itemStack>opencomputers:material 4 6</itemStack>
+			<oreDict>nuggetInvar 4</oreDict>
+		</input>
+		<output>
+			<itemStack>opencomputers:component 1 5</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="80">
+		<input>
+			<oreDict>nuggetElectrum 4</oreDict>
+			<itemStack>rockhounding_chemistry:alloy_parts 1 19</itemStack>
+			<itemStack>contenttweaker:material2</itemStack>
+		</input>
+		<output>
+			<itemStack>opencomputers:material 1 9</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2000" power ="100">
+		<input>
+			<oreDict>nuggetTin 4</oreDict>
+			<itemStack>mekanism:polyethene</itemStack>
+			<itemStack>ic2:crafting</itemStack>
+			<itemStack>techreborn:dust 1 10</itemStack>
+			<itemStack>contenttweaker:material 10</itemStack>
+			<oreDict>waferSilicon</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="100">
+		<input>
+			<oreDict>nuggetTin 2</oreDict>
+			<itemStack>mekanism:polyethene</itemStack>
+			<itemStack>ic2:crafting</itemStack>
+			<itemStack>rockhounding_chemistry:chemical_dusts 1 46</itemStack>
+			<oreDict>waferSilicon</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemcircuitplate</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="100">
+		<input>
+			<oreDict>nuggetGold 2</oreDict>
+			<oreDict>nuggetInvar 3</oreDict>
+			<itemStack>advancedrocketry:itemcircuitplate</itemStack>
+			<itemStack>techreborn:dust 1 10</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemcircuitplate 1 1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2400" power ="60">
+		<input>
+			<itemStack>ic2:dust 1 13</itemStack>
+			<itemStack>techreborn:smalldust 1 10</itemStack>
+			<itemStack>minecraft:gold_nugget 1</itemStack>
+			<itemStack>advancedrocketry:ic</itemStack>
+			<oreDict>dustRedstone</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:dataunit</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2600" power ="80">
+		<input>
+			<itemStack>advancedrocketry:itemcircuitplate 1 1</itemStack>
+			<itemStack>extrautils2:ingredients 1 2</itemStack>
+			<itemStack>enderio:item_material 1 35</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:ic 1 1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2800" power ="40">
+		<input>
+			<oreDict>plateSilicon</oreDict>
+			<oreDict>plateGold</oreDict>
+			<oreDict>dustRedstone</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:ic 1 4</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="3200" power ="40">
+		<input>
+			<itemStack>mekanism:polyethene 1 2</itemStack>
+			<itemStack>rockhounding_chemistry:chemical_dusts 2 42</itemStack>
+			<itemStack>techreborn:nuggets 4 13</itemStack>
+			<itemStack>techreborn:nuggets 3 4</itemStack>
+			<itemStack>techreborn:dust 1 38</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2400" power ="40">
+		<input>
+			<itemStack>mekanism:polyethene 1 2</itemStack>
+			<itemStack>rockhounding_chemistry:chemical_dusts 2 42</itemStack>
+			<itemStack>techreborn:nuggets 4 13</itemStack>
+			<itemStack>techreborn:nuggets 3 4</itemStack>
+			<oreDict>dustTitanium</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:ic 1 5</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="80">
+		<input>
+			<itemStack>advancedrocketry:lens</itemStack>
+			<itemStack>environmentaltech:diode</itemStack>
+			<itemStack>extrautils2:ingredients 1 2</itemStack>
+			<itemStack>minecraft:glowstone_dust</itemStack>
+			<itemStack>ic2:crafting 1 2</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:satelliteprimaryfunction</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1600" power ="20">
+		<input>
+			<oreDict>dustRedstone</oreDict>
+			<itemStack>essentialcraft:essence 1 11</itemStack>
+			<itemStack>advancedrocketry:ic</itemStack>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemupgrade</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="20">
+		<input>
+			<itemStack>minecraft:fire_charge</itemStack>
+			<oreDict>gemDiamond</oreDict>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemupgrade 1 1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="9600" power ="80">
+		<input>
+			<itemStack>advancedrocketry:itemupgrade 1 2</itemStack>
+			<itemStack>techreborn:cable 4 5</itemStack>
+			<itemStack>projectred-core:resource_item 1 410</itemStack>
+			<oreDict>rodTitanium 2</oreDict>
+			<oreDict>plateTitanium 4</oreDict>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemupgrade 1 2</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="5200" power ="40">
+		<input>
+			<itemStack>magneticraft:crafting 2 6</itemStack>
+			<itemStack>ic2:crafting 4</itemStack>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemupgrade 1 3</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="4000" power ="20">
+		<input>
+			<itemStack>libvulpes:battery</itemStack>
+			<itemStack>advancedrocketry:lens</itemStack>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+			<itemStack>advancedrocketry:ic 1 3</itemStack>
+			<itemStack>ic2:crafting 2</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:itemupgrade 1 4</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2000" power ="20">
+		<input>
+			<itemStack>libvulpes:battery</itemStack>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+			<oreDict>plateTin</oreDict>
+			<itemStack>advancedrocketry:lens</itemStack>
+			<itemStack>advancedrocketry:misc</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:atmanalyser</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="4000" power ="20">
+		<input>
+			<itemStack>libvulpes:battery</itemStack>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+			<oreDict>plateTin</oreDict>
+			<itemStack>advancedrocketry:ic 1 1</itemStack>
+			<itemStack>advancedrocketry:misc</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:biomechanger</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2000" power ="20">
+		<input>
+			<oreDict>stickCopper 2</oreDict>
+			<oreDict>stickTitanium</oreDict>
+			<oreDict>waferSilicon 2</oreDict>
+			<itemStack>advancedrocketry:ic 1 2</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:satelliteprimaryfunction 1 5</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1600" power ="40">
+		<input>
+			<itemStack>minecraft:glass 3</itemStack>
+			<oreDict>itemLens 3</oreDict>
+			<oreDict>stickIron</oreDict>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:blocklens</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1600" power ="40">
+		<input>
+			<itemStack>advancedrocketry:ic 1 1</itemStack>
+			<itemStack>advancedrocketry:spacestationchip</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:elevatorchip</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1800" power ="20">
+		<input>
+			<itemStack>advancedrocketry:ic 1 1</itemStack>
+			<itemStack>advancedrocketry:itemupgrade 1 4</itemStack>
+		</input>
+		<output>
+			<itemStack>advancedrocketry:beaconfinder</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2000" power ="200">
+		<input>
+			<itemStack>stevescarts:modulecomponents 2 49</itemStack>
+			<itemStack>libvulpes:productrod 1 7</itemStack>
+		</input>
+		<output>
+			<itemStack>stevescarts:modulecomponents 1 82</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="12000" power ="120">
+		<input>
+			<itemStack>advanced_solar_panels:machines 1 4</itemStack>
+			<itemStack>ic2:quantum_helmet</itemStack>
+			<itemStack>techreborn:part 1 17</itemStack>		
+			<itemStack>techreborn:cable 2 7</itemStack>
+		</input>
+		<output>
+			<itemStack>advanced_solar_panels:ultimatesolarhelmet</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="6000" power ="120">
+		<input>
+			<itemStack>ic2:nano_boots</itemStack>
+			<itemStack>ic2:crafting 1 4</itemStack>
+			<itemStack>ic2:lapotron_crystal</itemStack>		
+			<itemStack>minecraft:slime_ball 2</itemStack>
+			<itemStack>ic2:crafting 2</itemStack>
+			<itemStack>contenttweaker:material3</itemStack>
+		</input>
+		<output>
+			<itemStack>ic2:quantum_boots</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="20000" power ="120">
+		<input>
+			<itemStack>ic2:nano_chestplate</itemStack>
+			<itemStack>ic2:crafting 3 4</itemStack>
+			<itemStack>ic2:lapotron_crystal</itemStack>		
+			<itemStack>contenttweaker:material3 2</itemStack>
+		</input>
+		<output>
+			<itemStack>ic2:quantum_chestplate</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="14000" power ="120">
+		<input>
+			<itemStack>ic2:nano_leggings</itemStack>
+			<itemStack>ic2:crafting 2 4</itemStack>
+			<itemStack>ic2:lapotron_crystal</itemStack>		
+			<itemStack>contenttweaker:material3 2</itemStack>
+		</input>
+		<output>
+			<itemStack>ic2:quantum_leggings</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="12000" power ="120">
+		<input>
+			<itemStack>ic2:nano_helmet</itemStack>
+			<itemStack>ic2:crafting 2 1</itemStack>
+			<itemStack>ic2:lapotron_crystal</itemStack>
+			<itemStack>contenttweaker:material3 1</itemStack>
+			<itemStack>contenttweaker:material7</itemStack>
+			<itemStack>ic2:crafting 2 2</itemStack>		
+		</input>
+		<output>
+			<itemStack>ic2:quantum_helmet</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="600" power ="40">
+		<input>
+			<itemStack>mekanism:polyethene 2</itemStack>
+			<itemStack>mekanism:polyethene 1 3</itemStack>
+			<itemStack>rockhounding_chemistry:test_tube</itemStack>
+			<oreDict>nuggetInvar 1</oreDict>	
+		</input>
+		<output>
+			<itemStack>rftools:syringe</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="80">
+		<input>
+			<itemStack>opencomputers:material 1 4</itemStack>
+			<itemStack>contenttweaker:material 16</itemStack>
+			<itemStack>opencomputers:material 8 6</itemStack>
+		</input>
+		<output>
+			<itemStack>rftoolscontrol:card_base</itemStack>
+		</output>
+	</Recipe>
+</Recipes>
+

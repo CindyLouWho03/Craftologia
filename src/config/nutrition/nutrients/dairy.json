@@ -1,0 +1,45 @@
+{
+	"name": "dairy",
+	"icon": "minecraft:milk_bucket",
+	"color": "a0d4f7",
+	"enabled": true,
+	"food": {
+		"oredict": [
+			"foodButter",
+			"foodCheese",
+			"foodChocolatebar",
+			"listAllmilk"
+		],
+		"items": [
+			"actuallyadditions:item_food:0",
+			"actuallyadditions:item_food:8",
+			"actuallyadditions:item_food:9",
+			"actuallyadditions:item_food:11",
+			"actuallyadditions:item_food:13",
+			"actuallyadditions:item_food:14",
+			"actuallyadditions:item_food:18",
+			"actuallyadditions:item_food:19",
+			"betterwithmods:chowder",
+			"betterwithmods:cooked_scrambled_egg",
+			"betterwithmods:raw_scrambled_egg",
+			"minecraft:cake",
+			"minecraft:golden_apple:1",
+			"minecraft:milk_bucket",
+			"rockhounding_surface:mesquite_liquor",
+			"rockhounding_surface:mesquite_tea",
+			"rockhounding_surface:sotol",
+			"rockhounding_surface:truffle_vodka",
+			"rockhounding_surface:truffle_pumpkin",
+			"rockhounding_surface:truffle_omelette",
+			"simplecorn:chickencornchowder",
+			"simplecorn:cornchowder",
+			"tconstruct:edible:1",
+			"tconstruct:edible:2",
+			"tconstruct:edible:4",
+			"tconstruct:edible:30",
+			"tconstruct:edible:31",
+			"tconstruct:edible:32",
+			"tconstruct:edible:34"
+		]
+	}
+}
