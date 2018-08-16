@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "top": "contenttweaker:blocks/block_top",
+      "bottom": "contenttweaker:blocks/block_bottom",
+      "side": "contenttweaker:blocks/block_side"
+    },
+    "model": "minecraft:cube_bottom_top"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": {
+      "transform": "forge:default-block"
+    }
+  }
+}
