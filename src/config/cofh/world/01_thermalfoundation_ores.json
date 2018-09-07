@@ -1,35 +1,18 @@
 {
 	"dependencies": "thermalfoundation",
 	"populate": {
-		"copper": {
+		"copper_chalko": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
-					{
-						"name": "magneticraft:ores",
-						"metadata": 0,
-						"weight": 20
-					},
-					{
-						"name": "immersiveengineering:ore",
-						"metadata": 0,
-						"weight": 20
-					},
-					{
-						"name": "mekanism:oreblock",
-						"metadata": 1,
-						"weight": 30
-					},
-					{
-						"name": "techreborn:ore2",
-						"metadata": 0,
-						"weight": 30
-					},
-				],
+				"block": {
+					"name": "magneticraft:ores",
+					"metadata": 0
+				},
 				"material": "minecraft:stone",
 				"cluster-size": 32
 			},
 			"cluster-count": 1,
+			"chunk-chance": 6,
 			"min-height": 40,
 			"max-height": 75,
 			"retrogen": true,
@@ -39,28 +22,14 @@
 					{
 						"type": "id",
 						"entry": [
-							"birch_forest",
-							"mesa",
-							"mesa_clear_rock",
-							"mesa_rock",
-							"plains",
+							"birch_forest",				
 							"redwood_taiga",
-							"roofed_forest",
-							"savanna",
-							"savanna_rock",
-							"mutated_plains",
+							"roofed_forest",			
 							"mutated_birch_forest",
-							"biomesoplenty:bog",
 							"biomesoplenty:boreal_forest",
-							"biomesoplenty:brushland",
 							"biomesoplenty:coniferous_forest",
-							"biomesoplenty:dead_forest",
 							"biomesoplenty:eucalyptus_forest",
-							"biomesoplenty:fen",
-							"biomesoplenty:mountain",
-							"biomesoplenty:outback",
 							"biomesoplenty:temperate_rainforest",
-							"biomesoplenty:xeric_shrubland",
 							"biomesoplenty:woodland"
 						]
 					}
@@ -74,25 +43,137 @@
 			}
 		},
 
-		"tin": {
+		"copper_ie": {
+			"distribution": "fractal",
+			"generator": {
+				"block": {
+					"name": "immersiveengineering:ore",
+					"metadata": 0
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 42,
+            	"type": "large-vein",
+            	"sparse": true
+			},
+			"cluster-count": 1,
+			"chunk-chance": 10,
+			"min-height": 25,
+			"max-height": 60,
+			"vein-height": 30,
+       		"vein-diameter": 20,
+        	"vertical-density": 10,
+        	"horizontal-density": 30,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"mesa",
+							"mesa_clear_rock",
+							"mesa_rock"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"copper_mek": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
-					{
-						"name": "mekanism:oreblock",
-						"metadata": 2,
-						"weight": 50
-					},
-					{
-						"name": "techreborn:ore2",
-						"metadata": 1,
-						"weight": 50
-					},
-				],
+				"block": {
+					"name": "mekanism:oreblock",
+					"metadata": 1
+				},
 				"material": "minecraft:stone",
 				"cluster-size": 26
 			},
 			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 34,
+			"max-height": 56,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"plains",
+							"savanna",
+							"savanna_rock",
+							"mutated_plains",
+							"biomesoplenty:outback",
+							"biomesoplenty:xeric_shrubland"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"copper_tr": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "techreborn:ore2",
+					"metadata": 0
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 30
+			},
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 28,
+			"max-height": 58,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"biomesoplenty:bog",
+							"biomesoplenty:brushland",
+							"biomesoplenty:dead_forest",
+							"biomesoplenty:fen",
+							"biomesoplenty:mountain"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"tin_tr": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "techreborn:ore2",
+					"metadata": 1
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 26
+			},
+			"cluster-count": 1,
+			"chunk-chance": 6,
 			"min-height": 20,
 			"max-height": 55,
 			"retrogen": true,
@@ -102,24 +183,57 @@
 					{
 						"type": "id",
 						"entry": [
-							"forest",
 							"ice_flats",
 							"taiga",
-							"jungle",
-							"jungle_hills",
-							"birch_forest",
 							"mutated_ice_flats",
-							"mutated_jungle",
 							"biomesoplenty:bamboo_forest",
 							"biomesoplenty:bayou",
 							"biomesoplenty:eucalyptus_forest",
 							"biomesoplenty:grove",
+							"biomesoplenty:maple_woods",
+							"biomesoplenty:rain_forest",
+							"biomesoplenty:redwood_forest"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"tin_mek": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "mekanism:oreblock",
+					"metadata": 2
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 28
+			},
+			"cluster-count": 1,
+			"chunk-chance": 6,
+			"min-height": 24,
+			"max-height": 56,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"forest",
+							"jungle",
+							"jungle_hills",
+							"birch_forest",
+							"mutated_jungle",
 							"biomesoplenty:meadow",
 							"biomesoplenty:moor",
-							"biomesoplenty:maple_woods",
 							"biomesoplenty:pasture",
-							"biomesoplenty:rain_forest",
-							"biomesoplenty:redwood_forest",
 							"biomesoplenty:seasonal_forest",
 							"biomesoplenty:wetland"
 						]
@@ -134,35 +248,18 @@
 			}
 		},
 		
-		"silver": {
+		"silver_tf": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
-					{
-						"name": "thermalfoundation:ore",
-						"metadata": 2,
-						"weight": 40
-					},
-					{
-						"name": "techreborn:ore",
-						"metadata": 13,
-						"weight": 20
-					},
-					{
-						"name": "immersiveengineering:ore",
-						"metadata": 3,
-						"weight": 30
-					},
-					{
-						"name": "techreborn:ore",
-						"metadata": 0,
-						"weight": 10
-					}
-				],
+				"block": {
+					"name": "thermalfoundation:ore",
+					"metadata": 2
+				},
 				"material": "minecraft:stone",
 				"cluster-size": 20
 			},
 			"cluster-count": 1,
+			"chunk-chance": 4,
 			"min-height": 5,
 			"max-height": 30,
 			"retrogen": true,
@@ -172,18 +269,53 @@
 					{
 						"type": "id",
 						"entry": [
-							"plains",
-							"roofed_forest",
+							"plains",			
 							"mutated_plains",
-							"biomesoplenty:crag",
-							"biomesoplenty:boreal_forest",
 							"biomesoplenty:cherry_blossom_grove",
 							"biomesoplenty:fen",
+							"biomesoplenty:pasture"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"silver_ie": {
+			"distribution": "fractal",
+			"generator": {
+				"block": {
+					"name": "immersiveengineering:ore",
+					"metadata": 3
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 32,
+            	"type": "large-vein",
+            	"sparse": true
+			},
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 18,
+			"max-height": 42,
+			"vein-height": 26,
+       		"vein-diameter": 14,
+        	"vertical-density": 20,
+        	"horizontal-density": 2,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
 							"biomesoplenty:marsh",
 							"biomesoplenty:moor",
-							"biomesoplenty:highland",
 							"biomesoplenty:mystic_grove",
-							"biomesoplenty:pasture",
 							"biomesoplenty:sacred_springs"
 						]
 					}
@@ -197,37 +329,122 @@
 			}
 		},
 
-		"lead": {
+		"silver_galena": {
 			"distribution": "uniform",
 			"generator": {
 				"block": [
 					{
-						"name": "immersiveengineering:ore",
-						"metadata": 2,
-						"weight": 40
-					},
-					{
-						"name": "magneticraft:ores",
-						"metadata": 1,
-						"weight": 10
-					},
-					{
 						"name": "techreborn:ore",
-						"metadata": 12,
-						"weight": 40
+						"metadata": 13,
+						"weight": 80
 					},
 					{
 						"name": "techreborn:ore",
 						"metadata": 0,
-						"weight": 10
+						"weight": 20
 					}
 				],
 				"material": "minecraft:stone",
-				"cluster-size": 30
+				"cluster-size": 22
 			},
 			"cluster-count": 1,
+			"chunk-chance": 6,
+			"min-height": 12,
+			"max-height": 38,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"roofed_forest",
+							"biomesoplenty:crag",
+							"biomesoplenty:boreal_forest",
+							"biomesoplenty:highland"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"lead_ie": {
+			"distribution": "fractal",
+			"generator": {
+				"block": {
+					"name": "immersiveengineering:ore",
+					"metadata": 2
+					},
+				"material": "minecraft:stone",
+				"cluster-size": 36,
+				"type": "large-vein",
+            	"sparse": true
+			},
+			"cluster-count": 1,
+			"chunk-chance": 10,
 			"min-height": 8,
-			"max-height": 36,
+			"max-height": 32,
+			"vein-height": 2,
+       		"vein-diameter": 42,
+        	"vertical-density": 1,
+        	"horizontal-density": 30,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"mesa",
+							"mesa_clear_rock",
+							"mesa_rock",
+							"redwood_taiga_hills",
+							"mutated_mesa",
+							"mutated_mesa_clear_rock",
+							"mutated_mesa_rock",
+							"roofed_forest",
+							"biomesoplenty:highland",
+							"biomesoplenty:mountain"		
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"lead_galena": {
+			"distribution": "uniform",
+			"generator": {
+				"block": [
+					{
+						"name": "techreborn:ore",
+						"metadata": 12,
+						"weight": 60
+					},
+					{
+						"name": "techreborn:ore",
+						"metadata": 0,
+						"weight": 40
+					}
+				],
+				"material": "minecraft:stone",
+				"cluster-size": 20
+			},
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 10,
+			"max-height": 24,
 			"retrogen": true,
 			"biome": {
 				"restriction": "whitelist",
@@ -236,31 +453,15 @@
 						"type": "id",
 						"entry": [
 							"plains",
-							"smaller_extreme_hills",
-							"mesa",
-							"mesa_clear_rock",
-							"mesa_rock",
-							"roofed_forest",
-							"redwood_taiga_hills",
-							"mutated_mesa",
-							"mutated_mesa_clear_rock",
-							"mutated_mesa_rock",
-							"roofed_forest",
-							"biomesoplenty:grassland",
-							"biomesoplenty:meadow",
 							"biomesoplenty:bog",
 							"biomesoplenty:brushland",
-							"biomesoplenty:boreal_forest",
-							"biomesoplenty:coniferous_forest",
-							"biomesoplenty:grove",
-							"biomesoplenty:highland",
 							"biomesoplenty:shield",
 							"biomesoplenty:snowy_forest",
 							"biomesoplenty:lavender_fields",
-							"biomesoplenty:maple_woods",
-							"biomesoplenty:mountain",
-							"biomesoplenty:outback",
 							"biomesoplenty:shrubland",
+							"biomesoplenty:grassland",
+							"biomesoplenty:boreal_forest",
+							"biomesoplenty:coniferous_forest",
 							"biomesoplenty:woodland"
 						]
 					}
@@ -274,25 +475,57 @@
 			}
 		},
 
-		"nickel": {
+		"galena": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
+				"block": {
+					"name": "magneticraft:ores",
+					"metadata": 1
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 16
+			},
+			"cluster-count": 1,
+			"chunk-chance": 4,
+			"min-height": 13,
+			"max-height": 48,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
 					{
-						"name": "thermalfoundation:ore",
-						"metadata": 5,
-						"weight": 50
-					},
-					{
-						"name": "immersiveengineering:ore",
-						"metadata": 4,
-						"weight": 50
+						"type": "id",
+						"entry": [
+							"smaller_extreme_hills",
+							"roofed_forest",
+							"biomesoplenty:grove",
+							"biomesoplenty:maple_woods",
+							"biomesoplenty:meadow",
+							"biomesoplenty:outback"
+						]
 					}
-				],
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"nickel_tf": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "thermalfoundation:ore",
+					"metadata": 5
+				},
 				"material": "minecraft:stone",
 				"cluster-size": 8
 			},
 			"cluster-count": 1,
+			"chunk-chance": 3,
 			"min-height": 8,
 			"max-height": 24,
 			"retrogen": true,
@@ -302,24 +535,15 @@
 					{
 						"type": "id",
 						"entry": [
-							"forest_hills",
 							"taiga",
 							"taiga_cold",
 							"taiga_cold_hills",
 							"redwood_taiga",
-							"roofed_forest",
-							"savanna_rock",
-							"mutated_forest",
-							"mutated_taiga_cold",
-							"mutated_savanna_rock",
+							"mutated_taiga_cold",						
 							"biomesoplenty:chaparral",
-							"biomesoplenty:dead_forest",
-							"biomesoplenty:crag",
-							"biomesoplenty:bayou",
 							"biomesoplenty:coniferous_forest",
-							"biomesoplenty:land_of_lakes"
+							"biomesoplenty:land_of_lakes",
 							"biomesoplenty:woodland",
-							"biomesoplenty:quagmire",
 							"biomesoplenty:shield",
 							"biomesoplenty:shrubland",
 							"biomesoplenty:xeric_shrubland",
@@ -336,37 +560,20 @@
 			}
 		},
 
-		"aluminum": {
+		"nickel_ie": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
-					{
-						"name": "thermalfoundation:ore",
-						"metadata": 4,
-						"weight": 18
-					},
-					{
-						"name": "immersiveengineering:ore",
-						"metadata": 1,
-						"weight": 18
-					},
-					{
-						"name": "techreborn:ore",
-						"metadata": 4,
-						"weight": 36
-					},
-					{
-						"name": "nuclearcraft:ore",
-						"metadata": 7,
-						"weight": 18
-					}
-				],
+				"block": {
+					"name": "immersiveengineering:ore",
+					"metadata": 4
+				},
 				"material": "minecraft:stone",
-				"cluster-size": 18
+				"cluster-size": 12
 			},
 			"cluster-count": 1,
-			"min-height": 40,
-			"max-height": 65,
+			"chunk-chance": 6,
+			"min-height": 8,
+			"max-height": 24,
 			"retrogen": true,
 			"biome": {
 				"restriction": "whitelist",
@@ -374,28 +581,15 @@
 					{
 						"type": "id",
 						"entry": [
-							"extreme_hills",
-							"swampland",
-							"jungle",
-							"jungle_hills",
-							"taiga_hills",
-							"birch_forest_hills",
-							"extreme_hills_with_trees",
-							"mutated_extreme_hills",
-							"biomesoplenty:cold_desert",
-							"biomesoplenty:bamboo_forest",
-							"biomesoplenty:chaparral",
-							"biomesoplenty:eucalyptus_forest",
-							"biomesoplenty:dead_swamp",
-							"biomesoplenty:flower_field",
-							"biomesoplenty:lavender_fields",
-							"biomesoplenty:lush_desert",
-							"biomesoplenty:lush_swamp",
-							"biomesoplenty:orchard",
-							"biomesoplenty:shield",
-							"biomesoplenty:steppe",
-							"biomesoplenty:tundra",
-							"biomesoplenty:wetland"
+							"forest_hills",
+							"roofed_forest",
+							"savanna_rock",
+							"mutated_forest",
+							"mutated_savanna_rock",
+							"biomesoplenty:bayou",
+							"biomesoplenty:dead_forest",
+							"biomesoplenty:crag",
+							"biomesoplenty:quagmire"
 						]
 					}
 				]
@@ -408,27 +602,149 @@
 			}
 		},
 
-		"platinum": {
+		"bauxite": {
 			"distribution": "uniform",
 			"generator": {
 				"block": [
-						{
-							"name": "thermalfoundation:ore",
-							"metadata": 6,
-							"weight": 50
-						},
-						{
-							"name": "techreborn:ore",
-							"metadata": 1,
-							"weight": 50
-						}
-					],
+					{
+						"name": "immersiveengineering:ore",
+						"metadata": 1,
+						"weight": 40
+					},
+					{
+						"name": "techreborn:ore",
+						"metadata": 4,
+						"weight": 60
+					}
+				],
+				"material": "minecraft:stone",
+				"cluster-size": 18
+			},
+			"cluster-count": 1,
+			"chunk-chance": 4,
+			"min-height": 36,
+			"max-height": 60,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"extreme_hills",
+							"taiga_hills",
+							"birch_forest_hills",
+							"extreme_hills_with_trees",
+							"mutated_extreme_hills",
+							"biomesoplenty:chaparral"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"aluminum": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "thermalfoundation:ore",
+					"metadata": 4
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 20
+			},
+			"cluster-count": 1,
+			"chunk-chance": 4,
+			"min-height": 18,
+			"max-height": 46,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"swampland",
+							"jungle",
+							"jungle_hills",
+							"biomesoplenty:bamboo_forest",
+							"biomesoplenty:eucalyptus_forest",
+							"biomesoplenty:flower_field",
+							"biomesoplenty:lavender_fields",
+							"biomesoplenty:orchard"		
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"magnesium": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "nuclearcraft:ore",
+					"metadata": 7
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 16
+			},
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 12,
+			"max-height": 34,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"biomesoplenty:cold_desert",
+							"biomesoplenty:dead_swamp",							
+							"biomesoplenty:lush_desert",
+							"biomesoplenty:lush_swamp",
+							"biomesoplenty:shield",
+							"biomesoplenty:steppe",
+							"biomesoplenty:tundra",
+							"biomesoplenty:wetland"	
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"platinum_tr": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "techreborn:ore",
+					"metadata": 1
+				},
 				"material": "minecraft:stone",
 				"cluster-size": 12
 			},
 			"cluster-count": 1,
-			"min-height": 15,
-			"max-height": 35,
+			"chunk-chance": 2,
+			"min-height": 8,
+			"max-height": 24,
 			"retrogen": true,
 			"biome": {
 				"restriction": "whitelist",
@@ -437,18 +753,51 @@
 						"type": "id",
 						"entry": [
 							"ice_flats",
-							"mushroom_island",
-							"mushroom_island_shore",
 							"forest_hills",
 							"redwood_taiga_hills",
-							"mutated_plains",
-							"mutated_roofed_forest",
 							"biomesoplenty:alps",
 							"biomesoplenty:alps_foothills",
 							"biomesoplenty:cold_desert",
-							"biomesoplenty:snowy_coniferous_forest",
-							"biomesoplenty:snowy_forest",
 							"biomesoplenty:tundra"			
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"platinum_tf": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "thermalfoundation:ore",
+					"metadata": 6
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 10
+			},
+			"cluster-count": 1,
+			"chunk-chance": 4,
+			"min-height": 12,
+			"max-height": 28,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"mushroom_island",
+							"mushroom_island_shore",
+							"mutated_plains",
+							"mutated_roofed_forest",
+							"biomesoplenty:snowy_coniferous_forest",
+							"biomesoplenty:snowy_forest"			
 						]
 					}
 				]
@@ -472,6 +821,7 @@
 				"cluster-size": 4
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 1,
 			"max-height": 5,
 			"retrogen": true,
@@ -499,15 +849,17 @@
 		},
 
 		"osmium": {
-			"distribution": "uniform",
+			"distribution": "gaussian",
 			"generator": {
 				"block": "mekanism:oreblock",
 				"material": "minecraft:stone",
 				"cluster-size": 18
 			},
 			"cluster-count": 1,
-			"min-height": 1,
-			"max-height": 10,
+			"chunk-chance": 2,
+			"center-height": 8,
+			"spread": 4,
+			"smoothness": 8,
 			"retrogen": true,
 			"biome": {
 				"restriction": "whitelist",
@@ -546,6 +898,7 @@
 				"cluster-size": 6
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 1,
 			"max-height": 11,
 			"retrogen": true,
@@ -582,6 +935,7 @@
 				"cluster-size": 10
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 15,
 			"max-height": 27,
 			"retrogen": true,
@@ -622,6 +976,7 @@
 				"cluster-size": 18
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 15,
 			"max-height": 35,
 			"retrogen": true,
@@ -665,6 +1020,7 @@
 					{
 						"type": "id",
 						"entry": [
+							"jungle_hills",
 							"biomesoplenty:volcanic_island",
 							"biomesoplenty:polar_chasm"
 						]
@@ -678,8 +1034,88 @@
 				]
 			}
 		},
-		
 
+		"magnesium_chromite": {
+			"distribution": "gaussian",
+			"generator": {
+				"block": [
+					{
+						"name": "contenttweaker:ore",
+						"weight": 75
+					},
+					{
+						"name": "nuclearcraft:ore",
+						"metadata": 7,
+						"weight": 25
+					}
+				],
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 1,
+			"center-height": 20,
+			"spread": 4,
+			"smoothness": 8,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"jungle",
+							"mutated_jungle",
+							"biomesoplenty:bayou",
+							"biomesoplenty:flower_island",
+							"biomesoplenty:tropical_island"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"evaporite": {
+			"distribution": "underfluid",
+			"generator": {
+				"block": "contenttweaker:ore3",
+				"fluid": "water",	
+				"material": "minecraft:dirt",
+				"cluster-size": 12
+			},
+			"cluster-count": 2,
+			"chunk-chance": 6,
+			"min-height": 55,
+			"max-height": 63,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"swampland",
+							"biomesoplenty:bayou",
+							"biomesoplenty:land_of_lakes",
+							"biomesoplenty:moor",
+							"biomesoplenty:wetland"			
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		
 		"carnallite": {
 			"distribution": "uniform",
 			"generator": {
@@ -688,6 +1124,7 @@
 				"cluster-size": 14
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 40,
 			"max-height": 65,
 			"retrogen": true,
@@ -725,6 +1162,7 @@
 				"cluster-size": 8
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 10,
 			"max-height": 30,
 			"retrogen": true,
@@ -787,15 +1225,20 @@
 		},
 
 		"yellorite": {
-			"distribution": "uniform",
+			"distribution": "fractal",
 			"generator": {
 				"block": "bigreactors:brore",	
 				"material": "minecraft:stone",
-				"cluster-size": 24
+				"cluster-size": 36
 			},
 			"cluster-count": 1,
-			"min-height": 1,
-			"max-height": 25,
+			"chunk-chance": 2,
+			"min-height": 10,
+			"max-height": 40,
+			"vein-height": 20,
+       		"vein-diameter": 20,
+        	"vertical-density": 10,
+        	"horizontal-density": 20,
 			"retrogen": true,
 			"biome": {
 				"restriction": "whitelist",
@@ -803,7 +1246,6 @@
 					{
 						"type": "id",
 						"entry": [
-							"biomesoplenty:ominous_woods",
 							"biomesoplenty:volcanic_island"			
 						]
 					}
@@ -817,31 +1259,18 @@
 			}
 		},
 
-		"uranium": {
+		"uranium_ic": {
 			"distribution": "uniform",
 			"generator": {
-				"block": [
-						{
-							"name": "ic2:resource",
-							"metadata": 4,
-							"weight": 50
-						},
-						{	
-							"name": "nuclearcraft:ore",
-							"metadata": 4,
-							"weight": 25
-
-						},
-						{
-							"name": "immersiveengineering:ore",
-							"metadata": 5,
-							"weight": 25
-						}
-					],
+				"block": {
+					"name": "ic2:resource",
+					"metadata": 4
+				},
 				"material": "minecraft:stone",
-				"cluster-size": 16
+				"cluster-size": 14
 			},
 			"cluster-count": 1,
+			"chunk-chance": 6,
 			"min-height": 1,
 			"max-height": 32,
 			"retrogen": true,
@@ -852,12 +1281,9 @@
 						"type": "id",
 						"entry": [
 							"mutated_taiga_cold",
-							"biomesoplenty:dead_forest",
-							"biomesoplenty:dead_swamp",
 							"biomesoplenty:mangrove",
 							"biomesoplenty:mystic_grove",
-							"biomesoplenty:wasteland",
-							"nuclearcraft:nuclear_wasteland"		
+							"biomesoplenty:wasteland"	
 						]
 					}
 				]
@@ -865,7 +1291,108 @@
 			"dimension": {
 				"restriction": "whitelist",
 				"value": [
-					0,
+					0
+				]
+			}
+		},
+
+		"uranium_ie": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "immersiveengineering:ore",
+					"metadata": 5
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 16
+			},
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"min-height": 1,
+			"max-height": 32,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"biomesoplenty:dead_forest",
+							"biomesoplenty:dead_swamp",
+							"biomesoplenty:wasteland"	
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"uranium_nuclear": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "nuclearcraft:ore",
+					"metadata": 4
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 2
+			},
+			"cluster-count": 3,
+			"chunk-chance": 4,
+			"min-height": 2,
+			"max-height": 32,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"nuclearcraft:nuclear_wasteland"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"uranium_hoanna": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "ic2:resource",
+					"metadata": 4
+				},	
+				"material": "minecraft:stone",
+				"cluster-size": 1
+			},
+			"cluster-count": 32,
+			"min-height": 5,
+			"max-height": 75,
+			"retrogen": true,
+			"biome": {
+				"restriction": "blacklist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
 					53
 				]
 			}
@@ -882,6 +1409,7 @@
 				"cluster-size": 12
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 5,
 			"max-height": 45,
 			"retrogen": true,
@@ -919,9 +1447,10 @@
 					"metadata": 5
 				},	
 				"material": "minecraft:stone",
-				"cluster-size": 8
+				"cluster-size": 4
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 10,
 			"max-height": 30,
 			"retrogen": true,
@@ -971,6 +1500,7 @@
 				"cluster-size": 4
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 10,
 			"max-height": 20,
 			"retrogen": true,
@@ -1027,6 +1557,7 @@
 				"cluster-size": 4
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 10,
 			"max-height": 20,
 			"retrogen": true,
@@ -1075,6 +1606,7 @@
 				"cluster-size": 8
 			},
 			"cluster-count": 1,
+			"chunk-chance": 2,
 			"min-height": 1,
 			"max-height": 80,
 			"retrogen": true,
@@ -1109,6 +1641,7 @@
 				"cluster-size": 22
 			},
 			"cluster-count": 1,
+			"chunk-chance": 4,
 			"min-height": 60,
 			"max-height": 75,
 			"retrogen": true,
@@ -1135,23 +1668,40 @@
 			"distribution": "uniform",
 			"generator": {
 				"block": {
-					"name": "contenttweaker:ore2"
+					"name": "appliedenergistics2:quartz_ore"
 				},	
-				"material": "appliedenergistics2:sky_stone_block",
+				"material": "minecraft:stone",
 				"cluster-size": 4
 			},
-			"cluster-count": 1,
-			"min-height": 35,
-			"max-height": 55,
+			"cluster-count": 2,
+			"chunk-chance": 2,
+			"min-height": 8,
+			"max-height": 32,
 			"retrogen": true,
 			"biome": {
-				"restriction": "blacklist",
+				"restriction": "whitelist",
 				"value": [
 					{
-						"type": "id",
-						"entry": [
-						]
+						"type": "dictionary",
+						"entry": "WASTELAND"
 					}
+					{
+						"type": "dictionary",
+						"entry": "PLAINS"
+					},
+					{
+						"type": "dictionary",
+						"entry": "SNOWY"
+					},
+					{
+						"type": "dictionary",
+						"entry": "SWAMP"
+					},
+					{
+						"type": "dictionary",
+						"entry": "OCEAN"
+					}
+					
 				]
 			},
 			"dimension": {
@@ -1162,32 +1712,50 @@
 			}
 		},
 
-		"moissanite": {
+		"certus_charged": {
 			"distribution": "uniform",
 			"generator": {
 				"block": {
-					"name": "contenttweaker:ore2"
+					"name": "appliedenergistics2:quartz_ore"
 				},	
-				"material": "appliedenergistics2:sky_stone_block",
-				"cluster-size": 1
+				"material": "minecraft:stone",
+				"cluster-size": 2
 			},
-			"cluster-count": 2,
-			"min-height": 10,
-			"max-height": 100,
+			"cluster-count": 1,
+			"chunk-chance": 16,
+			"min-height": 8,
+			"max-height": 32,
 			"retrogen": true,
 			"biome": {
-				"restriction": "blacklist",
+				"restriction": "whitelist",
 				"value": [
 					{
-						"type": "id",
-						"entry": [
-						]
+						"type": "dictionary",
+						"entry": "WASTELAND"
 					}
+					{
+						"type": "dictionary",
+						"entry": "PLAINS"
+					},
+					{
+						"type": "dictionary",
+						"entry": "SNOWY"
+					},
+					{
+						"type": "dictionary",
+						"entry": "SWAMP"
+					},
+					{
+						"type": "dictionary",
+						"entry": "OCEAN"
+					}
+					
 				]
 			},
 			"dimension": {
 				"restriction": "whitelist",
 				"value": [
+					0
 				]
 			}
 		},
@@ -1270,6 +1838,7 @@
 				"cluster-size": 2
 			},
 			"cluster-count": 2,
+			"chunk-chance": 2,
 			"min-height": 30,
 			"max-height": 35,
 			"retrogen": true,
@@ -1297,6 +1866,7 @@
 				"cluster-size": 4
 			},
 			"cluster-count": 2,
+			"chunk-chance": 2,
 			"min-height": 35,
 			"max-height": 55,
 			"retrogen": true,
@@ -1324,6 +1894,7 @@
 				"cluster-size": 4
 			},
 			"cluster-count": 2,
+			"chunk-chance": 2,
 			"min-height": 50,
 			"max-height": 150,
 			"retrogen": true,
@@ -1363,6 +1934,7 @@
 				"cluster-size": 1
 			},
 			"cluster-count": 2,
+			"chunk-chance": 2,
 			"min-height": 1,
 			"max-height": 50,
 			"retrogen": true,
@@ -1446,6 +2018,7 @@
 				]
 			}
 		},
+
 		"uninspected_extraterrestial": {
 			"distribution": "uniform",
 			"generator": {
@@ -1473,6 +2046,82 @@
 				"restriction": "whitelist",
 				"value": [
 					17
+				]
+			}
+		},
+
+		"blackquartz": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "actuallyadditions:block_misc:3"
+				},	
+				"material": "stone",
+				"cluster-size": 4
+			},
+			"chunk-chance": 4,
+			"cluster-count": 2,
+			"min-height": 20,
+			"max-height": 40,
+			"retrogen": true,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+							"mesa",
+							"mesa_clear_rock",
+							"mesa_rock",
+							"redwood_taiga",
+							"savanna_rock",
+							"biomesoplenty:bog",
+							"biomesoplenty:boreal_forest",
+							"biomesoplenty:brushland",
+							"biomesoplenty:coniferous_forest",
+							"biomesoplenty:eucalyptus_forest",
+							"biomesoplenty:fen",
+							"biomesoplenty:mountain",
+							"biomesoplenty:temperate_rainforest"
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+
+		"remove_blackquartz": {
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "minecraft:stone"
+				},	
+				"material": "actuallyadditions:block_misc:3",
+				"cluster-size": 8
+			},
+			"cluster-count": 24,
+			"min-height": 1,
+			"max-height": 80,
+			"retrogen": true,
+			"biome": {
+				"restriction": "blacklist",
+				"value": [
+					{
+						"type": "id",
+						"entry": [
+						]
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
 				]
 			}
 		}

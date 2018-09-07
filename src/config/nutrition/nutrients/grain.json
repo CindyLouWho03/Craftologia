@@ -59,10 +59,18 @@
 			"minecraft:cake",
 			"minecraft:cookie",
 			"minecraft:golden_apple:1",
+			"nuclearcraft:dominos",
+			"nuclearcraft:graham_cracker",
+			"nuclearcraft:smore",
+			"nuclearcraft:moresmore",
 			"plants:ambrosia_a",
 			"plants:apocynum_c",
 			"rockhounding_surface:truffle_toast",
-			"simplecorn:poppedcorn"
+			"simplecorn:poppedcorn",
+			"simplecorn:chickencornchowder",
+			"simplecorn:cornchowder",
+			"simplecorn:corncob",
+			"simplecorn:roastedcorn"
 		]
 	}
 }

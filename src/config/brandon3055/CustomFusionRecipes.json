@@ -1,0 +1,15 @@
+[
+    {
+        "mode": "ADD",
+        "result": "stevescarts:modulecomponents,1,47",
+        "catalyst": "stevescarts:modulecomponents,1,21",
+        "energy": 50000000,
+        "tier": 3,
+        "ingredients": [
+            "stevescarts:modulecomponents,1,45",
+            "techreborn:dust,1,63",
+            "contenttweaker:dust",
+            "bigreactors:dustmetals,1,4"
+        ]
+    }
+]

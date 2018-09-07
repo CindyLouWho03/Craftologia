@@ -1,0 +1,30 @@
+{
+	"ore:treeLeaves,*":{
+	"replace":false,
+	"dropdatalist": [
+			{
+				"id": "minecraft:stick", 
+				"metadata": 0,
+	        	"fortunechancemap": {
+		          "0": 10,
+		          "1": 30,
+		          "2": 50,
+		          "3": 100
+	        	}
+			}
+		]
+	},
+
+	"ore:celestialBlock,*":{
+		"replace": true,
+		"allowsilktouch":true,
+		"dropdatalist": [
+			{
+				"id": "biomesoplenty:crystal", 
+				"metadata": 0,
+				"toolsBlacklist": false,
+	        	"tools": []
+			}
+		]
+	}
+}

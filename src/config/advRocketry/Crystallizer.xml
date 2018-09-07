@@ -31,7 +31,7 @@
 	</Recipe>
 	<Recipe timeRequired="300" power ="20">
 		<input>
-			<oreDict>ingotSilicon 2</oreDict>
+			<itemStack>rockhounding_chemistry:chemical_dusts 2 42</itemStack>
 		</input>
 		<output>
 			<itemStack>libvulpes:productboule 1 3</itemStack>
@@ -39,11 +39,22 @@
 	</Recipe>
 	<Recipe timeRequired="900" power ="100">
 		<input>
-			<itemStack>enderio:item_material 6  5</itemStack>
+			<itemStack>enderio:item_material 6 5</itemStack>
 			<fluidStack>fluidsilicon 3000</fluidStack>
 		</input>
 		<output>
 			<itemStack>projectred-core:resource_item 3 300</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="500">
+		<input>
+			<itemStack>nuclearcraft:gem_dust 6 3</itemStack>
+			<itemStack>appliedenergistics2:material 1 45</itemStack>
+			<itemStack>techreborn:smalldust 2 21</itemStack>
+			<fluidStack>cloud_seed_concentrated 1000</fluidStack>
+		</input>
+		<output>
+			<itemStack>biomesoplenty:crystal_shard</itemStack>
 		</output>
 	</Recipe>
 </Recipes>

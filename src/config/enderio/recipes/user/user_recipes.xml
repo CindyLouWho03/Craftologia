@@ -4,5 +4,23 @@
 	<recipe name="Sagmill: Silicon" disabled="true" />
 	<recipe name="Sagmill: ClayBlock" disabled="true" />
 	<recipe name="Sagmill: oreRedstone Ore" disabled="true" />
-	
+
+	<recipe name="Sagmill: Slate">
+	    <sagmilling energy="2000">
+	      <input name="slate" />
+	      <output name="techreborn:dust:15" amount="2" />
+	      <output name="minecraft:clay_ball" amount="2" />
+	      <output name="minecraft:clay_ball" chance="0.5" />
+	    </sagmilling>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: Epoxy">
+	    <alloying energy="8000">
+	      <input name="ic2:misc_resource:4" />
+	      <input name="mekanism:substrate" />
+	      <input name="slimeball" />
+	      <output name="contenttweaker:material1" />
+	    </alloying>
+  	</recipe>
+  	
 </enderio:recipes>

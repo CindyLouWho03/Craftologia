@@ -17,16 +17,17 @@
             <p bold="true">- <link ref="chapter3">The Mid Game</link></p>
             <p bold="true">- <link ref="chapter4">The Late Game</link></p>
             <p bold="true">- <link ref="chapter5">The End Game</link></p>
+            <p bold="true">- <link ref="chapter6">Modpack Goals (WIP)</link></p>
         </section>
     </chapter>
     <chapter id="chapter0">
         <page>
             <title bold="true" underline="true">Introduction</title>
             <p>
-                Hello, thank you for downloading my modpack. It has been almost a year of development and work without any previous
+                Hello, thank you for downloading my modpack. It has been over a year of development and work without any previous
                 knowledge about these things, all of this started in part because one day i decided to change one recipe of my 1.12.2 
                 world just because i didn't like how ugly and boring it was, i liked the outcome and then continued to change more and 
-                more recipes, and now, after more than 1700 recipes changed i can say i am sort of happy with how things are crafted so 
+                more recipes, and now, after more than 1800 recipes changed i can say i am sort of happy with how things are crafted so 
                 i decided to create this modpack to share it with you.
             </p>
             <p>
@@ -48,7 +49,7 @@
             </p>
             <p>
                 If you notice something really important is missing on this book or you find any sort inconsistency on the recipes or the config, 
-                or you find a mod conflict, feel free to report it to the issues page.
+                or you find a mod conflict, feel free to report it to the issues page or the discord server.
             </p>
         </page>
     </chapter>
@@ -73,8 +74,8 @@
         </page>
         <page>
             <p>
-                Finding a Village is your best bet, if its not abandoned, it will provide you with food and some useful things for the early game, and it is also
-                the perfect place for setting up your first base. 
+                Finding a Village is your best bet, if not abandoned, it will provide you with a variety of food and some useful things for the early game, 
+                it is also the perfect place for setting up your first base. 
             </p>
             <p>
                 There are also other things you should take into consideration if you want to survive to the first day.
@@ -105,22 +106,15 @@
             </p>
         </page>
         <page>
-            <p bold="true">Minecraft</p>
+            <p bold="true">Chapter Tips</p>
             <p>
-                -Lots of recipes have been changed to be more realistic but also more challenging to the player.
-            </p> 
-            <p>
-                -Unrealistic tools and armor have been removed, all recipes changed.
+                -Sticks can be obtained at early game by breaking leaves and trees, fallen branches in the ground or by crafting from leaves.
             </p>
             <p>
-                -Enchantment Tables, Brewing Stands and precious gemstones blocks are uncraftable.
+                -String can be obtained from wool, flax and cotton crops, or by killing spiders.
             </p>
             <p>
-                -Vanilla mechanincs tweaked by BetterWithMods, Quark and Inspirations.
-            </p>
-            <p bold="true">Tinkers Construct</p>
-            <p>
-                -Only one type of material listed per part and table, to prevent JEI from bloating with unnecessary pages. Tool forge has two different recipes.
+                -Iron Ores can't be melted down in Vanilla Furnaces, you need a TiC Smeltery instead.
             </p>
             <p>
                 -Pickaxes that display diamond mining level are not able to break obsidian blocks, this is not a modification by me, it just means they can mine 
@@ -129,6 +123,11 @@
             <p>
                 -Melting Villagers in the Smeltery no longer gives you molten emerald.
             </p>
+            <p>
+                -Villages usually have a Blacksmith and Engineer's House, where you can find an Engineer's Hammer.
+            </p>
+        </page>
+        <page>
         </page>
     </chapter>
 
@@ -136,7 +135,7 @@
         <page>
             <title bold="true" underline="true">The Early Game</title>
             <p>
-                Even though there is not a questline to keep track of your progress there is a milestone that clearly separates the beginning and the early game, 
+                Even though there is not a questline to keep track of your progress there is a milestone that clearly separates the beginning from the early game, 
                 that is the ability to produce steel.
             </p>
             <p>
@@ -148,16 +147,33 @@
         </page>
         <page>
             <p>
-                To create the portal to the Twilight Forest, a mru chunk is required instead of a diamond. 
-            </p>
-            <p>
                 Dragon Breath may be useful later on, you should carry some bottles with you in your first visit to the End.
                 It is highly recommended you obtain ender cores from ender crystals in The End instead of simply breaking them. They will be pretty useful later on. 
                 Rushing your fight against the Dragon will deprive you of them.
             </p>
+        </page>
+        <page>
+            <p bold="true">Chapter Tips</p>
             <p>
-                The Crystal Forest cannot be found in the Overworld.
+                -Lunch Box allows you to store 6 slots of food to save some inventory space.
             </p>
+            <p>
+                -To make Aluminium Brass, you can obtain Zinc from Sphalerite Ores in the Crushing Table.
+            </p>
+            <p>
+                -Forge Hammer and Engineer's Hammer can be used in the Magneticraft Crushing Table aswell.
+            </p>
+            <p>
+                -MRUCU entity can also be generated by operating with machines that generate radiation. 
+            </p>
+            <p>
+                -Faucet can be connected to other mods tanks to pour super hot liquids onto the Casting Table.
+            </p>
+            <p>
+                -To create the portal to the Twilight Forest, a MRU Chunk is required instead of a diamond. 
+            </p>
+        </page>
+        <page>
         </page>
     </chapter>
     <chapter id="chapter3">
@@ -171,24 +187,21 @@
             </p>
         </page>
         <page>
+            <p bold="true">Chapter Tips</p>
             <p>
-                Immersive Engineering Excavator is unable to work, since it breaks the modpack oregen. Digital Miner and Void Miner are the alternatives later on in the 
-                game.
+                -Immersive Engineering Excavator is unable to work, since it breaks the modpack oregen. Digital Miner and Void Miner are the alternatives later on.
             </p>
             <p> 
-                Tech Reborn Blast Furnace, along with IE Arc Furnace, are the only ways to melt down some key elements due to their high melting point. Basic furnace
-                recipes have been removed for most of the metals.
+                -Tech Reborn Blast Furnace, along with IE Arc Furnace, are the only ways to melt down some elements due to their high melting point. The first also shows real melting point of each, if below 1200Celsius, basic furnaces can be used aswell.
             </p>
             <p>
-                Aroma1997's Dimensional World oregen has been disabled, no ore will spawn in there, it is not meant to be a mining dimension but instead for generating 
-                energy, setting up farms, testing stuff, etc. Sun never sets in this dimension.
+                -Aroma1997's Dimensional World oregen has been disabled, no ore will spawn in there, it is not meant to be a mining dimension but instead a place for generating energy, setting up farms, testing stuff, etc. Sun never sets in this dimension.
+            </p>
+            <p>
+                -Obsidian TNT renamed to ANFO, which now has a 100 blast power, useful to blow up mountains.
             </p>
         </page>
         <page>
-            <p bold="true">Mekanism</p>
-            <p>
-                -Obsidian TNT renamed to ANFO, which now has a 64 block radius explosion, useful to blow up entire mountains and make big holes.
-            </p>
             <p>
                 -Osmium processing reworked, no more x5 ore multiplying, now it is a high tier material thus it is not longer used in many low recipes.
             </p>
@@ -198,6 +211,9 @@
             <p color="#FF4F4F">
                 There is a config bug and they output now the same amount of power, this issue will be fixed asap.
             </p>
+            <p>
+                -Wasteland biomes are hazardous to the player, radiation may kill you in a few minutes if you dont go prepared. Mining there is no longer possible until you are able to counter it. 
+            </p>
         </page>
     </chapter>
 
@@ -205,27 +221,20 @@
         <page>
             <title bold="true" underline="true">The Late Game</title>
             <p>
-                There are many factors to measure how far you have progressed on this modpack, like powergen, mining production, chemistry and nuclear stuff. But once you 
-                set up your AE2 network you are entering a new tech level, you need one to deal with all the materials and craftings in a efficient way.
-                You should set up your AE2 network in your main base, as you can now teleport to different places there is no more need to create multiple bases to host 
-                your mining facilities. Now its the moment to experiment with new ways of generating power in bigger quantities, but you can also keep improving the 
-                renewable generators.
+                There are many factors to measure how far you have progressed on this modpack, like powergen, mining production, chemistry and nuclear stuff. But once you set up your AE2 network you are entering a new tech level, you need one to deal with all the materials and craftings in a efficient way.
+                You should set up your AE2 network in your main base, as you can now teleport to different places there is no more need to create multiple bases to host your mining facilities. Now its the moment to experiment with new ways of generating power in bigger quantities, but you can also keep improving the renewable generators output.
             </p>
         </page>
         <page>
+        	 <p bold="true">Chapter Tips</p>
             <p>
-                Simple Void World dimension is always at noon, as opposed to Aroma1997's permanent day, no mobs will spawn in there so it is a good place for experimenting 
-                and late game setups.
+                -Simple Void World dimension is always at noon, as opposed to Aroma1997's permanent day, no mobs will spawn in there so it is a good place for experimenting and late game setups.
             </p>
             <p>
-                NuclearCraft cooling capacity of materials reworked, vanilla and basic metals are much more inefficient at cooling to the point they are almost useless. 
-                On the other hand, materials like helium, enderium and cryotheum have it increased.
+                NuclearCraft cooling capacity of materials reworked, vanilla and basic metals are much more inefficient at cooling to the point they are almost useless. On the other hand, materials like helium, enderium and cryotheum have it increased.
             </p>
-            <p bold="true">Advanced Solar Panels</p>
             <p>
-                -Molecullar Transformer is the only way to obtain Iridium.
-                -Quantum Solar Panel will be permanently disabled since it makes no sense the cost/benefits ratio of this generator, also there is no config options to change 
-                this so i had to disable it.
+                -Molecullar Transformer is currently the only way to obtain Iridium.
             </p>
         </page>
     </chapter>
@@ -234,52 +243,44 @@
         <page>
             <title bold="true" underline="true">The End Game</title>
             <p>
-                At this point you should have a constant stream of materials coming to your base, with several automatic mining outposts located in certain profitable biomes 
-                which will provide you with key materials for the late game. 
+                At this point you should have a constant stream of materials coming to your base, with several automatic mining outposts located in certain profitable biomes which will provide you with key materials for the end game. 
                 Now crafting process gets more complicated and maybe even tedious, with more extended craftings and lots of chained crafts, to speed up the process it is highly recommended setting up an automatized crafting system. 
-                As late machines drain larger chunks of power to do their jobs, you will need to increase first your powergen capabilities, Nuclear reactors will prove helpful 
-                at this moment.
+                As late machines drain larger chunks of power to do their jobs, you will need to increase first your powergen capabilities, Nuclear reactors will prove helpful at this moment.
                 This is also the right moment to start with space exploration now that you have acquired enough knowledge in all the previous fields.
             </p>
         </page>
         <page>
-            <p bold="true">Advanced Rocketry</p>
+            <p bold="true">Chapter Tips</p>
             <p>
                 -Dilithium Ore can be only found at some rare Asteroids (in a similar fashion to Star Trek).
             </p>
             <p>
-                -Asteroids have been reworked to make them much more interesting to discover and exploit, there are 10 types of asteroids of different sizes and composition,
-                they contain 15 different ores, some of them very rare or unobtainable on the Earth (Overworld). 
+                -Asteroids have been reworked to make them much more interesting to discover and exploit, there are 10 types of asteroids of different sizes and composition, they contain 15 different ores, some of them very rare or unobtainable on the Earth (Overworld). 
             </p>
             <p>
-                OpenComputers is meant to be played with at this moment in the game, where you start dealing with big nuclear reactors, large networks and uncountable amounts
-                of items.
+                -Environmental Tech Tier 1 Void Ore Miner drains 26MRF/Block at very high rate per tick with only 1MRF energy buffer. This presents technical difficulties to the player that cannot be overcome until the End Game. However this is the only way to override the modpack oregen since it mines directly from The Void.
             </p>
             <p>
-                Environmental Tech Tier 1 Void Ore Miner drains 26MRF/Block at very high rate per tick with only 1MRF energy buffer. This presents technical difficulties to the 
-                player that cannot be overcome until the End Game. However this is the only way to override the modpack oregen since it mines directly from The Void.
+                -XNet Advanced Cables can transfer up to 500000 RF/t
             </p>
         </page>
         <page>
-            <p bold="true">XNet</p>
-            <p>
-                XNet has been moved to the Endgame since it provides the ultimate network cables, but in exchange for the latter appearance and more expensive recipes, their 
-                performance has been nicely improved, Advanced Cables are by far the most powerful energy cable in this Modpack, 10 times better than "unlimited" cryo-stabilized 
-                fluxducts.
-            </p>
-            <p bold="true">RFTools</p>
-            <p>
-                RFTools and RFTools Dimensions have the ultimate recipes of the game, if you are able to craft a Dimension Builder and run your own custom dimension, then you 
-                can say you have "beaten" this modpack, but, even though you can now create whatever you want inside your base, mods like Open Computers, Chisels and Bits, 
-                ArchitectureCraft offer unlimited possibilities to keep playing, the limit is in your hands.
-            </p>
         </page>
         <page>
-            <space height="240"/>
+            <space height="250"/>
             <p>
                 Thank you for playing my modpack.
             </p>
                 <p align="right">Tenosko</p>
+        </page>
+
+    </chapter>
+    <chapter id="chapter6">
+        <page>
+            <title bold="true" underline="true">Modpack Goals</title>
+            <p color="#FF4F4F">
+                List in process...
+            </p>
         </page>
     </chapter>
 </book>

@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "crystals": {
+      "generationAttempts": 1000,
+      "amountPerChunk": 6.0
+    },
+    "amethyst": {
+      "amountPerChunk": 8.0
+    },
+    "biome_essence": {
+      "amountPerChunk": 16.0
+    }
+  }
+}
