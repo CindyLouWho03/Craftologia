@@ -4,12 +4,21 @@
 //////////////     IC2     /////////////////////
 ////////////////////////////////////////////////
 
+<ore:plateAdvancedAlloy>.add(<ic2:crafting:3>);
+
+recipes.addShapeless(<ic2:cable>.withTag({type: 0 as byte, insulation: 0 as byte}),[<techreborn:cable>]);
+recipes.addShapeless(<ic2:cable:2>.withTag({type: 2 as byte, insulation: 0 as byte}),[<techreborn:cable:2>]);
+recipes.addShapeless(<ic2:cable:3>.withTag({type: 3 as byte, insulation: 0 as byte}),[<techreborn:cable:3>]);
+recipes.addShapeless(<ic2:cable:4>.withTag({type: 4 as byte, insulation: 0 as byte}),[<techreborn:cable:1>]);
+recipes.addShapeless(<ic2:cable>.withTag({type: 0 as byte, insulation: 1 as byte}), [<techreborn:cable:5>]);
+recipes.addShapeless(<ic2:cable:2>.withTag({type: 2 as byte, insulation: 1 as byte}), [<techreborn:cable:6>]);
+recipes.addShapeless(<ic2:cable:3>.withTag({type: 3 as byte, insulation: 1 as byte}), [<techreborn:cable:7>]);
+
 recipes.remove(<ic2:cable:1>.withTag({type: 1 as byte, insulation: 0 as byte}));
-recipes.addShaped(<ic2:cable:1>.withTag({type: 1 as byte, insulation: 0 as byte}),[
-	[<minecraft:glass>, <minecraft:glass>, <minecraft:glass>],
-	[<ic2:dust:6>, <ore:dustSilver>, <ic2:dust:6>],
-	[<minecraft:glass>, <minecraft:glass>, <minecraft:glass>]
-]);
+recipes.addShapeless(<ic2:cable:1>.withTag({type: 1 as byte, insulation: 0 as byte}),[<techreborn:cable:4>]);
+
+recipes.addShapeless(<ic2:cable:2>.withTag({type: 2 as byte, insulation: 0 as byte})*2,[<magneticraft:light_plates:1>, <ic2:cutter:*>.transformDamage(2)]);
+recipes.addShapeless(<ic2:cable:3>.withTag({type: 3 as byte, insulation: 0 as byte})*2,[<magneticraft:light_plates>, <ic2:cutter:*>.transformDamage(2)]);
 
 recipes.remove(<ic2:re_battery:*>);
 recipes.addShaped(<ic2:re_battery:26>,[
@@ -136,9 +145,9 @@ recipes.addShaped(<ic2:te:52>,[
 
 recipes.remove(<ic2:te:55>);	//Metal Former
 recipes.addShaped(<ic2:te:55>,[
-	[<thermalfoundation:material:288>, <ic2:crafting:6>, <thermalfoundation:material:288>],
-	[<immersiveengineering:material:2>, <ic2:resource:13>, <immersiveengineering:material:2>],
-	[<minecraft:piston>, <tconstruct:large_plate>.withTag({Material: "manyullyn"}), <minecraft:piston>]
+	[<thermalfoundation:material:288>, <ic2:crafting:6>, <ic2:crafting:1>],
+	[<immersiveengineering:material:2>, <minecraft:piston>, <ic2:re_battery:26>.withTag({})],
+	[<ic2:block_cutting_blade:2>, <tconstruct:large_plate>.withTag({Material: "manyullyn"}), <immersiveengineering:material:9>]
 ]);
 
 recipes.remove(<ic2:te:56>);	//Ore Washing Plant
@@ -169,11 +178,11 @@ mods.extendedcrafting.TableCrafting.addShaped(<ic2:te:63>,[
     [<nuclearcraft:part:3>, <advancedrocketry:productsheet:1>, <advancedrocketry:productsheet:1>, 
     <essentialcraft:storage:4>.withTag({mru: 1000000, balance: 0.0 as float, shade: 0 as byte}), <advancedrocketry:productsheet:1>, <advancedrocketry:productsheet:1>, 
     <nuclearcraft:part:3>], 
-    [<advancedrocketry:productsheet:1>, <stevescarts:modulecomponents:49>, <essentialcraft:genitem:60>, <advanced_solar_panels:crafting:13>, <advanced_solar_panels:crafting:9>, 
+    [<advancedrocketry:productsheet:1>, <nuclearcraft:ingot:2>, <essentialcraft:genitem:60>, <advanced_solar_panels:crafting:13>, <advanced_solar_panels:crafting:9>, 
     <stevescarts:modulecomponents:49> , <advancedrocketry:productsheet:1>], 
     [<essentialcraft:mrumatrixprojection:1>, <advancedrocketry:warpcore>, <essentialcraft:genitem:53>, <contenttweaker:crafting6>, <draconicevolution:chaotic_core>, 
     <advancedrocketry:warpcore>, <essentialcraft:mrumatrixprojection:2>],
-    [<advancedrocketry:productsheet:1>, <stevescarts:modulecomponents:49>, <essentialcraft:genitem:60>, <advanced_solar_panels:crafting:13>, <advanced_solar_panels:crafting:9>,
+    [<advancedrocketry:productsheet:1>, <nuclearcraft:ingot:2>, <essentialcraft:genitem:60>, <advanced_solar_panels:crafting:13>, <advanced_solar_panels:crafting:9>,
     <stevescarts:modulecomponents:49>, <advancedrocketry:productsheet:1>],
     [<nuclearcraft:part:3>, <advancedrocketry:productsheet:1>, <advancedrocketry:productsheet:1>, <draconicevolution:draconic_energy_core>, <advancedrocketry:productsheet:1>, 
     <advancedrocketry:productsheet:1>, <nuclearcraft:part:3>]
@@ -258,6 +267,7 @@ recipes.remove(<ic2:quantum_leggings:*>);
 
 #TechReborn to IC2 Electronic Circuit conversion, otherwise ic2:circuit is unaccesible
 //recipes.addShapeless(<ic2:crafting:1>, [<techreborn:part:29>]);
+<ic2:crafting:1>.displayName = "Basic Circuit";
 
 recipes.remove(<ic2:crafting:2>);
 recipes.addShaped(<ic2:crafting:2>,[
@@ -268,9 +278,9 @@ recipes.addShaped(<ic2:crafting:2>,[
 
 recipes.remove(<ic2:crafting:4>);	//This is the only way of getting Iridium Reinforced Plates
 mods.techreborn.rollingMachine.addShaped(<ic2:crafting:4>, [
+	[<ic2:crafting:13>, <ic2:misc_resource:1>, <ic2:crafting:13>],
 	[<ic2:misc_resource:1>, <ic2:crafting:3>, <ic2:misc_resource:1>],
-	[<ic2:crafting:3>, <ore:dustCobalt>, <ic2:crafting:3>],
-	[<ic2:misc_resource:1>, <ic2:crafting:3>, <ic2:misc_resource:1>]
+	[<ic2:crafting:13>, <ic2:misc_resource:1>, <ic2:crafting:13>]
 ]);
 
 recipes.remove(<ic2:crafting:6>);	//Electric Motor
@@ -316,14 +326,14 @@ recipes.addShaped(<ic2:crafting:14>,[
 <ic2:crafting:15>.displayName = "Carbon Fiber Plate";
 
 recipes.remove(<ic2:crafting:27>);
-recipes.addShaped(<ic2:crafting:27>,[
-	[<ore:dustNickel>, <ore:dustChrome>, <ore:dustCobalt>],
-	[<ic2:dust:13>, <ic2:dust:13>, <ic2:dust:13>],
-	[<ore:dustNickel>, <ore:dustChrome>, <ore:dustCobalt>]
+mods.techreborn.rollingMachine.addShaped(<ic2:crafting:27>,[
+	[null, <ore:dustPlatinum>, null],
+	[<ore:dustNickel>, <rockhounding_chemistry:chemical_dusts:42>, <ore:dustCobalt>],
+	[null, <ore:dustChrome>, null]
 ]);
 
 recipes.remove(<ic2:crafting:33>);	//Steel Rotor Blade
-recipes.addShaped(<ic2:crafting:34>,[
+recipes.addShaped(<ic2:crafting:33>,[
 	[<ore:ingotSteel>, <ore:ingotSteel>],
 	[<ore:ingotSteel>, <ore:ingotSteel>],
 	[<ore:ingotSteel>, <ore:ingotSteel>]
@@ -353,9 +363,9 @@ mods.immersiveengineering.Blueprint.addRecipe("components", <ic2:block_cutting_b
 
 recipes.remove(<ic2:block_cutting_blade:2>);
 recipes.addShaped(<ic2:block_cutting_blade:2>,[
-	[null],
+	[null, <ore:dustDiamond>, null],
 	[<ore:dustDiamond>, <ic2:block_cutting_blade:1>, <ore:dustDiamond>],
-	[null]
+	[null, <ore:dustDiamond>, null]
 ]);
 
 recipes.remove(<ic2:tfbp>);
@@ -407,7 +417,7 @@ recipes.addShaped(<ic2:forge_hammer>,[
 ]);
 
 recipes.remove(<ic2:drill:*>);
-recipes.addShapeless(<ic2:drill:26>,[<ic2:crafting:12>, <immersiveengineering:drillhead>]);
+recipes.addShapeless(<ic2:drill:26>,[<ic2:crafting:12>, <thermalfoundation:material:656>]);
 
 recipes.remove(<ic2:chainsaw:*>);
 recipes.addShaped(<ic2:chainsaw:26>,[
@@ -430,11 +440,49 @@ recipes.addShaped(<ic2:nano_saber:26>,[
 	[<contenttweaker:part2>]
 ]);
 
+recipes.remove(<ic2:bronze_pickaxe>);
+recipes.addShaped(<ic2:bronze_pickaxe>,[
+	[<tconstruct:pick_head>.withTag({Material: "bronze"})],
+	[<ore:string>],
+	[<ore:stickWood>]
+]);
+
+recipes.remove(<ic2:bronze_axe>);
+recipes.addShaped(<ic2:bronze_axe>,[
+	[<tconstruct:axe_head>.withTag({Material: "bronze"})],
+	[<ore:string>],
+	[<ore:stickWood>]
+]);
+
+recipes.remove(<ic2:bronze_shovel>);
+recipes.addShaped(<ic2:bronze_shovel>,[
+	[<tconstruct:shovel_head>.withTag({Material: "bronze"})],
+	[<ore:string>],
+	[<ore:stickWood>]
+]);
+
+recipes.remove(<ic2:bronze_hoe>);
+recipes.addShaped(<ic2:bronze_hoe>,[
+	[<tconstruct:scythe_head>.withTag({Material: "bronze"})],
+	[<ore:string>],
+	[<ore:stickWood>]
+]);
+
+recipes.remove(<ic2:bronze_sword>);
+recipes.addShaped(<ic2:bronze_sword>,[
+	[<tconstruct:sword_blade>.withTag({Material: "bronze"})],
+	[<betterwithmods:material:36>],
+]);
+
+
 recipes.remove(<ic2:frequency_transmitter>);
 recipes.addShapeless(<ic2:frequency_transmitter>,[<enderio:item_material:15>, <ic2:crafting:2>]);
 
 recipes.remove(<ic2:upgrade:3>);
 recipes.addShapeless(<ic2:upgrade:3>,[<projectred-integration:gate:2>]);
+
+furnace.remove(<ic2:crystal_memory>);	//May find a better way
+mods.techreborn.blastFurnace.addRecipe(<ic2:crystal_memory>.withTag({}), null, <ic2:crafting:27>, null, 600, 88, 3500);
 
 //----------------------//
 // Removed blocks/items //
@@ -442,7 +490,6 @@ recipes.addShapeless(<ic2:upgrade:3>,[<projectred-integration:gate:2>]);
 mods.jei.JEI.removeAndHide(<ic2:te:39>);	//Teleporter, the only ways of teleporting are RFTools and Draconic at endgame
 mods.jei.JEI.removeAndHide(<ic2:te:57>);	//Advanced Miner
 mods.jei.JEI.removeAndHide(<ic2:te:60>);	//Miner
-
 
 ////////////////////////////////////////////////
 ////////////// Tech Reborn /////////////////////
@@ -452,32 +499,25 @@ recipes.remove(<techreborn:cable>);
 recipes.addShapeless(<techreborn:cable>,[<ic2:cable>.withTag({type: 0 as byte, insulation: 0 as byte})]);
 
 recipes.remove(<techreborn:cable:1>);
-recipes.addShapeless(<techreborn:cable:1>,[<ic2:cable>.withTag({type: 2 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:1>,[<ic2:cable:4>.withTag({type: 4 as byte, insulation: 0 as byte})]);
 
 recipes.remove(<techreborn:cable:2>);
-recipes.addShapeless(<techreborn:cable:2>,[<ic2:cable>.withTag({type: 3 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:2>,[<ic2:cable:2>.withTag({type: 2 as byte, insulation: 0 as byte})]);
 
 recipes.remove(<techreborn:cable:3>);
-recipes.addShapeless(<techreborn:cable:3>,[<ic2:cable>.withTag({type: 4 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:3>,[<ic2:cable:3>.withTag({type: 3 as byte, insulation: 0 as byte})]);
 
 recipes.remove(<techreborn:cable:4>);
-recipes.addShaped(<techreborn:cable:4>*3, [
-	[<mekanism:polyethene>, <appliedenergistics2:part:140>, <mekanism:polyethene>],
-	[<minecraft:redstone>, <ic2:dust:13>, <ore:dustDiamond>],
-	[<mekanism:polyethene>, <appliedenergistics2:part:140>, <mekanism:polyethene>]
-]);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:cable:4>, null, <ore:dustSiliconDioxide>, <appliedenergistics2:part:140>, 1800, 45, 1800);
 
 recipes.remove(<techreborn:cable:5>);
-recipes.addShapeless(<techreborn:cable:5>, [<ore:itemRubber>, <techreborn:cable>]);
-recipes.addShapeless(<techreborn:cable:5>, [<ore:itemRubber>, <ic2:cable>.withTag({type: 0 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:5>, [<ic2:cable>.withTag({type: 0 as byte, insulation: 1 as byte})]);
 
 recipes.remove(<techreborn:cable:6>);
-recipes.addShapeless(<techreborn:cable:6>, [<ore:itemRubber>, <techreborn:cable:2>, <ore:itemRubber>]);
-recipes.addShapeless(<techreborn:cable:6>, [<ore:itemRubber>, <ic2:cable>.withTag({type: 2 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:6>, [<ic2:cable:2>.withTag({type: 2 as byte, insulation: 1 as byte})]);
 
 recipes.remove(<techreborn:cable:7>);
-recipes.addShapeless(<techreborn:cable:7>, [<ore:itemRubber>, <techreborn:cable:3>, <ore:itemRubber>]);
-recipes.addShapeless(<techreborn:cable:7>, [<ore:itemRubber>, <ic2:cable>.withTag({type: 3 as byte, insulation: 0 as byte})]);
+recipes.addShapeless(<techreborn:cable:7>, [<ic2:cable:3>.withTag({type: 3 as byte, insulation: 1 as byte})]);
 
 recipes.remove(<techreborn:rebattery>);
 recipes.addShaped(<techreborn:rebattery>,[
@@ -535,9 +575,9 @@ recipes.addShaped(<techreborn:machine_casing:1>,[
 
 recipes.remove(<techreborn:machine_casing:2>);
 recipes.addShaped(<techreborn:machine_casing:2>,[
-	[<rockhounding_chemistry:alloy_items_tech:22>, <ore:plateChrome>, <rockhounding_chemistry:alloy_items_tech:22>],
+	[<rockhounding_chemistry:metal_items:4>, <ore:plateChrome>, <rockhounding_chemistry:metal_items:4>],
 	[<techreborn:part>, <techreborn:machine_casing:1>, <techreborn:part>],
-	[<rockhounding_chemistry:alloy_items_tech:22>, <ore:plateChrome>, <rockhounding_chemistry:alloy_items_tech:22>]
+	[<rockhounding_chemistry:metal_items:4>, <ore:plateChrome>, <rockhounding_chemistry:metal_items:4>]
 ]);
 
 recipes.remove(<techreborn:quantum_chest>);
@@ -655,7 +695,7 @@ recipes.addShaped(<techreborn:electric_furnace>,[
 
 recipes.remove(<techreborn:implosion_compressor>);
 recipes.addShaped(<techreborn:implosion_compressor>,[
-	[<techreborn:part:30>, <magneticraft:heavy_plates:5>, <techreborn:part:30>],
+	[<ic2:crafting:2>, <magneticraft:heavy_plates:5>, <ic2:crafting:2>],
 	[<contenttweaker:plate1>, <techreborn:compressor>, <contenttweaker:plate1>],
 	[<techreborn:plates:35>, <techreborn:machine_frame:1>, <techreborn:plates:35>]
 ]);
@@ -748,8 +788,8 @@ recipes.addShaped(<techreborn:part:29>,[
 
 recipes.remove(<techreborn:part:30>);		//Advanced Electronic Circuit
 recipes.addShaped(<techreborn:part:30>,[
-	[<ore:nuggetElectrum>, <ore:dustChrome>, <mekanism:polyethene>],
-	[<ore:nuggetElectrum>, <techreborn:part:29>, <ore:dustChrome>],
+	[<ore:nuggetElectrum>, <techreborn:smalldust:10>, <mekanism:polyethene>],
+	[<ore:nuggetElectrum>, <techreborn:part:29>, <techreborn:smalldust:10>],
 	[<mekanism:polyethene>, <ore:nuggetElectrum>, <ore:nuggetElectrum>]
 ]);
 
@@ -788,7 +828,12 @@ recipes.addShaped(<techreborn:treetap>,[
 	[<biomesoplenty:plant_1:5>, <biomesoplenty:plant_1:5>, <biomesoplenty:plant_1:5>],
 	[null, null, <biomesoplenty:plant_1:5>]]);
 
-
+recipes.remove(<techreborn:electrictreetap>);
+recipes.addShaped(<techreborn:electrictreetap>.withTag({energy: 0}),[
+	[null, <techreborn:treetap>, null],
+	[<techreborn:cable:5>, <techreborn:rebattery>.withTag({energy: 0}), <immersiveengineering:material:8>],
+	[null, <ic2:casing>, null]
+]);
 
 recipes.remove(<techreborn:rockcutter>);
 recipes.addShaped(<techreborn:rockcutter>,[
@@ -799,7 +844,7 @@ recipes.addShaped(<techreborn:rockcutter>,[
 
 recipes.remove(<techreborn:irondrill>);
 recipes.addShaped(<techreborn:irondrill>,[
-	[null, <immersiveengineering:drillhead>, null],
+	[null, <thermalfoundation:material:656>, null],
 	[<projectred-core:resource_item:410>, <techreborn:part:29>, <immersiveengineering:material:9>],
 	[<mekanism:polyethene:2>, <ore:reBattery>, <mekanism:polyethene:2>]
 ]);
@@ -939,6 +984,23 @@ recipes.addShaped(<techreborn:alarm>,[
 
 <techreborn:industrial_sawmill>.displayName = "Cutting Machine";
 
+recipes.remove(<techreborn:nuke>);
+mods.extendedcrafting.TableCrafting.addShaped(<techreborn:nuke>,[
+    [<techreborn:plates:35>, <techreborn:plates:16>, <techreborn:plates:35>, <techreborn:plates:16>, <techreborn:plates:35>, null, null], 
+    [<techreborn:part:27>, <frogcraftrebirth:non_metal_dust>, <rockhounding_chemistry:misc_items:34>, <rockhounding_chemistry:misc_items:34>, <nuclearcraft:uranium:8>, 
+    <techreborn:plates:16>, null], 
+    [<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "neutron", Amount: 1000}}), <rockhounding_chemistry:chemical_dusts:19>, <immersiveengineering:graphite_electrode>, 
+    <nuclearcraft:uranium:8>, <nuclearcraft:uranium:4>, <nuclearcraft:uranium:8>, <techreborn:plates:35>], 
+    [<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "deuterium", Amount: 1000}}), <nuclearcraft:plutonium:4>, 
+    <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "tritium", Amount: 1000}}), <nuclearcraft:uranium:8>, 
+    <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "lithium6", Amount: 1000}}), <nuclearcraft:uranium:8>, <techreborn:plates:16>],
+    [<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "neutron", Amount: 1000}}), <rockhounding_chemistry:chemical_dusts:19>, <immersiveengineering:graphite_electrode>, 
+    <nuclearcraft:uranium:8>, <nuclearcraft:uranium:4>, <nuclearcraft:uranium:8>, <techreborn:plates:35>], 
+    [<techreborn:part:27>, <frogcraftrebirth:non_metal_dust>, <rockhounding_chemistry:misc_items:34>, <rockhounding_chemistry:misc_items:34>, <nuclearcraft:uranium:8>, 
+    <techreborn:plates:16>, null],
+    [<techreborn:plates:35>, <techreborn:plates:16>, <techreborn:plates:35>, <techreborn:plates:16>, <techreborn:plates:35>, null, null]
+]); 
+
 //-- Rolling Machine --//
 mods.techreborn.rollingMachine.removeRecipe(<minecraft:minecart>);
 mods.techreborn.rollingMachine.removeRecipe(<minecraft:rail>);
@@ -969,6 +1031,5 @@ mods.jei.JEI.removeAndHide(<techreborn:scrapboxinator>);
 //Renamed Blocks
 <techreborn:ore:10>.displayName = "Peridotite Ore";
 <techreborn:ore:1>.displayName = "Platinum Ore";
-
 
 

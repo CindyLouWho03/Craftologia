@@ -164,6 +164,10 @@ var monoCrystalSolarPanel = VanillaFactory.createItem("crafting8");
 monoCrystalSolarPanel.maxStackSize = 16;
 monoCrystalSolarPanel.register();
 
+var sodiumChlorideContainer = VanillaFactory.createItem("crafting9");
+sodiumChlorideContainer.maxStackSize = 1;
+sodiumChlorideContainer.maxDamage = 32;
+sodiumChlorideContainer.register();
 
 
 

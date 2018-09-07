@@ -46,7 +46,7 @@ recipes.remove(<deepresonance:smelter>);
 recipes.addShaped(<deepresonance:smelter>,[
 	[null, <ic2:crafting:1>, null],
 	[<techreborn:part:15>, <deepresonance:machine_frame>, <techreborn:part:15>],
-	[<minecraft:netherbrick>, <techreborn:part:15>, <minecraft:netherbrick>]
+	[<enderio:item_material:72>, <techreborn:part:15>, <enderio:item_material:72>]
 ]);
 
 recipes.remove(<deepresonance:purifier>);

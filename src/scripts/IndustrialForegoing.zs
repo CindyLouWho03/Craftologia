@@ -127,7 +127,8 @@ recipes.addShaped(<industrialforegoing:plant_interactor>,[
 ]);
 
 furnace.remove(<industrialforegoing:plastic>);
-recipes.addShapeless(<industrialforegoing:plastic>,[<industrialforegoing:dryrubber>*4]);
+recipes.addShapeless(<industrialforegoing:plastic>,[<industrialforegoing:dryrubber>*9]);
+mods.tconstruct.Casting.addTableRecipe(<industrialforegoing:plastic>, <tconstruct:cast_custom:3>, <liquid:plastic>, 144*4);
 
 recipes.remove(<industrialforegoing:mob_imprisonment_tool>);
 recipes.addShaped(<industrialforegoing:mob_imprisonment_tool>,[
@@ -242,5 +243,11 @@ recipes.addShapeless(<industrialforegoing:fluid_transfer_addon_pull>,[<ic2:upgra
 recipes.remove(<industrialforegoing:fluid_transfer_addon_push>);
 recipes.addShapeless(<industrialforegoing:fluid_transfer_addon_push>,[<ic2:upgrade:9>, <industrialforegoing:plastic>]);
 
+recipes.remove(<industrialforegoing:fertilizer>);
+recipes.addShapeless(<industrialforegoing:fertilizer>*16,[<rockhounding_surface:gypsum_items:4>, <actuallyadditions:item_misc:1>, <frogcraftrebirth:non_metal_dust:7>, 
+<rockhounding_chemistry:chemical_items:12>]);
+
 mods.jei.JEI.removeAndHide(<industrialforegoing:laser_lens:*>);
 mods.jei.JEI.removeAndHide(<industrialforegoing:laser_lens_inverted:*>);
+
+<ore:itemRubber>.remove(<industrialforegoing:plastic>);	//May become plastic sheets 

@@ -145,6 +145,9 @@ recipes.addShaped(<essentialcraft:genitem:30>,[
 recipes.remove(<essentialcraft:genitem:33>);
 recipes.addShapeless(<essentialcraft:genitem:33>, [<essentialcraft:genitem:23>, <essentialcraft:genitem:34>, <essentialcraft:genitem:20>]);
 
+recipes.remove(<essentialcraft:genitem:50>);
+mods.techreborn.alloySmelter.addRecipe(<essentialcraft:genitem:50>, <essentialcraft:genitem:51>*2, <essentialcraft:genitem:5>, 400, 10);
+
 recipes.remove(<essentialcraft:genitem:80>);
 recipes.addShaped(<essentialcraft:genitem:80>,[
 	[null, <essentialcraft:genitem>, null],

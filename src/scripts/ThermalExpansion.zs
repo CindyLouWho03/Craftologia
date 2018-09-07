@@ -53,9 +53,9 @@ recipes.remove(<thermaldynamics:duct_32:6>);
 recipes.remove(<thermaldynamics:duct_32:7>);
 
 recipes.addShaped(<thermaldynamics:duct_32>,[
-	[null, <thermalfoundation:material:132>, null],
-	[<thermalfoundation:material:132>, <ore:glassReinforced>, <thermalfoundation:material:132>],
-	[null, <thermalfoundation:material:132>, null]
+	[null, <techreborn:ingot>, null],
+	[<techreborn:ingot>, <ore:glassReinforced>, <techreborn:ingot>],
+	[null, <techreborn:ingot>, null]
 ]);
 
 recipes.addShapeless(<thermaldynamics:duct_32:2>, [<thermaldynamics:duct_32>, <ore:dustElectrum>, <minecraft:glowstone_dust>]);
@@ -291,7 +291,7 @@ recipes.addShaped(<thermalexpansion:frame:64>,[
 recipes.remove(<thermalexpansion:frame:128>);
 recipes.addShaped(<thermalexpansion:frame:128>,[
 	[<ore:ingotLead>, <minecraft:glass_pane>, <ore:ingotLead>],
-	[<minecraft:glass_pane>, <ore:gearElectrum>, <minecraft:glass_pane>],
+	[<minecraft:glass_pane>, <ore:ingotElectrum>, <minecraft:glass_pane>],
 	[<ore:ingotLead>, <minecraft:glass_pane>, <ore:ingotLead>]
 ]);
 
@@ -342,9 +342,9 @@ recipes.addShaped(<thermalfoundation:material:513>,[
 
 recipes.remove(<thermalfoundation:material:514>);	//Redstone Transmision Coil
 recipes.addShaped(<thermalfoundation:material:514>,[
-	[null, <actuallyadditions:item_crystal>, <mekanism:clump:5>],
+	[null, <actuallyadditions:item_crystal>, <ore:nuggetSilver>],
 	[<actuallyadditions:item_crystal>, <immersiveengineering:wirecoil:5>, <actuallyadditions:item_crystal>],
-	[<mekanism:clump:5>, <actuallyadditions:item_crystal>, null]
+	[<ore:nuggetSilver>, <actuallyadditions:item_crystal>, null]
 ]);
 
 recipes.remove(<thermalfoundation:material:515>);	//Redstone Conductance Coil
@@ -356,8 +356,12 @@ recipes.addShaped(<thermalfoundation:material:515>,[
 
 //Cryothenum should be crafted in a machine, instead of barehands, since it is harmful to player
 //Cryotheum dust is more expensive as it is intended to be a later game material, default recipe is fairly easy to obtain
+<thermalfoundation:material:656>.displayName = "Advanced Drill Head";
+
 recipes.remove(<thermalfoundation:material:656>);
-recipes.addShapeless(<thermalfoundation:material:656>,[<immersiveengineering:drillhead>]);
+mods.immersiveengineering.Blueprint.addRecipe("components", <thermalfoundation:material:656>, 
+	[<nuclearcraft:alloy:5>*4, <tconstruct:tough_binding>.withTag({Material: "tough"}), <magneticraft:steel_hammer>, 
+	<forge:bucketfilled>.withTag({FluidName: "pyrotheum", Amount: 1000})]);
 
 recipes.remove(<thermalfoundation:material:657>);
 recipes.addShapeless(<thermalfoundation:material:657>,[<betterwithmods:steel_saw>]);

@@ -43,7 +43,7 @@ recipes.remove(<immersiveengineering:sword_steel>);
 recipes.addShaped(<immersiveengineering:sword_steel>,[
 	[<tconstruct:sword_blade>.withTag({Material: "steel"})],
 	[<tconstruct:wide_guard>.withTag({Material: "bronze"})],
-	[<betterwithmods:material:8>, <betterwithmods:shaft>, <betterwithmods:material:8>]
+	[<betterwithmods:material:36>]
 ]);
 
 recipes.remove(<immersiveengineering:stone_decoration>);
@@ -140,6 +140,9 @@ recipes.remove(<immersiveengineering:material:1>);
 recipes.remove(<immersiveengineering:material:2>);	
 recipes.remove(<immersiveengineering:material:3>);
 
+recipes.addShapeless(<immersiveengineering:material:1>,[<tconstruct:tool_rod>.withTag({Material: "iron"})]);
+mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:material:3>, <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:plastic>, 144*4);
+
 recipes.remove(<immersiveengineering:connector>);
 recipes.addShaped(<immersiveengineering:connector>,[
 	[null, null, null],
@@ -210,7 +213,7 @@ recipes.addShaped(<immersiveengineering:metal_device0:2>,[
 recipes.remove(<immersiveengineering:metal_device0:5>);
 recipes.addShaped(<immersiveengineering:metal_device0:5>,[
 	[null, <contenttweaker:crafting1>, null],
-	[<immersiveengineering:metal:39>, <immersiveengineering:material:8>, <immersiveengineering:metal:39>],
+	[<ore:plateIron>, <immersiveengineering:material:8>, <ore:plateIron>],
 	[<immersiveengineering:material:8>, <immersiveengineering:metal_device1:6>, <immersiveengineering:material:8>]
 ]);
 
@@ -280,6 +283,8 @@ recipes.addShaped(<immersiveengineering:material:5>,[
 	[<betterwithmods:material:4>, <immersiveengineering:material>, <betterwithmods:material:4>],
 	[<betterwithmods:material:4>, <betterwithmods:material:4>, <betterwithmods:material:4>]
 ]);
+
+recipes.addShapeless(<immersiveengineering:material:2>,[<tconstruct:tool_rod>.withTag({Material: "steel"})]);
 
 recipes.remove(<immersiveengineering:material:13>);		//Wooden Grip
 mods.immersiveengineering.Blueprint.addRecipe("components", <immersiveengineering:material:13>, 
@@ -374,14 +379,25 @@ recipes.addShapeless(<immersiveengineering:fluorescent_tube>,[<immersiveengineer
 
 recipes.remove(<immersiveengineering:metal_device1:7>);
 
+<immersiveengineering:metal:34>.displayName = "Berylllium Thin Plate";
+recipes.remove(<immersiveengineering:metal:34>);
+mods.rockhounding_chemistry.ProfilingBench.add(<nuclearcraft:ingot:9>, <immersiveengineering:metal:34>*4, 3);
+
+<immersiveengineering:metal:39>.displayName = "Redstone Base Plate";
+mods.techreborn.rollingMachine.addShaped(<immersiveengineering:metal:39>, [
+	[<minecraft:iron_nugget>, <ic2:misc_resource:4>, <minecraft:iron_nugget>],
+	[<techreborn:smalldust:61>, <techreborn:smalldust:61>, <techreborn:smalldust:61>],
+	[<techreborn:smalldust:1>, <ic2:misc_resource:4>, <techreborn:smalldust:1>]
+]);
+
 //////////////////////////////////////////////////////////////
 /////////////		Immersive Petroleum	     /////////////////
 //////////////////////////////////////////////////////////////
 
 recipes.remove(<immersivepetroleum:metal_device:1>);
 recipes.addShaped(<immersivepetroleum:metal_device:1>,[
-	[<minecraft:iron_ingot>, <minecraft:bucket>, <minecraft:iron_ingot>],
-	[<immersiveengineering:metal:39>, <immersiveengineering:metal_decoration0:6>, <immersiveengineering:metal:39>],
+	[<immersiveengineering:metal:8>, <minecraft:bucket>, <immersiveengineering:metal:8>],
+	[<ore:plateIron>, <immersiveengineering:metal_decoration0:6>, <ore:plateIron>],
 	[<minecraft:iron_ingot>, <immersiveengineering:metal_device0>, <minecraft:iron_ingot>]
 ]);
 

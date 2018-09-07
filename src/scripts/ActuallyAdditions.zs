@@ -4,12 +4,17 @@
 /////////////      Actually Additions     ////////////////////
 //////////////////////////////////////////////////////////////
 
+//Ender Casing
+recipes.remove(<actuallyadditions:block_misc:8>);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_misc:8>, <thermalfoundation:storage_alloy:7>, 
+	<mekanism:otherdust:6>, <nuclearcraft:dust:8>, <techreborn:dust:55>, <actuallyadditions:item_misc:5>, 160000, 10,[0.4,0,1]);
+
 //Iron Casing
 recipes.remove(<actuallyadditions:block_misc:9>);
 recipes.addShaped(<actuallyadditions:block_misc:9>,[
-	[<immersiveengineering:metal:39>, <immersiveengineering:metal:39>, <immersiveengineering:metal:39>],
+	[<magneticraft:light_plates>, <immersiveengineering:metal:39>, <magneticraft:light_plates>],
 	[<betterwithmods:material:51>, <tconstruct:ingots>, <betterwithmods:material:51>],
-	[<immersiveengineering:metal:39>, <immersiveengineering:metal:39>, <immersiveengineering:metal:39>]
+	[<magneticraft:light_plates>, <immersiveengineering:metal:39>, <magneticraft:light_plates>]
 ]);
 
 recipes.remove(<actuallyadditions:item_battery>);
@@ -43,7 +48,7 @@ recipes.addShaped(<actuallyadditions:block_miner>,[
 recipes.remove(<actuallyadditions:block_atomic_reconstructor>);
 recipes.addShaped(<actuallyadditions:block_atomic_reconstructor>,[
 	[<ore:plateLead>, <ore:ingotSteel>, <ore:plateLead>],
-	[<actuallyadditions:item_battery_double>, <mekanism:machineblock2:13>, <minecraft:stained_glass_pane:5>],
+	[<techreborn:lithiumbattery>.withTag({energy: 0}), <mekanism:machineblock2:13>, <minecraft:stained_glass_pane:5>],
 	[<ore:plateLead>, <ore:ingotSteel>, <ore:plateLead>]
 ]);
 
@@ -56,14 +61,14 @@ recipes.addShaped(<actuallyadditions:block_laser_relay>,[
 
 recipes.remove(<actuallyadditions:block_laser_relay_advanced>);
 recipes.addShaped(<actuallyadditions:block_laser_relay_advanced>,[
-	[null, <actuallyadditions:item_crystal>, null],
+	[null, <actuallyadditions:item_crystal_empowered>, null],
 	[null, <extrautils2:ingredients:2>, null],
 	[<techreborn:plates:8>, <thermalfoundation:material:514>, <techreborn:plates:8>]
 ]);
 
 recipes.remove(<actuallyadditions:block_laser_relay_extreme>);
 recipes.addShaped(<actuallyadditions:block_laser_relay_extreme>,[
-	[null, <actuallyadditions:item_crystal_empowered>, null],
+	[null, <rockhounding_chemistry:alloy_items_gems:2>, null],
 	[null, <extrautils2:ingredients:2>, null],
 	[<techreborn:plates:9>, <actuallyadditions:battery_double_bauble>, <techreborn:plates:9>]
 ]);
@@ -133,7 +138,7 @@ recipes.addShaped(<actuallyadditions:item_misc:16>,[
 recipes.remove(<actuallyadditions:item_drill:3>);
 recipes.addShaped(<actuallyadditions:item_drill:3>,[
 	[null, <actuallyadditions:item_crystal_empowered:2>, null],
-	[<ore:nuggetTitanium>, <immersiveengineering:drillhead>, <ore:nuggetTitanium>],
+	[<ore:nuggetTitanium>, <thermalfoundation:material:656>, <ore:nuggetTitanium>],
 	[<mekanism:polyethene:2>, <actuallyadditions:item_misc:16>, <actuallyadditions:battery_double_bauble>]
 ]);
 
@@ -244,6 +249,12 @@ recipes.addShaped(<actuallyadditions:item_potion_ring_advanced:7>,[
 recipes.remove(<actuallyadditions:item_misc:19>);
 recipes.addShapeless(<actuallyadditions:item_misc:19>,[<minecraft:nether_star>, <minecraft:dragon_breath>, <extrautils2:ingredients:10>, <twilightforest:fiery_blood>]);
 <actuallyadditions:item_misc:19>.displayName = "Chaos Star";
+
+mods.extendedcrafting.EnderCrafting.addShaped(<actuallyadditions:item_misc:19>, [
+	[null, <minecraft:dragon_breath>, null],
+	[<extrautils2:ingredients:10>, <minecraft:nether_star>, <quark:black_ash>],
+	[null, <twilightforest:fiery_blood>, null]
+]);
 
 mods.actuallyadditions.AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:3>);
 mods.actuallyadditions.AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal:3>, <enderio:item_material:5>, 300000);

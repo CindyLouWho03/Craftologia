@@ -23,6 +23,10 @@ recipes.addShapeless(<mekanism:gasupgrade>,[<mekanism:polyethene:2>, <stevescart
 mods.mekanism.infuser.removeRecipe(<mekanism:controlcircuit>, <rockhounding_chemistry:metal_items:2>, "REDSTONE");
 mods.mekanism.infuser.addRecipe("REDSTONE", 10, <projectred-core:resource_item>, <mekanism:controlcircuit>);
 
+//Iron no longer used for enriched alloys
+mods.mekanism.infuser.removeRecipe(<mekanism:enrichedalloy>, <minecraft:iron_ingot>, "REDSTONE");
+mods.mekanism.infuser.addRecipe("REDSTONE", 10, <techreborn:plates:35>, <mekanism:enrichedalloy>*2);
+
 recipes.remove(<mekanism:energytablet>);
 recipes.addShaped(<mekanism:energytablet>,[
 	[<minecraft:redstone>, <ore:dustLithium>, <minecraft:redstone>],
@@ -38,11 +42,13 @@ recipes.addShaped(<mekanism:robit>,[
 ]);
 
 recipes.remove(<mekanism:atomicdisassembler>);
-recipes.addShaped(<mekanism:atomicdisassembler>,[
-	[<rftools:infused_diamond>, <mekanism:atomicalloy>, <rftools:infused_diamond>],
-	[null, <mekanism:energytablet>, <mekanism:atomicalloy>],
-	[null, null, <redstonearsenal:material:193>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<mekanism:atomicdisassembler>,[
+    [null, null, <rftools:infused_diamond>, <mekanism:energytablet>.withTag({mekData: {}}), <thermalfoundation:material:229>],  
+    [null, <rftools:infused_diamond>, <mekanism:atomicalloy>, <tconstruct:binding>.withTag({Material: "hard_carbon"}), <tconstruct:cross_guard>.withTag({Material: "hard_carbon"})],  
+    [null, null, <rftools:infused_diamond>, <contenttweaker:part2>, <thermalfoundation:material:229>],  
+    [null, null, null, <contenttweaker:part2>, null], 
+    [null, null, null, <thermalfoundation:material:229>, null] 
+]); 
 
 recipes.remove(<mekanism:configurator>);
 recipes.addShaped(<mekanism:configurator>,[
@@ -123,9 +129,9 @@ recipes.addShaped(<mekanism:basicblock:8>,[
 //Dynamic Tank
 recipes.remove(<mekanism:basicblock:9>);
 recipes.addShaped(<mekanism:basicblock:9>,[
-	[null, <ore:ingotSteel>, null],
-	[<ore:ingotSteel>, <minecraft:bucket>, <ore:ingotSteel>],
-	[null, <ore:ingotSteel>, null]
+	[null, <rockhounding_chemistry:alloy_parts:25>, null],
+	[<rockhounding_chemistry:alloy_parts:25>, <mekanism:machineblock2:11>.withTag({tier: 1, mekData: {}}), <rockhounding_chemistry:alloy_parts:25>],
+	[null, <rockhounding_chemistry:alloy_parts:25>, null]
 ]);
 
 recipes.remove(<mekanism:basicblock:10>);
@@ -219,7 +225,7 @@ recipes.remove(<mekanism:machineblock:8>);
 recipes.addShaped(<mekanism:machineblock:8>,[
 	[<mekanism:nugget:1>, <techreborn:part:14>, <mekanism:nugget:1>],
 	[<thermalfoundation:material:357>, <techreborn:machine_frame:1>, <thermalfoundation:material:357>],
-	[<mekanism:energytablet>.withTag({mekData: {}}), <ore:circuitBasic>, <minecraft:redstone>]
+	[<ic2:re_battery:26>.withTag({}), <ore:circuitBasic>, <minecraft:redstone>]
 ]);
 //Purification Chamber
 recipes.remove(<mekanism:machineblock:9>);
@@ -330,6 +336,17 @@ recipes.addShaped(<mekanism:machineblock2:9>,[
 	[<rockhounding_chemistry:misc_blocks_a>,<ic2:crafting:30>, <immersiveengineering:material:9>],
 	[<ore:plateSteel>,<ic2:crafting:30>, <ore:plateSteel>]
 ]);
+//PRC
+recipes.remove(<mekanism:machineblock2:10>);
+mods.extendedcrafting.TableCrafting.addShaped(<mekanism:machineblock2:10>,[
+    [null],  
+    [null],  
+    [<ore:plateAdvancedAlloy>, <mekanism:reinforcedalloy>, <mekanism:machineblock>, <mekanism:reinforcedalloy>, <ore:plateAdvancedAlloy>],  
+    [<mekanism:controlcircuit:2>, <mekanism:transmitter:2>.withTag({tier: 0}), <advgenerators:advanced_pressure_valve>, <mekanism:transmitter:2>.withTag({tier: 0}), 
+    <mekanism:controlcircuit:2>], 
+    [<ore:plateAdvancedAlloy>, <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}}), 
+    <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <ore:plateAdvancedAlloy>] 
+]); 
 //Tank
 recipes.remove(<mekanism:machineblock2:11>.withTag({tier: 0}));
 recipes.addShaped(<mekanism:machineblock2:11>.withTag({tier: 0}),[
@@ -347,8 +364,8 @@ recipes.addShaped(<mekanism:machineblock2:13>,[
 //Laser Amplifier
 recipes.remove(<mekanism:machineblock2:14>);
 recipes.addShaped(<mekanism:machineblock2:14>.withTag({mekData: {}}),[
-	[<ore:stickSteel>, <environmentaltech:laser_lens>, <ore:stickSteel>],
-	[<ore:ingotInvar>, <mekanismgenerators:reactorglass:1>, <ore:ingotInvar>],
+	[<ore:stickSteel>, <rockhounding_chemistry:alloy_items_gems:1>, <ore:stickSteel>],
+	[<techreborn:plates:22>, <mekanismgenerators:reactorglass:1>, <techreborn:plates:22>],
 	[<ore:stickSteel>, <actuallyadditions:item_crystal_empowered>, <ore:stickSteel>]
 ]);
 //Quantum Entangloporter
@@ -432,9 +449,9 @@ recipes.addShaped(<mekanism:transmitter:3>.withTag({tier: 0})*2,[
 //ThermodynamicConductor
 recipes.remove(<mekanism:transmitter:6>.withTag({tier: 0}));
 recipes.addShaped(<mekanism:transmitter:6>.withTag({tier: 0})*2,[
-	[<ore:ingotSteel>, <mekanism:crystal:2>, <ore:ingotSteel>],
-	[null, <techreborn:dust:10>, null],
-	[<ore:ingotSteel>, <mekanism:crystal:2>, <ore:ingotSteel>]
+	[<techreborn:ingot:4>, null, <techreborn:ingot:4>],
+	[null, <nuclearcraft:part:6>, null],
+	[<techreborn:ingot:4>, null, <techreborn:ingot:4>]
 ]);
 
 recipes.remove(<mekanism:gastank>.withTag({tier: 0, mekData: {}}));
@@ -515,6 +532,13 @@ mods.extendedcrafting.TableCrafting.addShaped(<mekanismgenerators:generator:6>,[
     [null, <ore:plateAdvancedAlloy>, <mekanism:transmitter>.withTag({tier: 2}), <ore:plateAdvancedAlloy>, null], 
     [<ore:plateAdvancedAlloy>, <ore:plateAdvancedAlloy>, <mekanism:energytablet>.withTag({mekData: {}}), <ore:plateAdvancedAlloy>, <ore:plateAdvancedAlloy>]
 ]); 
+//Rotational Complex
+recipes.remove(<mekanismgenerators:generator:8>);
+recipes.addShaped(<mekanismgenerators:generator:8>, [
+	[<nuclearcraft:alloy:5>, <techreborn:plates:35>, <nuclearcraft:alloy:5>],
+	[<techreborn:part:30>, <contenttweaker:crafting7>, <techreborn:plates:35>],
+	[<nuclearcraft:alloy:5>, <techreborn:plates:35>, <nuclearcraft:alloy:5>]
+]);
 //Turbine Rotor
 recipes.remove(<mekanismgenerators:generator:7>);
 mods.techreborn.rollingMachine.addShaped(<mekanismgenerators:generator:7>, [
@@ -549,9 +573,9 @@ recipes.addShaped(<mekanismgenerators:generator:12>,[
 //Saturating Condenser
 recipes.remove(<mekanismgenerators:generator:13>);
 recipes.addShaped(<mekanismgenerators:generator:13>,[
-	[<techreborn:ingot:15>, <ore:ingotOsmium>, <techreborn:ingot:15>],
-	[<ore:ingotOsmium>, <ic2:te:27>, <ore:ingotOsmium>],
-	[<techreborn:ingot:15>, <ore:ingotOsmium>, <techreborn:ingot:15>]
+	[<nuclearcraft:alloy:11>, <rockhounding_chemistry:misc_items:28>, <nuclearcraft:alloy:11>],
+	[<rockhounding_chemistry:misc_items:28>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "cryotheum", Amount: 1000}}), <rockhounding_chemistry:misc_items:28>],
+	[<nuclearcraft:alloy:11>, <rockhounding_chemistry:misc_items:28>, <nuclearcraft:alloy:11>]
 ]);
 
 recipes.remove(<mekanismgenerators:reactor>);

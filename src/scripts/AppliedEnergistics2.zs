@@ -8,12 +8,16 @@
 mods.techreborn.grinder.addRecipe(<appliedenergistics2:material:45>*2, <appliedenergistics2:sky_stone_block>, 200, 64);
 mods.mekanism.crusher.addRecipe(<appliedenergistics2:sky_stone_block>, <appliedenergistics2:material:45>);
 
+<appliedenergistics2:grindstone>.displayName = "Diamond Grindstone";
 recipes.remove(<appliedenergistics2:grindstone>);
 recipes.addShaped(<appliedenergistics2:grindstone>,[
 	[<minecraft:cobblestone>, <betterwithmods:shaft>, <minecraft:cobblestone>],
 	[<minecraft:diamond>, <betterwithmods:material>, <minecraft:diamond>],
 	[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>]
 ]);
+
+recipes.remove(<appliedenergistics2:crank>);
+recipes.addShapeless(<appliedenergistics2:crank>,[<ore:fiberHemp>, <minecraft:stick>, <betterwithmods:shaft>]);
 
 recipes.remove(<appliedenergistics2:inscriber>);
 mods.extendedcrafting.TableCrafting.addShaped(<appliedenergistics2:inscriber>,[
@@ -362,3 +366,11 @@ recipes.addShaped(<appliedenergistics2:material:52>,[
 	[<minecraft:glowstone_dust>, <appliedenergistics2:material:10>, <minecraft:glowstone_dust>],
 	[<techreborn:plates:16>, <ore:nuggetInvar>, <techreborn:plates:16>]
 ]);
+
+//Removed items since config option does not remove them properly
+<ore:gearWood>.remove(<appliedenergistics2:material:40>);
+mods.jei.JEI.removeAndHide(<appliedenergistics2:material:40>);
+<ore:dustIron>.remove(<appliedenergistics2:material:49>);
+mods.jei.JEI.removeAndHide(<appliedenergistics2:material:49>);
+<ore:dustGold>.remove(<appliedenergistics2:material:51>);
+mods.jei.JEI.removeAndHide(<appliedenergistics2:material:51>);

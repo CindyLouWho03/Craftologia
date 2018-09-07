@@ -122,11 +122,14 @@ recipes.addShaped(<nuclearcraft:infuser_idle>,[
 ]);
 
 recipes.remove(<nuclearcraft:melter_idle>);
-recipes.addShaped(<nuclearcraft:melter_idle>,[
-	[<nuclearcraft:alloy:1>, <nuclearcraft:part:1>, <nuclearcraft:alloy:1>],
-	[<nuclearcraft:alloy_furnace_idle>, <techreborn:part:13>, <ic2:te:81>],
-	[<nuclearcraft:part:1>, <betterwithmods:aesthetic:2>, <nuclearcraft:part:1>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<nuclearcraft:melter_idle>,[
+    [null],  
+    [<nuclearcraft:part:1>, <ic2:crafting:15>, <techreborn:lithiumbattery>.withTag({energy: 0}), <ic2:crafting:15>, <nuclearcraft:part:1>],  
+    [<nuclearcraft:alloy:1>, <immersiveengineering:stone_decoration_slab:2>, null, <immersiveengineering:stone_decoration_slab:2>, <nuclearcraft:alloy:1>],  
+    [<rockhounding_chemistry:alloy_items_tech:22>, <rockhounding_chemistry:misc_items:28>, <mekanism:basicblock2:5>, <rockhounding_chemistry:misc_items:28>, 
+    <rockhounding_chemistry:alloy_items_tech:22>], 
+    [<nuclearcraft:part:1>, <deepresonance:dense_obsidian>, <rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}), <deepresonance:dense_obsidian>, <nuclearcraft:part:1>] 
+]); 
 
 recipes.remove(<nuclearcraft:supercooler_idle>);
 recipes.addShaped(<nuclearcraft:supercooler_idle>,[
@@ -159,9 +162,9 @@ recipes.addShaped(<nuclearcraft:irradiator_idle>,[
 
 recipes.remove(<nuclearcraft:ingot_former_idle>);
 recipes.addShaped(<nuclearcraft:ingot_former_idle>,[
-	[<nuclearcraft:part:1>, <nuclearcraft:ingot:5>, <nuclearcraft:part:1>],
-	[<ic2:te:81>, <rockhounding_chemistry:ingot_pattern>, null],
-	[<nuclearcraft:part:1>, <nuclearcraft:ingot:5>, <nuclearcraft:part:1>]
+	[<nuclearcraft:part:1>, <immersiveengineering:stone_decoration_slab:1>, <nuclearcraft:part:1>],
+	[<ic2:te:81>, <rockhounding_chemistry:ingot_pattern>, <enderio:item_material:72>],
+	[<nuclearcraft:part:1>, <immersiveengineering:stone_decoration_slab:1>, <nuclearcraft:part:1>]
 ]);
 
 recipes.remove(<nuclearcraft:pressurizer_idle>);
@@ -233,9 +236,9 @@ recipes.addShaped(<nuclearcraft:decay_generator>,[
 
 recipes.remove(<nuclearcraft:active_cooler>);
 recipes.addShaped(<nuclearcraft:active_cooler>,[
-	[null, <ore:ingotTin>, null],
+	[<tconstruct:ingots:5>, <ore:ingotTin>, <tconstruct:ingots:5>],
 	[<ore:ingotTin>, <nuclearcraft:cooler>, <ore:ingotTin>],
-	[null, <ore:ingotTin>, null]
+	[<tconstruct:ingots:5>, <ore:ingotTin>, <tconstruct:ingots:5>]
 ]);
 
 recipes.remove(<nuclearcraft:bin>);
@@ -285,24 +288,24 @@ recipes.addShapeless(<nuclearcraft:glowing_mushroom>,[<minecraft:brown_mushroom>
 
 //Basic Plating
 recipes.remove(<nuclearcraft:part>);
-recipes.addShaped(<nuclearcraft:part>,[
-	[null, <ore:dustObsidian>, null],
-	[<immersiveengineering:material:18>, <ic2:plate:14>, <immersiveengineering:material:18>],
-	[null, <ore:dustObsidian>, null]
+mods.techreborn.rollingMachine.addShaped(<nuclearcraft:part>*3,[
+	[null, <techreborn:ingot:13>, null],
+	[null, <nuclearcraft:alloy:9>, null],
+	[null, <techreborn:ingot:13>, null]
 ]);
 
 recipes.remove(<nuclearcraft:part:1>);
 recipes.addShaped(<nuclearcraft:part:1>,[
-	[<ore:dustTin>, <techreborn:dust:1>, <ore:dustTin>],
-	[<techreborn:dust:1>, <nuclearcraft:part>, <techreborn:dust:1>],
-	[<ore:dustTin>, <techreborn:dust:1>, <ore:dustTin>]
+	[null, <ore:dustObsidian>, null],
+	[<ore:dustObsidian>, <nuclearcraft:part>, <ore:dustObsidian>],
+	[null, <ore:dustObsidian>, null]
 ]);
 
 recipes.remove(<nuclearcraft:part:3>);
 mods.techreborn.rollingMachine.addShaped(<nuclearcraft:part:3>,[
-	[null, <nuclearcraft:compound:1>, null],
-	[<nuclearcraft:compound:1>, <nuclearcraft:part:1>, <nuclearcraft:compound:1>],
-	[null, <nuclearcraft:compound:1>, null]
+	[<nuclearcraft:compound:1>, <nuclearcraft:dust:2>, <nuclearcraft:compound:1>],
+	[<nuclearcraft:dust:2>, <contenttweaker:plate>, <nuclearcraft:dust:2>],
+	[<nuclearcraft:compound:1>, <nuclearcraft:dust:2>, <nuclearcraft:compound:1>]
 ]);
 
 recipes.remove(<nuclearcraft:part:4>);
@@ -368,7 +371,62 @@ mods.techreborn.rollingMachine.addShaped(<nuclearcraft:reactor_door_item>,[
 	[<nuclearcraft:part>, <nuclearcraft:part>, null]
 ]);
 
+recipes.remove(<nuclearcraft:rad_shielding>);
+recipes.addShaped(<nuclearcraft:rad_shielding>,[
+	[null],
+	[<ore:dustCarbon>, <contenttweaker:material3>, <ore:dustCarbon>],
+	[<nuclearcraft:dust:2>, <magneticraft:crafting:6>, <nuclearcraft:dust:2>]
+]);
+
+recipes.remove(<nuclearcraft:rad_shielding:1>);
+recipes.addShaped(<nuclearcraft:rad_shielding:1>,[
+	[null, <nuclearcraft:dust:5>, null],
+	[<ic2:crafting:15>, <contenttweaker:material3>, <ic2:crafting:15>],
+	[<nuclearcraft:dust:2>, <magneticraft:crafting:6>, <nuclearcraft:dust:2>]
+]);
+
+recipes.remove(<nuclearcraft:rad_shielding:2>);
+recipes.addShaped(<nuclearcraft:rad_shielding:2>,[
+	[<immersiveengineering:metal:34>, <nuclearcraft:part:6>, <immersiveengineering:metal:34>],
+	[<ic2:crafting:15>, <contenttweaker:material3>, <ic2:crafting:15>],
+	[<nuclearcraft:dust:2>, <magneticraft:crafting:6>, <nuclearcraft:dust:2>]
+]);
+
+recipes.remove(<nuclearcraft:geiger_counter>);
+recipes.addShaped(<nuclearcraft:geiger_counter>,[
+	[<quark:biotite>, null, <ore:itemRubber>],
+	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), null, <rsgauges:flatgauge3>],
+	[<rockhounding_chemistry:misc_items:33>, <techreborn:cable:5>, <techreborn:part:30>]
+]);
+
+recipes.remove(<nuclearcraft:rad_x>);
+recipes.addShaped(<nuclearcraft:rad_x>,[
+	[null, <ic2:misc_resource:6>, null],
+	[<ore:dustSalt>, <frogcraftrebirth:inflammable:3>, <nuclearcraft:compound:2>],
+	[null, <nuclearcraft:radaway>, null]
+]);
+
+<nuclearcraft:solar_panel_elite>.displayName = "Celestial Solar Panel";
+recipes.remove(<nuclearcraft:solar_panel_elite>);
+mods.extendedcrafting.TableCrafting.addShaped(<nuclearcraft:solar_panel_elite>,[ 
+    [<nuclearcraft:compound:1>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <nuclearcraft:compound:1>],  
+    [<contenttweaker:dust4>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <contenttweaker:dust4>],  
+    [<nuclearcraft:compound:1>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <nuclearcraft:compound:1>],  
+    [<nuclearcraft:part:3>, <rockhounding_chemistry:metal_items:13>, <techreborn:solar_panel:4>, <rockhounding_chemistry:metal_items:13>, <nuclearcraft:part:3>], 
+    [<nuclearcraft:part:3>, <techreborn:part:17>, <draconicevolution:wyvern_energy_core>, <techreborn:part:17>, <nuclearcraft:part:3>] 
+]); 
+
 mods.techreborn.centrifuge.addRecipe(<nuclearcraft:gem_dust:1>, <techreborn:smalldust:11>, null, null, <minecraft:redstone>*16, null, 2840, 16);
+
+//Lead-Platinum Alloy also in blastFurnace
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:alloy:9>*4, null, <ore:dustLead>*3, <ore:dustPlatinum>, 1800, 45, 1800);
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:alloy:9>*4, null, <ore:ingotLead>*3, <ore:dustPlatinum>, 1800, 45, 1800);
+
+//Rename Crushed Obsidian for its new use
+<nuclearcraft:gem_dust:3>.displayName = "Celestial Dust";
+<ore:dustObsidian>.remove(<nuclearcraft:gem_dust:3>);
+mods.nuclearcraft.pressurizer.removeRecipeWithOutput([<minecraft:obsidian>]);
+mods.nuclearcraft.rock_crusher.addRecipe([<biomesoplenty:crystal>, <nuclearcraft:gem_dust:3>, <techreborn:smalldust:21>, null, 2.0]);
 
 //Rename CrystalBinder for its new use
 <nuclearcraft:compound:1>.displayName = "HPNB"; // High-Performance NanoComposite Binder
@@ -378,12 +436,37 @@ mods.rockhounding_chemistry.MetalAlloyer.add(
 	["dustRhodochrosite", "dustMagnesium", "dustRefinedObsidian", "dustVanadiumPentoxide", "dustDiamond", "dustNickel", "dustBeryllium", "curedEpoxy"],
 	[12, 8, 6, 10, 16, 16, 4, 5], <nuclearcraft:compound:1>);
 
+//Rename Steel Alloy Ingot for its new use
+<nuclearcraft:alloy:5>.displayName = "8750 Alloy Steel Ingot";
+mods.rockhounding_chemistry.MetalAlloyer.add( 
+	["dustIron", "dustCarbon", "dustManganese", "dustSmallPhosphorous", "dustSmallSulfur", "dustSilicon", "dustNickel", "dustChromium", "dustMolybdenum"],
+	[92, 1, 2, 2, 1, 1, 1, 1, 1], <nuclearcraft:alloy:5>);
+
+//Rename Lead Ingot for its new use
+<nuclearcraft:ingot:2>.displayName = "Shielding Ingot";
+<nuclearcraft:dust:2>.displayName = "Shielding Dust";
+mods.techreborn.grinder.addRecipe(<nuclearcraft:dust:2>, <nuclearcraft:ingot:2>, 1800, 16);
+mods.nuclearcraft.manufactory.addRecipe([<nuclearcraft:ingot:2>, <nuclearcraft:dust:2>, 2.0, 1.0, 0.0]);
+mods.rockhounding_chemistry.MetalAlloyer.add( 
+	["dustLead", "dustTin", "dustTungsten", "curedEpoxy", "dustAntimony", "dustBismuth"],
+	[36, 18, 12, 10, 8, 5], <nuclearcraft:ingot:2>);
+
+//Rename glass for its new use
+<nuclearcraft:part:6>.displayName = "Borosilicate Glass";
+mods.techreborn.alloySmelter.addRecipe(<nuclearcraft:part:6>, <mekanism:crystal:2>, <ore:dustSiliconDioxide>, 4800, 20);
+
+recipes.remove(<nuclearcraft:dominos>);
+recipes.addShaped(<nuclearcraft:dominos>,[
+	[<plants2:ampelopsis_a>, <inspirations:materials:4>, <plants2:pineapple>],
+	[<actuallyadditions:item_food:20>,<actuallyadditions:item_food> , <minecraft:cooked_beef>],
+	[<minecraft:bread>, <minecraft:bread>, <minecraft:bread>]
+]);
+
 //---------------------//
 //Removed Blocks/Items //
 //---------------------//
 mods.jei.JEI.removeAndHide(<nuclearcraft:nuclear_furnace_idle>);			//Pointless to waste uranium to bake some potatoes
 //mods.jei.JEI.removeAndHide(<nuclearcraft:manufactory_idle>);				//It is used to obtain some NuclearCraft materials
-mods.jei.JEI.removeAndHide(<nuclearcraft:solar_panel_basic>);				//Produces too low RF/t is not worthmaking solar photovoltaic cells
 mods.jei.JEI.removeAndHide(<nuclearcraft:cobblestone_generator>);			//We have other cobblegen means
 mods.jei.JEI.removeAndHide(<nuclearcraft:cobblestone_generator_compact>);	//We have other cobblegen means
 mods.jei.JEI.removeAndHide(<nuclearcraft:cobblestone_generator_dense>);		//We have other cobblegen means
@@ -391,6 +474,10 @@ mods.jei.JEI.removeAndHide(<nuclearcraft:water_source>);					//We have other wat
 mods.jei.JEI.removeAndHide(<nuclearcraft:water_source_compact>);			//We have other watergen means
 mods.jei.JEI.removeAndHide(<nuclearcraft:water_source_dense>);				//We have other watergen means
 mods.jei.JEI.removeAndHide(<nuclearcraft:portable_ender_chest>);			//EnderStorage and Vanilla only
+//Solar Panels removed except the last one
+mods.jei.JEI.removeAndHide(<nuclearcraft:solar_panel_basic>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:solar_panel_advanced>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:solar_panel_du>);
 
 //Remove all tools and armor, would be more convenient to disable them on init via config
 mods.jei.JEI.removeAndHide(<nuclearcraft:sword_boron>);

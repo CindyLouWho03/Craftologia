@@ -35,6 +35,12 @@ recipes.remove(<extendedcrafting:material:2>);
 mods.mekanism.compressor.addRecipe(<extendedcrafting:material>, <extendedcrafting:material:2>);
 mods.techreborn.compressor.addRecipe(<extendedcrafting:material:2>, <extendedcrafting:material>*2, 800, 32);
 
+recipes.remove(<extendedcrafting:material:14>);
+recipes.addShapeless(<extendedcrafting:material:14>,[<extendedcrafting:material:2>, <extendedcrafting:material:7>, <thermalfoundation:material:130>, <minecraft:iron_ingot>]);
+
+recipes.remove(<extendedcrafting:material:15>);
+recipes.addShapeless(<extendedcrafting:material:15>,[<extendedcrafting:material:2>, <extendedcrafting:material:7>, <thermalfoundation:material:166>, <minecraft:gold_ingot>]);
+
 recipes.remove(<extendedcrafting:material:16>);
 recipes.addShapeless(<extendedcrafting:material:16>,[<extendedcrafting:material:2>, <extendedcrafting:material:7>, <psi:material:2>, <minecraft:diamond>]);
 
@@ -52,21 +58,21 @@ recipes.addShaped(<extendedcrafting:table_basic>,[
 ]);
 
 recipes.remove(<extendedcrafting:table_advanced>);
-recipes.addShaped(<extendedcrafting:table_advanced>,[
+mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:table_advanced>,[
 	[<extendedcrafting:material:15>, <extendedcrafting:material:9>, <extendedcrafting:material:15>],
 	[<extendedcrafting:material>, null, <extendedcrafting:material>],
 	[<extendedcrafting:material>, <extendedcrafting:material:2>, <extendedcrafting:material>]
 ]);
 
 recipes.remove(<extendedcrafting:table_elite>);
-recipes.addShaped(<extendedcrafting:table_elite>,[
+mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:table_elite>,[
 	[<extendedcrafting:material:16>, <extendedcrafting:material:10>, <extendedcrafting:material:16>],
 	[<extendedcrafting:material>, <contenttweaker:crafting4>, <extendedcrafting:material>],
 	[<extendedcrafting:material>, <extendedcrafting:material:2>, <extendedcrafting:material>]
 ]);
 
 recipes.remove(<extendedcrafting:table_ultimate>);
-recipes.addShaped(<extendedcrafting:table_ultimate>,[
+mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:table_ultimate>,[
 	[<extendedcrafting:material:17>, <extendedcrafting:material:11>, <extendedcrafting:material:17>],
 	[<extendedcrafting:material>, <contenttweaker:crafting5>, <extendedcrafting:material>],
 	[<extendedcrafting:material>, <extendedcrafting:material:2>, <extendedcrafting:material>]
@@ -88,15 +94,15 @@ recipes.addShaped(<extendedcrafting:compressor>,[
 
 recipes.remove(<extendedcrafting:ender_alternator>);
 recipes.addShaped(<extendedcrafting:ender_alternator>,[
-	[null, <enderutilities:enderpart:1>, null],
+	[null, <essentialcraft:genitem:49>, null],
 	[<enderutilities:enderpart:1>, <minecraft:ender_eye>, <enderutilities:enderpart:1>],
-	[<enderutilities:enderpart>, <enderutilities:enderpart>, <enderutilities:enderpart>]
+	[<thermalfoundation:material:167>, <enderio:item_material:39>, <thermalfoundation:material:167>]
 ]);
 
 recipes.remove(<extendedcrafting:ender_crafter>);
 recipes.addShaped(<extendedcrafting:ender_crafter>,[
 	[<enderutilities:enderpart:1>, <enderutilities:enderpart>, <enderutilities:enderpart:1>],
-	[<enderio:item_material:39>, <actuallyadditions:block_misc:8>, <enderutilities:enderpart:1>],
+	[<enderio:item_material:39>, <actuallyadditions:block_misc:8>, <enderio:item_material:39>],
 	[<enderio:item_material:39>, <essentialcraft:genitem:36>, <enderio:item_material:39>]
 ]);
 
@@ -126,6 +132,7 @@ mods.jei.JEI.removeAndHide(<extendedcrafting:material:37>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:41>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:48>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:49>);
+mods.jei.JEI.removeAndHide(<extendedcrafting:material:140>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:storage:1>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:storage:2>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:storage:3>);

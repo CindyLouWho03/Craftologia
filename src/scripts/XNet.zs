@@ -21,7 +21,7 @@ recipes.addShaped(<xnet:redstone_proxy>,[
 recipes.remove(<xnet:netcable>);
 recipes.addShaped(<xnet:netcable>.withTag({display: {LocName: "tile.xnet.netcable_blue.name"}})*2,[
 	[<ic2:crafting:15>, <thermalfoundation:material:103>, <ic2:crafting:15>],
-	[<appliedenergistics2:part:140>, <appliedenergistics2:part:140>, <appliedenergistics2:part:140>],
+	[<techreborn:cable:4>, <appliedenergistics2:material:8>, <techreborn:cable:4>],
 	[<ic2:crafting:15>, <thermalfoundation:material:103>, <ic2:crafting:15>]
 ]);
 

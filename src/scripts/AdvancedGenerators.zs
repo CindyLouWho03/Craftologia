@@ -53,8 +53,8 @@ recipes.addShaped(<advgenerators:upgrade_kit>,[
 
 recipes.remove(<advgenerators:controller>);
 recipes.addShaped(<advgenerators:controller>,[
-	[<ore:dustIron>, <rockhounding_chemistry:chemical_dusts:42>, <ore:dustIron>],
-	[<ore:dustNickel>, <ic2:crafting:1>, <ore:dustNickel>],
+	[<ore:nuggetInvar>, <contenttweaker:material>, <ore:nuggetInvar>],
+	[<techreborn:smalldust:10>, <ic2:crafting:1>, <techreborn:smalldust:10>],
 	[<techreborn:dust:10>, <rockhounding_chemistry:chemical_dusts:42>, <techreborn:dust:10>]
 ]);
 

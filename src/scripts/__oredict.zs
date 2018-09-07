@@ -14,6 +14,7 @@ furnace.remove(<libvulpes:productingot:9>);
 furnace.remove(<frogcraftrebirth:metal_ingot>);
 furnace.addRecipe(<techreborn:ingot>, <ore:oreAluminum>, 2);
 furnace.addRecipe(<techreborn:ingot>, <ore:oreBauxite>, 2);
+furnace.addRecipe(<techreborn:ingot>*2, <magneticraft:chunks:7>, 2);
 
 <ore:ingotAluminum>.remove(<immersiveengineering:metal:1>);
 <ore:ingotAluminum>.remove(<rockhounding_chemistry:metal_items:3>);
@@ -47,6 +48,11 @@ mods.jei.JEI.removeAndHide(<libvulpes:productplate:9>);
 
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:16>, <techreborn:ingot>, <immersiveengineering:mold>, 600);
 
+mods.immersiveengineering.ArcFurnace.removeRecipe(<immersiveengineering:metal:1>);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot>*2, <ore:oreAluminum>, <immersiveengineering:material:7>, 100, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot>*2, <ore:oreBauxite>, <immersiveengineering:material:7>, 100, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot>, <ore:dustAluminum>, null, 600, 64);
+
 //Aluminium melting point: 660.32 °C
 mods.techreborn.blastFurnace.removeRecipe(<techreborn:ingot>);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot>, null, <ore:dustAluminum>, null, 600, 16, 660);
@@ -55,14 +61,73 @@ mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot>*2, <techreborn:dust:15
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot>*2, <minecraft:iron_nugget>*4, <ore:oreBauxite>, null, 600, 16, 660);
 
 ##############
+#   Boron    #
+##############
+
+furnace.remove(<nuclearcraft:ingot:5>);
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:ingot:5>*2, <immersiveengineering:material:7>, <nuclearcraft:ore:5>, null, 2000, 52, 2076);
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:ingot:5>, <techreborn:part:33>, <contenttweaker:ore3>, null, 2000, 52, 2076);
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:ingot:5>, <immersiveengineering:material:7>, <ore:dustBoron>, null, 2000, 52, 2076);
+
+//Borax
+<techreborn:dust:62>.displayName = "Borax Dust";
+<techreborn:smalldust:64>.displayName = "Small Pile of Borax Dust";
+<ore:dustDiorite>.remove(<techreborn:dust:62>);
+<ore:dustSmallDiorite>.remove(<techreborn:smalldust:64>);
+<mekanism:crystal:2>.displayName = "Boron Trioxide Crystal";
+
+mods.techreborn.centrifuge.addRecipe(<techreborn:smalldust:64>*3, <betterwithmods:sand_pile>*2, null, null, <contenttweaker:ore3>, null, 1200, 16);
+mods.techreborn.industrialGrinder.addRecipe(<techreborn:dust:62>, null, null, null, 
+	<rockhounding_chemistry:borate_shards>, null, <liquid:water>*2000, 900, 128);
+
+mods.techreborn.blastFurnace.addRecipe(<mekanism:crystal:2>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "fluidsodiumpersulfate", Amount: 1000}}), 
+<techreborn:dust:62>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "sulfuricacid", Amount: 1000}}), 1200, 20, 750);
+
+##############
+# Beryllium  #
+##############
+
+furnace.remove(<nuclearcraft:ingot:9>);
+
+//Beryllium melting point: 1287 °C
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:ingot:9>, null, <ore:dustBeryllium>, null, 1000, 32, 1287);
+
+##############
 #   Chrome   #
 ##############
+
+<ore:dustChrome>.add(<rockhounding_chemistry:chemical_dusts:27>);
 
 //Chrome melting point: 1907 °C
 mods.techreborn.blastFurnace.removeRecipe(<techreborn:ingot:3>);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:3>, null, <techreborn:dust:10>, null, 1800, 48, 1907);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:3>, null, <techreborn:smalldust:10>*4, null, 1800, 48, 1907);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:3>*2, <techreborn:dust:15>, <contenttweaker:ore>, null, 1800, 48, 1907);
+
+mods.immersiveengineering.Crusher.addRecipe(<techreborn:dust:10>, <contenttweaker:ore>, 4000);
+
+recipes.addShapeless(<techreborn:smalldust:10>*4,[<rockhounding_chemistry:chemical_dusts:27>]);
+
+##############
+#    Coal    #
+##############
+
+<ore:dustCarbon>.add(<ic2:dust:2>);
+<ore:dustCoal>.remove(<actuallyadditions:item_dust:6>);
+<ore:dustCoal>.remove(<betterwithmods:material:18>);
+<ore:dustCarbon>.remove(<betterwithmods:material:18>);
+<ore:dustCoal>.remove(<nuclearcraft:gem_dust:7>);
+<ore:dustCoal>.remove(<techreborn:dust:13>);
+<ore:dustCoal>.remove(<thermalfoundation:material:768>);
+
+mods.jei.JEI.removeAndHide(<actuallyadditions:item_dust:6>);
+mods.jei.JEI.removeAndHide(<betterwithmods:material:18>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:gem_dust:7>);
+mods.jei.JEI.removeAndHide(<techreborn:dust:13>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:material:768>);
+
+mods.tconstruct.Melting.removeRecipe(<liquid:coal>);
+mods.nuclearcraft.melter.removeRecipeWithInput(<minecraft:coal>);
 
 ##############
 #   Cobalt   #
@@ -73,10 +138,12 @@ mods.techreborn.blastFurnace.addRecipe(<magneticraft:ingots:4>, null, <magneticr
 mods.techreborn.blastFurnace.addRecipe(<magneticraft:ingots:4>, null, <magneticraft:dusts:4>, null, 1400, 40, 1495);
 mods.techreborn.blastFurnace.addRecipe(<magneticraft:ingots:4>, null, <rockhounding_chemistry:chemical_dusts:25>, null, 1400, 40, 1495);
 mods.techreborn.blastFurnace.addRecipe(<magneticraft:ingots:4>*2, <techreborn:dust:15>, <tconstruct:ore>, null, 1400, 40, 1495);
+mods.techreborn.blastFurnace.addRecipe(<magneticraft:ingots:4>*2, <immersiveengineering:material:7>, <magneticraft:chunks:4>, null, 1400, 40, 1495);
+
 //Arc Furnace requires the same amount of energy
-mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <magneticraft:ores:2>, <immersiveengineering:material:7>, 1400, 160);
-mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <magneticraft:dusts:4>, <immersiveengineering:material:7>, 1400, 160);
-mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <rockhounding_chemistry:chemical_dusts:25>, <immersiveengineering:material:7>, 1400, 160);
+mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <magneticraft:ores:2>, <immersiveengineering:material:7>, 1000, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <magneticraft:dusts:4>, <immersiveengineering:material:7>, 1000, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<magneticraft:ingots:4>, <rockhounding_chemistry:chemical_dusts:25>, <immersiveengineering:material:7>, 1000, 512);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<tconstruct:ingots>);
 
 //Tinkers Furnace has a maximum melting point of 1300, so i have to lower this here otherwise manyullyn would be unaccesible
@@ -124,6 +191,7 @@ furnace.remove(<magneticraft:ingots:2>);
 furnace.remove(<ic2:ingot:2>);
 
 furnace.addRecipe(<techreborn:ingot:4>, <ore:oreCopper>, 2);
+furnace.addRecipe(<techreborn:ingot:4>*2, <magneticraft:chunks:2>, 2);
 
 mods.jei.JEI.removeAndHide(<libvulpes:ore0:4>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:ore>);
@@ -196,9 +264,17 @@ mods.jei.JEI.removeAndHide(<libvulpes:productplate:4>);
 mods.immersiveengineering.MetalPress.removeRecipe(<immersiveengineering:metal:30>);
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:20>, <techreborn:ingot:4>, <immersiveengineering:mold>, 1000);
 
+mods.techreborn.compressor.removeRecipe(<techreborn:plates:20>);
+mods.techreborn.compressor.addRecipe(<techreborn:plates:20>, <magneticraft:ingots:2>, 200, 6);
+
+mods.immersiveengineering.ArcFurnace.removeRecipe(<immersiveengineering:metal>);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot:4>*2, <ore:oreCopper>, <immersiveengineering:material:7>, 300, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot:4>, <ore:dustCopper>, <immersiveengineering:material:7>, 300, 512);
+
 //Copper real melting point: 1084.64 °C
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:4>*2, <techreborn:dust:15>, <ore:oreCopper>, null, 1000, 27, 1085);
-mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:4>*2, null, <ore:dustCopper>, null, 1000, 27, 1085);	
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:4>, null, <ore:dustCopper>, null, 1000, 27, 1085);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:4>*2, null, <magneticraft:chunks:2>, null, 1000, 27, 1085);
 
 ##############
 #  Dilithium #
@@ -218,6 +294,10 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:material:353>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:161>);
 <ore:nuggetElectrum>.remove(<thermalfoundation:material:225>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:225>);
+
+mods.techreborn.alloySmelter.addRecipe(<techreborn:ingot:5>*2, <ore:dustGold>, <thermalfoundation:material:130>, 1000, 26);
+mods.techreborn.alloySmelter.addRecipe(<techreborn:ingot:5>*2, <minecraft:gold_ingot>, <thermalfoundation:material:130>, 1000, 26);
+
 
 ##############
 #    Gems    #
@@ -254,11 +334,16 @@ mods.jei.JEI.removeAndHide(<techreborn:plates:13>);
 mods.tconstruct.Melting.removeRecipe(<liquid:emerald>);
 mods.tconstruct.Melting.removeRecipe(<liquid:diamond>);
 mods.tconstruct.Melting.removeRecipe(<liquid:emerald_nak_hot>);
+mods.tconstruct.Melting.removeRecipe(<liquid:emerald_nak>);
+mods.tconstruct.Melting.removeRecipe(<liquid:emerald>, <minecraft:emerald>);
 
 //mods.nuclearcraft.melter.removeRecipeWithOutput(<liquid:diamond>);
 //mods.nuclearcraft.melter.removeRecipeWithOutput(<liquid:emerald>);
 mods.nuclearcraft.melter.removeRecipeWithInput(<ore:blockDiamond>);
 mods.nuclearcraft.melter.removeRecipeWithInput(<ore:blockEmerald>);
+
+mods.nuclearcraft.pressurizer.removeRecipeWithInput(<minecraft:emerald>);
+mods.nuclearcraft.pressurizer.removeRecipeWithInput(<minecraft:diamond>);
 
 //All nuggets removed
 mods.jei.JEI.removeAndHide(<techreborn:nuggets:24>);
@@ -279,6 +364,7 @@ mods.techreborn.industrialSawmill.addRecipe(<extrabitmanipulation:diamond_nugget
 // Gold melting point: 1064.18 °C
 mods.techreborn.blastFurnace.addRecipe(<minecraft:gold_ingot>*2, null, <minecraft:gold_ore>, null, 1000, 26, 1064);
 mods.techreborn.blastFurnace.addRecipe(<minecraft:gold_ingot>, null, <ore:dustGold>, null, 1000, 26, 1064);
+mods.techreborn.blastFurnace.addRecipe(<minecraft:gold_ingot>*2, null, <magneticraft:chunks:1>, null, 1000, 26, 1064);
 
 <ore:dustGold>.remove(<ic2:dust:7>);
 <ore:dustGold>.remove(<libvulpes:productdust:2>);
@@ -338,6 +424,9 @@ furnace.remove(<thermalfoundation:material:162>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:162>);
 <ore:plateInvar>.remove(<thermalfoundation:material:354>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:354>);
+
+mods.techreborn.alloySmelter.addRecipe(<techreborn:ingot:6>*3, <minecraft:iron_ingot>*2, <immersiveengineering:metal:4>, 800, 40);
+mods.techreborn.alloySmelter.addRecipe(<techreborn:ingot:6>*3, <ore:dustIron>*2, <immersiveengineering:metal:4>, 800, 40);
 
 //Invar melting point: 1427 °C
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:6>*3, null, <minecraft:iron_ingot>*2, <immersiveengineering:metal:4>, 1600, 35, 1427);
@@ -419,6 +508,11 @@ mods.jei.JEI.removeAndHide(<techreborn:nuggets:7>);
 mods.jei.JEI.removeAndHide(<techreborn:plates:23>);
 mods.jei.JEI.removeAndHide(<techreborn:storage:13>);
 
+mods.immersiveengineering.MetalPress.removeRecipe(<techreborn:plates:37>);
+mods.techreborn.blastFurnace.removeRecipe(<techreborn:plates:37>);
+
+//mods.nuclearcraft.alloy_furnace.addRecipe([itemInput1, itemInput2, itemOutput, {timeMultiplier (double), powerMultiplier (double)}]);
+
 ##############
 #    Iron    #
 ##############
@@ -434,6 +528,7 @@ mods.betterwithmods.Crucible.addStoked([<ore:dustIron>], [<minecraft:iron_ingot>
 mods.techreborn.blastFurnace.removeRecipe(<minecraft:iron_ingot>);
 mods.techreborn.blastFurnace.addRecipe(<minecraft:iron_ingot>*3, <techreborn:nuggets:9>, <minecraft:iron_ore>, <techreborn:dust:8>, 1400, 38, 1538);
 mods.techreborn.blastFurnace.addRecipe(<minecraft:iron_ingot>*2, null, <ore:dustIron>, <ore:dustIron>, 1400, 38, 1538);
+mods.techreborn.blastFurnace.addRecipe(<minecraft:iron_ingot>*2, null, <magneticraft:chunks>, null, 1400, 38, 1538);
 
 <ore:dustIron>.remove(<libvulpes:productdust:1>);
 mods.jei.JEI.removeAndHide(<libvulpes:productdust:1>);
@@ -477,6 +572,7 @@ furnace.remove(<rockhounding_chemistry:metal_items:5>);
 furnace.remove(<thermalfoundation:material:131>);
 
 furnace.addRecipe(<techreborn:ingot:8>, <ore:oreLead>, 2);
+furnace.addRecipe(<techreborn:ingot:8>*2, <magneticraft:chunks:3>, 2);
 
 <ore:ingotLead>.remove(<immersiveengineering:metal:2>);
 <ore:ingotLead>.remove(<ic2:ingot:3>);
@@ -487,14 +583,12 @@ furnace.addRecipe(<techreborn:ingot:8>, <ore:oreLead>, 2);
 mods.jei.JEI.removeAndHide(<immersiveengineering:metal:2>);
 mods.jei.JEI.removeAndHide(<ic2:ingot:3>);
 mods.jei.JEI.removeAndHide(<magneticraft:ingots:3>);
-mods.jei.JEI.removeAndHide(<nuclearcraft:ingot:2>);
 mods.jei.JEI.removeAndHide(<rockhounding_chemistry:metal_items:5>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:131>);
 
 recipes.addShapeless(<techreborn:ingot:8>,[<immersiveengineering:metal:2>]);
 recipes.addShapeless(<techreborn:ingot:8>,[<ic2:ingot:3>]);
 recipes.addShapeless(<techreborn:ingot:8>,[<magneticraft:ingots:3>]);
-recipes.addShapeless(<techreborn:ingot:8>,[<nuclearcraft:ingot:2>]);
 recipes.addShapeless(<techreborn:ingot:8>,[<rockhounding_chemistry:metal_items:5>]);
 recipes.addShapeless(<techreborn:ingot:8>,[<thermalfoundation:material:131>]);
 
@@ -504,8 +598,9 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:ore:3>);
 
 <ore:dustLead>.remove(<ic2:dust:10>);
 <ore:dustLead>.remove(<nuclearcraft:dust:2>);
+<ore:tinyDustLead>.remove(<nuclearcraft:tiny_dust_lead>);
 mods.jei.JEI.removeAndHide(<ic2:dust:10>);
-mods.jei.JEI.removeAndHide(<nuclearcraft:dust:2>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:tiny_dust_lead>);
 
 <ore:lightPlateLead>.add(<techreborn:plates:24>);
 <ore:plateLead>.remove(<immersiveengineering:metal:32>);
@@ -516,13 +611,28 @@ mods.jei.JEI.removeAndHide(<immersiveengineering:metal:32>);
 mods.jei.JEI.removeAndHide(<ic2:plate:5>);
 mods.jei.JEI.removeAndHide(<magneticraft:light_plates:3>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:323>);
+
+recipes.remove(<ic2:resource:7>);
+
+mods.appliedenergistics2.Grinder.removeRecipe(<nuclearcraft:ingot:2>);
+mods.nuclearcraft.melter.removeRecipeWithInput(<nuclearcraft:ingot:2>);
+mods.nuclearcraft.manufactory.removeRecipeWithInput([<nuclearcraft:ingot:2>]);
+mods.nuclearcraft.pressurizer.removeRecipeWithInput([<nuclearcraft:ingot:2>]);
+
 mods.immersiveengineering.MetalPress.removeRecipe(<immersiveengineering:metal:32>);
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:24>, <techreborn:ingot:8>, <immersiveengineering:mold>, 600);
 
+mods.techreborn.compressor.removeRecipe(<techreborn:plates:24>);
+mods.techreborn.compressor.addRecipe(<techreborn:plates:24>, <techreborn:ingot:8>, 200, 4);
+
+mods.immersiveengineering.ArcFurnace.removeRecipe(<immersiveengineering:metal:2>);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot:8>, <ore:oreLead>, <immersiveengineering:material:7>, 100, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot:8>, <ore:dustLead>, null, 100, 512);
 
 //Lead melting point: 327.46 °C
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:8>, null, <ore:dustLead>, null, 300, 8, 328);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:8>*2, <techreborn:dust:15>, <ore:oreLead>, null, 300, 8, 328);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:8>*2, <techreborn:dust:15>, <magneticraft:chunks:3>, null, 300, 8, 328);
 
 ##############
 #   Nickel   #
@@ -552,14 +662,20 @@ mods.jei.JEI.removeAndHide(<rockhounding_chemistry:metal_items:13>);
 
 <ore:plateNickel>.remove(<immersiveengineering:metal:34>);
 <ore:plateNickel>.remove(<thermalfoundation:material:325>);
-mods.jei.JEI.removeAndHide(<immersiveengineering:metal:34>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:325>);
 mods.immersiveengineering.MetalPress.removeRecipe(<immersiveengineering:metal:34>);
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:25>, <immersiveengineering:metal:4>, <immersiveengineering:mold>, 1200);
 
+//Remove wrong uses of Platinum-Rhodium as Nickel
+mods.appliedenergistics2.Grinder.removeRecipe(<rockhounding_chemistry:metal_items:13>);
+mods.nuclearcraft.manufactory.removeRecipeWithInput([<rockhounding_chemistry:metal_items:13>]);
+mods.nuclearcraft.melter.removeRecipeWithInput([<rockhounding_chemistry:metal_items:13>]);
+mods.nuclearcraft.pressurizer.removeRecipeWithInput([<rockhounding_chemistry:metal_items:13>]);
+
 //Nickel melting point: 1455 °C
 mods.techreborn.blastFurnace.addRecipe(<immersiveengineering:metal:4>*2, <minecraft:iron_nugget>*5, <ore:oreNickel>, null, 1400, 36, 1455);
 mods.techreborn.blastFurnace.addRecipe(<immersiveengineering:metal:4>, null, <ore:dustNickel>, null, 1400, 36, 1455);
+mods.techreborn.blastFurnace.addRecipe(<immersiveengineering:metal:4>*2, <immersiveengineering:material:7>, <magneticraft:chunks:10>, null, 1400, 36, 1455);
 
 ##############
 # Magnesium  #
@@ -583,14 +699,15 @@ mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:12>, 
 
 //Osmium melting point: 3033 °C
 mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <techreborn:dust:15>, <mekanism:oreblock>, null, 2800, 75, 3033);
-mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, null, <mekanism:dust:2>, null, 2800, 75, 3033);
-mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, null, <magneticraft:dusts:11>, null, 2800, 75, 3033);
-mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, null, <rockhounding_chemistry:chemical_dusts:38>, null, 2800, 75, 3033);
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, null, <ore:dustOsmium>, null, 2800, 75, 3033);
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>*2, <immersiveengineering:material:7>, <magneticraft:chunks:11>, null, 2800, 75, 3033);
+
 //Arc Furnace requires the same amount of energy, but also consumes graphite electrodes, so this way should be only used until blastFurnace
+mods.immersiveengineering.ArcFurnace.removeRecipe(<mekanism:ingot:1>);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<rockhounding_chemistry:metal_items:2>);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <mekanism:oreblock>, <immersiveengineering:material:7>, 2800, 300);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <mekanism:dust:2>, <immersiveengineering:material:7>, 2800, 300);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <magneticraft:dusts:11>, <immersiveengineering:material:7>, 2800, 300);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <mekanism:oreblock>, <immersiveengineering:material:7>, 1800, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>, <ore:dustOsmium>, <immersiveengineering:material:7>, 1800, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:2>*2, <magneticraft:chunks:11>, <immersiveengineering:material:7>, 1800, 512);
 
 //Remove x5 ore processing for osmium, since it is now a high tier element, making each one much more valuable
 mods.mekanism.chemical.dissolution.removeRecipe(<gas:osmium>, <mekanism:oreblock>);
@@ -605,6 +722,8 @@ recipes.remove(<rockhounding_chemistry:metal_items:2>);
 furnace.remove(<mekanism:ingot:1>);
 furnace.remove(<magneticraft:ingots:11>);
 furnace.remove(<rockhounding_chemistry:metal_items:2>);
+
+recipes.addShapeless(<rockhounding_chemistry:metal_items:2>,[<mekanism:ingot:1>]);
 
 //mods.actuallyadditions.Crusher.removeRecipe(<magneticraft:dusts:11>);
 mods.thermalexpansion.Pulverizer.removeRecipe(<mekanism:oreblock>);
@@ -645,8 +764,8 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:material:326>);
 mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>, null, <ore:dustPlatinum>, null, 1800, 44, 1769);
 mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>*2, <techreborn:dust:15>, <ore:orePlatinum>, null, 1800, 44, 1769);
 mods.immersiveengineering.ArcFurnace.removeRecipe(<techreborn:ingot:10>);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>, <ore:dustPlatinum>, <immersiveengineering:material:7>, 1800, 176);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>*2, <ore:orePlatinum>, <immersiveengineering:material:7>, 1800, 176);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>, <ore:dustPlatinum>, <immersiveengineering:material:7>, 800, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:6>*2, <ore:orePlatinum>, <immersiveengineering:material:7>, 800, 512);
 
 ##############
 #   Quartz   #
@@ -660,22 +779,43 @@ mods.jei.JEI.removeAndHide(<enderio:item_material:33>);
 <ore:dustNetherQuartz>.remove(<enderio:item_material:33>);
 
 ##############
+#  Rhodium   #
+##############
+
+<techreborn:dust:63>.displayName = "Rhodium Dust";
+<techreborn:smalldust:65>.displayName = "Small Pile of Rhodium Dust";
+<rockhounding_chemistry:metal_items:13>.displayName = "Platinum-Rhodium Alloy Ingot";
+
+<ore:dustGranite>.remove(<techreborn:dust:63>);
+<ore:dustSmallGranite>.remove(<techreborn:smalldust:65>);
+
+//Rhodium melting point is 1964 °C
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:13>*2, null, <rockhounding_chemistry:metal_items:6>, <techreborn:dust:63>, 2400, 50, 2000);
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:13>*2, null, <ore:dustPlatinum>, <techreborn:dust:63>, 2400, 50, 2000);
+
+//Rhodium is found in platinum or nickel ores together with the other members of the platinum group metals
+mods.rockhounding_chemistry.LabOven.add("Rhodium Dust", <rockhounding_chemistry:native_shards:5>, <contenttweaker:crafting9>, <liquid:ethanol>*1000, null, 
+<liquid:toxic_waste>*500, null, <techreborn:dust:63>);
+mods.rockhounding_chemistry.LabOven.add("Rhodium Dust", <rockhounding_chemistry:sulfide_shards:20>, <contenttweaker:crafting9>, <liquid:ethanol>*1000, null, 
+<liquid:toxic_waste>*800, null, <techreborn:smalldust:65>);
+
+##############
 #   Silicon  #
 ##############
 
 //Enable conversion between silica
 recipes.addShapeless(<ic2:dust:13>,[<frogcraftrebirth:non_metal_dust:5>]);
 recipes.addShapeless(<frogcraftrebirth:non_metal_dust:5>,[<ic2:dust:13>]);
+<ore:dustSiliconDioxide>.add(<frogcraftrebirth:non_metal_dust:5>);
 
 recipes.addShapeless(<rockhounding_chemistry:chemical_dusts:42>*2,[<frogcraftrebirth:non_metal_dust:5>, <ore:dustMagnesium>, <frogcraftrebirth:non_metal_dust:5>]);
-mods.immersiveengineering.ArcFurnace.addRecipe(<techreborn:ingot:14>, <ore:dustTitanium>, <immersiveengineering:material:7>, 3600, 336);
 
 mods.immersiveengineering.BlastFurnace.addRecipe(<rockhounding_chemistry:chemical_dusts:42>, <frogcraftrebirth:non_metal_dust:5>, 1400);
 mods.immersiveengineering.BlastFurnace.addRecipe(<rockhounding_chemistry:chemical_dusts:42>, <ic2:dust:13>, 1400);
 
 //Silicon melting point: 1414 °C
 mods.techreborn.blastFurnace.addRecipe(<enderio:item_material:5>, null, <rockhounding_chemistry:chemical_dusts:42>, null, 1500, 35, 1414);
-mods.immersiveengineering.ArcFurnace.addRecipe(<enderio:item_material:5>, <rockhounding_chemistry:chemical_dusts:42>, null, 1500, 140);
+mods.immersiveengineering.ArcFurnace.addRecipe(<enderio:item_material:5>, <rockhounding_chemistry:chemical_dusts:42>, null, 1200, 512);
 
 mods.techreborn.centrifuge.addRecipe(<frogcraftrebirth:non_metal_dust:5>*2, <minecraft:clay_ball>*2, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "water", Amount: 1000}}), 
 null, <minecraft:clay>, <techreborn:dynamiccell>, 1800, 16);
@@ -683,16 +823,21 @@ mods.techreborn.centrifuge.addRecipe(<frogcraftrebirth:non_metal_dust:5>, <bette
 mods.techreborn.centrifuge.addRecipe(<frogcraftrebirth:non_metal_dust:5>, <minecraft:dirt>*4, <techreborn:part:33>*3, null, <minecraft:dirt>*8, null, 3000, 16);
 
 //Keep just one type of silicon
+<ore:itemSilicon>.remove(<libvulpes:productingot:3>);
+<ore:itemSilicon>.remove(<appliedenergistics2:material:5>);
 <ore:ingotSilicon>.add(<enderio:item_material:5>);
 <ore:ingotSilicon>.remove(<libvulpes:productingot:3>);
-<ore:itemSilicon>.remove(<libvulpes:productingot:3>);
 <ore:nuggetSilicon>.remove(<libvulpes:productnugget:3>);
+<ore:dustSilicon>.remove(<libvulpes:productdust:3>);
 
+mods.jei.JEI.removeAndHide(<appliedenergistics2:material:5>);
 mods.jei.JEI.removeAndHide(<libvulpes:productingot:3>);
 mods.jei.JEI.removeAndHide(<libvulpes:productnugget:3>);
+mods.jei.JEI.removeAndHide(<libvulpes:productdust:3>);
 
-mods.mekanism.crusher.removeRecipe(<enderio:item_material:5>);
+furnace.remove(<appliedenergistics2:material:5>);
 mods.nuclearcraft.manufactory.removeRecipeWithInput(<ore:sand>*4);
+mods.mekanism.crusher.removeRecipe(<enderio:item_material:5>);
 
 ##############
 #   Silver   #
@@ -718,12 +863,21 @@ recipes.addShapeless(<thermalfoundation:material:130>,[<techreborn:ingot:11>]);
 <ore:plateSilver>.remove(<thermalfoundation:material:322>);
 mods.jei.JEI.removeAndHide(<immersiveengineering:metal:33>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:322>);
+
 mods.immersiveengineering.MetalPress.removeRecipe(<immersiveengineering:metal:33>);
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:27>, <thermalfoundation:material:130>, <immersiveengineering:mold>, 800);
+
+mods.techreborn.compressor.removeRecipe(<techreborn:plates:27>);
+mods.techreborn.compressor.addRecipe(<techreborn:plates:27>, <thermalfoundation:material:130>, 200, 6);
+
+mods.immersiveengineering.ArcFurnace.removeRecipe(<immersiveengineering:metal:3>);
+mods.immersiveengineering.ArcFurnace.addRecipe(<thermalfoundation:material:130>*2, <ore:oreSilver>, <immersiveengineering:material:7>, 600, 512);
+mods.immersiveengineering.ArcFurnace.addRecipe(<thermalfoundation:material:130>, <ore:dustSilver>, null, 600, 512);
 
 //Silver melting point: 961.78 °C
 mods.techreborn.blastFurnace.addRecipe(<thermalfoundation:material:130>, null, <ore:dustSilver>, null, 900, 24, 962);
 mods.techreborn.blastFurnace.addRecipe(<thermalfoundation:material:130>*2, <techreborn:dust:15>, <ore:oreSilver>, null, 900, 24, 962);
+mods.techreborn.blastFurnace.addRecipe(<thermalfoundation:material:130>*2, <techreborn:dust:15>, <magneticraft:chunks:12>, null, 900, 24, 962);
 
 ##############
 #   Steel    #
@@ -737,6 +891,8 @@ furnace.remove(<techreborn:ingot:12>);
 furnace.remove(<thermalfoundation:material:160>);
 furnace.remove(<libvulpes:productingot:6>);
 furnace.remove(<bigreactors:ingotmetals:5>);
+furnace.remove(<nuclearcraft:alloy:5>);
+
 <ore:ingotSteel>.remove(<magneticraft:ingots:6>);
 <ore:ingotSteel>.remove(<ic2:ingot:5>);
 <ore:ingotSteel>.remove(<mekanism:ingot:4>);
@@ -744,6 +900,7 @@ furnace.remove(<bigreactors:ingotmetals:5>);
 <ore:ingotSteel>.remove(<thermalfoundation:material:160>);
 <ore:ingotSteel>.remove(<libvulpes:productingot:6>);
 <ore:ingotSteel>.remove(<bigreactors:ingotmetals:5>);
+<ore:ingotSteel>.remove(<nuclearcraft:alloy:5>);
 mods.jei.JEI.removeAndHide(<magneticraft:ingots:6>);
 mods.jei.JEI.removeAndHide(<ic2:ingot:5>);
 mods.jei.JEI.removeAndHide(<mekanism:ingot:4>);
@@ -775,9 +932,15 @@ mods.jei.JEI.removeAndHide(<magneticraft:light_plates:6>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:352>);
 mods.jei.JEI.removeAndHide(<libvulpes:productplate:6>);
 
+mods.tconstruct.Alloy.removeRecipe(<liquid:steel>);
+
+recipes.addShapeless(<immersiveengineering:metal:8>*9,[<ore:blockSteel>]);
+
 mods.immersiveengineering.MetalPress.removeRecipe(<immersiveengineering:metal:38>);
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:28>, <immersiveengineering:metal:8>, <immersiveengineering:mold>, 3000);
 
+mods.techreborn.compressor.removeRecipe(<techreborn:plates:28>);
+mods.techreborn.compressor.addRecipe(<techreborn:plates:28>, <immersiveengineering:metal:8>, 200, 10);
 
 //Steel melting point: 1510 °C
 mods.techreborn.blastFurnace.addRecipe(<thermalfoundation:material:130>, null, <minecraft:iron_ingot>, <minecraft:coal>, 1400, 37, 1510);
@@ -795,6 +958,8 @@ furnace.remove(<projectred-core:resource_item:101>);
 furnace.remove(<thermalfoundation:material:129>);
 furnace.remove(<libvulpes:productingot:5>);
 furnace.addRecipe(<techreborn:ingot:13>, <ore:oreTin>, 2);
+furnace.addRecipe(<techreborn:ingot:13>*2, <magneticraft:chunks:13>, 2);
+
 
 <ore:ingotTin>.remove(<ic2:ingot:6>);
 <ore:ingotTin>.remove(<magneticraft:ingots:13>);
@@ -834,10 +999,8 @@ mods.jei.JEI.removeAndHide(<mekanism:nugget:6>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:193>);
 mods.jei.JEI.removeAndHide(<libvulpes:productnugget:5>);
 
-<ore:dustTin>.remove(<ic2:dust:17>);
 <ore:dustTin>.remove(<nuclearcraft:dust:1>);
 <ore:dustTin>.remove(<libvulpes:productdust:5>);
-mods.jei.JEI.removeAndHide(<ic2:dust:17>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:dust:1>);
 mods.jei.JEI.removeAndHide(<libvulpes:productdust:5>);
 
@@ -850,9 +1013,14 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:material:321>);
 
 mods.immersiveengineering.MetalPress.addRecipe(<techreborn:plates:16>, <techreborn:ingot:13>, <immersiveengineering:mold>, 500);
 
+mods.techreborn.compressor.removeRecipe(<techreborn:plates:29>);
+mods.techreborn.compressor.addRecipe(<techreborn:plates:29>, <techreborn:ingot:13>, 200, 4);
+
 //Tin melting point: 231.93 °C
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:13>, null, <ore:dustTin>, null, 240, 6, 232);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:13>*2, <techreborn:dust:15>, <ore:oreTin>, null, 240, 6, 232);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:13>*2, <techreborn:dust:15>, <magneticraft:chunks:13>, null, 240, 6, 232);
+
 
 ##############
 #  Titanium  #
@@ -890,7 +1058,13 @@ mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:4>, n
 mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items:4>, null, <techreborn:smalldust:54>*4, null, 1600, 42, 1668);
 //Same energy cost as blast furnace
 mods.immersiveengineering.ArcFurnace.removeRecipe(<rockhounding_chemistry:metal_items:4>);
-mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:4>, <ore:dustTitanium>, <immersiveengineering:material:7>, 3600, 336);
+mods.immersiveengineering.ArcFurnace.addRecipe(<rockhounding_chemistry:metal_items:4>, <ore:dustTitanium>, <immersiveengineering:material:7>, 1200, 512);
+
+##############
+#   Tough    #
+##############
+
+mods.tconstruct.Melting.removeRecipe(<liquid:tough>);	//Only via NC Melter
 
 ##############
 #  Tungsten  #
@@ -908,6 +1082,7 @@ mods.jei.JEI.removeAndHide(<magneticraft:ingots:5>);
 mods.techreborn.blastFurnace.removeRecipe(<techreborn:ingot:15>);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>, null, <techreborn:dust:55>, null, 3200, 85, 3422);
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>, null, <techreborn:smalldust:55>*4, null, 3200, 85, 3422);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>*2, <immersiveengineering:material:7>, <magneticraft:chunks:5>, null, 3200, 85, 3422);
 
 ##############
 #  Uranium   #
@@ -930,10 +1105,21 @@ mods.jei.JEI.removeAndHide(<advanced_solar_panels:crafting:11>);
 mods.jei.JEI.removeAndHide(<immersiveengineering:metal:14>);
 
 ##############
+#  Vanadium  #
+##############
+
+furnace.remove(<rockhounding_chemistry:metal_items>);
+//Vanadium melting point: 1910 °C
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items>, null, <rockhounding_chemistry:chemical_dusts:52>, null, 2000, 48, 1910);
+mods.techreborn.blastFurnace.addRecipe(<rockhounding_chemistry:metal_items>, null, <frogcraftrebirth:intermediate_product:6>, null, 1200, 48, 1910);
+
+##############
 #    Zinc    #
 ##############
 
 furnace.addRecipe(<techreborn:ingot:18>, <ore:dustZinc>, 3);
+furnace.addRecipe(<techreborn:ingot:18>*2, <magneticraft:chunks:14>, 3);
+
 furnace.remove(<magneticraft:ingots:14>);
 furnace.remove(<rockhounding_chemistry:metal_items:9>);
 <ore:ingotZinc>.remove(<rockhounding_chemistry:metal_items:9>);
@@ -943,6 +1129,8 @@ mods.jei.JEI.removeAndHide(<magneticraft:ingots:14>);
 
 //Zinc melting point: 419.53 °C
 mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>, null, <techreborn:smalldust:55>*4, null, 400, 10, 420);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>, null, <ore:dustZinc>, null, 400, 10, 420);
+mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>*2, null, <magneticraft:chunks:14>, null, 400, 10, 420);
 
 //-----------//
 //  toolAxe  //
@@ -954,6 +1142,4 @@ mods.techreborn.blastFurnace.addRecipe(<techreborn:ingot:15>, null, <techreborn:
 <ore:toolAxe>.add(<enderio:item_dark_steel_axe:*>);
 <ore:toolAxe>.add(<immersiveengineering:axe_steel:*>);
 <ore:toolAxe>.add(<thermalfoundation:tool.axe_steel:*>);
-<ore:toolAxe>.add(<thermalfoundation:tool.axe_constantan:*>);
-<ore:toolAxe>.add(<thermalfoundation:tool.axe_bronze:*>);
 <ore:toolAxe>.add(<ic2:bronze_axe:*>);

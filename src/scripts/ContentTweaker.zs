@@ -89,6 +89,7 @@ mods.techreborn.blastFurnace.addRecipe(<contenttweaker:ingot5>, null, <rockhound
 mods.nuclearcraft.pressurizer.addRecipe(<rockhounding_chemistry:metal_items:2>, <contenttweaker:plate>, 100);
 mods.nuclearcraft.pressurizer.addRecipe(<mekanism:ingot:1>*9, <contenttweaker:plate1>, 1200);
 mods.nuclearcraft.pressurizer.addRecipe(<mekanism:basicblock>, <contenttweaker:plate1>, 1200);
+mods.magneticraft.HydraulicPress.addRecipe(<rockhounding_chemistry:metal_items:2>*9, <contenttweaker:plate1>, 600, 2, false);
 
 //----------//
 //	Part	//
@@ -108,8 +109,8 @@ recipes.addShaped(<contenttweaker:part2>,[
 recipes.addShaped(<contenttweaker:part6>,[
 	[<ore:nuggetCobalt>],
 	[<enderio:item_alloy_nugget:4>],
-	[null]
-]);
+	[null]]);
+recipes.addShapeless(<contenttweaker:part6>,[<ore:nuggetCobalt>, <enderio:item_alloy_nugget:4>]);
 
 //-----------//
 // Material  //
@@ -123,6 +124,8 @@ mods.actuallyadditions.Empowerer.addRecipe(<contenttweaker:material1>*4,
 
 //Cured Epoxy Resin
 mods.techreborn.blastFurnace.addRecipe(<contenttweaker:material2>*2, null, <contenttweaker:material1>, <thermalexpansion:florb>.withTag({Fluid: "hydrochloric_acid"}), 600, 24, 1000);	
+mods.rockhounding_chemistry.LabOven.add("Cured Epoxy", <contenttweaker:material1>, <rockhounding_chemistry:va_catalyst>, <liquid:hydrochloric_acid>*500, null, 
+<liquid:toxic_waste>*300, null, <contenttweaker:material2>);
 
 //CFRP Sheet, Carbon fiber reinforced polymer
 mods.techreborn.rollingMachine.addShaped(<contenttweaker:material3>*8, [
@@ -209,6 +212,14 @@ recipes.addShaped(<contenttweaker:crafting8>,[
 	[<mekanism:polyethene>, <projectred-core:resource_item:301>, <mekanism:polyethene>]
 ]);
 	
+//Sodium Chloride Container
+recipes.remove(<contenttweaker:crafting9>);
+recipes.addShaped(<contenttweaker:crafting9>,[
+	[<frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>],
+	[<frogcraftrebirth:intermediate_product:4>, <stevescarts:cartmodule:63>, <frogcraftrebirth:intermediate_product:4>],
+	[<frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>]
+]);
+
 //----------//
 // OreDicts //
 //----------//

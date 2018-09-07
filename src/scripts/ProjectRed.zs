@@ -6,7 +6,7 @@
 
 recipes.remove(<projectred-core:resource_item>);
 furnace.remove(<projectred-core:resource_item>);
-mods.techreborn.alloySmelter.addRecipe(<projectred-core:resource_item>*2, <contenttweaker:material2>, <minecraft:sand>, 800, 16);
+mods.techreborn.alloySmelter.addRecipe(<projectred-core:resource_item>*4, <contenttweaker:material2>, <minecraft:sand>, 800, 16);
 
 mods.techreborn.alloySmelter.addRecipe(<projectred-core:resource_item:104>, <minecraft:iron_ingot>, <projectred-core:resource_item:105>, 400, 16);
 recipes.addShapeless(<projectred-core:resource_item:105>*2, [<ore:dustCobalt>, <minecraft:redstone>]);

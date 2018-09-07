@@ -10,8 +10,11 @@ recipes.remove(<tconstruct:soil>);
 recipes.addShaped(<tconstruct:soil>*8,[
 	[<minecraft:concrete_powder:*>,<minecraft:concrete_powder:*>, <minecraft:concrete_powder:*>],
 	[<minecraft:sand>, <claybucket:claybucket:1>.transformReplace(<claybucket:claybucket>), <minecraft:sand>],
-	[<minecraft:sand>, <minecraft:clay>, <minecraft:sand>]
-]);
+	[<minecraft:sand>, <minecraft:clay>, <minecraft:sand>]]);
+recipes.addShaped(<tconstruct:soil>*8,[
+	[<minecraft:concrete_powder:*>,<minecraft:concrete_powder:*>, <minecraft:concrete_powder:*>],
+	[<minecraft:sand>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <minecraft:sand>],
+	[<minecraft:sand>, <minecraft:clay>, <minecraft:sand>]]);
 
 recipes.remove(<tconstruct:fancy_frame:6>);
 recipes.addShaped(<tconstruct:fancy_frame:6>,[
@@ -37,6 +40,7 @@ recipes.addShaped(<tconstruct:wood_rail>,[
 
 recipes.remove(<tconstruct:tooltables>);
 mods.betterwithmods.Saw.add(<minecraft:crafting_table>, [<tconstruct:tooltables>, <betterwithmods:material:22>*4]);
+recipes.addShapeless(<tconstruct:tooltables>, [<minecraft:crafting_table>, <betterwithmods:steel_hacksaw:*>.transformDamage(1)]);
 
 recipes.remove(<tconstruct:tooltables:3>);
 recipes.addShaped(<tconstruct:tooltables:3>,[
@@ -88,4 +92,7 @@ mods.techreborn.vacuumFreezer.addRecipe(<tconstruct:slime_congealed>, <minecraft
 mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom>, <liquid:alubrass>);
 mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom>, <liquid:gold>);
 
+//Aluminium Brass new composition: 3 Brass per 1 Alu
+mods.tconstruct.Alloy.removeRecipe(<liquid:alubrass>);
+mods.tconstruct.Alloy.addRecipe(<liquid:alubrass> * 4, [<liquid:brass> * 3, <liquid:aluminum> * 1]);
 

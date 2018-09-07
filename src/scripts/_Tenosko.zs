@@ -50,6 +50,8 @@ mods.jei.JEI.removeAndHide();
 .setUseOreDict(false);
 /effect Tenosko night_vision 600
 /fill ~0 ~0 ~0 ~30 ~-30 ~-30 air
+/clone ~0 ~0 ~0 ~26 ~-42 ~26 ~0 ~100 ~0
+/fill ~0 ~0 ~0 ~26 ~-42 ~26 air 0 replace stone
 */
 
 #################
@@ -105,7 +107,7 @@ recipes.addShaped(<architecturecraft:largepulley>,[
 
 recipes.remove(<architecturecraft:sawbench>);
 recipes.addShaped(<architecturecraft:sawbench>,[
-	[<immersiveengineering:metal:39>, <architecturecraft:sawblade>, <immersiveengineering:metal:39>],
+	[<ore:plateIron>, <architecturecraft:sawblade>, <ore:plateIron>],
 	[<betterwithmods:shaft>, <architecturecraft:largepulley>, <betterwithmods:shaft>],
 	[<betterwithmods:shaft>, <minecraft:wooden_pressure_plate>, <betterwithmods:shaft>]
 ]);
@@ -204,6 +206,11 @@ recipes.addShapeless(<biomesoplenty:plant_0:11>*8,[<ore:treeLeaves>, <ore:treeLe
 recipes.addShapeless(<minecraft:log>*3,[<rockhounding_surface:aging_items>, <biomesoplenty:log_4:5>, <biomesoplenty:log_4:5>, <biomesoplenty:log_4:5>]);
 recipes.addShapeless(<biomesoplenty:log_4:5>*3,[<rockhounding_surface:aging_items:1>, <minecraft:log>, <minecraft:log>, <minecraft:log>]);
 
+recipes.removeByRecipeName("biomesoplenty:boat");
+
+<ore:celestialBlock>.add(<biomesoplenty:crystal>);
+recipes.remove(<biomesoplenty:crystal>);
+
 //////////////////////////////////////////////////////////////
 /////////////		   Catwalks 	    //////////////////////
 //////////////////////////////////////////////////////////////
@@ -264,6 +271,13 @@ recipes.addShaped(<chineseworkshop:black_tile_roof>,[
 	[<minecraft:oak_stairs>, <chineseworkshop:material:1>, <chineseworkshop:material:1>]
 ]);
 
+recipes.remove(<chineseworkshop:rammed_earth>);
+recipes.addShaped(<chineseworkshop:rammed_earth>*2,[
+	[null],
+	[null],
+	[<minecraft:wooden_pressure_plate>, <biomesoplenty:dirt:1>, <minecraft:wooden_pressure_plate>]
+]);
+
 recipes.remove(<chineseworkshop:upper_door_frame>);	//This was giving duplicate recipe problems with slabs
 recipes.addShapeless(<chineseworkshop:upper_door_frame>,[<betterwithmods:corner_wood>]);
 
@@ -298,6 +312,9 @@ recipes.addShaped(<cookingforblockheads:oven>,[
 	[<ore:plateIron>, <minecraft:furnace>, <ore:plateIron>],
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]
 ]);
+
+recipes.remove(<cookingforblockheads:spice_rack>);
+recipes.addShapeless(<cookingforblockheads:spice_rack>,[<tconstruct:rack:1>]);
 
 recipes.remove(<cookingforblockheads:ice_unit>);
 <cookingforblockheads:ice_unit>.addTooltip(format.aqua("Disabled"));
@@ -516,23 +533,28 @@ mods.jei.JEI.removeAndHide(<natura:ghostwood_sword>);
 mods.jei.JEI.removeAndHide(<natura:ghostwood_pickaxe>);
 mods.jei.JEI.removeAndHide(<natura:ghostwood_shovel>);
 mods.jei.JEI.removeAndHide(<natura:ghostwood_axe>);
+mods.jei.JEI.removeAndHide(<natura:ghostwood_kama>);
 mods.jei.JEI.removeAndHide(<natura:bloodwood_sword>);
 mods.jei.JEI.removeAndHide(<natura:bloodwood_pickaxe>);
 mods.jei.JEI.removeAndHide(<natura:bloodwood_shovel>);
 mods.jei.JEI.removeAndHide(<natura:bloodwood_axe>);
+mods.jei.JEI.removeAndHide(<natura:bloodwood_kama>);
 mods.jei.JEI.removeAndHide(<natura:darkwood_sword>);
 mods.jei.JEI.removeAndHide(<natura:darkwood_pickaxe>);
 mods.jei.JEI.removeAndHide(<natura:darkwood_shovel>);
 mods.jei.JEI.removeAndHide(<natura:darkwood_axe>);
+mods.jei.JEI.removeAndHide(<natura:darkwood_kama>);
 mods.jei.JEI.removeAndHide(<natura:fusewood_sword>);
 mods.jei.JEI.removeAndHide(<natura:fusewood_pickaxe>);
 mods.jei.JEI.removeAndHide(<natura:fusewood_shovel>);
 mods.jei.JEI.removeAndHide(<natura:fusewood_axe>);
+mods.jei.JEI.removeAndHide(<natura:fusewood_kama>);
 //Really?
 mods.jei.JEI.removeAndHide(<natura:netherquartz_sword>);
 mods.jei.JEI.removeAndHide(<natura:netherquartz_pickaxe>);
 mods.jei.JEI.removeAndHide(<natura:netherquartz_shovel>);
 mods.jei.JEI.removeAndHide(<natura:netherquartz_axe>);
+mods.jei.JEI.removeAndHide(<natura:netherquartz_kama>);
 
 //////////////////////////////////////////////////////////////
 /////////////		   Open Glider		   ///////////////////
@@ -680,6 +702,20 @@ recipes.addShaped(<quark:custom_chest:4>,[
 	[<minecraft:planks:5>, <minecraft:planks:5>, <minecraft:planks:5>]
 ]);
 
+recipes.remove(<quark:framed_glass>);
+recipes.addShaped(<quark:framed_glass>,[
+	[<minecraft:iron_nugget>, <minecraft:iron_nugget>, <minecraft:iron_nugget>],
+	[<minecraft:iron_nugget>, <minecraft:glass>, <minecraft:iron_nugget>],
+	[<minecraft:iron_nugget>, <minecraft:iron_nugget>, <minecraft:iron_nugget>]
+]);
+
+recipes.remove(<quark:redstone_randomizer>);
+recipes.addShaped(<quark:redstone_randomizer>,[
+	[null, <quark:biotite>, null],
+	[<minecraft:redstone_torch>, <immersiveengineering:metal:39>, <minecraft:redstone_torch>],
+	[null, <minecraft:redstone_torch>, null]
+]);
+
 //////////////////////////////////////////////////////////////
 /////////////      Redstone Arsenal       ////////////////////
 //////////////////////////////////////////////////////////////
@@ -691,41 +727,10 @@ recipes.addShaped(<redstonearsenal:tool.shield_flux>,[
 	[<redstonearsenal:material:128>, <techreborn:plates:3>,]
 ]);
 
+recipes.remove(<redstonearsenal:material:96>);	//Remove easy recipe for gear
+
 recipes.remove(<redstonearsenal:material:192>);
 mods.tconstruct.Casting.addTableRecipe(<redstonearsenal:material:192>, <tconstruct:clay_cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:obsidian>, 288);
-
-//////////////////////////////////////////////////////////////
-//////////       Redstone Gauges and Switches      ///////////
-//////////////////////////////////////////////////////////////
-
-recipes.remove(<rsgauges:flatgauge1>);
-recipes.addShaped(<rsgauges:flatgauge1>,[
-	[<ore:dyeBlack>, <minecraft:glass_pane>, null],
-	[<actuallyadditions:item_crystal>,<techreborn:plates:16>, null],
-	[null]
-]);
-
-recipes.remove(<rsgauges:indicator1>);
-recipes.addShapeless(<rsgauges:indicator1>,[<enderio:block_electric_light:2>, <minecraft:stained_glass_pane:13>]);
-
-recipes.remove(<rsgauges:indicator1blink1>);
-recipes.addShapeless(<rsgauges:indicator1blink1>, [<rsgauges:indicator1>, <contenttweaker:material>]);
-
-recipes.remove(<rsgauges:indicator2blink1>);
-recipes.addShapeless(<rsgauges:indicator2blink1>, [<rsgauges:indicator1blink1>]);
-
-recipes.remove(<rsgauges:indicator3blink1>);
-recipes.addShapeless(<rsgauges:indicator3blink1>, [<rsgauges:indicator2blink1>]);
-
-recipes.remove(<rsgauges:bistableswitch1>);
-recipes.addShapeless(<rsgauges:bistableswitch1>, [<actuallyadditions:item_crystal>, <techreborn:plates:28>, <minecraft:iron_nugget>, <minecraft:lever>]);
-
-recipes.remove(<rsgauges:flatgauge1>);
-recipes.addShaped(<rsgauges:flatgauge1>,[
-	[<projectred-illumination:light_button:13>],
-	[<techreborn:plates:28>],
-	[<minecraft:redstone>]
-]);
 
 //////////////////////////////////////////////////////////////
 /////////////      Simple Void World      ////////////////////
@@ -747,6 +752,17 @@ recipes.addShaped(<sereneseasons:season_clock>,[
 	[<enderio:item_material:18>],
 	[<minecraft:clock>],
 	[<minecraft:quartz>]
+]);
+
+//////////////////////////////////////////////////////////////
+/////////////         Spice of Life       ////////////////////
+////////////////////////////////////////////////////////////// 
+
+recipes.remove(<spiceoflife:lunchbox>);
+recipes.addShaped(<spiceoflife:lunchbox>,[
+	[null, <betterwithmods:material:8>, null],
+	[<techreborn:plates:16>, <tconstruct:nuggets:5>, <techreborn:plates:16>],
+	[<techreborn:plates:16>, <techreborn:plates:16>, <techreborn:plates:16>]
 ]);
 
 //////////////////////////////////////////////////////////////

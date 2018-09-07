@@ -27,11 +27,11 @@ recipes.addShaped(<advancedrocketry:seat>,[
 
 recipes.remove(<advancedrocketry:rocketmotor>);
 mods.extendedcrafting.TableCrafting.addShaped(<advancedrocketry:rocketmotor>,[
-    [<techreborn:ingot:12>, <nuclearcraft:cooler:10>, <ic2:advanced_heat_exchanger>, <nuclearcraft:cooler:10>, <techreborn:ingot:12>],  
-    [null, <techreborn:ingot:12>, <rockhounding_chemistry:misc_items:9>, <techreborn:ingot:12>, null],  
-    [null, <techreborn:plates:28>, <techreborn:plates:28>, <techreborn:plates:28>, null],  
-    [<techreborn:plates:28>, <nuclearcraft:ingot:8>, <techreborn:dust:33>, <nuclearcraft:ingot:8>, <techreborn:plates:28>], 
-    [<techreborn:plates:28>, <techreborn:dust:33>, <enderio:item_material:22>, <techreborn:dust:33>, <techreborn:plates:28>] 
+    [<frogcraftrebirth:metal_ingot:1>, <nuclearcraft:cooler:10>, <ic2:advanced_heat_exchanger>, <nuclearcraft:cooler:10>, <frogcraftrebirth:metal_ingot:1>],  
+    [null, <frogcraftrebirth:metal_ingot:1>, <rockhounding_chemistry:misc_items:9>, <frogcraftrebirth:metal_ingot:1>, null],  
+    [null, <ore:plateMagnalium>, <ore:plateMagnalium>, <ore:plateMagnalium>, null],  
+    [<ore:plateMagnalium>, <nuclearcraft:ingot:8>, <techreborn:dust:33>, <nuclearcraft:ingot:8>, <ore:plateMagnalium>], 
+    [<ore:plateMagnalium>, <techreborn:dust:33>, <enderio:item_material:22>, <techreborn:dust:33>, <ore:plateMagnalium>] 
 ]); 
 
 recipes.remove(<advancedrocketry:advrocketmotor>);
@@ -163,7 +163,7 @@ recipes.addShaped(<advancedrocketry:electrolyser>,[
 
 recipes.remove(<advancedrocketry:chemicalreactor>);
 recipes.addShaped(<advancedrocketry:chemicalreactor>,[
-	[null, <techreborn:plates:26>, null],
+	[null, <rockhounding_chemistry:metal_items:13>, null],
 	[<rockhounding_chemistry:alloy_items_tech:46>, <libvulpes:structuremachine>, <rockhounding_chemistry:alloy_items_tech:46>],
 	[<advancedrocketry:ic>, <advancedrocketry:ic:5>, <advancedrocketry:ic>]
 ]);

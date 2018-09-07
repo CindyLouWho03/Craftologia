@@ -108,6 +108,16 @@ recipes.addShapeless(<betterwithmods:material:51>,[<immersiveengineering:tool>.t
 mods.jei.JEI.removeAndHide(<betterwithmods:aesthetic:5>);
 mods.jei.JEI.removeAndHide(<betterwithmods:aesthetic:8>);
 
+recipes.remove(<betterwithmods:material:14>);
+recipes.addShapeless(<betterwithmods:material:14>*9,[<betterwithmods:steel_block>]);
+
+mods.betterwithmods.Anvil.removeShaped(<betterwithmods:steel_block>);
+recipes.addShaped(<betterwithmods:steel_block>,[
+	[<betterwithmods:material:14>, <betterwithmods:material:14>, <betterwithmods:material:14>],
+	[<betterwithmods:material:14>, <betterwithmods:material:14>, <betterwithmods:material:14>],
+	[<betterwithmods:material:14>, <betterwithmods:material:14>, <betterwithmods:material:14>]
+]);
+
 <betterwithmods:steel_anvil>.addTooltip(format.gold("Recipes appear rotated due to a bug"));
 recipes.remove(<betterwithmods:steel_anvil>);
 recipes.addShaped(<betterwithmods:steel_anvil>,[
@@ -164,6 +174,8 @@ mods.betterwithmods.Anvil.addShaped(<betterwithmods:material:24>, [
 	[<immersiveengineering:metal:8>, <immersiveengineering:material:2>, <immersiveengineering:metal:8>, null],
 	[<immersiveengineering:material:2>, <immersiveengineering:metal:8>, null, null]
 ]);
+
+mods.appliedenergistics2.Grinder.addRecipe(<betterwithmods:material:15>, <minecraft:netherrack>, 8);
 
 mods.jei.JEI.removeAndHide(<betterwithmods:material:45>);	//Diamond ingot
 mods.jei.JEI.removeAndHide(<betterwithmods:material:46>);	//Diamond nugget

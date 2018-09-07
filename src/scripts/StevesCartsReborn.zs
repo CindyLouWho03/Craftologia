@@ -143,7 +143,7 @@ mods.rockhounding_chemistry.MetalAlloyer.add(
 	[18, 18, 18, 18], <stevescarts:modulecomponents:21>);
 
 furnace.remove(<stevescarts:modulecomponents:22>);
-mods.techreborn.blastFurnace.addRecipe(<stevescarts:modulecomponents:22>, null, <stevescarts:modulecomponents:21>, <ic2:misc_resource:2>, 18000, 62, 2500);
+mods.techreborn.blastFurnace.addRecipe(<stevescarts:modulecomponents:22>, null, <stevescarts:modulecomponents:21>, <ic2:misc_resource:2>, 6000, 250, 2500);
 
 recipes.remove(<stevescarts:modulecomponents:23>);
 mods.immersiveengineering.Blueprint.addRecipe("components", <stevescarts:modulecomponents:23>, 
@@ -184,11 +184,17 @@ recipes.addShapeless(<stevescarts:modulecomponents:43>,[<betterwithmods:material
 recipes.remove(<stevescarts:modulecomponents:44>);
 recipes.addShapeless(<stevescarts:modulecomponents:44>,[<mekanismgenerators:solarpanel>]);
 
+recipes.remove(<stevescarts:modulecomponents:45>);
+mods.extendedcrafting.EnderCrafting.addShaped(<stevescarts:modulecomponents:45>,[
+	[<minecraft:glowstone_dust>, <minecraft:ghast_tear>, <enderzoo:witheringdust>],
+	[<minecraft:dragon_breath>, <minecraft:ender_eye>, <twilightforest:fiery_tears>],
+	[<minecraft:nether_wart>, <minecraft:fermented_spider_eye>, <betterwithmods:bat_wing>]
+]);
+
 furnace.remove(<stevescarts:modulecomponents:47>);
-recipes.addShapeless(<stevescarts:modulecomponents:47>,[<stevescarts:modulecomponents:21>, <stevescarts:modulecomponents:45>]);
 
 furnace.remove(<stevescarts:modulecomponents:49>);
-mods.techreborn.blastFurnace.addRecipe(<stevescarts:modulecomponents:49>, null, <stevescarts:modulecomponents:47>, <nuclearcraft:compound:1>, 6000, 175, 3500);
+mods.techreborn.blastFurnace.addRecipe(<stevescarts:modulecomponents:49>, null, <stevescarts:modulecomponents:47>, <nuclearcraft:compound:1>*4, 19000, 350, 3500);
 
 recipes.remove(<stevescarts:modulecomponents:59>);
 recipes.addShaped(<stevescarts:modulecomponents:59>,[

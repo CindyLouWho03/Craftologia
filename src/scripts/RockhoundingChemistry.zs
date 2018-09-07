@@ -37,7 +37,7 @@ mods.techreborn.rollingMachine.addShaped(<rockhounding_chemistry:misc_items:6>, 
 //Glass Pipe
 recipes.remove(<rockhounding_chemistry:misc_items:7>);
 mods.rockhounding_chemistry.ProfilingBench.removeByInput(<minecraft:glass>);
-mods.tconstruct.Casting.addTableRecipe(<rockhounding_chemistry:misc_items:7>, <tconstruct:clay_cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:glass>, 200);
+mods.tconstruct.Casting.addTableRecipe(<rockhounding_chemistry:misc_items:7>, <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:glass>, 144);
 //Compressor Unit
 recipes.remove(<rockhounding_chemistry:misc_items:9>);
 recipes.addShaped(<rockhounding_chemistry:misc_items:9>,[
@@ -135,7 +135,7 @@ recipes.addShaped(<rockhounding_chemistry:machines_a:9>,[
 //Profiling Bench
 recipes.remove(<rockhounding_chemistry:machines_a:11>);
 recipes.addShaped(<rockhounding_chemistry:machines_a:11>,[
-	[null, null, null],
+	[<immersiveengineering:mold>, <immersiveengineering:mold:1>, <immersiveengineering:mold:2>],
 	[<immersiveengineering:material:2>, <contenttweaker:block1>, <immersiveengineering:material:2>],
 	[<immersiveengineering:metal:8>, <techreborn:plates:31>, <immersiveengineering:metal:8>]
 ]);
@@ -429,6 +429,9 @@ recipes.addShaped(<rockhounding_chemistry:misc_items:22>,[
 	[<rockhounding_chemistry:alloy_parts:85>, <magneticraft:crafting:3>, <rockhounding_chemistry:alloy_parts:85>],
 	[null, <rockhounding_chemistry:alloy_parts:85>, null]
 ]);
+
+mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:crushing_gear>);
+mods.rockhounding_chemistry.ProfilingBench.add(<immersiveengineering:metal:8>, <rockhounding_chemistry:crushing_gear>, 6);
 
 //----------------------//
 // Removed Blocks/Items //

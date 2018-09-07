@@ -18,6 +18,20 @@ mods.extendedcrafting.EnderCrafting.addShaped(<rftools:dimensional_shard>*4, [
 	[null, <plants2:generic:6>, null]]);
 mods.techreborn.industrialGrinder.addRecipe(<rftools:dimensional_shard>*8, null, null, null, <ore:oreDimensionalShard>, null, <liquid:fluidmercury>*2000, 1800, 256);
 
+recipes.remove(<rftools:infused_diamond>);
+mods.extendedcrafting.EnderCrafting.addShaped(<rftools:infused_diamond>, [
+	[<rftools:dimensional_shard>, <rftools:dimensional_shard>, <rftools:dimensional_shard>],
+	[<rftools:dimensional_shard>, <minecraft:diamond>, <rftools:dimensional_shard>],
+	[<rftools:dimensional_shard>, <rftools:dimensional_shard>, <rftools:dimensional_shard>]
+]);
+
+recipes.remove(<rftools:infused_enderpearl>);
+mods.extendedcrafting.EnderCrafting.addShaped(<rftools:infused_enderpearl>, [
+	[<rftools:dimensional_shard>, <rftools:dimensional_shard>, <rftools:dimensional_shard>],
+	[<rftools:dimensional_shard>, <minecraft:ender_pearl>, <rftools:dimensional_shard>],
+	[<rftools:dimensional_shard>, <rftools:dimensional_shard>, <rftools:dimensional_shard>]
+]);
+
 //In Precision Assembler
 recipes.remove(<rftools:syringe>);
 
@@ -449,7 +463,7 @@ recipes.addShaped(<rftools:powercell>,[
 recipes.remove(<rftools:powercell_advanced>);
 recipes.addShaped(<rftools:powercell_advanced>,[
 	[<rftools:infused_enderpearl>, <rftools:infused_enderpearl>, <rftools:infused_enderpearl>],
-	[<stevescarts:modulecomponents:21>, <techreborn:lapotroncrystal>.withTag({energy: 0}), <stevescarts:modulecomponents:21>],
+	[<stevescarts:modulecomponents:22>, <techreborn:lapotroncrystal>.withTag({energy: 0}), <stevescarts:modulecomponents:22>],
 	[<contenttweaker:dust>, <rftools:powercell>, <contenttweaker:dust>]
 ]);
 

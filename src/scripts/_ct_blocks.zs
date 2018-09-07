@@ -35,6 +35,14 @@ moissaniteOre.setLightValue(1);
 moissaniteOre.setBlockSoundType(<soundtype:stone>);
 moissaniteOre.register();
 
+var evaporite = VanillaFactory.createBlock("ore3", <blockmaterial:ground>);
+evaporite.setBlockHardness(5.0);
+evaporite.setBlockResistance(3.0);
+evaporite.setToolClass("shovel");
+evaporite.setToolLevel(1);
+evaporite.setBlockSoundType(<soundtype:ground>);
+evaporite.register();
+
 //----------//
 //	 Block	//
 //----------//
@@ -58,8 +66,6 @@ osirtusBlock.OnBlockPlace = function(world, blockPos, blockState){
 }
 */
 osirtusBlock.register();
-
-
 
 var hydraulicPress = VanillaFactory.createBlock("block1", <blockmaterial:iron>);
 hydraulicPress.setToolClass("pickaxe");

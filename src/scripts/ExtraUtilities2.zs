@@ -278,5 +278,11 @@ recipes.addShaped(<extrautils2:screen>,[
 	[null, <ic2:crafting:1>, null]
 ]);
 
+recipes.remove(<extrautils2:compoundbow>);
+recipes.addShaped(<extrautils2:compoundbow>,[
+	[<enderio:item_material:71>, <enderio:item_material:14>, null],
+	[<enderio:item_material:17>, <contenttweaker:part2>, <tconstruct:bow_string>.withTag({Material: "soularium"})],
+	[<enderio:item_material:71>, <enderio:item_material:14>, null]
+]);
 
 

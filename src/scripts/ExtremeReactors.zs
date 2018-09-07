@@ -46,9 +46,9 @@ recipes.addShaped(<bigreactors:turbinehousingcores>,[
 
 recipes.remove(<bigreactors:turbinehousing>);
 recipes.addShaped(<bigreactors:turbinehousing>,[
-	[<ore:ingotSteel>, <ore:ingotGraphite>, <ore:ingotSteel>],
-	[<ore:ingotGraphite>, <bigreactors:turbinehousingcores>, <ore:ingotGraphite>],
-	[<ore:ingotSteel>, <ore:ingotGraphite>, <ore:ingotSteel>]
+	[<rockhounding_chemistry:metal_items:12>, <nuclearcraft:alloy:5>, <rockhounding_chemistry:metal_items:12>],
+	[<nuclearcraft:alloy:5>, null, <nuclearcraft:alloy:5>],
+	[<rockhounding_chemistry:metal_items:12>, <nuclearcraft:alloy:5>, <rockhounding_chemistry:metal_items:12>]
 ]);
 
 recipes.remove(<bigreactors:turbinebearing>);
@@ -98,7 +98,11 @@ recipes.remove(<bigreactors:reactorcasing>);
 recipes.addShaped(<bigreactors:reactorcasing>*4, [
 	[<techreborn:storage2>, <ic2:crafting:15>, <techreborn:storage2>],
 	[<ic2:crafting:15>, <bigreactors:reactorcasingcores>, <ic2:crafting:15>],
-	[<techreborn:storage2>, <ic2:crafting:15>, <techreborn:storage2>]
+	[<techreborn:storage2>, <ic2:crafting:15>, <techreborn:storage2>]]);
+recipes.addShaped(<bigreactors:reactorcasing>, [
+	[<nuclearcraft:dust:2>, <ic2:crafting:15>, <nuclearcraft:dust:2>],
+	[<ic2:crafting:15>, <bigreactors:reactorcasingcores>, <ic2:crafting:15>],
+	[<nuclearcraft:dust:2>, <ic2:crafting:15>, <nuclearcraft:dust:2>]
 ]);
 
 recipes.remove(<bigreactors:reactorcoolantport>);
@@ -191,7 +195,7 @@ mods.techreborn.rollingMachine.addShaped(<bigreactors:ingotmetals:4>*9, [
 
 recipes.remove(<bigreactors:reactorcasingcores>);
 recipes.addShaped(<bigreactors:reactorcasingcores>,[
-	[<rockhounding_chemistry:misc_items:4>, <contenttweaker:part2>, <rockhounding_chemistry:misc_items:4>],
+	[<immersiveengineering:material:3>, <contenttweaker:part2>, <immersiveengineering:material:3>],
 	[<contenttweaker:part2>, <minecraft:gold_ingot>, <contenttweaker:part2>],
-	[<rockhounding_chemistry:misc_items:4>, <contenttweaker:part2>, <rockhounding_chemistry:misc_items:4>]
+	[<immersiveengineering:material:3>, <contenttweaker:part2>, <immersiveengineering:material:3>]
 ]);

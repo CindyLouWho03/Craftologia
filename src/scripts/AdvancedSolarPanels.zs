@@ -49,11 +49,14 @@ recipes.addShaped(<advanced_solar_panels:crafting:9>,[
 ]);
 
 recipes.remove(<advanced_solar_panels:crafting:13>);
-recipes.addShaped(<advanced_solar_panels:crafting:13>,[
-	[<techreborn:part:17>, <frogcraftrebirth:metal_plate_dense:2>, <techreborn:part:17>],
-	[<contenttweaker:plate1>, <actuallyadditions:item_misc:19>, <contenttweaker:plate1>],
-	[<techreborn:part:17>, <frogcraftrebirth:metal_plate_dense:2>, <techreborn:part:17>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<advanced_solar_panels:crafting:13>,[
+    [null, <techreborn:part:17>, <draconicevolution:wyvern_core>, <techreborn:part:17>, null],  
+    [<techreborn:part:17>, <ic2:crafting:4>, <rockhounding_chemistry:alloy_items_gems:1>, <ic2:crafting:4>, <techreborn:part:17>],  
+    [<draconicevolution:wyvern_core>, <rockhounding_chemistry:alloy_items_gems:1>, <actuallyadditions:item_misc:19>, <rockhounding_chemistry:alloy_items_gems:1>, 
+    <draconicevolution:wyvern_core>],  
+    [<techreborn:part:17>, <ic2:crafting:4>, <rockhounding_chemistry:alloy_items_gems:1>, <ic2:crafting:4>, <techreborn:part:17>], 
+    [null, <techreborn:part:17>, <draconicevolution:wyvern_core>, <techreborn:part:17>, null] 
+]); 
 
 //Remove bugged textures of stone double slabs
 mods.jei.JEI.removeAndHide(<advanced_solar_panels:double_stone_slab:*>);

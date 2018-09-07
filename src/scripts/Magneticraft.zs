@@ -4,13 +4,6 @@
 /////////////		Magneticraft		//////////////////////
 //////////////////////////////////////////////////////////////
 
-recipes.remove(<magneticraft:stone_hammer>);
-recipes.addShaped(<magneticraft:stone_hammer>,[
-	[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:string>],
-	[<minecraft:cobblestone>, <ore:stickWood>, <minecraft:cobblestone>],
-	[null,<ore:stickWood>, null]
-]);
-
 recipes.remove(<magneticraft:voltmeter>);
 recipes.addShaped(<magneticraft:voltmeter>,[
 	[<enderio:item_alloy_nugget:6>, <minecraft:paper>, <minecraft:dye>],
@@ -62,7 +55,7 @@ mods.techreborn.compressor.addRecipe(<magneticraft:crafting:6>, <minecraft:wool>
 
 recipes.remove(<magneticraft:floppy_disk>);
 recipes.addShaped(<magneticraft:floppy_disk>,[
-	[<ic2:crafting>, <immersiveengineering:metal:39>, <ic2:crafting>],
+	[<ic2:crafting>, <rockhounding_chemistry:misc_items:3>, <ic2:crafting>],
 	[<ic2:crafting>, <ic2:crystal_memory>, <ic2:crafting>],
 	[<mekanism:polyethene>, <minecraft:paper>, <mekanism:polyethene>]
 ]);
@@ -188,15 +181,34 @@ recipes.addShaped(<magneticraft:iron_pipe>*2,[
 recipes.remove(<magneticraft:wind_turbine>);
 <magneticraft:wind_turbine>.addTooltip(format.yellow("WIP"));
 
+recipes.remove(<magneticraft:inserter_upgrade>);
+recipes.addShapeless(<magneticraft:inserter_upgrade>,[<redstonearsenal:material:96>, <industrialforegoing:plastic>, <immersiveengineering:material:3>, 
+<thermalfoundation:material:514>]);
+recipes.remove(<magneticraft:inserter_upgrade:1>);
+recipes.addShapeless(<magneticraft:inserter_upgrade:1>,[<thermalfoundation:material:295>, <industrialforegoing:plastic>, <immersiveengineering:material:3>, 
+<thermalfoundation:material:514>]);
+
 mods.jei.JEI.removeAndHide(<magneticraft:light_plates:4>);	//Hide glitched texture plate
 
 mods.magneticraft.CrushingTable.addRecipe(<techreborn:ore:7>, <magneticraft:rocky_chunks:14>, true);
+
+mods.magneticraft.HydraulicPress.removeRecipe(<magneticraft:ingots:5>, 2);
+# addRecipe: Arguments:
+# 1. input: the recipe input stack
+# 2. output: The primary result of the recipe
+# 3. duration: amount of game ticks need to complete the recipe
+# 4. mode: 0 -> Plates, 1 -> Light plates, 2 -> Heavy plates
+# 5. useOreDict:  If true, it will use the oreDictionary to check if an input stack is equivalent to the recipe input
+
+# Add a new Hydraulic Press recipe to convert snow blocks into snow balls.
+mods.magneticraft.HydraulicPress.addRecipe(<techreborn:ingot:15>*2, <magneticraft:heavy_plates:5>, 500, 2, false);
 
 recipes.remove(<magneticraft:stone_hammer>);
 recipes.remove(<magneticraft:iron_hammer>);
 recipes.remove(<magneticraft:steel_hammer>);
 recipes.addShapeless(<magneticraft:iron_hammer>,[<tconstruct:hammer_head>.withTag({Material: "iron"}), <tconstruct:binding>.withTag({Material: "iron"}), <betterwithmods:shaft>]);
-recipes.addShapeless(<magneticraft:steel_hammer>,[<tconstruct:hammer_head>.withTag({Material: "steel"}), <tconstruct:binding>.withTag({Material: "steel"}), <betterwithmods:shaft>]);
+recipes.addShapeless(<magneticraft:steel_hammer>,[<tconstruct:hammer_head>.withTag({Material: "steel"}), <tconstruct:binding>.withTag({Material: "steel"}), 
+<betterwithmods:shaft>]);
 
 //Two more hammers that can be used in Crushing Table
 mods.magneticraft.CrushingTable.addHammer(<ic2:forge_hammer:*>, 2, 10, 1);

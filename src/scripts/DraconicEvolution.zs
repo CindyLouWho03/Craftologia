@@ -4,6 +4,9 @@
 /////////////     Draconic Evolution      ////////////////////
 //////////////////////////////////////////////////////////////
 
+mods.techreborn.industrialGrinder.addRecipe(<draconicevolution:draconium_dust>*8, <techreborn:part:33>, null, null, 
+	<ore:oreDraconium>, null, <liquid:hydrochloric_acid>*1000, 1800, 256);
+
 recipes.remove(<draconicevolution:infused_obsidian>);
 recipes.addShaped(<draconicevolution:infused_obsidian>,[
 	[null, <draconicevolution:draconium_dust>, null],
