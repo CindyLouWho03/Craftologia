@@ -6,6 +6,7 @@ tile.contenttweaker.block1.name=Hydraulic Press
 tile.contenttweaker.ore.name=Chromite Ore
 tile.contenttweaker.ore1.name=Quartz Sandstone
 tile.contenttweaker.ore2.name=Moissanite Ore
+tile.contenttweaker.ore3.name=Evaporite
 
 #Smalldust
 item.contenttweaker.smalldust.name=Small Pile of Ruthenium Dust
@@ -60,4 +61,4 @@ item.contenttweaker.crafting5.name=Advanced Module
 item.contenttweaker.crafting6.name=Ultimate Module
 item.contenttweaker.crafting7.name=Turbine Bearing
 item.contenttweaker.crafting8.name=Monocrystalline Solar Panel
-
+item.contenttweaker.crafting9.name=Sodium Chloride Container
