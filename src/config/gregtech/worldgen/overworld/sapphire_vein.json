@@ -1,0 +1,42 @@
+{
+  "weight": 0,
+  "density": 0.3,
+  "max_height": 40,
+  "min_height": 10,
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [8, 10]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 30,
+          "value": "ore:almandine"
+        },
+        {
+          "weight": 30,
+          "value": "ore:pyrope"
+        },
+        {
+          "weight": 30,
+          "value": "ore:sapphire"
+        },
+        {
+          "weight": 10,
+          "value": "ore:green_sapphire"
+        }
+      ]
+    }
+  },
+  "biome_modifier": {
+    "type": "biome_map",
+    "biomesoplenty:chaparral": 10,
+    "biomesoplenty:eucalyptus_forest": 5,
+    "biomesoplenty:lush_desert": 10,
+  }
+}
+

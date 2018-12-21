@@ -74,8 +74,8 @@
 				"material": "minecraft:end_stone",
 				"cluster-size": 16
 			},
-			"cluster-count": 8,
-			"chunk-chance": 4,
+			"cluster-count": 6,
+			"chunk-chance": 8,
 			"min-height": 10,
 			"max-height": 80,
 			"retrogen": "true",

@@ -1,0 +1,43 @@
+{
+  "weight": 0,
+  "density": 0.7,
+  "max_height": 90,
+  "min_height": 40,
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [10, 14]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 40,
+          "value": "ore:salt"
+        },
+        {
+          "weight": 35,
+          "value": "ore:rock_salt"
+        },
+		{
+          "weight": 15,
+          "value": "ore:lepidolite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:spodumene"
+        }
+      ]
+    }
+  },
+  "biome_modifier": {
+    "type": "biome_map",
+    "minecraft:snowy_mountains": 10,
+    "biomesoplenty:mountain_foothills": 10,
+    "biomesoplenty:prairie": 5,
+    "biomesoplenty:snowy_coniferous_forest": 15,
+  }
+}
+

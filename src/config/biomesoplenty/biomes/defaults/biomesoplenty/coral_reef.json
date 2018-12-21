@@ -107,7 +107,6 @@
       "amountPerChunk": 15.0,
       "enable": true
     },
-    "amber": {},
     "roots": {
       "with": {
         "block": "biomesoplenty:plant_1",

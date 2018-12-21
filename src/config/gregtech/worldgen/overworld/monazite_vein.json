@@ -1,0 +1,40 @@
+{
+  "weight": 0,
+  "density": 0.4,
+  "max_height": 40,
+  "min_height": 20,
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [5, 3]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 66,
+          "value": "ore:bastnasite"
+        },
+        {
+          "weight": 26,
+          "value": "ore:monazite"
+        },
+		{
+          "weight": 8,
+          "value": "ore:neodymium"
+        }
+      ]
+    }
+  },
+  "biome_modifier": {
+    "type": "biome_map",
+    "biomesoplenty:cherry_blossom_grove": 10,
+    "biomesoplenty:dead_forest": 10,
+    "biomesoplenty:eucalyptus_forest": 8,
+    "biomesoplenty:land_of_lakes": 6,
+    "biomesoplenty:mystic_grove": 10
+  }
+}
+

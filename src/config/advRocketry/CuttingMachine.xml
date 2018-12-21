@@ -109,20 +109,28 @@
 			<itemStack>advancedrocketry:planks 6</itemStack>
 		</output>
 	</Recipe>
+	<Recipe timeRequired="200" power ="20">
+		<input>
+			<itemStack>enderio:item_material</itemStack>
+		</input>
+		<output>
+			<itemStack>enderio:item_material 8 69</itemStack>
+		</output>
+	</Recipe>
 	<Recipe timeRequired="400" power ="40">
 		<input>
 			<itemStack>enderio:item_material 1 1</itemStack>
 		</input>
 		<output>
-			<itemStack>enderio:item_material 10 2</itemStack>
+			<itemStack>enderio:item_material 8 2</itemStack>
 		</output>
 	</Recipe>
-	<Recipe timeRequired="300" power ="80">
+	<Recipe timeRequired="800" power ="80">
 		<input>
-			<itemStack>immersiveengineering:graphite_electrode</itemStack>
+			<itemStack>enderio:item_material</itemStack>
 		</input>
 		<output>
-			<itemStack>contenttweaker:part4 6</itemStack>
+			<itemStack>enderio:item_material 8 54</itemStack>
 		</output>
 	</Recipe>
 	<Recipe timeRequired="1200" power ="100">
@@ -139,6 +147,14 @@
 		</input>
 		<output>
 			<itemStack>projectred-core:resource_item 4 301</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="2400" power ="80">
+		<input>
+			<itemStack>minecraft:obsidian</itemStack>
+		</input>
+		<output>
+			<itemStack>essentialcraft:genitem 4 31</itemStack>
 		</output>
 	</Recipe>
 	

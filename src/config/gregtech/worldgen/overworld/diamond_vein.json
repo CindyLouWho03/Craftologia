@@ -1,0 +1,33 @@
+{
+  "weight": 20,
+  "density": 0.5,
+  "max_height": 5,
+  "min_height": 2,
+  "dimension_filter": ["name:overworld"],
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [1, 3]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": "ore:diamond"
+        }
+      ]
+    }
+  },
+  "biome_modifier": {
+    "type": "biome_dictionary",
+    "CONIFEROUS": 40, 
+    "LUSH": 30,
+    "MESA": 20,
+    "MOUNTAIN": 10,
+    "SANDY": 10,
+    "SAVANNA": 10
+  }
+}

@@ -1,5 +1,5 @@
 <Asteroids>
-	<asteroid name="Small Asteroid" distance="10" mass="50" massVariability="0.5" minLevel="0" probability="10" richness="0.2" richnessVariability="0.5">
+	<asteroid name="Small Asteroid" distance="10" mass="50" massVariability="0.5" minLevel="0" probability="2" richness="0.2" richnessVariability="0.5">
 		<ore itemStack="minecraft:iron_ore" chance="15" />
 		<ore itemStack="thermalfoundation:ore 5" chance="10" />
 	</asteroid>
@@ -12,6 +12,11 @@
 		<ore itemStack="techreborn:ore 13" chance="10" />
 		<ore itemStack="thermalfoundation:ore 5" chance="10" />
 		<ore itemStack="magneticraft:ores 2" chance="10" />
+	</asteroid>
+	<asteroid name="Rock-Ice Asteroid" distance="50" mass="150" massVariability="0.3" minLevel="0" probability="6" richness="0.5" richnessVariability="0.4">
+		<ore itemStack="biomesoplenty:hard_ice" chance="25" />
+		<ore itemStack="quark:biome_cobblestone 1" chance="20" />
+		<ore itemStack="nuclearcraft:block_ice" chance="15" />
 	</asteroid>
 	<asteroid name="Large Asteroid" distance="200" mass="500" massVariability="0.1" minLevel="0" probability="0.1" richness="0.2" richnessVariability="0.5">
 		<ore itemStack="minecraft:iron_ore" chance="15" />
@@ -37,10 +42,8 @@
 	<asteroid name="Dilithium Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.2" richness="0.2" richnessVariability="0.3">
 		<ore itemStack="libvulpes:ore0" chance="10" />
 	</asteroid>
-	<asteroid name="Graphite Enriched Small Asteroid" distance="100" mass="50" massVariability="0.5" minLevel="0" probability="0.65" richness="0.2" richnessVariability="0.3">
-		<ore itemStack="quantumflux:graphiteore" chance="10" />
-	</asteroid>
 	<asteroid name="Unknown Asteroid" distance="200" mass="25" massVariability="0.5" minLevel="0" probability="0.15" richness="0.2" richnessVariability="0.3">
-		<ore itemStack="contenttweaker:ore2" chance="15" />
+		<ore itemStack="appliedenergistics2:sky_stone_block" chance="15" />
+		<ore itemStack="contenttweaker:ore2" chance="10" />
 	</asteroid>
 </Asteroids>

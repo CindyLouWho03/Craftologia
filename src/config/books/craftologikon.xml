@@ -25,31 +25,88 @@
             <title bold="true" underline="true">Introduction</title>
             <p>
                 Hello, thank you for downloading my modpack. It has been over a year of development and work without any previous
-                knowledge about these things, all of this started in part because one day i decided to change one recipe of my 1.12.2 
-                world just because i didn't like how ugly and boring it was, i liked the outcome and then continued to change more and 
-                more recipes, and now, after more than 1800 recipes changed i can say i am sort of happy with how things are crafted so 
-                i decided to create this modpack to share it with you.
+                knowledge about these things, all of this started in part because one day i decided to change one recipe of my  world 
+                just because i didn't like how ugly and boring it was, i liked the outcome and then continued to change more and 
+                more recipes, and now, after more than 1900 recipes changed i can say i am sort of happy with how things are crafted in
+                this pack and want to share it with you.
             </p>
             <p>
-                I want to thank all the mod devs for doing such nice mods that make me wanting to continue playing Minecraft. But in special 
-                thanks to the creators of CraftTweaker and ContentTweaker, without them i wouldn't have created this modpack. 
+                I want to thank all the mod devs for doing such nice mods that make me wanting to continue playing this amazing game. 
+                But in special thanks to the creators of CraftTweaker and ContentTweaker, mods without which i wouldn't have created this modpack. 
             </p>
         </page>
         <page>
             <p>
-                This book is not meant to be a complete guide to lead you through the whole modpack with a questline or an advancements system,
-                here you will only find some some small tips and mentions to changes i have made in recipes or in the config that require you to know. 
-                If i don't make metion to a mod it just means there is nothing important to say about it. 
+                Having a questbook for this pack wasn't in the plans, but after hearing the players feedback on the discord server i have changed 
+                my mind. Also i have to admit a Questbook may be more necessary in a pack which has made so many changes. So i will try to provide 
+                you with a decent amount of quests that help you cover all the essentials this pack has to offer. Still this questbook is not necessary
+                to play this pack, you can drop the mod from the mods folder without problems.
+            </p>
+            <p underline="true">
+                A key is used to open the questbook, so i recommend you to go to the control settings and select a keybind to avoid any possible conflicts.
             </p>
             <p>
-                There is not a strict sequence of actions to complete this modpack, you are free to explore the mods you want in the order you 
-                preferand learn your own way of advancing through it. However, crafting recipes talk for themselves, to craft a certain item or 
-                block you will need to complete a series of steps before, even though in some cases you have different ways of getting to the 
-                same point.   
+                Once the questbook gains more content over time i will remove the parts of this guidebook that are not needed anymore.
+            </p>
+        </page>
+        <page>
+            <p color="#FF4F4F">
+                If you are planning to add or remove a mod by yourself, take into account it may break the modpack in different ways, specially if its a mod
+                with items or which makes worldgen changes. Information and Utility mods are not a problem.
             </p>
             <p>
-                If you notice something really important is missing on this book or you find any sort inconsistency on the recipes or the config, 
-                or you find a mod conflict, feel free to report it to the issues page or the discord server.
+                The following mods can be safely removed from the pack:
+            </p>
+            <p>
+                -AppleCore and AppleSkin
+            </p>
+            <p>
+                -CraftingTweaks
+            </p>
+            <p>
+                -Custom Main Menu
+            </p>
+            <p>
+                -Dynamic Surroundings
+            </p>
+            <p>
+                -FTBLib, FTBQuests and FTBUtilities
+            </p>
+            <p>
+                -LagGoggles
+            </p>
+            <p>
+                -Gravestone Mod
+            </p>
+            <p>
+                -InventorySorter
+            </p>
+            <p>
+                -JourneyMap
+            </p>
+            <p>
+                -LagGoggles
+            </p>
+             <p>
+                -Nutrition
+            </p>
+             <p>
+                -SilentLib and ExtendedDays 
+            </p>
+             <p>
+                -Spice of Life
+            </p>
+            <p>
+                -Stackable
+            </p>
+            <p>
+                -Unlimited Chisel Works
+            </p>
+        </page>
+        <page>
+            <p>
+                If you notice something really important is missing in this book or in the questbook, or you find any kind inconsistency in the recipes 
+                or in the config, feel free to report it in the discord server or the issues page. It is greatly appreciated.
             </p>
         </page>
     </chapter>
@@ -74,15 +131,15 @@
         </page>
         <page>
             <p>
-                Finding a Village is your best bet, if not abandoned, it will provide you with a variety of food and some useful things for the early game, 
+                Villages, if not abandoned, will provide you with a variety of food and some useful things for the early game, 
                 it is also the perfect place for setting up your first base. 
             </p>
             <p>
-                There are also other things you should take into consideration if you want to survive to the first day.
+                There are also other things you should take into consideration if you want to survive during the first days.
                 Days are 60 minutes long, this is three times a normal vanilla day, which may be enough time to find all the materials needed to craft a pickaxe, 
                 but pay attention to the food, it is very important in the first days as you will be like a nomad, moving around to find the materials you need, 
                 without a permanent base and source of food, raw meat is not healthy, you need to process it. Berries and fruits are a good alternative until you 
-                get a furnace. Diversifing your food sources in the first days will be difficult.
+                get a furnace.
             </p>
         </page>
         <page>
@@ -102,19 +159,22 @@
             <p>
                 How do you know where to find a certain ore? Well, exploration should lead you to the answer at some point, but maybe you are too hasty and you
                 prefer to spoil yourself checking the modpack files or asking somewhere, that is up to your playstyle, still i recommend you to note down all the 
-                ores you find in each biome you visited as you explore the world, it will become handy later on. 
+                ores you find in each biome you visited as you explore the world, it will become handy later on. If you dont see any vanilla redstone, lapis, diamond or emerald ores don't panic, they have been replaced by their GTCE counterparts, which no longer give you away the final material that easily, now 
+                more processing is needed to have diamonds.
+            </p>
+            <p>
+                After the addition of GTCE to the pack you will sometimes see nuggets on the ground, which means there might be some ore generation of the same type 
+                in that area. 
             </p>
         </page>
         <page>
             <p bold="true">Chapter Tips</p>
             <p>
-                -Sticks can be obtained at early game by breaking leaves and trees, fallen branches in the ground or by crafting from leaves.
+                -If you don't have enough torches while doing mining or exploring, you can activate Optifine Dynamic Lights to enlight your surroundings with only 
+                one torch or glowing item/block in your off-hand.
             </p>
             <p>
-                -String can be obtained from wool, flax and cotton crops, or by killing spiders.
-            </p>
-            <p>
-                -Iron Ores can't be melted down in Vanilla Furnaces, you need a TiC Smeltery instead.
+                -You can obtain sticks by breaking tree leaves with your hand.
             </p>
             <p>
                 -Pickaxes that display diamond mining level are not able to break obsidian blocks, this is not a modification by me, it just means they can mine 
@@ -123,21 +183,37 @@
             <p>
                 -Melting Villagers in the Smeltery no longer gives you molten emerald.
             </p>
-            <p>
-                -Villages usually have a Blacksmith and Engineer's House, where you can find an Engineer's Hammer.
-            </p>
         </page>
         <page>
+            <p bold="true" underline="true" color="#FF4F4F">
+                NOTE
+            </p>
+            <p>
+                TinkersConstruct enables the option to display only one item per material and part in JEI. This saves some pages but may be confusing if i make
+                recipe changes cause they are not displayed.
+            </p>
+            <p>
+                Tool Forge has one different recipe for each metal block, but you can see only one displayed. I added a cheaper recipe for the Iron Tool Forge which is much more reasonable, this is the only recipe which requires 4 ingots instead of 4 blocks.    
+            </p>
+            <space height="20"/>
+            <big_recipe>
+                <stack item="tconstruct:materials"/>
+                <stack item="tconstruct:materials"/>
+                <stack item="tconstruct:materials"/>
+                <stack item="minecraft:iron_ingot"/>
+                <stack item="tconstruct:tooltables" meta="3"/>
+                <stack item="minecraft:iron_ingot"/>
+                <stack item="minecraft:iron_ingot"/>
+                <space/>
+                <stack item="minecraft:iron_ingot"/>
+                <stack item="tconstruct:toolforge" tag="{textureBlock: {id: &quot;minecraft:iron_block&quot;, Count: 1 as byte, Damage: 0 as short}}"/>
+            </big_recipe>
         </page>
     </chapter>
 
     <chapter id="chapter2">
         <page>
             <title bold="true" underline="true">The Early Game</title>
-            <p>
-                Even though there is not a questline to keep track of your progress there is a milestone that clearly separates the beginning from the early game, 
-                that is the ability to produce steel.
-            </p>
             <p>
                 At this point in the game you may find yourself having to travel a lot, from one place to another, trying to discover new biomes to get all the 
                 resources you need, using a Glider and slime tools will be of great help. As travel distances increase, you can consider setting up multiple small 
@@ -155,22 +231,10 @@
         <page>
             <p bold="true">Chapter Tips</p>
             <p>
-                -Lunch Box allows you to store 6 slots of food to save some inventory space.
-            </p>
-            <p>
-                -To make Aluminium Brass, you can obtain Zinc from Sphalerite Ores in the Crushing Table.
-            </p>
-            <p>
-                -Forge Hammer and Engineer's Hammer can be used in the Magneticraft Crushing Table aswell.
-            </p>
-            <p>
                 -MRUCU entity can also be generated by operating with machines that generate radiation. 
             </p>
             <p>
                 -Faucet can be connected to other mods tanks to pour super hot liquids onto the Casting Table.
-            </p>
-            <p>
-                -To create the portal to the Twilight Forest, a MRU Chunk is required instead of a diamond. 
             </p>
         </page>
         <page>
@@ -190,9 +254,6 @@
             <p bold="true">Chapter Tips</p>
             <p>
                 -Immersive Engineering Excavator is unable to work, since it breaks the modpack oregen. Digital Miner and Void Miner are the alternatives later on.
-            </p>
-            <p> 
-                -Tech Reborn Blast Furnace, along with IE Arc Furnace, are the only ways to melt down some elements due to their high melting point. The first also shows real melting point of each, if below 1200Celsius, basic furnaces can be used aswell.
             </p>
             <p>
                 -Aroma1997's Dimensional World oregen has been disabled, no ore will spawn in there, it is not meant to be a mining dimension but instead a place for generating energy, setting up farms, testing stuff, etc. Sun never sets in this dimension.
@@ -221,20 +282,25 @@
         <page>
             <title bold="true" underline="true">The Late Game</title>
             <p>
-                There are many factors to measure how far you have progressed on this modpack, like powergen, mining production, chemistry and nuclear stuff. But once you set up your AE2 network you are entering a new tech level, you need one to deal with all the materials and craftings in a efficient way.
-                You should set up your AE2 network in your main base, as you can now teleport to different places there is no more need to create multiple bases to host your mining facilities. Now its the moment to experiment with new ways of generating power in bigger quantities, but you can also keep improving the renewable generators output.
+                You can now teleport to different places there is no more need to create multiple bases to host your mining facilities. Now its the moment to experiment with new ways of generating power in bigger quantities, but you can also keep improving the renewable generators output.
+                Once you have progressed enough in tech mods it is the momment to start with space exploration.
             </p>
         </page>
         <page>
-        	 <p bold="true">Chapter Tips</p>
+        	<p bold="true">Chapter Tips</p>
+            <p bold="true" underline="true" color="#FF4F4F">
+                NOTE
+            </p>
+            <p>
+                -AE2 Meteorites no longer generate on the Overworld, the reason of this change is that we (pack makers) cannot change the sky stone chest loot, 
+                they dont work with COFHWorld, so Moissanite Ore cannot generate with them, and once you have found the four presses they become almost useless even though in this pack Sky Stone has more uses. So they are moved to the Moon, which is also the only place in which you can find Certus Quartz (charged).
+                No one can say AdvancedRocketry Luna is useless in this pack.
+            </p>
             <p>
                 -Simple Void World dimension is always at noon, as opposed to Aroma1997's permanent day, no mobs will spawn in there so it is a good place for experimenting and late game setups.
             </p>
             <p>
                 NuclearCraft cooling capacity of materials reworked, vanilla and basic metals are much more inefficient at cooling to the point they are almost useless. On the other hand, materials like helium, enderium and cryotheum have it increased.
-            </p>
-            <p>
-                -Molecullar Transformer is currently the only way to obtain Iridium.
             </p>
         </page>
     </chapter>
@@ -246,7 +312,6 @@
                 At this point you should have a constant stream of materials coming to your base, with several automatic mining outposts located in certain profitable biomes which will provide you with key materials for the end game. 
                 Now crafting process gets more complicated and maybe even tedious, with more extended craftings and lots of chained crafts, to speed up the process it is highly recommended setting up an automatized crafting system. 
                 As late machines drain larger chunks of power to do their jobs, you will need to increase first your powergen capabilities, Nuclear reactors will prove helpful at this moment.
-                This is also the right moment to start with space exploration now that you have acquired enough knowledge in all the previous fields.
             </p>
         </page>
         <page>
@@ -277,9 +342,9 @@
     </chapter>
     <chapter id="chapter6">
         <page>
-            <title bold="true" underline="true">Modpack Goals</title>
-            <p color="#FF4F4F">
-                List in process...
+            <title bold="true" underline="true">Modpack Challenges (WIP)</title>
+            <p>
+                The modpack challenges are divided in six categories, they dont ask you for an item, instead, simply mark the checkbox and submit once you have completed the challenge. The first ones should only be marked as completed once you have done so with all the challenges below it.
             </p>
         </page>
     </chapter>

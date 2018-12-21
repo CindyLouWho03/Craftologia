@@ -1,0 +1,28 @@
+{
+  "weight": 30,
+  "density": 1,
+  "max_height": 80,
+  "min_height": 5,
+  "dimension_filter": ["name:the_end"],
+
+  "generator": {
+    "type": "plate",
+    "length": 1,
+    "depth": 1,
+    "height": 1
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": {
+            "block": "biomesoplenty:biome_block"
+          }
+        }
+      ]
+    }
+  }
+}

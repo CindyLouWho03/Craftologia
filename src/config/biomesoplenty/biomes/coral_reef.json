@@ -1,7 +1,7 @@
 {
 	"generators" :
 	{
-		"amber" :
+		"sapphire" :
 		{
 			"amountPerChunk" : 2
 		}

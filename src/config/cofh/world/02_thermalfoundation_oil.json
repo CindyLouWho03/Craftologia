@@ -164,6 +164,45 @@
 					1
 				]
 			}
+		},
+
+		"oil_lake": {
+			"distribution": "uniform",
+			"generator": {
+				"type": "lake",
+				"block": "thermalfoundation:fluid_crude_oil",
+				"material": [
+					"minecraft:sand",
+					"minecraft:sandstone",
+					"minecraft:stone"
+				],
+				"cluster-size": 24
+			},
+			"cluster-count": 1,
+			"chunk-chance": 24,
+			"min-height": 18,
+			"max-height": 70,
+			"follow-terrain": true,
+			"retrogen": "true",
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "dictionary",
+						"entry": "SANDY"
+					},
+					{
+						"type": "dictionary",
+						"entry": "OCEAN"
+					}
+				]
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
 		}
 	}
 }

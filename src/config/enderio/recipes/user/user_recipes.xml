@@ -3,7 +3,12 @@
 
 	<recipe name="Sagmill: Silicon" disabled="true" />
 	<recipe name="Sagmill: ClayBlock" disabled="true" />
+	<recipe name="Sagmill: oreCoal Ore" disabled="true" />
+	<recipe name="Sagmill: oreDiamond Ore" disabled="true" />
 	<recipe name="Sagmill: oreRedstone Ore" disabled="true" />
+	<recipe name="Sagmill: oreQuartz" disabled="true" />
+	<recipe name="Alloy: Pulsating Iron" disabled="true" />
+	<recipe name="Alloy: Vibrant Alloy" disabled="true" />
 
 	<recipe name="Sagmill: Slate">
 	    <sagmilling energy="2000">
@@ -14,13 +19,83 @@
 	    </sagmilling>
   	</recipe>
 
+  	<recipe name="Sagmill: quartzOre">
+	    <sagmilling energy="8000">
+	      <input name="oreQuartz" />
+	      <output name="nuclearcraft:gem_dust:2" amount="2" />
+	      <output name="techreborn:smalldust:33" amount="2" />
+	      <output name="frogcraftrebirth:non_metal_dust:5" chance="0.05" />
+	    </sagmilling>
+  	</recipe>
+
+  	<recipe name="Sagmill: TungstenCarbide">
+	    <sagmilling energy="50000">
+	      <input name="magneticraft:ingots:5" />
+	      <output name="magneticraft:dusts:5" />
+	    </sagmilling>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: ElectricalSteelIngot">
+	    <alloying energy="16000">
+	      <input name="dustCarbon" />
+	      <input name="minecraft:iron_ingot" />
+	      <input name="dustSilicon" />
+	      <output name="enderio:item_alloy_ingot" />
+	    </alloying>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: PulsatingIronIngot">
+	    <alloying energy="3000">
+	      <input name="minecraft:ender_pearl" />
+	      <input name="minecraft:iron_ingot" amount="2" />
+	      <input name="essentialcraft:genitem:51" />
+	      <output name="enderio:item_alloy_ingot:5" amount="2" />
+	    </alloying>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: VibrantAlloyIngot">
+	    <alloying energy="5000">
+	      <input name="minecraft:ender_eye" />
+	      <input name="minecraft:iron_ingot" amount="2" />
+	      <input name="contenttweaker:dust1" />
+	      <output name="enderio:item_alloy_ingot:2" amount="2" />
+	    </alloying>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: BlackIron">
+	    <alloying energy="2000">
+	      <input name="actuallyadditions:item_dust:7" amount="2" />
+	      <input name="minecraft:iron_ingot" />
+	      <input name="dustObsidian" />
+	      <output name="extendedcrafting:material" />
+	    </alloying>
+  	</recipe>
+
   	<recipe name="Alloysmelter: Epoxy">
-	    <alloying energy="8000">
+	    <alloying energy="12000">
 	      <input name="ic2:misc_resource:4" />
 	      <input name="mekanism:substrate" />
 	      <input name="slimeball" />
 	      <output name="contenttweaker:material1" />
 	    </alloying>
   	</recipe>
-  	
+
+  	<recipe name="Alloysmelter: CarbonSteel">
+	    <alloying energy="24000">
+	      <input name="minecraft:iron_ingot" />
+	      <input name="techreborn:smalldust:13" amount="2" />
+	      <input name="techreborn:smalldust:34" />
+	      <output name="mekanism:ingot:4" />
+	    </alloying>
+  	</recipe>
+
+  	<recipe name="Alloysmelter: Nichrome">
+	    <alloying energy="40000">
+	      <input name="techreborn:part:14" amount="3" />
+	      <input name="techreborn:smalldust:31" amount="2" />
+	      <input name="techreborn:smalldust:9" />
+	      <output name="rockhounding_chemistry:alloy_items_tech:22" amount="2" />
+	    </alloying>
+  	</recipe>
+
 </enderio:recipes>
