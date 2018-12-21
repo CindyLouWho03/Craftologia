@@ -1,17 +1,14 @@
 #Block
 tile.contenttweaker.block.name=Osirtus Block
-tile.contenttweaker.block1.name=Hydraulic Press
 
 #Ore
 tile.contenttweaker.ore.name=Chromite Ore
-tile.contenttweaker.ore1.name=Quartz Sandstone
 tile.contenttweaker.ore2.name=Moissanite Ore
 tile.contenttweaker.ore3.name=Evaporite
 
 #Smalldust
 item.contenttweaker.smalldust.name=Small Pile of Ruthenium Dust
 item.contenttweaker.smalldust1.name=Small Pile of Sand
-item.contenttweaker.smalldust2.name=Tiny Pile of Graphite Dust
 
 #Dust
 item.contenttweaker.dust.name=Ruthenium Dust
@@ -19,26 +16,22 @@ item.contenttweaker.dust1.name=Energetic Dust
 item.contenttweaker.dust2.name=Indium Dust
 item.contenttweaker.dust3.name=Silver Nitrate Dust
 item.contenttweaker.dust4.name=Pure Silicon Carbide Dust
+item.contenttweaker.dust5.name=HeatProof Dust
 
 #Ingot
 item.contenttweaker.ingot.name=Chrome Steel Ingot
-item.contenttweaker.ingot1.name=Osmiridium Ingot
-item.contenttweaker.ingot2.name=Ruthenosmiridium Ingot
+item.contenttweaker.ingot1.name=Iridosmine Ingot
+item.contenttweaker.ingot2.name=Rutheniridosmine Ingot
 item.contenttweaker.ingot3.name=Indium Tin Alloy
 item.contenttweaker.ingot4.name=Indium Tin Oxide
-item.contenttweaker.ingot5.name=Niobium-Titanium Alloy Ingot
 
 #Plate
-item.contenttweaker.plate.name=Osmium Plate
 item.contenttweaker.plate1.name=Heavy Osmium Plate 
 
 #Part
 item.contenttweaker.part.name=Glass Package
 item.contenttweaker.part1.name=Chrome Steel Bearing
 item.contenttweaker.part2.name=Carbon Fiber Tube
-item.contenttweaker.part3.name=Wolfram Wire
-item.contenttweaker.part4.name=Small Graphite Rod
-item.contenttweaker.part5.name=Niobium-Titanium Alloy Wire
 item.contenttweaker.part6.name=Small Magnet
 
 #Material
@@ -53,7 +46,6 @@ item.contenttweaker.material7.name=Sight Glass
 
 #Crafting
 item.contenttweaker.crafting.name=Electroplated Cutting Disc
-item.contenttweaker.crafting1.name=Plunger
 item.contenttweaker.crafting2.name=Canister
 item.contenttweaker.crafting3.name=Single Module
 item.contenttweaker.crafting4.name=Basic Module
@@ -61,4 +53,4 @@ item.contenttweaker.crafting5.name=Advanced Module
 item.contenttweaker.crafting6.name=Ultimate Module
 item.contenttweaker.crafting7.name=Turbine Bearing
 item.contenttweaker.crafting8.name=Monocrystalline Solar Panel
-item.contenttweaker.crafting9.name=Sodium Chloride Container
+item.contenttweaker.crafting10.name=Deflector Piston
