@@ -5,11 +5,11 @@ Craftologia is a modpack that tries to offer a more realistic and challenging co
 One year of work has been put by me to create this modpack and i hope it encourages you to explore the world, optimize your time and resources, research what each mod provides, explore the different alternatives with its advantages and disadvantages and investigate how things are done based on real data. 
 
 # Features
--150 mods (172 by Forge Loader).
+-153 mods (175 by Forge Loader).
 
--Over 1740 recipe changes (with CraftTweaker).
+-Over 1800 recipe changes (with CraftTweaker).
 
--40 new custom items and 5 new custom blocks mostly created (with ContentTweaker) to cover the lack of ingredients of some recipes.
+-41 new custom items and 6 new custom blocks mostly created (with ContentTweaker) to cover the lack of ingredients of some recipes.
 
 -Biome and dimension based oregen with larger but less common ore chunks.
 
@@ -20,4 +20,4 @@ One year of work has been put by me to create this modpack and i hope it encoura
 -Guidebook that offers you some commentary about the modpack, tips and changes that you may need to know at some point during your adventure. This is not a questbook. Over time the book 
 may include new content and updates, so dont throw it away.
 
--74 chemical elements of the Periodic Table are present in this modpack, all rows except the seventh one are mostly covered, if you like chemistry and physics this is your modpack. May include more in the future.
+-75 chemical elements of the Periodic Table are present in this modpack, all rows except the seventh one are mostly covered, if you like chemistry and physics this is your modpack. May include more in the future.
