@@ -5,11 +5,15 @@
 //////////////////////////////////////////////////////////////
 
 recipes.remove(<advanced_solar_panels:machines>);
-recipes.addShaped(<advanced_solar_panels:machines>,[
-	[<techreborn:part>, <ic2:te:80>, <techreborn:part>],
-	[null, <advanced_solar_panels:crafting:12>, null],
-	[<techreborn:part>, <ic2:te:80>, <techreborn:part>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<advanced_solar_panels:machines>,[
+    [<ic2:crafting:15>, <techreborn:part>, <ic2:te:80>, <techreborn:part>, <ic2:crafting:15>],  
+    [<ic2:crafting:15>, <rockhounding_chemistry:alloy_items_deco:31>, <rockhounding_chemistry:alloy_items_gems:1>, <rockhounding_chemistry:alloy_items_deco:31>, 
+    <ic2:crafting:15>],  
+    [null, <ic2:crafting:15>, <advanced_solar_panels:crafting:12>, <ic2:crafting:15>, null],  
+    [<ic2:crafting:15>, <rockhounding_chemistry:alloy_items_deco:31>, <rockhounding_chemistry:alloy_items_gems:1>, <rockhounding_chemistry:alloy_items_deco:31>, 
+    <ic2:crafting:15>], 
+    [<ic2:crafting:15>, <techreborn:part>, <ic2:te:80>, <techreborn:part>, <ic2:crafting:15>] 
+]); 
 
 recipes.remove(<advanced_solar_panels:machines:3>);
 recipes.addShaped(<advanced_solar_panels:machines:3>,[
@@ -48,11 +52,18 @@ recipes.addShaped(<advanced_solar_panels:crafting:9>,[
 	[<minecraft:redstone>, <ore:dustDiamond>, <minecraft:redstone>]
 ]);
 
+recipes.remove(<advanced_solar_panels:crafting:12>);
+recipes.addShaped(<advanced_solar_panels:crafting:12>,[
+	[<advanced_solar_panels:crafting:6>, <techreborn:part:26>, <advanced_solar_panels:crafting:6>],
+	[<advanced_solar_panels:crafting:6>, <nuclearcraft:part:6>, <advanced_solar_panels:crafting:6>],
+	[<advanced_solar_panels:crafting:6>, <techreborn:part:26>, <advanced_solar_panels:crafting:6>]
+]);
+
 recipes.remove(<advanced_solar_panels:crafting:13>);
 mods.extendedcrafting.TableCrafting.addShaped(<advanced_solar_panels:crafting:13>,[
     [null, <techreborn:part:17>, <draconicevolution:wyvern_core>, <techreborn:part:17>, null],  
     [<techreborn:part:17>, <ic2:crafting:4>, <rockhounding_chemistry:alloy_items_gems:1>, <ic2:crafting:4>, <techreborn:part:17>],  
-    [<draconicevolution:wyvern_core>, <rockhounding_chemistry:alloy_items_gems:1>, <actuallyadditions:item_misc:19>, <rockhounding_chemistry:alloy_items_gems:1>, 
+    [<draconicevolution:wyvern_core>, <rockhounding_chemistry:alloy_items_gems:1>, <gregtech:meta_item_1:32725>, <rockhounding_chemistry:alloy_items_gems:1>, 
     <draconicevolution:wyvern_core>],  
     [<techreborn:part:17>, <ic2:crafting:4>, <rockhounding_chemistry:alloy_items_gems:1>, <ic2:crafting:4>, <techreborn:part:17>], 
     [null, <techreborn:part:17>, <draconicevolution:wyvern_core>, <techreborn:part:17>, null] 
@@ -60,10 +71,6 @@ mods.extendedcrafting.TableCrafting.addShaped(<advanced_solar_panels:crafting:13
 
 //Remove bugged textures of stone double slabs
 mods.jei.JEI.removeAndHide(<advanced_solar_panels:double_stone_slab:*>);
-
-recipes.remove(<advanced_solar_panels:machines:5>);
-
-<advanced_solar_panels:machines:5>.addTooltip(format.aqua("Disabled"));
 
 recipes.remove(<advanced_solar_panels:advancedsolarhelmet:*>);
 recipes.addShaped(<advanced_solar_panels:advancedsolarhelmet>.withTag({}),[

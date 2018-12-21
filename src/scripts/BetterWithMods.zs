@@ -4,14 +4,6 @@
 //////////////      Better With Mods       ///////////////////
 //////////////////////////////////////////////////////////////
 
-//Siding from slabs
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "oak"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab>]);
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "spruce"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab:1>]);
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "birch"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab:2>]);
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "jungle"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab:3>]);
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "acacia"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab:4>]);
-recipes.addShapeless(<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}}),[<minecraft:wooden_slab:5>]);
-
 recipes.remove(<betterwithmods:detector_rail_steel>);
 recipes.addShapeless(<betterwithmods:detector_rail_steel>,[<minecraft:rail>, <betterwithmods:material:51>]);
 
@@ -42,7 +34,7 @@ recipes.addShaped(<betterwithmods:single_machine:2>,[
 recipes.remove(<betterwithmods:single_machine:3>);	//Turntable
 recipes.addShaped(<betterwithmods:single_machine:3>,[
 	[null],
-	[<minecraft:wooden_slab>, <minecraft:iron_nugget>, <minecraft:wooden_slab>],
+	[<ore:slabWood>, <minecraft:iron_nugget>, <ore:slabWood>],
 	[<minecraft:wooden_button>, <betterwithmods:single_machine>, <minecraft:wooden_button>]
 ]);
 
@@ -95,11 +87,12 @@ recipes.addShaped(<betterwithmods:saw>,[
 recipes.remove(<betterwithmods:stake>);
 recipes.addShapeless(<betterwithmods:stake>,[<tconstruct:rack:1>.withTag({textureBlock: {id: "minecraft:wooden_slab"}}), <minecraft:string>]);
 
+<betterwithmods:steel_saw>.displayName = "Steel Saw";
 recipes.remove(<betterwithmods:steel_saw>);		//Saw
 mods.betterwithmods.Anvil.addShaped(<betterwithmods:steel_saw>, [
-	[<betterwithmods:material:30>, <betterwithmods:material:30>, <betterwithmods:material:30>, null],
-	[<betterwithmods:material:30>, <betterwithmods:material:48>, <betterwithmods:material:30>, null],
-	[<betterwithmods:material:30>, <betterwithmods:material:30>, <betterwithmods:material:30>, null],
+	[<immersiveengineering:metal:28>, <immersiveengineering:metal:28>, <immersiveengineering:metal:28>, null],
+	[<immersiveengineering:metal:28>, <ore:gearSteel>, <immersiveengineering:metal:28>, null],
+	[<immersiveengineering:metal:28>, <immersiveengineering:metal:28>, <immersiveengineering:metal:28>, null],
 	[null, null, null, null]
 ]);
 
@@ -121,9 +114,9 @@ recipes.addShaped(<betterwithmods:steel_block>,[
 <betterwithmods:steel_anvil>.addTooltip(format.gold("Recipes appear rotated due to a bug"));
 recipes.remove(<betterwithmods:steel_anvil>);
 recipes.addShaped(<betterwithmods:steel_anvil>,[
-	[<betterwithmods:material:14>, <betterwithmods:steel_block>, <betterwithmods:material:14>],
+	[<betterwithmods:material:14>, <ore:blockSteel>, <betterwithmods:material:14>],
 	[null, <betterwithmods:material:14>, null],
-	[<betterwithmods:material:14>, <betterwithmods:steel_block>, <betterwithmods:material:14>]
+	[<betterwithmods:material:14>, <ore:blockSteel>, <betterwithmods:material:14>]
 ]);
 
 recipes.remove(<betterwithmods:cooking_pot:1>);
@@ -168,12 +161,8 @@ recipes.addShaped(<betterwithmods:material:11>,[
 ]);
 
 recipes.remove(<betterwithmods:material:24>);	//Archimedes Screw
-mods.betterwithmods.Anvil.addShaped(<betterwithmods:material:24>, [
-	[null, null, <immersiveengineering:metal:8>, <immersiveengineering:material:2>],
-	[null, <immersiveengineering:metal:8>, <immersiveengineering:material:2>, <immersiveengineering:metal:8>],
-	[<immersiveengineering:metal:8>, <immersiveengineering:material:2>, <immersiveengineering:metal:8>, null],
-	[<immersiveengineering:material:2>, <immersiveengineering:metal:8>, null, null]
-]);
+mods.immersiveengineering.Blueprint.addRecipe("components", <betterwithmods:material:24>, 
+	[<gregtech:meta_item_2:19184>, <gregtech:meta_item_1:18184>*8]);
 
 mods.appliedenergistics2.Grinder.addRecipe(<betterwithmods:material:15>, <minecraft:netherrack>, 8);
 
@@ -188,5 +177,9 @@ recipes.addShaped(<betterwithmods:axle_generator>,[
 ]);
 
 recipes.addShapeless(<betterwithmods:fertile_farmland>, [<minecraft:dirt>, <minecraft:dye:15>, <betterwithmods:material:21>]);
+
+mods.techreborn.industrialGrinder.addRecipe(<betterwithmods:material:7>*8, null, null, null, <minecraft:leather>*8, null, <liquid:sodium_hydroxide>*500, 2400, 4);
+
+mods.immersiveengineering.BlastFurnace.addRecipe(<betterwithmods:urn>, <betterwithmods:unfired_pottery:2>, 1200);
 
 <ore:string>.add(<betterwithmods:material:3>);

@@ -75,6 +75,16 @@ recipes.addShaped(<darkutils:material:1>,[
 recipes.remove(<darkutils:material>);
 mods.mekanism.crusher.addRecipe(<minecraft:skull:1>, <darkutils:material> * 3);
 
+recipes.remove(<darkutils:material:3>);
+recipes.addShaped(<darkutils:material:3>,[
+	[<minecraft:sugar>, <minecraft:sugar>, <minecraft:sugar>],
+	[<minecraft:sugar>, <darkutils:material>, <minecraft:sugar>],
+	[<minecraft:sugar>, <minecraft:sugar>, <minecraft:sugar>]
+]);
+
+mods.rockhounding_chemistry.LabBlender.add([<thermalfoundation:material:2049>, <mekanism:dust:2>, <rockhounding_chemistry:alloy_items_tech:27>, <nuclearcraft:dust:2>], 
+<thermalfoundation:material:1025>*2);
+
 recipes.remove(<darkutils:wither_block>);
 mods.techreborn.compressor.addRecipe(<darkutils:wither_block>, <darkutils:material>*9, 600, 50);
 

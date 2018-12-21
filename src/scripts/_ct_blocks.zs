@@ -18,14 +18,6 @@ chromiteOre.setToolLevel(1);
 chromiteOre.setBlockSoundType(<soundtype:stone>);
 chromiteOre.register();
 
-var quartziteBlock = VanillaFactory.createBlock("ore1", <blockmaterial:rock>);
-quartziteBlock.setBlockHardness(5.0);
-quartziteBlock.setBlockResistance(8.0);
-quartziteBlock.setToolClass("pickaxe");
-quartziteBlock.setToolLevel(0);
-quartziteBlock.setBlockSoundType(<soundtype:stone>);
-quartziteBlock.register();
-
 var moissaniteOre = VanillaFactory.createBlock("ore2", <blockmaterial:rock>);
 moissaniteOre.setBlockHardness(50.0);
 moissaniteOre.setBlockResistance(50.0);
@@ -67,9 +59,4 @@ osirtusBlock.OnBlockPlace = function(world, blockPos, blockState){
 */
 osirtusBlock.register();
 
-var hydraulicPress = VanillaFactory.createBlock("block1", <blockmaterial:iron>);
-hydraulicPress.setToolClass("pickaxe");
-hydraulicPress.setToolLevel(1);
-hydraulicPress.setBlockSoundType(<soundtype:metal>);
-hydraulicPress.register();
 

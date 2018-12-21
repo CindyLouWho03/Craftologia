@@ -96,7 +96,7 @@ recipes.remove(<opencomputers:printer>);
 recipes.addShaped(<opencomputers:printer>,[
 	[<techreborn:part:30>, <contenttweaker:crafting4>, <techreborn:part:30>],
 	[<advancedrocketry:ic:5>, <rockhounding_chemistry:pipeline_valve>, <opencomputers:material:9>],
-	[<thermalexpansion:reservoir:1>.withTag({}), <contenttweaker:plate>, <enderutilities:enderpart:50>]
+	[<thermalexpansion:reservoir:1>.withTag({}), <ore:plateOsmium>, <enderutilities:enderpart:50>]
 ]);
 
 recipes.remove(<opencomputers:screen1>);
@@ -370,7 +370,7 @@ recipes.addShaped(<opencomputers:storage:1>,[
 recipes.remove(<opencomputers:storage:2>);
 recipes.addShaped(<opencomputers:storage:2>,[
 	[<opencomputers:material:12>, <opencomputers:material:4>, <techreborn:plates:35>],
-	[<opencomputers:material:12>, <contenttweaker:part4>, <magneticraft:steel_gear>],
+	[<opencomputers:material:12>, <ore:nuggetGraphite>, <magneticraft:steel_gear>],
 	[<opencomputers:material:12>, <opencomputers:material:7>, <techreborn:plates:16>]
 ]);
 

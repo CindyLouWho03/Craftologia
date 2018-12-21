@@ -11,6 +11,9 @@ recipes.addShaped(<thermaldynamics:duct_0>*2,[
 	[<ore:ingotLead>, <minecraft:glass_pane>, <ore:ingotLead>]
 ]);
 
+mods.thermalexpansion.Transposer.removeFillRecipe(<thermaldynamics:duct_0:9>, <liquid:cryotheum>);
+mods.thermalexpansion.Transposer.addFillRecipe(<thermaldynamics:duct_0:5>, <thermaldynamics:duct_0:9>, <liquid:cryotheum>*2000, 100000);
+
 recipes.remove(<thermaldynamics:duct_0:6>);
 recipes.addShaped(<thermaldynamics:duct_0:6>*2,[
 	[<ore:ingotElectrum>, <minecraft:glass_pane>, <ore:ingotElectrum>],
@@ -19,11 +22,20 @@ recipes.addShaped(<thermaldynamics:duct_0:6>*2,[
 ]);
 
 recipes.remove(<thermaldynamics:duct_0:9>);
-recipes.addShaped(<thermaldynamics:duct_0:9>,[
-	[<redstonearsenal:material:32>, <thermalfoundation:glass_alloy:5>, <redstonearsenal:material:32>],
-	[<thermalfoundation:glass_alloy:5>, <thermaldynamics:duct_0:4>, <thermalfoundation:glass_alloy:5>],
-	[<redstonearsenal:material:32>, <thermalfoundation:glass_alloy:5>, <redstonearsenal:material:32>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<thermaldynamics:duct_0:9>,[
+    [null, null, <nuclearcraft:compound:1>, <rockhounding_chemistry:alloy_items_tech:34>, <nuclearcraft:compound:1>, null, null], 
+    [null, <nuclearcraft:compound:1>, <rockhounding_chemistry:misc_items:25>, <rockhounding_chemistry:alloy_items_gems:1>, <rockhounding_chemistry:misc_items:25>, 
+    <nuclearcraft:compound:1>, null], 
+    [<nuclearcraft:compound:1>, <rockhounding_chemistry:misc_items:25>, <techreborn:part:17>, <thermaldynamics:duct_0:4>, <techreborn:part:17>, 
+    <rockhounding_chemistry:misc_items:25>, <nuclearcraft:compound:1>], 
+    [<rockhounding_chemistry:alloy_items_tech:34>, <rockhounding_chemistry:alloy_items_gems:1>, <thermaldynamics:duct_0:4>, <techreborn:part:17>, 
+    <thermaldynamics:duct_0:4>, <rockhounding_chemistry:alloy_items_gems:1>, <rockhounding_chemistry:alloy_items_tech:34>],
+    [<nuclearcraft:compound:1>, <rockhounding_chemistry:misc_items:25>, <techreborn:part:17>, <thermaldynamics:duct_0:4>, <techreborn:part:17>, 
+    <rockhounding_chemistry:misc_items:25>, <nuclearcraft:compound:1>], 
+    [null, <nuclearcraft:compound:1>, <rockhounding_chemistry:misc_items:25>, <rockhounding_chemistry:alloy_items_gems:1>, <rockhounding_chemistry:misc_items:25>, 
+    <nuclearcraft:compound:1>, null],
+    [null, null, <nuclearcraft:compound:1>, <rockhounding_chemistry:alloy_items_tech:34>, <nuclearcraft:compound:1>, null, null]
+]); 
 
 //Redo Fluiducts
 recipes.remove(<thermaldynamics:duct_16>);
@@ -69,21 +81,21 @@ recipes.addShapeless(<thermaldynamics:duct_32:6>, [<thermaldynamics:duct_0:1>, <
 //////////////////////////////////////////////////////////////
 
 //Redstone Furnace
-recipes.remove(<thermalexpansion:machine>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine>);
 recipes.addShaped(<thermalexpansion:machine>.withTag({Level: 0 as byte}),[
 	[<minecraft:netherbrick>, <ore:dustInvar>, <minecraft:netherbrick>],
 	[<techreborn:part:13>, <thermalexpansion:frame>, <techreborn:part:13>],
 	[<minecraft:netherbrick>, <thermalfoundation:material:513>, <minecraft:netherbrick>]
 ]);
 //Pulverizer
-recipes.remove(<thermalexpansion:machine:1>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:1>);
 recipes.addShaped(<thermalexpansion:machine:1>.withTag({Level: 0 as byte}),[
 	[null, null, null],
 	[<ore:craftingDiamondGrinder>, <thermalexpansion:frame>, <minecraft:piston>],
 	[<betterwithmods:material:9>, <thermalfoundation:material:513>, <extrautils2:filter>]
 ]);
 //Sawmill
-recipes.remove(<thermalexpansion:machine:2>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:2>);
 recipes.addShaped(<thermalexpansion:machine:2>.withTag({Level: 0 as byte}),[
 	[null, <ore:stickIron>, null],
 	[<thermalfoundation:material:24>, <betterwithmods:material:9>, <techreborn:part:5>],
@@ -100,84 +112,84 @@ recipes.addShaped(<thermalexpansion:machine:3>.withTag({Level: 0 as byte}),[
 ]);
 */
 //Compactor
-recipes.remove(<thermalexpansion:machine:5>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:5>);
 recipes.addShaped(<thermalexpansion:machine:5>.withTag({Level: 0 as byte}),[
 	[null, null, null],
 	[<minecraft:piston>, <ore:plateSteel>, <minecraft:piston>],
 	[<thermalfoundation:material:513>, <thermalexpansion:frame>, <thermalfoundation:material:513>]
 ]);
-//Magama Crucible
-recipes.remove(<thermalexpansion:machine:6>.withTag({Level: 0 as byte}));
+//Magma Crucible
+recipes.remove(<thermalexpansion:machine:6>);
 recipes.addShaped(<thermalexpansion:machine:6>.withTag({Level: 0 as byte}),[
 	[null, <thermalfoundation:material:513>, null],
-	[<thermalfoundation:material:515>, <thermalexpansion:frame>, <thermalexpansion:tank>.withTag({Level: 0 as byte})],
-	[<deepresonance:dense_obsidian>, <ic2:re_battery:26>.withTag({}), <betterwithmods:aesthetic:2>]
+	[<thermalfoundation:material:515>, <thermalexpansion:frame>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte})],
+	[<deepresonance:dense_obsidian>, <ic2:re_battery:*>, <betterwithmods:aesthetic:2>]
 ]);
 //Fractionaning Still
-recipes.remove(<thermalexpansion:machine:7>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:7>);
 recipes.addShaped(<thermalexpansion:machine:7>.withTag({Level: 0 as byte}),[
 	[<rockhounding_chemistry:gasline_duct>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "cryotheum", Amount: 1000}}), <rockhounding_chemistry:pipeline_duct>],
 	[<mekanism:basicblock2:5>, <thermalexpansion:frame>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte})],
 	[null, <thermalfoundation:material:515>, null]
 ]);
 //Fluid Transposer
-recipes.remove(<thermalexpansion:machine:8>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:8>);
 recipes.addShaped(<thermalexpansion:machine:8>.withTag({Level: 0 as byte}),[
 	[<thermaldynamics:duct_16:2>, <thermaldynamics:duct_16:2>, <thermaldynamics:duct_16:2>],
 	[<thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte}), <thermalexpansion:frame>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte})],
 	[<techreborn:ingot:20>, <thermalfoundation:material:515>, <techreborn:ingot:20>]
 ]);
 //Centrifugal Separator
-recipes.remove(<thermalexpansion:machine:10>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:10>);
 recipes.addShaped(<thermalexpansion:machine:10>.withTag({Level: 0 as byte}),[
 	[<ore:ingotConstantan>, <ic2:advanced_heat_vent>.withTag({advDmg: 0}), <ore:ingotConstantan>],
 	[<thermalfoundation:material:513>, <thermalexpansion:frame>, <advgenerators:controller>],
 	[<thermalfoundation:material:290>, <ic2:crafting:6>, <techreborn:plates:35>]
 ]);
 //Sequential Fabricator
-recipes.remove(<thermalexpansion:machine:11>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:11>);
 recipes.addShaped(<thermalexpansion:machine:11>.withTag({Level: 0 as byte}),[
 	[<thermalfoundation:material:290>, <thermalfoundation:material:514>, <thermalfoundation:material:290>],
 	[<thermalexpansion:strongbox>.withTag({Level: 0 as byte}), <thermalexpansion:frame>, <enderutilities:enderpart:50>],
 	[<contenttweaker:crafting4>, <techreborn:part:1>, <contenttweaker:crafting4>]
 ]);
 //Igneous Extruder
-recipes.remove(<thermalexpansion:machine:15>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:machine:15>);
 recipes.addShaped(<thermalexpansion:machine:15>.withTag({Level: 0 as byte}),[
 	[<thermalexpansion:tank>.withTag({Level: 1 as byte}), <techreborn:ingot:20>, <thermalexpansion:tank>.withTag({Level: 1 as byte})],
 	[<mekanism:transmitter:1>.withTag({tier: 1}), <thermalexpansion:frame>, <mekanism:transmitter:1>.withTag({tier: 1})],
 	[<techreborn:plates:32>, <thermalfoundation:material:513>, <techreborn:plates:32>]
 ]);
 //Thermal Mediator
-recipes.remove(<thermalexpansion:device:2>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:device:2>);
 recipes.addShaped(<thermalexpansion:device:2>.withTag({Level: 0 as byte}),[
 	[null, <rockhounding_chemistry:misc_items:8>, null],
 	[<thermalexpansion:tank>.withTag({Level: 1 as byte}), <thermalexpansion:frame:64>, <ic2:heat_vent>.withTag({advDmg: 0})],
 	[null, <ore:ingotCobalt>, <thermalfoundation:material:514>]
 ]);
 //Steam Dynamo
-recipes.remove(<thermalexpansion:dynamo>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:dynamo>);
 recipes.addShaped(<thermalexpansion:dynamo>.withTag({Level: 0 as byte}),[
 	[null, <advgenerators:pressure_valve>, null],
 	[<thermalfoundation:material:514>, <immersiveengineering:metal_device1:6>, <minecraft:water_bucket>],
 	[<ore:ingotCopper>, <minecraft:lava_bucket>, <ore:ingotCopper>]
 ]);
 //Magmatic Dynamo
-recipes.remove(<thermalexpansion:dynamo:1>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:dynamo:1>);
 recipes.addShaped(<thermalexpansion:dynamo:1>.withTag({Level: 0 as byte}),[
 	[null, <thermalfoundation:material:514>, null],
 	[<techreborn:part:13>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 1 as byte}), <techreborn:part:13>],
 	[<rockhounding_chemistry:metal_items:2>, <thermalfoundation:material:291>, <rockhounding_chemistry:metal_items:2>]
 ]);
 //Compression Dynamo
-recipes.remove(<thermalexpansion:dynamo:2>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:dynamo:2>);
 recipes.addShaped(<thermalexpansion:dynamo:2>.withTag({Level: 0 as byte}),[
-	[null, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 1 as byte}), null],
-	[<thermalfoundation:material:24>, <minecraft:piston>, <thermalfoundation:material:514>],
-	[<ore:ingotTin>, <minecraft:piston>, <ore:ingotTin>]
+	[null, <immersiveengineering:material:9>, null],
+	[<ore:plateTin>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte}), <thermalfoundation:material:288>],
+	[<thermalfoundation:material:514>, <minecraft:piston>, <thermalfoundation:material:514>]
 ]);
 //Reactant Dynamo
-recipes.remove(<thermalexpansion:dynamo:3>.withTag({Level: 0 as byte}));
+recipes.remove(<thermalexpansion:dynamo:3>);
 recipes.addShaped(<thermalexpansion:dynamo:3>.withTag({Level: 0 as byte}),[
 	[null, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 1 as byte}), null],
 	[<thermalfoundation:material:514>, <rockhounding_chemistry:gr_catalyst>, <thermalfoundation:material:290>],
@@ -199,21 +211,11 @@ recipes.addShaped(<thermalexpansion:cell>,[
 	[<minecraft:glass_pane>, <thermalfoundation:material:515>, <minecraft:glass_pane>]
 ]);
 
-//Cant figure out why this does not work, it cant cast the cell metadata in any of the ways i ve tried
-/*
-recipes.remove(<thermalexpansion:cell>.withTag({Level: 0 as byte}));
-recipe.addShaped(<thermalexpansion:cell>.withTag({Level: 0 as byte}),[
-	[null, <forge:bucketfilled>.withTag({FluidName: "redstone", Amount: 1000}), null],
-	[<minecraft:redstone_block>, <thermalexpansion:frame:128>, <minecraft:redstone_block>],
-	[null, <thermalfoundation:material:515>, null]
-]);
-*/
-
 recipes.remove(<thermalexpansion:tank>);
 recipes.addShaped(<thermalexpansion:tank>,[
-	[<techreborn:smalldust:13>, <ore:ingotCopper>, <techreborn:smalldust:13>],
-	[<ore:ingotCopper>, <ic2:glass>, <ore:ingotCopper>],
-	[<techreborn:smalldust:13>, <ore:ingotCopper>, <techreborn:smalldust:13>]
+	[<techreborn:plates:20>, <minecraft:glass_pane>, <stevescarts:modulecomponents:60>],
+	[<minecraft:glass_pane>, null, <minecraft:glass_pane>],
+	[<techreborn:ingot:4>, <minecraft:glass_pane>, <techreborn:ingot:4>]
 ]);
 
 recipes.remove(<thermalexpansion:cache>);
@@ -276,8 +278,8 @@ recipes.addShaped(<thermalexpansion:satchel>,[
 //ThermalExpansion Frames are made more expensive to enforce the player going through IE and IC2/TechReborn before TE
 recipes.remove(<thermalexpansion:frame>);
 recipes.addShaped(<thermalexpansion:frame>,[
-	[<thermalfoundation:material:132>, <thermalfoundation:material:132>, <thermalfoundation:material:132>],
-	[<thermalfoundation:material:132>, <ore:dustInvar>, <thermalfoundation:material:132>],
+	[<contenttweaker:ingot>, <contenttweaker:ingot>, <contenttweaker:ingot>],
+	[<techreborn:ingot>, <ore:dustInvar>, <techreborn:ingot>],
 	[<techreborn:ingot:20>, <techreborn:ingot:20>, <techreborn:ingot:20>]
 ]);
 
@@ -297,6 +299,9 @@ recipes.addShaped(<thermalexpansion:frame:128>,[
 
 recipes.remove(<thermalexpansion:augment:128>);
 recipes.addShapeless(<thermalexpansion:augment:128>,[<advgenerators:upgrade_kit>, <thermalfoundation:material:513>]);
+recipes.remove(<thermalexpansion:augment:432>);
+recipes.addShaped(<thermalexpansion:augment:432>,[
+	[<thermalfoundation:material:322>],[<projectred-integration:gate:26>],[<thermalfoundation:material:512>]]);
 recipes.remove(<thermalexpansion:augment:512>);
 recipes.addShapeless(<thermalexpansion:augment:512>,[<advgenerators:upgrade_kit>, <thermalfoundation:material:514>]);
 recipes.remove(<thermalexpansion:augment:513>);
@@ -319,8 +324,9 @@ recipes.addShaped(<thermalfoundation:wrench>,[
 	[<tconstruct:hand_guard>.withTag({Material: "steel"}), <ic2:crafting>, null]
 ]);
 
-recipes.remove(<thermalfoundation:material:103>);	//Enderium Dust
-recipes.addShapeless(<thermalfoundation:material:103>,[<forge:bucketfilled>.withTag({FluidName: "ender", Amount: 1000}), <ore:dustCobalt>, <ore:dustPlatinum>, <ic2:dust:26>]);
+recipes.remove(<thermalfoundation:material:103>);	//Enderium Dust, more resoruce heavy than through Chemical Reactor
+recipes.addShapeless(<thermalfoundation:material:103>,[<forge:bucketfilled>.withTag({FluidName: "ender", Amount: 1000}), <ore:dustCobalt>, <ore:dustPlatinum>, 
+<ore:dustTinySilver>]);
 
 //Redstone Servo
 recipes.remove(<thermalfoundation:material:512>);
@@ -354,21 +360,38 @@ recipes.addShaped(<thermalfoundation:material:515>,[
 	[<ore:nuggetElectrum>, <actuallyadditions:item_crystal>, null]
 ]);
 
-//Cryothenum should be crafted in a machine, instead of barehands, since it is harmful to player
-//Cryotheum dust is more expensive as it is intended to be a later game material, default recipe is fairly easy to obtain
 <thermalfoundation:material:656>.displayName = "Advanced Drill Head";
 
 recipes.remove(<thermalfoundation:material:656>);
 mods.immersiveengineering.Blueprint.addRecipe("components", <thermalfoundation:material:656>, 
-	[<nuclearcraft:alloy:5>*4, <tconstruct:tough_binding>.withTag({Material: "tough"}), <magneticraft:steel_hammer>, 
+	[<nuclearcraft:alloy:5>*4, <magneticraft:nuggets:5>*3, <tconstruct:tough_binding>.withTag({Material: "tough"}), <magneticraft:steel_hammer>, 
 	<forge:bucketfilled>.withTag({FluidName: "pyrotheum", Amount: 1000})]);
 
 recipes.remove(<thermalfoundation:material:657>);
 recipes.addShapeless(<thermalfoundation:material:657>,[<betterwithmods:steel_saw>]);
 
+recipes.remove(<thermalfoundation:material:1024>);	//Pyrotheum
+mods.rockhounding_chemistry.LabBlender.add([<minecraft:blaze_powder>, <techreborn:dust:52>, <frogcraftrebirth:non_metal_dust>, <contenttweaker:dust1>], 
+<thermalfoundation:material:1024>*2);
+//Cryothenum is crafted in a machine, instead of barehands, since it is harmful to the player
+//Cryotheum dust is more expensive as it is intended to be a later game material, default recipe is fairly easy to obtain
 recipes.remove(<thermalfoundation:material:1025>);
-recipes.addShapeless(<thermalfoundation:material:1025>*2,
-	[<thermalfoundation:material:2049>, <ore:dustOsmium>, <rockhounding_chemistry:alloy_items_tech:27>, <ore:dustTin>]);
+mods.rockhounding_chemistry.LabBlender.add([<thermalfoundation:material:2049>, <mekanism:dust:2>, <rockhounding_chemistry:alloy_items_tech:27>, <nuclearcraft:dust:2>], 
+<thermalfoundation:material:1025>*2);
+
+recipes.remove(<thermalfoundation:material:1026>);	//Aerotheum
+mods.rockhounding_chemistry.LabBlender.add([<thermalfoundation:material:2051>, <techreborn:dust:44>, <frogcraftrebirth:intermediate_product:2>, 
+<minecraft:glowstone_dust>], <thermalfoundation:material:1026>*2);
+
+recipes.remove(<thermalfoundation:material:1027>);	//Pethrotheum
+mods.rockhounding_chemistry.LabBlender.add([<thermalfoundation:material:2053>, <techreborn:dust:63>, <ic2:dust:12>, <minecraft:redstone>], 
+<thermalfoundation:material:1027>*2);
+
+recipes.remove(<thermalfoundation:material:2049>);
+mods.thermalexpansion.Transposer.removeFillRecipe(<minecraft:snowball>, <liquid:xpjuice>);
+mods.thermalexpansion.Transposer.removeFillRecipe(<minecraft:snowball>, <liquid:experience>);
+mods.thermalexpansion.Transposer.removeFillRecipe(<minecraft:snowball>, <liquid:essence>);
+mods.magneticraft.CrushingTable.addRecipe(<thermalfoundation:material:2048>, <thermalfoundation:material:2049>, false);
 
 recipes.remove(<thermalfoundation:upgrade>);
 recipes.addShaped(<thermalfoundation:upgrade>,[
@@ -391,8 +414,8 @@ recipes.addShaped(<thermalfoundation:upgrade:2>,[
 	[<thermalfoundation:material:1024>, <thermalfoundation:material:292>, <thermalfoundation:material:1024>]
 ]);
 
-recipes.remove(<thermalfoundation:upgrade:2>);
-recipes.addShaped(<thermalfoundation:upgrade:2>,[
+recipes.remove(<thermalfoundation:upgrade:3>);
+recipes.addShaped(<thermalfoundation:upgrade:3>,[
 	[<thermalfoundation:material:167>, <thermalfoundation:glass_alloy:7>, <thermalfoundation:material:167>],
 	[<thermalfoundation:material:167>, <advgenerators:upgrade_kit>, <thermalfoundation:material:167>],
 	[<thermalfoundation:material:1025>, <thermalfoundation:material:262>, <thermalfoundation:material:1025>]
@@ -422,6 +445,8 @@ recipes.remove(<thermalfoundation:material:295>);
 //----------------------//
 // Removed Blocks/Items //
 //----------------------//
+mods.jei.JEI.removeAndHide(<thermalfoundation:material:22>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:material:23>);
 mods.jei.JEI.removeAndHide(<thermalexpansion:device:3>);	//IndustrialForegoing has the same block with better uses
 mods.jei.JEI.removeAndHide(<thermalexpansion:device:4>);	//Fishing net from ActuallyAdditions
 mods.jei.JEI.removeAndHide(<thermalexpansion:device:7>);	//Transmutation way too OP

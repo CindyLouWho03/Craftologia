@@ -32,13 +32,18 @@ recipes.addShaped(<xnet:netcable:4>.withTag({display: {LocName: "tile.xnet.netca
 	[<techreborn:part:2>]
 ]);
 
-recipes.remove(<xnet:connector>.withTag({display: {LocName: "tile.xnet.connector_blue.name"}}));
+recipes.remove(<xnet:connector>);
 recipes.addShapeless(<xnet:connector>.withTag({display: {LocName: "tile.xnet.connector_blue.name"}}),
 [<xnet:netcable>.withTag({display: {LocName: "tile.xnet.netcable_blue.name"}}), <techreborn:lapotroncrystal>.withTag({energy: 0}), <contenttweaker:crafting4>]);
 
-recipes.remove(<xnet:connector:4>.withTag({display: {LocName: "tile.xnet.connector_routing.name"}}));
+recipes.remove(<xnet:connector:4>);
 recipes.addShapeless(<xnet:connector:4>.withTag({display: {LocName: "tile.xnet.connector_routing.name"}}),
 [<xnet:netcable:4>.withTag({display: {LocName: "tile.xnet.netcable_routing.name"}}), <contenttweaker:crafting4>]);
+
+recipes.remove(<xnet:advanced_connector>);
+recipes.addShapeless(<xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}}),
+[<xnet:netcable>.withTag({display: {LocName: "tile.xnet.netcable_blue.name"}}), <xnet:connector_upgrade>]);
+
 
 recipes.remove(<xnet:controller>);
 recipes.addShaped(<xnet:controller>,[

@@ -33,7 +33,7 @@ mods.thermalexpansion.Transposer.addFillRecipe(<advgenerators:iron_wiring>, <adv
 recipes.remove(<advgenerators:pressure_valve>);
 recipes.addShaped(<advgenerators:pressure_valve>,[
 	[null, <thermalfoundation:material:24>, null],
-	[<minecraft:iron_ingot>, <ic2:plate:3>, <minecraft:iron_ingot>],
+	[<minecraft:iron_ingot>, <magneticraft:light_plates>, <minecraft:iron_ingot>],
 	[null, null, null]
 ]);
 
@@ -53,9 +53,9 @@ recipes.addShaped(<advgenerators:upgrade_kit>,[
 
 recipes.remove(<advgenerators:controller>);
 recipes.addShaped(<advgenerators:controller>,[
-	[<ore:nuggetInvar>, <contenttweaker:material>, <ore:nuggetInvar>],
-	[<techreborn:smalldust:10>, <ic2:crafting:1>, <techreborn:smalldust:10>],
-	[<techreborn:dust:10>, <rockhounding_chemistry:chemical_dusts:42>, <techreborn:dust:10>]
+	[<ore:nuggetInvar>, <techreborn:smalldust:61>, <ore:nuggetInvar>],
+	[<techreborn:smalldust:34>, <ic2:crafting:1>, <techreborn:smalldust:34>],
+	[<techreborn:nuggets:3>, <rockhounding_chemistry:chemical_dusts:42>, <techreborn:nuggets:3>]
 ]);
 
 recipes.remove(<advgenerators:item_input>);
@@ -84,6 +84,13 @@ recipes.addShaped(<advgenerators:fluid_input>,[
 	[<contenttweaker:ingot>, <advgenerators:iron_frame>, <contenttweaker:ingot>],
 	[<advgenerators:iron_frame>, <rockhounding_chemistry:pipeline_pump>, <advgenerators:iron_frame>],
 	[<contenttweaker:ingot>, <advgenerators:iron_frame>, <contenttweaker:ingot>]
+]);
+
+recipes.remove(<advgenerators:fluid_output_select>);
+recipes.addShaped(<advgenerators:fluid_output_select>,[
+	[<advgenerators:iron_tubing>, <thermalfoundation:material:288>, <advgenerators:iron_tubing>],
+	[<immersiveengineering:material:9>, <immersiveengineering:metal_device1:6>, <immersiveengineering:material:9>],
+	[null, <advgenerators:iron_frame>, null]
 ]);
 
 recipes.remove(<advgenerators:heating_chamber>);

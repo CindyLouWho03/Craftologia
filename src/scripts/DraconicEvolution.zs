@@ -45,7 +45,7 @@ recipes.addShaped(<draconicevolution:dislocator_pedestal>,[
 recipes.remove(<draconicevolution:diss_enchanter>);
 recipes.addShaped(<draconicevolution:diss_enchanter>,[
 	[<draconicevolution:awakened_core>],
-	[<terraqueous:ender_table>],
+	[<minecraft:enchanting_table>],
 	[null]
 ]);
 
@@ -218,14 +218,14 @@ mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_sword>,[
 recipes.remove(<draconicevolution:wyvern_helm>);
 mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_helm>,[
     [<draconicevolution:wyvern_core>, <draconicevolution:wyvern_energy_core>, <draconicevolution:wyvern_core>, null],  
-    [<stevescarts:modulecomponents:47>, <twilightforest:phantom_helmet>, <quark:enderdragon_scale>, null],  
+    [<stevescarts:modulecomponents:47>, <essentialcraft:wind_helmet>, <quark:enderdragon_scale>, null],  
     [<draconicevolution:draconium_ingot>, null, <draconicevolution:draconium_ingot>, null], 
     [null, null, null, null] 
 ]); 
 
 recipes.remove(<draconicevolution:wyvern_chest>);
 mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_chest>,[
-    [<twilightforest:naga_scale>, null, null, <twilightforest:naga_scale>],  
+    [<quark:enderdragon_scale>, null, null, <quark:enderdragon_scale>],  
     [<draconicevolution:draconium_ingot>, <quark:enderdragon_scale>, <quark:enderdragon_scale>, <draconicevolution:draconium_ingot>],  
     [<draconicevolution:draconium_ingot>, <draconicevolution:wyvern_energy_core>, <draconicevolution:wyvern_core>, <draconicevolution:draconium_ingot>], 
     [null, null, null, null] 
@@ -234,8 +234,9 @@ mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_chest>,[
 recipes.remove(<draconicevolution:wyvern_legs>);
 mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_legs>,[
     [null, <draconicevolution:wyvern_energy_core>, null, null],  
-    [<draconicevolution:wyvern_core>, <twilightforest:steeleaf_leggings>.withTag({ench: [{lvl: 2 as short, id: 1 as short}]}), <draconicevolution:wyvern_core>, null],  
-    [<twilightforest:naga_scale>, null, <twilightforest:naga_scale>, null], 
+    [<draconicevolution:wyvern_core>, <natura:imp_armor_leggings>.withTag({ench: [{lvl: 1 as short, id: 4}, {lvl: 1 as short, id: 1}]}), 
+    <draconicevolution:wyvern_core>, null],  
+    [<quark:enderdragon_scale>, null, <quark:enderdragon_scale>, null], 
     [<draconicevolution:draconium_ingot>, null, <draconicevolution:draconium_ingot>, null] 
 ]); 
 
@@ -244,7 +245,7 @@ mods.betterwithmods.Anvil.addShaped(<draconicevolution:wyvern_boots>,[
     [null, null, null, null],  
     [null, <draconicevolution:wyvern_energy_core>, null, null],  
     [null, <draconicevolution:wyvern_core>, null, null], 
-    [null, <twilightforest:yeti_boots>.withTag({ench: [{lvl: 2 as short, id: 0 as short}, {lvl: 4 as short, id: 2 as short}]}), null, null] 
+    [null, <essentialcraft:wind_boots>, null, null] 
 ]); 
 
 recipes.remove(<draconicevolution:tool_upgrade>);
@@ -339,6 +340,13 @@ mods.extendedcrafting.TableCrafting.addShaped(<draconicevolution:dislocator>,[
     [<nuclearcraft:compound:1>, <appliedenergistics2:material:34>, <draconicevolution:wyvern_energy_core>, <appliedenergistics2:material:34>, <nuclearcraft:compound:1>], 
     [null, <nuclearcraft:compound:1>, <nuclearcraft:compound:1>, <nuclearcraft:compound:1>, null] 
 ]); 
+
+recipes.remove(<draconicevolution:magnet>);
+recipes.addShaped(<draconicevolution:magnet>,[
+	[<enderio:item_alloy_ingot:1>, null, <enderio:item_alloy_ingot:1>],
+	[<draconicevolution:draconium_ingot>, null, <draconicevolution:draconium_ingot>],
+	[<draconicevolution:draconium_ingot>, <draconicevolution:dislocator>, <draconicevolution:draconium_ingot>]
+]);
 
 mods.jei.JEI.removeAndHide(<draconicevolution:generator>);	// 84RF/t coal generator is like a joke at endgame
 mods.jei.JEI.removeAndHide(<draconicevolution:celestial_manipulator>);

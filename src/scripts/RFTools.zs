@@ -159,7 +159,7 @@ recipes.addShaped(<rftools:fluid_module>,[
 recipes.remove(<rftools:machineinformation_module>);
 recipes.addShaped(<rftools:machineinformation_module>,[
 	[<techreborn:part:29>],
-	[<advgenerators:controller>],
+	[<techreborn:part:30>],
 	[<techreborn:part:29>]
 ]);
 

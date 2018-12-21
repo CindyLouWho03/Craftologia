@@ -17,6 +17,13 @@ recipes.remove();
 recipes.addShapeless(,[]);
 
 recipes.remove();
+mods.extendedcrafting.EnderCrafting.addShaped(,[
+	[,,],
+	[,,],
+	[,,]
+]);
+
+recipes.remove();
 mods.extendedcrafting.TableCrafting.addShaped(,[
     [, , , , ],  
     [, , , , ],  
@@ -47,11 +54,10 @@ mods.betterwithmods.Anvil.addShaped(,[
 mods.jei.JEI.removeAndHide();
 .addTooltip(format.aqua(""));
 .displayName = "";
-.setUseOreDict(false);
 /effect Tenosko night_vision 600
-/fill ~0 ~0 ~0 ~30 ~-30 ~-30 air
-/clone ~0 ~0 ~0 ~26 ~-42 ~26 ~0 ~100 ~0
 /fill ~0 ~0 ~0 ~26 ~-42 ~26 air 0 replace stone
+/cofh tpx Tenosko 1
+/ftbquests editing_mode
 */
 
 #################
@@ -62,30 +68,6 @@ mods.jei.JEI.removeAndHide();
 <minecraft:book>
 <contenttweaker:crafting3>
 */
-//////////////////////////////////////////////////////////////
-/////////////  		Adventure tools       ////////////////////
-//////////////////////////////////////////////////////////////
-
-recipes.remove(<adventurepack:mining_helmet>);
-recipes.addShaped(<adventurepack:mining_helmet>,[
-	[null, <betterwithmods:material:33>, null],
-	[<ore:itemRubber>, <contenttweaker:material5>, <ore:itemRubber>],
-	[<betterwithmods:material:33>, <betterwithmods:material:33>, <betterwithmods:material:33>]
-]);
-
-recipes.remove(<adventurepack:explorer_hat>);
-recipes.addShaped(<adventurepack:explorer_hat>,[
-	[null, <betterwithmods:material:32>, null],
-	[<betterwithmods:material:3>, <betterwithmods:material:9>, <betterwithmods:material:3>],
-	[<betterwithmods:material:32>, <betterwithmods:material:32>, <betterwithmods:material:32>]
-]);
-
-recipes.remove(<adventurepack:escape_rope>);
-recipes.addShaped(<adventurepack:escape_rope>,[
-	[null, <betterwithmods:rope>, null],
-	[<betterwithmods:rope>, null, <betterwithmods:rope>],
-	[null, <betterwithmods:rope>, null]
-]);
 
 //////////////////////////////////////////////////////////////
 /////////////  	    ArchitectureCraft       //////////////////
@@ -112,6 +94,8 @@ recipes.addShaped(<architecturecraft:sawbench>,[
 	[<betterwithmods:shaft>, <minecraft:wooden_pressure_plate>, <betterwithmods:shaft>]
 ]);
 
+//mods.jei.JEI.removeAndHide(<ariente:dirty_diamond>);
+
 //////////////////////////////////////////////////////////////
 /////////////  Aroma's Dimensional World  ////////////////////
 //////////////////////////////////////////////////////////////
@@ -125,6 +109,27 @@ recipes.addShaped(<aroma1997sdimension:miningmultitool>,[
 ]);
 
 mods.jei.JEI.removeAndHide(<aroma1997sdimension:miningore>);
+
+//////////////////////////////////////////////////////////////
+///////////////  	    Astikoor          ////////////////////
+//////////////////////////////////////////////////////////////
+
+recipes.remove(<astikoor:wheel>);
+recipes.addShaped(<astikoor:wheel>,[
+	[<tconstruct:tool_rod>.withTag({Material: "wood"}), <minecraft:stick>, <tconstruct:tool_rod>.withTag({Material: "wood"})],
+	[<minecraft:stick>, <betterwithmods:material>, <minecraft:stick>],
+	[<tconstruct:tool_rod>.withTag({Material: "wood"}), <minecraft:stick>, <tconstruct:tool_rod>.withTag({Material: "wood"})]
+]);
+
+recipes.remove(<astikoor:cargocart>);
+recipes.addShaped(<astikoor:cargocart>,[
+	[<minecraft:fence>, <techreborn:plates:3>, <minecraft:fence>],
+	[<techreborn:plates:3>, <techreborn:plates:3>, <techreborn:plates:3>],
+	[<astikoor:wheel>, <betterwithmods:shaft>, <astikoor:wheel>]
+]);
+
+mods.jei.JEI.removeAndHide(<astikoor:carriage>);
+mods.jei.JEI.removeAndHide(<astikoor:chariot>);
 
 //////////////////////////////////////////////////////////////
 //////////////   BetterBuilder's Wands    ////////////////////
@@ -150,9 +155,9 @@ recipes.addShaped(<betterbuilderswands:wanddiamond>,[
 ]);
 recipes.remove(<betterbuilderswands:wandunbreakable>);
 recipes.addShaped(<betterbuilderswands:wandunbreakable>,[
-	[null, <techreborn:part:35>, <ic2:crafting:4>],
-	[null, <contenttweaker:crafting4>, <techreborn:part:35>],
-	[<advancedrocketry:productrod:1>, null, null]
+	[null, <gtadditions:ga_meta_item:32079>, <ic2:crafting:4>],
+	[null, <contenttweaker:crafting4>, <gtadditions:ga_meta_item:32079>],
+	[<ore:stickLongNeutronium>, null, null]
 ]);
 
 //////////////////////////////////////////////////////////////
@@ -198,6 +203,7 @@ recipes.addShaped(<bibliocraft:paintingcanvas>.withTag({blank: 1 as byte}),[
 //////////////////////////////////////////////////////////////
 
 <biomesoplenty:gem_ore:2>.displayName = "Peridotite Ore";
+<ore:whiteSand>.add(<biomesoplenty:white_sand>);
 
 recipes.remove(<biomesoplenty:plant_0:11>);
 recipes.addShapeless(<biomesoplenty:plant_0:11>*8,[<ore:treeLeaves>, <ore:treeLeaves>]);
@@ -210,6 +216,20 @@ recipes.removeByRecipeName("biomesoplenty:boat");
 
 <ore:celestialBlock>.add(<biomesoplenty:crystal>);
 recipes.remove(<biomesoplenty:crystal>);
+
+recipes.remove(<biomesoplenty:terrestrial_artifact>);
+mods.extendedcrafting.EnderCrafting.addShaped(<biomesoplenty:terrestrial_artifact>,[
+	[<biomesoplenty:gem:1>, <biomesoplenty:gem:3>, <techreborn:gem:4>],
+	[<biomesoplenty:gem:4>, <minecraft:diamond>, <biomesoplenty:gem:2>],
+	[<biomesoplenty:gem:6>, <biomesoplenty:gem:5>, <minecraft:emerald>]
+]);	//TODO: <gregtech:meta_item_1:8244> in recipe[0,2]
+
+recipes.remove(<biomesoplenty:biome_finder>);
+recipes.addShaped(<biomesoplenty:biome_finder>,[
+	[<essentialcraft:genitem:12>, <biomesoplenty:terrestrial_artifact>, <essentialcraft:genitem:12>],
+	[<minecraft:glass_pane>, <gregtech:meta_item_1:16297>, <ore:dyeGray>],
+	[<essentialcraft:genitem:12>, <essentialcraft:genitem:43>, <essentialcraft:genitem:12>]
+]);
 
 //////////////////////////////////////////////////////////////
 /////////////		   Catwalks 	    //////////////////////
@@ -245,9 +265,9 @@ recipes.addShaped(<catwalks:catwalk>.withTag({material: "treated_wood"}),[
 
 recipes.remove(<chineseworkshop:red_lantern>);
 recipes.addShaped(<chineseworkshop:red_lantern>,[
-	[<minecraft:gold_nugget>],
-	[<terraqueous:type_earth:120>.withTag({rgbsimple: 14 as byte, rgb16: 2867 as short})],
-	[<minecraft:gold_nugget>]
+	[null, <minecraft:gold_nugget>, null],
+	[<minecraft:paper>, <contenttweaker:material5>, <minecraft:paper>],
+	[<minecraft:paper>, <ore:dyeRed>, <minecraft:paper>]
 ]);
 
 recipes.remove(<chineseworkshop:stone_tower_lamp>);
@@ -281,7 +301,6 @@ recipes.addShaped(<chineseworkshop:rammed_earth>*2,[
 recipes.remove(<chineseworkshop:upper_door_frame>);	//This was giving duplicate recipe problems with slabs
 recipes.addShapeless(<chineseworkshop:upper_door_frame>,[<betterwithmods:corner_wood>]);
 
-
 //////////////////////////////////////////////////////////////
 /////////////	 	     Chisel		      ////////////////////
 //////////////////////////////////////////////////////////////
@@ -301,10 +320,16 @@ recipes.addShaped(<claybucket:unfiredclaybucket>,[
 	[<minecraft:clay_ball>, <minecraft:clay_ball>, <minecraft:clay_ball>]
 ]);
 
-
 //////////////////////////////////////////////////////////////
 /////////////	 Cooking For Blockheads	   ///////////////////
 //////////////////////////////////////////////////////////////
+/*
+recipes.remove(<cookingforblockheads:cooking_table>);
+recipes.addShaped(<cookingforblockheads:cooking_table>,[
+	[null],
+	[<minecraft:stone:6>, <techreborn:plates:34>, <minecraft:stone:6>],
+	[<minecraft:hardened_clay>, <cookingforblockheads:recipe_book:2>, <minecraft:hardened_clay>]
+]);
 
 recipes.remove(<cookingforblockheads:oven>);
 recipes.addShaped(<cookingforblockheads:oven>,[
@@ -313,12 +338,46 @@ recipes.addShaped(<cookingforblockheads:oven>,[
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]
 ]);
 
+recipes.remove(<cookingforblockheads:sink>);
+<cookingforblockheads:sink>.addTooltip(format.aqua("Temporarily Disabled"));
+
+recipes.remove(<cookingforblockheads:counter>);
+recipes.addShaped(<cookingforblockheads:counter>,[
+	[null],
+	[null, <minecraft:stone:6>, null],
+	[<minecraft:hardened_clay>, <storagedrawers:basicdrawers>, <minecraft:hardened_clay>]
+]);
+
+recipes.remove(<cookingforblockheads:cabinet>);
+recipes.addShaped(<cookingforblockheads:cabinet>,[
+	[<storagedrawers:basicdrawers:1>.withTag({material: "jungle"})],
+	[<quark:jungle_pressure_plate>],
+	[<techreborn:nuggets:1>]
+]);
+
+recipes.remove(<cookingforblockheads:fridge>);
+recipes.addShaped(<cookingforblockheads:fridge>,[
+	[<techreborn:plates:16>, <rockhounding_chemistry:machines_a:12>.withTag({Energy: 0, Fuel: 0}), <techreborn:plates:16>],
+	[<techreborn:plates:16>, <rockhounding_chemistry:misc_items:8>, <techreborn:plates:16>],
+	[<techreborn:plates:16>, <rockhounding_chemistry:machines_b:10>.withTag({Energy: 0, Fuel: 0}), <techreborn:plates:16>]
+]);
+
 recipes.remove(<cookingforblockheads:spice_rack>);
 recipes.addShapeless(<cookingforblockheads:spice_rack>,[<tconstruct:rack:1>]);
 
 recipes.remove(<cookingforblockheads:ice_unit>);
 <cookingforblockheads:ice_unit>.addTooltip(format.aqua("Disabled"));
 
+recipes.remove(<cookingforblockheads:recipe_book:1>);
+recipes.addShapeless(<cookingforblockheads:recipe_book:1>,[<minecraft:writable_book>, <minecraft:golden_apple>]);
+
+recipes.remove(<cookingforblockheads:recipe_book:2>);
+recipes.addShaped(<cookingforblockheads:recipe_book:2>,[
+	[<actuallyadditions:item_knife>, <tconstruct:pan_head>.withTag({Material: "steel"}), <cfm:item_spatula>],
+	[<minecraft:glass_bottle>, <minecraft:writable_book>, <cfm:item_cup>],
+	[<minecraft:bowl>, <minecraft:bucket>, <betterwithmods:cooking_pot:1>]
+]);
+*/
 //////////////////////////////////////////////////////////////
 /////////////		Ender Storage		//////////////////////
 //////////////////////////////////////////////////////////////
@@ -365,12 +424,21 @@ mods.techreborn.rollingMachine.addShaped(<engineersdoors:trapdoor_steel>, [
 	[null, null, null]
 ]);
 
+recipes.remove(<engineersdoors:door_concrete>);
+recipes.addShaped(<engineersdoors:door_concrete>,[
+	[<immersiveengineering:stone_decoration_slab:7>, <immersiveengineering:stone_decoration_slab:7>, null],
+	[<immersiveengineering:material:2>, <immersiveengineering:material:2>, null],
+	[<immersiveengineering:stone_decoration_slab:7>, <immersiveengineering:stone_decoration_slab:7>, null]
+]);
+
+
+
 //////////////////////////////////////////////////////////////
 /////////////		 FlatColoredBlocks	   ///////////////////
 //////////////////////////////////////////////////////////////
 
 recipes.remove(<flatcoloredblocks:coloredcraftingitem>);
-recipes.addShaped(<flatcoloredblocks:coloredcraftingitem>*2,[
+recipes.addShaped(<flatcoloredblocks:coloredcraftingitem>,[
 	[<ore:dyePink>, <ore:dyeRed>, <ore:dyeYellow>],
 	[<ore:dyePurple>, <ore:dyeBlack>, <ore:dyeLime>],
 	[<ore:dyeBlue>, <ore:dyeCyan>, <ore:dyeGreen>]
@@ -381,6 +449,31 @@ recipes.addShaped(<flatcoloredblocks:coloredcraftingitem>*2,[
 //////////////////////////////////////////////////////////////
 
 mods.techreborn.alloySmelter.addRecipe(<frogcraftrebirth:metal_ingot:1>*2, <techreborn:dust:1>*2, <techreborn:smalldust:30>, 900, 16);
+
+mods.techreborn.chemicalReactorRecipe.addRecipe(<frogcraftrebirth:non_metal_dust:2>*2, <frogcraftrebirth:non_metal_dust:4>, <ore:dustSiliconDioxide>, 600, 16);
+mods.betterwithmods.Cauldron.addStoked([<ore:dustAluminum>, <ore:dustSulfur>, <ore:dustMagnesium>, <ore:whiteSand>],[<frogcraftrebirth:non_metal_dust:5>]);
+
+mods.techreborn.industrialGrinder.addRecipe(<frogcraftrebirth:non_metal_dust:4>, <techreborn:smalldust:8>, <techreborn:smalldust:12>, null, 
+	<ore:stoneLimestone>, null, <liquid:fluidsodiumpersulfate>*1000, 600, 16);
+
+mods.techreborn.centrifuge.addRecipe(<frogcraftrebirth:intermediate_product>*25, <frogcraftrebirth:intermediate_product:5>, <frogcraftrebirth:intermediate_product:6>, null, <frogcraftrebirth:ore_dust:1>*27, null, 600, 32);
+
+
+recipes.remove(<frogcraftrebirth:ammonia_coolant_60k>);
+recipes.addShaped(<frogcraftrebirth:ammonia_coolant_60k>,[
+	[null, <ore:plateTin>, null],
+	[<ore:plateTin>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "liquid_ammonia", Amount: 1000}}), <ore:plateTin>],
+	[null, <ore:plateTin>, null]
+]);
+
+recipes.remove(<frogcraftrebirth:ammonia_coolant_360k>);
+recipes.addShaped(<frogcraftrebirth:ammonia_coolant_360k>,[
+	[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>],
+	[<frogcraftrebirth:ammonia_coolant_180k>, <ore:platePlatinum>, <frogcraftrebirth:ammonia_coolant_180k>],
+	[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>]
+]);
+
+<ore:dustSodiumChloride>.add(<frogcraftrebirth:intermediate_product:4>);
 
 //////////////////////////////////////////////////////////////
 /////////////		  Inspirations	       ///////////////////
@@ -406,19 +499,26 @@ recipes.remove(<inspirations:rope>);
 recipes.addShapeless(<inspirations:rope>*3,[<betterwithmods:rope>]);
 
 recipes.remove(<inspirations:rope:1>);
-recipes.addShapeless(<inspirations:rope:1>*4,[<enderio:block_dark_iron_bars>, <ic2:cutter>.transformDamage(4)]);
+recipes.addShapeless(<inspirations:rope:1>*4,[<enderio:block_dark_iron_bars>, <ic2:cutter:*>.transformDamage(4)]);
 
 recipes.remove(<inspirations:path>);
-recipes.addShapeless(<inspirations:path>*16,[<minecraft:cobblestone>, <ic2:forge_hammer>.transformDamage(1)]);
+recipes.addShapeless(<inspirations:path>*16,[<minecraft:cobblestone>, <ic2:forge_hammer:*>.transformDamage(1)]);
 
 recipes.remove(<inspirations:path:1>);
-recipes.addShapeless(<inspirations:path:1>*16,[<minecraft:stone>, <chiselsandbits:bitsaw_diamond>.transformDamage(1)]);
+recipes.addShapeless(<inspirations:path:1>*16,[<minecraft:stone>, <chiselsandbits:bitsaw_diamond:*>.transformDamage(1)]);
 
 recipes.remove(<inspirations:path:2>);
-recipes.addShapeless(<inspirations:path:2>*16,[<minecraft:stonebrick>, <chiselsandbits:bitsaw_diamond>.transformDamage(1)]);
+recipes.addShapeless(<inspirations:path:2>*16,[<minecraft:stonebrick>, <chiselsandbits:bitsaw_diamond:*>.transformDamage(1)]);
 
 recipes.remove(<inspirations:path:3>);
-recipes.addShapeless(<inspirations:path:3>*16,[<minecraft:brick_block>, <ic2:forge_hammer>.transformDamage(1)]);
+recipes.addShapeless(<inspirations:path:3>*16,[<minecraft:brick_block>, <ic2:forge_hammer:*>.transformDamage(1)]);
+
+recipes.remove(<inspirations:barometer>);
+recipes.addShaped(<inspirations:barometer>,[
+	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "fluidmercury", Amount: 1000}}), <rockhounding_chemistry:graduated_cylinder>, null],
+	[null, <minecraft:glass_bottle>, null],
+	[null]
+]);
 
 //////////////////////////////////////////////////////////////
 /////////////	    Landlust Furniture	     /////////////////
@@ -429,6 +529,13 @@ recipes.addShaped(<landlust:lantern>,[
 	[<minecraft:stained_glass_pane>, <immersiveengineering:metal:38>, <minecraft:stained_glass_pane>],
 	[null, <contenttweaker:material5>, null],
 	[<minecraft:stained_glass_pane>, <immersiveengineering:metal:38>, <minecraft:stained_glass_pane>]
+]);
+
+recipes.remove(<landlust:candle>);
+recipes.addShaped(<landlust:candle>,[
+	[<minecraft:string>],
+	[<ore:tallow>],
+	[<techreborn:nuggets:1>, <ore:dyeBlack>, <techreborn:nuggets:1>]
 ]);
 
 //////////////////////////////////////////////////////////////
@@ -585,6 +692,12 @@ recipes.addShaped(<openglider:hang_glider_part:2>,[
 /////////////		      Plants		   ///////////////////
 //////////////////////////////////////////////////////////////
 
+recipes.remove(<plants2:generic:6>);
+recipes.remove(<plants2:generic:8>);
+
+mods.extendedcrafting.CompressionCrafting.addRecipe(<plants2:generic:6>, <plants2:generic:5>, 6, <extendedcrafting:material:40>, 25000000, 500000);
+mods.extendedcrafting.CompressionCrafting.addRecipe(<plants2:generic:8>, <plants2:generic:7>, 6, <extendedcrafting:material:40>, 25000000, 500000);
+
 //Remove tools that may break early game
 mods.jei.JEI.removeAndHide(<plants2:crystal_pickaxe>);
 mods.jei.JEI.removeAndHide(<plants2:crystal_axe>);
@@ -604,8 +717,8 @@ mods.jei.JEI.removeAndHide(<plants2:dark_crystal_sword>);
 recipes.remove(<psi:cad_assembly>);
 recipes.addShaped(<psi:cad_assembly>,[
 	[null, null, <immersiveengineering:material:14>],
-	[<contenttweaker:smalldust>, <ic2:dust:6>, <essentialcraft:genitem:20>],
-	[<immersiveengineering:material:13>, <minecraft:iron_ingot>, <immersiveengineering:material:13>]
+	[<minecraft:iron_ingot>, <gregtech:meta_item_1:32683>, <essentialcraft:genitem:20>],
+	[<immersiveengineering:material:13>, <ic2:dust:6>, <contenttweaker:smalldust>]
 ]);
 
 recipes.remove(<psi:cad_assembly:1>);
@@ -641,10 +754,10 @@ recipes.addShaped(<psi:programmer>,[
 recipes.addShapeless(<quark:soul_powder>*4,[<minecraft:soul_sand>, <minecraft:bone>]);
 
 recipes.remove(<quark:ender_watcher>);
-recipes.addShaped(<quark:ender_watcher>,[
-	[<ore:dustObsidian>, <minecraft:ender_eye>, <ore:dustObsidian>],
-	[<minecraft:ender_eye>, <minecraft:noteblock>, <minecraft:ender_eye>],
-	[<ore:dustObsidian>, <minecraft:ender_eye>, <ore:dustObsidian>]
+mods.extendedcrafting.EnderCrafting.addShaped(<quark:ender_watcher>,[
+	[<minecraft:redstone>, <minecraft:ender_eye>, <minecraft:redstone>],
+	[<minecraft:ender_eye>, <magneticraft:box>, <minecraft:ender_eye>],
+	[<minecraft:redstone>, <minecraft:ender_eye>, <minecraft:redstone>]
 ]);
 
 recipes.remove(<quark:iron_rod>);
@@ -748,73 +861,49 @@ recipes.addShaped(<simplevoidworld:portal>,[
 ////////////////////////////////////////////////////////////// 
 
 recipes.remove(<sereneseasons:season_clock>);
-recipes.addShaped(<sereneseasons:season_clock>,[
-	[<enderio:item_material:18>],
-	[<minecraft:clock>],
-	[<minecraft:quartz>]
+mods.extendedcrafting.EnderCrafting.addShaped(<sereneseasons:season_clock>,[
+	[null, <essentialcraft:ffocus>, null],
+	[<essentialcraft:efocus>, <enderio:item_material:18>, <essentialcraft:wfocus>],
+	[null, <essentialcraft:afocus>, null]
 ]);
+
+recipes.remove(<sereneseasons:season_sensor_spring>);
 
 //////////////////////////////////////////////////////////////
 /////////////         Spice of Life       ////////////////////
 ////////////////////////////////////////////////////////////// 
-
+/*
 recipes.remove(<spiceoflife:lunchbox>);
 recipes.addShaped(<spiceoflife:lunchbox>,[
 	[null, <betterwithmods:material:8>, null],
 	[<techreborn:plates:16>, <tconstruct:nuggets:5>, <techreborn:plates:16>],
 	[<techreborn:plates:16>, <techreborn:plates:16>, <techreborn:plates:16>]
 ]);
-
+*/
 //////////////////////////////////////////////////////////////
-/////////////         Terraqueous         ////////////////////
-//////////////////////////////////////////////////////////////
+/////////////           Stackable         ////////////////////
+////////////////////////////////////////////////////////////// 
 
-recipes.remove(<terraqueous:crafting:5>);
-recipes.addShaped(<terraqueous:crafting:5>,[
-	[<minecraft:carpet:3>, <tconstruct:tooltables>, <minecraft:carpet:3>],
-	[<extrautils2:compressedcobblestone>, <minecraft:chest>, <extrautils2:compressedcobblestone>],
-	[<minecraft:stone_slab>, <minecraft:comparator>, <minecraft:stone_slab>]
-]);
-
-recipes.remove(<terraqueous:crafting:6>);
-recipes.addShaped(<terraqueous:crafting:6>,[
-	[<extrautils2:compressedcobblestone>, <extrautils2:compressedcobblestone>, <extrautils2:compressedcobblestone>],
-	[<minecraft:furnace>, <extrautils2:compressedcobblestone>, <minecraft:furnace>],
-	[<extrautils2:compressedcobblestone>, <extrautils2:compressedcobblestone>, <extrautils2:compressedcobblestone>]
-]);
-
-recipes.remove(<terraqueous:hammer>);
-recipes.addShapeless(<terraqueous:hammer>,[<immersiveengineering:tool>]);
-
-recipes.remove(<terraqueous:item_main:109>);
-recipes.addShapeless(<terraqueous:item_main:109>,[<minecraft:book>, <minecraft:ender_eye>, <twilightforest:magic_map_focus>, <essentialcraft:genitem:10>]);
-
-recipes.remove(<terraqueous:ender_table>);
-recipes.addShapeless(<terraqueous:ender_table>,[<minecraft:enchanting_table>, <terraqueous:item_main:109>]);
+recipes.remove(<stackable:changer>.withTag({m0de: 0 as byte}));
+recipes.addShapeless(<stackable:changer>.withTag({m0de: 0 as byte}),[<enderutilities:enderpart:20>, <flatcoloredblocks:coloredcraftingitem>]);
 
 //////////////////////////////////////////////////////////////
 /////////////     	   Torch Master         //////////////////
 //////////////////////////////////////////////////////////////
 
 recipes.remove(<torchmaster:mega_torch>);
-recipes.addShaped(<torchmaster:mega_torch>,[
-	[<minecraft:glowstone>],
-	[<extrautils2:decorativesolidwood:1>],
-	[<twilightforest:twilight_log>]
+mods.extendedcrafting.EnderCrafting.addShaped(<torchmaster:mega_torch>,[
+	[<extendedcrafting:material:7>],
+	[<betterwithmods:moulding_wood>.withTag({texture: {Properties: {variant: "sacred_oak"}, Name: "biomesoplenty:planks_0"}})],
+	[null]
 ]);
 
 recipes.remove(<torchmaster:feral_flare_lantern>);
-recipes.addShapeless(<torchmaster:feral_flare_lantern>,[<landlust:lantern>, <forge:bucketfilled>.withTag({FluidName: "glowstone", Amount: 1000})]);
+recipes.addShapeless(<torchmaster:feral_flare_lantern>,[<minecraft:glass_pane>, <forge:bucketfilled>.withTag({FluidName: "glowstone", Amount: 1000}), 
+<minecraft:iron_nugget>, <minecraft:iron_nugget>]);
 
 recipes.remove(<torchmaster:frozen_pearl>);
 mods.techreborn.vacuumFreezer.addRecipe(<torchmaster:frozen_pearl>, <minecraft:ender_pearl>, 1800, 8);
-
-//////////////////////////////////////////////////////////////
-/////////////     The Twilight Forest     ////////////////////
-//////////////////////////////////////////////////////////////
-
-recipes.remove(<twilightforest:uncrafting_table>);
-<twilightforest:uncrafting_table>.addTooltip(format.aqua("Disabled"));
 
 //////////////////////////////////////////////////////////////
 //////////      Wireless Crafting Terminal      //////////////

@@ -45,6 +45,9 @@ recipes.addShaped(<quantumflux:craftingpiece:4>,[
 recipes.remove(<quantumflux:craftingpiece:5>);
 recipes.addShapeless(<quantumflux:craftingpiece:5>,[<opencomputers:material:4>, <contenttweaker:dust4>, <quantumflux:craftingpiece>]);
 
+mods.extendedcrafting.CompressionCrafting.addRecipe(<quantumflux:craftingpiece:6>, <nuclearcraft:dust:8>, 1, <draconicevolution:chaotic_core>, 
+370000000, 5000000);
+
 recipes.remove(<quantumflux:voidbucket>);
 recipes.addShapeless(<quantumflux:voidbucket>,[<forge:bucketfilled>.withTag({FluidName: "ender_distillation", Amount: 1000}), <essentialcraft:genitem:23>]);
 
@@ -129,9 +132,9 @@ recipes.addShaped(<quantumflux:rfentangler>,[
 
 recipes.remove(<quantumflux:rfexciter>);
 recipes.addShaped(<quantumflux:rfexciter>,[
-	[null, <actuallyadditions:item_crystal_empowered>, null],
-	[<quantumflux:craftingpiece:3>, <techreborn:plates:2>, <quantumflux:craftingpiece:3>],
-	[null, <quantumflux:craftingpiece>, null]
+	[null, <extrautils2:ingredients>, null],
+	[<quantumflux:craftingpiece>, <techreborn:plates:2>, <quantumflux:craftingpiece:3>],
+	[null, <redstonearsenal:material:96>, null]
 ]);
 
 //Some items and machines will be temporarily disabled due to mod is still being ported i dont know if new things to be added will be unbalanced with my recipes

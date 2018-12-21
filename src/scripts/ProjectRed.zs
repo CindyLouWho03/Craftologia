@@ -19,7 +19,7 @@ recipes.addShaped(<projectred-core:resource_item:250>,[
 ]);
 
 recipes.remove(<projectred-core:resource_item:251>);
-recipes.addShapeless(<projectred-core:resource_item:251>,[<projectred-core:resource_item:103>]);
+recipes.remove(<projectred-transmission:wire>);
 
 //Use these instead of creating new items
 <projectred-core:resource_item:300>.displayName = "Monocrystalline Silicon Boule";

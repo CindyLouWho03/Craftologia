@@ -135,13 +135,27 @@ recipes.remove(<immersiveengineering:metal_decoration2:4>);	//Lantern
 mods.immersiveengineering.Blueprint.addRecipe("components", <immersiveengineering:metal_decoration2:4>, 
 	[<minecraft:glowstone>, <ore:ingotSteel>, <ore:paneGlass>, <ore:paneGlass>]);
 
+recipes.remove(<immersiveengineering:wooden_device1>);
+recipes.addShaped(<immersiveengineering:wooden_device1>,[
+	[<immersiveengineering:treated_wood_slab:2>, <immersiveengineering:material:10>, <immersiveengineering:treated_wood_slab:2>],
+	[<immersiveengineering:material:10>, <tconstruct:tough_binding>.withTag({Material: "treatedwood"}), <immersiveengineering:material:10>],
+	[<immersiveengineering:treated_wood_slab:2>, <immersiveengineering:material:10>, <immersiveengineering:treated_wood_slab:2>]
+]);
+
+recipes.remove(<immersiveengineering:wooden_device1:1>);
+recipes.addShaped(<immersiveengineering:wooden_device1:1>,[
+	[<immersiveengineering:material:11>, <immersiveengineering:material:11>, <immersiveengineering:material:11>],
+	[<immersiveengineering:material:11>, <tconstruct:tough_binding>.withTag({Material: "treatedwood"}), <immersiveengineering:material:11>],
+	[<immersiveengineering:material:11>, <immersiveengineering:material:11>, <immersiveengineering:material:11>]
+]);
+
 //Remove rod barehand crafting (you are not hulk), enforcing the use of metal press
 recipes.remove(<immersiveengineering:material:1>);
 recipes.remove(<immersiveengineering:material:2>);	
 recipes.remove(<immersiveengineering:material:3>);
 
 recipes.addShapeless(<immersiveengineering:material:1>,[<tconstruct:tool_rod>.withTag({Material: "iron"})]);
-mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:material:3>, <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:plastic>, 144*4);
+mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:material:3>, <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:aluminum>, 144*3);
 
 recipes.remove(<immersiveengineering:connector>);
 recipes.addShaped(<immersiveengineering:connector>,[
@@ -212,7 +226,7 @@ recipes.addShaped(<immersiveengineering:metal_device0:2>,[
 
 recipes.remove(<immersiveengineering:metal_device0:5>);
 recipes.addShaped(<immersiveengineering:metal_device0:5>,[
-	[null, <contenttweaker:crafting1>, null],
+	[null, <gregtech:meta_item_1:32610>, null],
 	[<ore:plateIron>, <immersiveengineering:material:8>, <ore:plateIron>],
 	[<immersiveengineering:material:8>, <immersiveengineering:metal_device1:6>, <immersiveengineering:material:8>]
 ]);
@@ -374,8 +388,23 @@ recipes.addShaped(<immersiveengineering:shield>,[
 	[null, <immersiveengineering:metal:38>, null]
 ]);
 
+recipes.remove(<immersiveengineering:earmuffs>);
+recipes.addShaped(<immersiveengineering:earmuffs>,[
+	[<ore:itemRubber>, <ore:sheetIron>, <ore:itemRubber>],
+	[<ore:ringSteel>, null, <ore:ringSteel>],
+	[<magneticraft:crafting:6>, null, <magneticraft:crafting:6>]
+]);
+
+recipes.remove(<immersiveengineering:skyhook>);
+recipes.addShaped(<immersiveengineering:skyhook>,[
+	[<gregtech:meta_item_2:10183>,<gregtech:meta_item_2:10183>],
+	[<immersiveengineering:material:9>,<immersiveengineering:material:9>],
+	[<immersiveengineering:material:13>,<immersiveengineering:material:13>]
+]);
+
 recipes.remove(<immersiveengineering:fluorescent_tube>);
-recipes.addShapeless(<immersiveengineering:fluorescent_tube>,[<immersiveengineering:graphite_electrode>, <twilightforest:firefly>, <nuclearcraft:glowing_mushroom>]);
+recipes.addShapeless(<immersiveengineering:fluorescent_tube>,[<immersiveengineering:graphite_electrode>, <nuclearcraft:glowing_mushroom>, 
+<nuclearcraft:glowing_mushroom>]);
 
 recipes.remove(<immersiveengineering:metal_device1:7>);
 
@@ -389,6 +418,9 @@ mods.techreborn.rollingMachine.addShaped(<immersiveengineering:metal:39>, [
 	[<techreborn:smalldust:61>, <techreborn:smalldust:61>, <techreborn:smalldust:61>],
 	[<techreborn:smalldust:1>, <ic2:misc_resource:4>, <techreborn:smalldust:1>]
 ]);
+
+//Wait to improve the recipe if more proyectiles
+recipes.remove(<immersiveengineering:railgun>);
 
 //////////////////////////////////////////////////////////////
 /////////////		Immersive Petroleum	     /////////////////

@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////
 
 furnace.remove(<deepresonance:resonating_plate>);
-mods.techreborn.implosionCompressor.addRecipe(<deepresonance:resonating_plate>*8, <techreborn:dust:15>*4, <deepresonance:resonating_ore:*>, <minecraft:tnt>*2, 100, 128);
+mods.mekanism.enrichment.addRecipe(<deepresonance:resonating_ore:1>, <deepresonance:resonating_plate>*4);
 
 recipes.remove(<deepresonance:machine_frame>);
 recipes.addShaped(<deepresonance:machine_frame>,[
@@ -91,7 +91,7 @@ recipes.remove(<deepresonance:radiation_sensor>);
 recipes.addShaped(<deepresonance:radiation_sensor>,[
 	[<rockhounding_chemistry:misc_items:7>,<mekanism:gaugedropper>.withTag({mekData: {}}), <rockhounding_chemistry:misc_items:7>],
 	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <deepresonance:machine_frame>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}})],
-	[<contenttweaker:part3>, <techreborn:part:29>, <contenttweaker:part3>]
+	[<gregtech:cable_tungsten>, <techreborn:part:29>, <gregtech:cable_tungsten>]
 ]);
 
 recipes.remove(<deepresonance:radiation_monitor>);

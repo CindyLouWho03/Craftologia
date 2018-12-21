@@ -19,20 +19,40 @@ recipes.addShaped(<appliedenergistics2:grindstone>,[
 recipes.remove(<appliedenergistics2:crank>);
 recipes.addShapeless(<appliedenergistics2:crank>,[<ore:fiberHemp>, <minecraft:stick>, <betterwithmods:shaft>]);
 
+//Seeds 
+recipes.remove(<appliedenergistics2:crystal_seed>);
+recipes.addShaped(<appliedenergistics2:crystal_seed>.withTag({progress: 0})*12,[
+	[null, <appliedenergistics2:material:2>, null],
+	[<appliedenergistics2:material:2>, <thermalfoundation:material:1025>, <appliedenergistics2:material:2>],
+	[null, <appliedenergistics2:material:2>, null]
+]);
+
+recipes.remove(<appliedenergistics2:crystal_seed:1200>);
+recipes.addShaped(<appliedenergistics2:crystal_seed:1200>.withTag({progress: 1200})*12,[
+	[null, <appliedenergistics2:material:8>, null],
+	[<appliedenergistics2:material:8>, <thermalfoundation:material:1025>, <appliedenergistics2:material:8>],
+	[null, <appliedenergistics2:material:8>, null]
+]);
+
+recipes.remove(<appliedenergistics2:crystal_seed:600>);
+recipes.addShaped(<appliedenergistics2:crystal_seed:600>.withTag({progress: 600}),[
+	[null, <nuclearcraft:gem_dust:2>, null],
+	[<nuclearcraft:gem_dust:2>, <thermalfoundation:material:1025>, <nuclearcraft:gem_dust:2>],
+	[null, <nuclearcraft:gem_dust:2>, null]
+]);
+
 recipes.remove(<appliedenergistics2:inscriber>);
-mods.extendedcrafting.TableCrafting.addShaped(<appliedenergistics2:inscriber>,[
-    [null, <enderio:item_alloy_ingot:6>, <minecraft:sticky_piston>, <enderio:item_alloy_ingot:6>, null],  
-    [<enderio:item_alloy_ingot:6>, <rockhounding_chemistry:pipeline_duct>, <techreborn:plates:31>, <rockhounding_chemistry:pipeline_duct>, <enderio:item_alloy_ingot:6>],  
-    [<forge:bucketfilled>.withTag({FluidName: "fluidoil", Amount: 1000}), null, null, null, <forge:bucketfilled>.withTag({FluidName: "fluidoil", Amount: 1000})],  
-    [<enderio:item_alloy_ingot:6>, <rockhounding_chemistry:pipeline_duct>, <techreborn:plates:31>, <rockhounding_chemistry:pipeline_duct>, <enderio:item_alloy_ingot:6>], 
-    [null, <enderio:item_alloy_ingot:6>, <minecraft:sticky_piston>, <enderio:item_alloy_ingot:6>, null] 
-]); 
+recipes.addShaped(<appliedenergistics2:inscriber>,[
+	[<ore:plateBlackSteel>, <gregtech:meta_item_1:32643>, <ore:plateBlackSteel>],
+	[<ore:ingotBlackSteel>, null, <ore:ingotBlackSteel>],
+	[<ore:plateBlackSteel>, <gregtech:meta_item_1:32643>, <ore:plateBlackSteel>]
+]);
 
 recipes.remove(<appliedenergistics2:charger>);
 recipes.addShaped(<appliedenergistics2:charger>,[
-	[<enderio:item_alloy_ingot:6>, <appliedenergistics2:material:7>, <enderio:item_alloy_ingot>],
+	[<enderio:item_alloy_ingot:6>, <actuallyadditions:item_crystal_empowered>, <enderio:item_alloy_ingot>],
 	[<enderio:item_alloy_ingot:6>, <ore:ingotCobalt>, null],
-	[<enderio:item_alloy_ingot:6>, <appliedenergistics2:material:7>, <enderio:item_alloy_ingot>]
+	[<enderio:item_alloy_ingot:6>, <actuallyadditions:item_crystal_empowered:1>, <enderio:item_alloy_ingot>]
 ]);
 
 recipes.remove(<appliedenergistics2:controller>);
@@ -73,9 +93,9 @@ recipes.addShaped(<appliedenergistics2:io_port>,[
 recipes.remove(<appliedenergistics2:interface>);
 mods.extendedcrafting.TableCrafting.addShaped(<appliedenergistics2:interface>,[
     [<techreborn:plates:22>, <enderio:item_alloy_ingot>, <contenttweaker:crafting3>, <enderio:item_alloy_ingot>, <techreborn:plates:22>],  
-    [<contenttweaker:smalldust2>, <appliedenergistics2:material:12>, <appliedenergistics2:material:23>, <appliedenergistics2:material:12>, <contenttweaker:smalldust2>],  
+    [<ore:dustTinyGraphite>, <appliedenergistics2:material:12>, <appliedenergistics2:material:23>, <appliedenergistics2:material:12>, <ore:dustTinyGraphite>],  
     [<contenttweaker:crafting3>, <appliedenergistics2:material:44>, <appliedenergistics2:material:22>, <appliedenergistics2:material:43>, <contenttweaker:crafting3>],  
-    [<contenttweaker:smalldust2>, <appliedenergistics2:material:12>, <appliedenergistics2:material:24>, <appliedenergistics2:material:12>, <contenttweaker:smalldust2>], 
+    [<ore:dustTinyGraphite>, <appliedenergistics2:material:12>, <appliedenergistics2:material:24>, <appliedenergistics2:material:12>, <ore:dustTinyGraphite>], 
     [<techreborn:plates:22>, <enderio:item_alloy_ingot>, <contenttweaker:crafting3>, <enderio:item_alloy_ingot>, <techreborn:plates:22>] 
 ]); 
 
@@ -88,10 +108,21 @@ recipes.addShaped(<appliedenergistics2:condenser>,[
 
 recipes.remove(<appliedenergistics2:energy_acceptor>);
 recipes.addShaped(<appliedenergistics2:energy_acceptor>,[
-	[<enderio:item_alloy_ingot>, <appliedenergistics2:material:12>, <enderio:item_alloy_ingot>],
-	[<appliedenergistics2:material:12>, <ic2:re_battery:26>, <appliedenergistics2:material:12>],
-	[<enderio:item_alloy_ingot>, <appliedenergistics2:material:12>, <enderio:item_alloy_ingot>]
+	[<enderio:item_alloy_ingot>, <appliedenergistics2:material:7>, <enderio:item_alloy_ingot>],
+	[<appliedenergistics2:material:7>, <enderio:item_basic_capacitor:2>, <appliedenergistics2:material:7>],
+	[<enderio:item_alloy_ingot>, <appliedenergistics2:material:7>, <enderio:item_alloy_ingot>]
 ]);
+
+recipes.remove(<appliedenergistics2:energy_cell>);
+mods.extendedcrafting.TableCrafting.addShaped(<appliedenergistics2:energy_cell>.withTag({}),[
+    [<thermalfoundation:material:130>, <appliedenergistics2:material:10>, <ic2:dust:6>, <appliedenergistics2:material:10>, <thermalfoundation:material:130>],  
+    [<appliedenergistics2:material:10>, <rockhounding_chemistry:chemical_dusts:22>, <appliedenergistics2:material:10>, <rockhounding_chemistry:chemical_dusts:22>, 
+    <appliedenergistics2:material:10>],  
+    [<ic2:dust:6>, <appliedenergistics2:material:10>, <techreborn:energycrystal>.withTag({energy: 0}), <appliedenergistics2:material:10>, <ic2:dust:6>],  
+    [<appliedenergistics2:material:10>, <rockhounding_chemistry:chemical_dusts:22>, <appliedenergistics2:material:10>, <rockhounding_chemistry:chemical_dusts:22>, 
+    <appliedenergistics2:material:10>], 
+    [<thermalfoundation:material:130>, <appliedenergistics2:material:10>, <ic2:dust:6>, <appliedenergistics2:material:10>, <thermalfoundation:material:130>] 
+]); 
 
 recipes.remove(<appliedenergistics2:crafting_unit>);
 recipes.addShaped(<appliedenergistics2:crafting_unit>,[
@@ -244,8 +275,8 @@ recipes.addShaped(<appliedenergistics2:material:53>,[
 recipes.remove(<appliedenergistics2:material:41>);	//Wireless Receiver
 recipes.addShaped(<appliedenergistics2:material:41>,[
 	[null, <appliedenergistics2:material:9>, null],
-	[<contenttweaker:part5>, <appliedenergistics2:part:140>, <contenttweaker:part5>],
-	[null, <contenttweaker:part5>, null]
+	[<gregtech:cable_niobium_titanium>, <appliedenergistics2:part:140>, <gregtech:cable_niobium_titanium>],
+	[null, <gregtech:cable_niobium_titanium>, null]
 ]);
 
 recipes.remove(<appliedenergistics2:material:42>);	//Wireless Booster
@@ -312,7 +343,7 @@ recipes.addShaped(<appliedenergistics2:part:460>,[
 ]);
 
 recipes.remove(<appliedenergistics2:part:140>);
-mods.mekanism.reaction.addRecipe(<nuclearcraft:gem_dust:2>, <liquid:liquidethene>, <gas:oxygen>, <appliedenergistics2:part:140>*2, <gas:oxygen>, 40000, 1200);
+mods.mekanism.reaction.addRecipe(<nuclearcraft:gem_dust:2>, <liquid:liquidethene>*50, <gas:oxygen>*100, <appliedenergistics2:part:140>*2, <gas:oxygen>*50, 512, 1200);
 
 recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 recipes.addShaped(<appliedenergistics2:quartz_vibrant_glass>*4,[
@@ -366,6 +397,10 @@ recipes.addShaped(<appliedenergistics2:material:52>,[
 	[<minecraft:glowstone_dust>, <appliedenergistics2:material:10>, <minecraft:glowstone_dust>],
 	[<techreborn:plates:16>, <ore:nuggetInvar>, <techreborn:plates:16>]
 ]);
+
+//Let charged certus quartz be a natural process
+mods.thermalexpansion.Infuser.removeRecipe(<appliedenergistics2:material>);
+mods.thermalexpansion.Infuser.removeRecipe(<appliedenergistics2:quartz_ore>);
 
 //Removed items since config option does not remove them properly
 <ore:gearWood>.remove(<appliedenergistics2:material:40>);

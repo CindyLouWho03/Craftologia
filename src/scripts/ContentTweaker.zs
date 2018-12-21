@@ -10,39 +10,25 @@ recipes.addShaped(<contenttweaker:block>,[
 	[<nuclearcraft:compound:1>, <contenttweaker:plate1>, <nuclearcraft:compound:1>]
 ]);
 
-//Hydraulic Press
-mods.extendedcrafting.TableCrafting.addShaped(<contenttweaker:block1>,[
-    [<immersiveengineering:metal:8>, <minecraft:piston>, <forge:bucketfilled>.withTag({FluidName: "fluidoil", Amount: 1000}), <minecraft:piston>, <immersiveengineering:metal:8>],  
-    [<chisel:factory:6>, <rockhounding_chemistry:pipeline_duct>, <rockhounding_chemistry:pipeline_duct>, <rockhounding_chemistry:pipeline_duct>, <chisel:factory:6>],  
-    [<chisel:factory:6>, null, <ic2:crafting:30>, null, <chisel:factory:6>],  
-    [<chisel:factory:6>, <ic2:plate:16>,<ic2:plate:16> , <ic2:plate:16>, <chisel:factory:6>], 
-    [<immersiveengineering:metal:8>, <immersiveengineering:metal:38>, <immersiveengineering:metal:38>, <immersiveengineering:metal:38>, <immersiveengineering:metal:8>] 
-]); 
-
-//----------//
-// 	 Ore 	//
-//----------//
-
-mods.techreborn.centrifuge.addRecipe(<minecraft:sand:1>, <enderio:item_material:33>*3, <techreborn:smalldust:27>, <rockhounding_chemistry:chemical_dusts:42>*2, 
-	<contenttweaker:ore1>, null, 800, 8);
-mods.mekanism.enrichment.addRecipe(<contenttweaker:ore1>, <minecraft:quartz> * 6);
-
 //----------//
 // 	Dust  	//
 //----------//
 
 recipes.addShapeless(<contenttweaker:dust>, [<contenttweaker:smalldust>, <contenttweaker:smalldust>, <contenttweaker:smalldust>, <contenttweaker:smalldust>]);
-recipes.addShapeless(<contenttweaker:dust1>, [<minecraft:glowstone_dust>, <minecraft:gold_ingot>, <minecraft:redstone>]);
+recipes.addShapeless(<contenttweaker:dust1>, [<minecraft:glowstone_dust>, <ore:dustGold>, <minecraft:redstone>]);
 mods.techreborn.industrialElectrolyzer.addRecipe(<contenttweaker:dust2>, <techreborn:dust:59>*6, <techreborn:dynamiccell>*8, null, null, 
 	<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "zinc", Amount: 1000}})*8, 900, 32);
 mods.techreborn.centrifuge.addRecipe(<contenttweaker:dust2>, <techreborn:dust:59>*3, <techreborn:dynamiccell>*4, null, 
 <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "zinc", Amount: 1000}})*4, null, 1200, 64);
-mods.rockhounding_chemistry.LabOven.add("Silver Nitrate", <techreborn:ingot:11>, null, <liquid:nitric_acid>*200, null, <liquid:water>*100, <liquid:toxic_waste>*50, <contenttweaker:dust3>);
+//mods.rockhounding_chemistry.LabOven.add("Silver Nitrate", <ic2:dust:14>, null, <liquid:nitric_acid>*200, null, <liquid:toxic_waste>*50, <contenttweaker:dust3>);
 
 mods.techreborn.industrialGrinder.addRecipe(<contenttweaker:dust4>, <appliedenergistics2:material:45>*1, <techreborn:smalldust:16>, null, 
 	<contenttweaker:ore2>, null, <liquid:water>*2000, 1800, 256);
 mods.techreborn.industrialGrinder.addRecipe(<contenttweaker:dust4>*2, <appliedenergistics2:material:45>*1, <techreborn:smalldust:16>, null, 
 	<contenttweaker:ore2>, null, <liquid:fluidsodiumpersulfate>*2000, 3000, 256);
+
+mods.rockhounding_chemistry.LabBlender.add([<frogcraftrebirth:non_metal_dust:2>, <frogcraftrebirth:intermediate_product>, <rockhounding_chemistry:chemical_dusts:54>, 
+<techreborn:dust:33>], <contenttweaker:dust5>*2);
 
 //-----------//
 // Smalldust //
@@ -60,15 +46,12 @@ recipes.addShapeless(<contenttweaker:smalldust>*4, [<contenttweaker:dust>]);
 recipes.addShapeless(<contenttweaker:smalldust1>*4, [<betterwithmods:sand_pile>]);
 recipes.addShapeless(<betterwithmods:sand_pile>, [<contenttweaker:smalldust1>, <contenttweaker:smalldust1>, <contenttweaker:smalldust1>, <contenttweaker:smalldust1>]);
 
-recipes.addShapeless(<contenttweaker:smalldust2>*9, [<nuclearcraft:dust:8>]);
-recipes.addShapeless(<nuclearcraft:dust:8>, [<contenttweaker:smalldust2>*9]);
-
 //----------//
 //	Ingot	//
 //----------//
 
 mods.actuallyadditions.Empowerer.addRecipe(<contenttweaker:ingot>, 
-	<techreborn:ingot:12>, <techreborn:smalldust:10>, <techreborn:dust:34>, <techreborn:smalldust:10>, <techreborn:dust:34>, 15000, 200, [0.5, 0.5, 0.5]);
+	<mekanism:ingot:4>, <techreborn:smalldust:10>, <techreborn:smalldust:10>, <techreborn:smalldust:10>, <techreborn:smalldust:10>, 15000, 200, [0.5, 0.5, 0.5]);
 
 mods.techreborn.blastFurnace.addRecipe(<contenttweaker:ingot1>*4, null, <rockhounding_chemistry:metal_items:2>*3, <ic2:misc_resource:1>, 5400, 85, 3486);
 
@@ -79,14 +62,10 @@ mods.techreborn.blastFurnace.addRecipe(<contenttweaker:ingot3>, null, <techrebor
 
 mods.nuclearcraft.infuser.addRecipe(<contenttweaker:ingot3>, <liquid:oxygen>*1000, <contenttweaker:ingot4>, 600);
 
-mods.techreborn.blastFurnace.addRecipe(<contenttweaker:ingot5>, null, <rockhounding_chemistry:chemical_dusts:37>, <ore:dustTitanium>, 3200, 62, 2500);
-mods.techreborn.blastFurnace.addRecipe(<contenttweaker:ingot5>, null, <rockhounding_chemistry:chemical_dusts:37>, <ore:ingotTitanium>, 3200, 62, 2500);
-
 //----------//
 //	Plate	//
 //----------//
 
-mods.nuclearcraft.pressurizer.addRecipe(<rockhounding_chemistry:metal_items:2>, <contenttweaker:plate>, 100);
 mods.nuclearcraft.pressurizer.addRecipe(<mekanism:ingot:1>*9, <contenttweaker:plate1>, 1200);
 mods.nuclearcraft.pressurizer.addRecipe(<mekanism:basicblock>, <contenttweaker:plate1>, 1200);
 mods.magneticraft.HydraulicPress.addRecipe(<rockhounding_chemistry:metal_items:2>*9, <contenttweaker:plate1>, 600, 2, false);
@@ -116,7 +95,7 @@ recipes.addShapeless(<contenttweaker:part6>,[<ore:nuggetCobalt>, <enderio:item_a
 // Material  //
 //-----------//
 
-mods.techreborn.implosionCompressor.addRecipe(<contenttweaker:material>*8, <techreborn:dust:15>*4, <rockhounding_chemistry:chemical_dusts:42>, <minecraft:tnt>*16, 200, 128);
+mods.rockhounding_chemistry.PullingCrucible.add(<rockhounding_chemistry:chemical_dusts:42>, <nuclearcraft:gem_dust:2>, <contenttweaker:material>*8);
 
 //Uncured Epoxy Resin
 mods.actuallyadditions.Empowerer.addRecipe(<contenttweaker:material1>*4, 
@@ -124,8 +103,6 @@ mods.actuallyadditions.Empowerer.addRecipe(<contenttweaker:material1>*4,
 
 //Cured Epoxy Resin
 mods.techreborn.blastFurnace.addRecipe(<contenttweaker:material2>*2, null, <contenttweaker:material1>, <thermalexpansion:florb>.withTag({Fluid: "hydrochloric_acid"}), 600, 24, 1000);	
-mods.rockhounding_chemistry.LabOven.add("Cured Epoxy", <contenttweaker:material1>, <rockhounding_chemistry:va_catalyst>, <liquid:hydrochloric_acid>*500, null, 
-<liquid:toxic_waste>*300, null, <contenttweaker:material2>);
 
 //CFRP Sheet, Carbon fiber reinforced polymer
 mods.techreborn.rollingMachine.addShaped(<contenttweaker:material3>*8, [
@@ -148,14 +125,8 @@ mods.techreborn.alloySmelter.addRecipe(<contenttweaker:material6>, <contenttweak
 //----------//
 
 mods.actuallyadditions.Empowerer.addRecipe(<contenttweaker:crafting>, <ic2:block_cutting_blade:1>, 
-	<techreborn:dust:55>, <rockhounding_chemistry:alloy_items_tech:9>, <rockhounding_chemistry:alloy_items_tech:42>, <rockhounding_chemistry:alloy_items_tech:9>, 150000, 30,[0,0,0]);
-
-//Plunger
-recipes.addShaped(<contenttweaker:crafting1>,[	
-	[<immersiveengineering:metal:8>, <immersiveengineering:material:2>, <immersiveengineering:metal:8>],
-	[null, <immersiveengineering:material:9>, null],
-	[<immersiveengineering:material:9>, <immersiveengineering:metal_device1:6>, <immersiveengineering:material:9>]
-]);
+	<techreborn:dust:55>, <rockhounding_chemistry:alloy_items_tech:9>, <rockhounding_chemistry:alloy_items_tech:42>, <rockhounding_chemistry:alloy_items_tech:9>, 
+	150000, 30,[0,0,0]);
 
 //Canister
 mods.techreborn.rollingMachine.addShaped(<contenttweaker:crafting2>*2, [
@@ -166,9 +137,9 @@ mods.techreborn.rollingMachine.addShaped(<contenttweaker:crafting2>*2, [
 
 //Single Module
 recipes.addShaped(<contenttweaker:crafting3>,[
-	[<techreborn:part:35>, <rockhounding_chemistry:alloy_items_tech:15>, <techreborn:part:35>],
+	[<gtadditions:ga_meta_item:32079>, <rockhounding_chemistry:alloy_items_tech:15>, <gtadditions:ga_meta_item:32079>],
 	[<techreborn:smalldust:47>, <appliedenergistics2:material:20>, <contenttweaker:smalldust>],
-	[<techreborn:part:35>, <techreborn:nuggets:6>, <techreborn:part:35>]
+	[<gtadditions:ga_meta_item:32079>, <techreborn:nuggets:6>, <gtadditions:ga_meta_item:32079>]
 ]);
 
 //Basic Module
@@ -202,7 +173,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<contenttweaker:crafting6>,[
 
 //Turbine Bearing
 mods.immersiveengineering.Blueprint.addRecipe("components", <contenttweaker:crafting7>, 
-	[<thermalfoundation:material:290>, <contenttweaker:part1>*8, <techreborn:ingot:20>, <forge:bucketfilled>.withTag({FluidName: "fluidoil", Amount: 1000})]);
+	[<gregtech:meta_item_2:26301>, <contenttweaker:part1>*8, <techreborn:ingot:20>, <forge:bucketfilled>.withTag({FluidName: "fluidoil", Amount: 1000})]);
 
 //Monocrystalline Solar Panel
 recipes.remove(<contenttweaker:crafting8>);
@@ -211,14 +182,9 @@ recipes.addShaped(<contenttweaker:crafting8>,[
 	[<techreborn:smalldust:54>, <rockhounding_chemistry:alloy_items_tech:27>, <contenttweaker:smalldust>],
 	[<mekanism:polyethene>, <projectred-core:resource_item:301>, <mekanism:polyethene>]
 ]);
-	
-//Sodium Chloride Container
-recipes.remove(<contenttweaker:crafting9>);
-recipes.addShaped(<contenttweaker:crafting9>,[
-	[<frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>],
-	[<frogcraftrebirth:intermediate_product:4>, <stevescarts:cartmodule:63>, <frogcraftrebirth:intermediate_product:4>],
-	[<frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>, <frogcraftrebirth:intermediate_product:4>]
-]);
+
+mods.immersiveengineering.Blueprint.addRecipe("components", <contenttweaker:crafting10>, 
+	[<rockhounding_chemistry:alloy_items_tech:7>*2, <contenttweaker:ingot>, <techreborn:nuggets>*3, <thermalexpansion:florb>.withTag({Fluid: "creosote"})]);
 
 //----------//
 // OreDicts //

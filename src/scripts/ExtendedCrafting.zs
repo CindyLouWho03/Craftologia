@@ -26,7 +26,6 @@ recipes.addShaped(<extendedcrafting:pedestal>,[
 
 recipes.remove(<extendedcrafting:material>);
 recipes.addShapeless(<extendedcrafting:material>,[<extendedcrafting:material:1>*9]);
-mods.techreborn.implosionCompressor.addRecipe(<extendedcrafting:material>, <techreborn:dust:15>*10, <minecraft:iron_ingot>*4, <minecraft:tnt>*16, 200, 1024);
 
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:1>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:3>);
@@ -86,10 +85,26 @@ recipes.addShaped(<extendedcrafting:interface>,[
 ]);
 
 recipes.remove(<extendedcrafting:compressor>);
-recipes.addShaped(<extendedcrafting:compressor>,[
-	[<extendedcrafting:material>, <rftools:infused_diamond>, <extendedcrafting:material>],
-	[<extendedcrafting:material:16>, <mekanism:machineblock:1>, <extendedcrafting:material:16>],
-	[<extendedcrafting:material>, <advanced_solar_panels:crafting:13>, <extendedcrafting:material>]
+mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:compressor>,[
+    [<xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}}), 
+    <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), <mekanism:controlcircuit:3>, <contenttweaker:material7>, <mekanism:controlcircuit:3>, 
+    <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), 
+    <xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}})], 
+    [<xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}}), 
+    <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), <advancedrocketry:pressuretank:3>, <mekanism:transmitter:2>.withTag({tier: 3}), 
+    <advancedrocketry:pressuretank:3>, <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), 
+    <xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}})], 
+    [<xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}}), 
+    <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), null, <advancedrocketry:productrod:1>, null, 
+    <rockhounding_chemistry:machines_b:1>.withTag({Energy: 0, Fuel: 0}), 
+    <xnet:advanced_connector>.withTag({display: {LocName: "tile.xnet.advanced_connector_blue.name"}})], 
+    [<magneticraft:heavy_plates:5>, <advanced_solar_panels:crafting:13>, null, <contenttweaker:block>, null, <advanced_solar_panels:crafting:13>, 
+    <magneticraft:heavy_plates:5>],
+    [<advanced_solar_panels:crafting:8>, <extendedcrafting:material:10>, null, null, null, <extendedcrafting:material:10>, <advanced_solar_panels:crafting:8>], 
+    [<advanced_solar_panels:crafting:8>, <extendedcrafting:material:10>, <rftools:infused_diamond>, <rftools:infused_diamond>, <rftools:infused_diamond>, 
+    <extendedcrafting:material:10>, <advanced_solar_panels:crafting:8>],
+    [<extendedcrafting:material:2>, <advanced_solar_panels:crafting:8>, <nuclearcraft:part:3>, <nuclearcraft:part:3>, <nuclearcraft:part:3>, 
+    <advanced_solar_panels:crafting:8>, <extendedcrafting:material:2>]
 ]);
 
 recipes.remove(<extendedcrafting:ender_alternator>);

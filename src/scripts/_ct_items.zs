@@ -22,6 +22,9 @@ silverNitrateDust.register();
 var siliconCarbideDust = VanillaFactory.createItem("dust4");
 siliconCarbideDust.register();
 
+var heatproofDust = VanillaFactory.createItem("dust5");
+heatproofDust.register();
+
 //-----------//
 // Smalldust //
 //-----------//
@@ -31,9 +34,6 @@ rutheniumSmallDust.register();
 
 var sandSmallDust = VanillaFactory.createItem("smalldust1");
 sandSmallDust.register();
-
-var graphiteTinyDust = VanillaFactory.createItem("smalldust2");
-graphiteTinyDust.register();
 
 //----------//
 //	Ingot	//
@@ -54,15 +54,9 @@ indiumTinIngot.register();
 var ito = VanillaFactory.createItem("ingot4");
 ito.register();
 
-var NiTi = VanillaFactory.createItem("ingot5");
-NiTi.register();
-
 //----------//
 //	Plate	//
 //----------//
-
-var osmiumPlate = VanillaFactory.createItem("plate");
-osmiumPlate.register();
 
 var osmiumDensePlate = VanillaFactory.createItem("plate1");
 osmiumDensePlate.register();
@@ -81,15 +75,6 @@ chromesteelBearing.register();
 
 var carbonFiberTube = VanillaFactory.createItem("part2");
 carbonFiberTube.register();
-
-var wolframWire = VanillaFactory.createItem("part3");
-wolframWire.register();
-
-var smallGraphiteRod = VanillaFactory.createItem("part4");
-smallGraphiteRod.register();
-
-var nitiWire = VanillaFactory.createItem("part5");
-nitiWire.register();
 
 var smallMagnet = VanillaFactory.createItem("part6");
 smallMagnet.register();
@@ -132,10 +117,6 @@ var eCuttingDisc = VanillaFactory.createItem("crafting");
 eCuttingDisc.maxStackSize = 1;
 eCuttingDisc.register();
 
-var waterPlunger = VanillaFactory.createItem("crafting1");
-waterPlunger.maxStackSize = 1;
-waterPlunger.register();
-
 var canister = VanillaFactory.createItem("crafting2");
 canister.maxStackSize = 8;
 canister.register();
@@ -164,12 +145,9 @@ var monoCrystalSolarPanel = VanillaFactory.createItem("crafting8");
 monoCrystalSolarPanel.maxStackSize = 16;
 monoCrystalSolarPanel.register();
 
-var sodiumChlorideContainer = VanillaFactory.createItem("crafting9");
-sodiumChlorideContainer.maxStackSize = 1;
-sodiumChlorideContainer.maxDamage = 32;
-sodiumChlorideContainer.register();
-
-
+var deflectorPiston = VanillaFactory.createItem("crafting10");
+deflectorPiston.maxStackSize = 16;
+deflectorPiston.register();
 
 
 

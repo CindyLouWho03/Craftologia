@@ -4,6 +4,13 @@
 ////////////// NuclearCraft ////////////////////
 ////////////////////////////////////////////////
 
+recipes.remove(<nuclearcraft:reactor_casing_transparent>);
+recipes.addShaped(<nuclearcraft:reactor_casing_transparent>,[
+	[<nuclearcraft:alloy:9>, <nuclearcraft:part:6>, <nuclearcraft:alloy:9>],
+	[<nuclearcraft:part:6>, null, <nuclearcraft:part:6>],
+	[<nuclearcraft:alloy:9>, <nuclearcraft:part:6>, <nuclearcraft:alloy:9>]
+]);
+
 //Enderium Cooler
 recipes.remove(<nuclearcraft:cooler:10>);
 recipes.addShaped(<nuclearcraft:cooler:10>,[
@@ -34,13 +41,6 @@ recipes.addShaped(<nuclearcraft:fission_block:1>,[
 	[null, <nuclearcraft:part>, null],
 	[<nuclearcraft:part>, <mekanism:basicblock:2>, <nuclearcraft:part>],
 	[null, <nuclearcraft:part>, null]
-]);
-
-recipes.remove(<nuclearcraft:reactor_casing_transparent>);
-recipes.addShaped(<nuclearcraft:reactor_casing_transparent>,[
-	[null, <ore:dustObsidian>, null],
-	[<ore:dustObsidian>, <techreborn:reinforced_glass>, <ore:dustObsidian>],
-	[null, <ore:dustObsidian>, null]
 ]);
 
 recipes.remove(<nuclearcraft:cell_block>);
@@ -135,13 +135,13 @@ recipes.remove(<nuclearcraft:supercooler_idle>);
 recipes.addShaped(<nuclearcraft:supercooler_idle>,[
 	[<mekanism:gastank>.withTag({tier: 0, mekData: {}}), <nuclearcraft:part:1>, <ic2:te:81>],
 	[<rockhounding_chemistry:gasline_duct>, <nuclearcraft:cooler:1>, <rockhounding_chemistry:pipeline_duct>],
-	[<nuclearcraft:part:1>, <ic2:hex_heat_storage>.withTag({advDmg: 0}), <nuclearcraft:part:1>]
+	[<nuclearcraft:part:1>, <frogcraftrebirth:ammonia_coolant_360k>, <nuclearcraft:part:1>]
 ]);
 
 recipes.remove(<nuclearcraft:electromagnet_supercooler_idle>);
 recipes.addShaped(<nuclearcraft:electromagnet_supercooler_idle>,[
 	[<nuclearcraft:part:5>, <nuclearcraft:part:1>, <nuclearcraft:part:5>],
-	[<contenttweaker:part5>, <immersiveengineering:metal_decoration0:2>, <contenttweaker:part5>],
+	[<gregtech:cable_niobium_titanium:2>, <immersiveengineering:metal_decoration0:2>, <gregtech:cable_niobium_titanium:2>],
 	[<nuclearcraft:part:5>, <nuclearcraft:part:1>, <nuclearcraft:part:5>]
 ]);
 
@@ -157,7 +157,7 @@ recipes.remove(<nuclearcraft:irradiator_idle>);
 recipes.addShaped(<nuclearcraft:irradiator_idle>,[
 	[<nuclearcraft:part:1>, <deepresonance:radiation_monitor>, <nuclearcraft:part:1>],
 	[<ic2:te:81>, <nuclearcraft:salt_mixer_idle>, <ic2:te:81>],
-	[<techreborn:part:28>, <essentialcraft:radiatingchamber>, <techreborn:part:28>]
+	[<techreborn:part:26>, <essentialcraft:radiatingchamber>, <techreborn:part:26>]
 ]);
 
 recipes.remove(<nuclearcraft:ingot_former_idle>);
@@ -170,7 +170,7 @@ recipes.addShaped(<nuclearcraft:ingot_former_idle>,[
 recipes.remove(<nuclearcraft:pressurizer_idle>);
 recipes.addShaped(<nuclearcraft:pressurizer_idle>,[
 	[<nuclearcraft:alloy:1>, <nuclearcraft:part:1>, <nuclearcraft:alloy:1>],
-	[<nuclearcraft:part:1>, <contenttweaker:block1>, <nuclearcraft:part:1>],
+	[<nuclearcraft:part:1>, <gregtech:meta_item_1:32644>, <nuclearcraft:part:1>],
 	[<nuclearcraft:alloy:1>, <nuclearcraft:part:1>, <nuclearcraft:alloy:1>]
 ]);
 
@@ -251,14 +251,14 @@ recipes.addShaped(<nuclearcraft:bin>,[
 recipes.remove(<nuclearcraft:fusion_electromagnet_idle>);
 recipes.addShaped(<nuclearcraft:fusion_electromagnet_idle>,[
 	[<nuclearcraft:part:4>, <nuclearcraft:part:1>, <nuclearcraft:part:4>],
-	[<nuclearcraft:part:4>, <immersiveengineering:metal_decoration0:2>, <nuclearcraft:part:4>],
+	[<nuclearcraft:part:4>, <gregtech:wire_coil:2>, <nuclearcraft:part:4>],
 	[<nuclearcraft:part:4>, <nuclearcraft:part:1>, <nuclearcraft:part:4>]
 ]);
 
 recipes.remove(<nuclearcraft:accelerator_electromagnet_idle>);
 recipes.addShaped(<nuclearcraft:accelerator_electromagnet_idle>,[
 	[<nuclearcraft:part:5>, <nuclearcraft:part:1>, <nuclearcraft:part:5>],
-	[<nuclearcraft:part:5>, <immersiveengineering:metal_decoration0:2>, <nuclearcraft:part:5>],
+	[<nuclearcraft:part:5>, <gregtech:wire_coil:5>, <nuclearcraft:part:5>],
 	[<nuclearcraft:part:5>, <nuclearcraft:part:1>, <nuclearcraft:part:5>]
 ]);
 
@@ -304,7 +304,7 @@ recipes.addShaped(<nuclearcraft:part:1>,[
 recipes.remove(<nuclearcraft:part:3>);
 mods.techreborn.rollingMachine.addShaped(<nuclearcraft:part:3>,[
 	[<nuclearcraft:compound:1>, <nuclearcraft:dust:2>, <nuclearcraft:compound:1>],
-	[<nuclearcraft:dust:2>, <contenttweaker:plate>, <nuclearcraft:dust:2>],
+	[<nuclearcraft:dust:2>, <contenttweaker:plate1>, <nuclearcraft:dust:2>],
 	[<nuclearcraft:compound:1>, <nuclearcraft:dust:2>, <nuclearcraft:compound:1>]
 ]);
 
@@ -406,26 +406,141 @@ recipes.addShaped(<nuclearcraft:rad_x>,[
 	[null, <nuclearcraft:radaway>, null]
 ]);
 
+recipes.remove(<nuclearcraft:helm_hazmat>);
+recipes.addShaped(<nuclearcraft:helm_hazmat>.withTag({ncRadiationResistance: 2.0}),[
+	[<mekanism:gasmask>],
+	[<nuclearcraft:rad_shielding:1>],
+	[null]
+]);
+
+recipes.remove(<nuclearcraft:chest_hazmat>);
+recipes.addShaped(<nuclearcraft:chest_hazmat>.withTag({ncRadiationResistance: 3.0}),[
+	[<ore:dyeYellow>, <nuclearcraft:rad_shielding:2>, <ore:dyeYellow>],
+	[<nuclearcraft:rad_shielding:2>, <betterwithmods:leather_tanned_chest>, <nuclearcraft:rad_shielding:2>],
+	[<ore:dyeBlack>, <nuclearcraft:rad_shielding:2>, <ore:dyeBlack>]
+]);
+
+recipes.remove(<nuclearcraft:legs_hazmat>);
+recipes.addShaped(<nuclearcraft:legs_hazmat>.withTag({ncRadiationResistance: 2.0}),[
+	[null],
+	[<nuclearcraft:rad_shielding:1>, <ore:dyeYellow>, <nuclearcraft:rad_shielding:1>],
+	[<nuclearcraft:rad_shielding:1>, <betterwithmods:leather_tanned_pants>, <nuclearcraft:rad_shielding:1>]
+]);
+
+recipes.remove(<nuclearcraft:boots_hazmat>);
+recipes.addShaped(<nuclearcraft:boots_hazmat>.withTag({ncRadiationResistance: 2.0}),[
+	[null],
+	[null, <ore:dyeBlack>, null],
+	[<nuclearcraft:rad_shielding:1>, <betterwithmods:leather_tanned_boots>, <nuclearcraft:rad_shielding:1>]
+]);
+
+recipes.remove(<nuclearcraft:radiation_scrubber>);
+mods.extendedcrafting.TableCrafting.addShaped(<nuclearcraft:radiation_scrubber>,[
+    [null],  
+    [<ic2:crafting:15>, <nuclearcraft:compound:7>, <ic2:crafting:17>, <nuclearcraft:compound:7>, <ic2:crafting:15>],  
+    [<ic2:crafting:15>, <immersiveengineering:metal_decoration0:7>, <nuclearcraft:alloy:10>, <immersiveengineering:metal_decoration0:7>, <ic2:crafting:15>],  
+    [<extrautils2:pipe>, <nuclearcraft:compound:7>, <rockhounding_chemistry:machines_a:8>.withTag({Energy: 0, Fuel: 0}), <nuclearcraft:compound:7>, 
+    <extrautils2:pipe>], 
+    [<ic2:crafting:15>, <immersiveengineering:metal_decoration0:7>, <nuclearcraft:alloy:10>, <immersiveengineering:metal_decoration0:7>, <ic2:crafting:15>] 
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_wall>);
+recipes.addShaped(<nuclearcraft:salt_fission_wall>*3,[
+	[<rockhounding_chemistry:misc_items:17>, <rockhounding_chemistry:misc_blocks_a>, <rockhounding_chemistry:misc_items:17>],
+	[<rockhounding_chemistry:misc_items:17>, <rockhounding_chemistry:misc_blocks_a>, <rockhounding_chemistry:misc_items:17>],
+	[<rockhounding_chemistry:misc_items:17>, <rockhounding_chemistry:misc_blocks_a>, <rockhounding_chemistry:misc_items:17>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_frame>);
+recipes.addShaped(<nuclearcraft:salt_fission_frame>,[
+	[null, <rockhounding_chemistry:alloy_parts:37>, null],
+	[<rockhounding_chemistry:alloy_parts:37>, <nuclearcraft:part:12>, <rockhounding_chemistry:alloy_parts:37>],
+	[null, <rockhounding_chemistry:alloy_parts:37>, null]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_glass>);
+mods.actuallyadditions.Empowerer.addRecipe(<nuclearcraft:salt_fission_glass>, <extrautils2:decorativeglass>, 
+	<rockhounding_chemistry:alloy_items_tech:36>, <ic2:dust:2>, <rockhounding_chemistry:alloy_items_tech:36>, <ic2:dust:2>, 
+	80000, 20,[0.9,0.9,0.9]);
+
+recipes.remove(<nuclearcraft:salt_fission_redstone_port>);
+recipes.addShaped(<nuclearcraft:salt_fission_redstone_port>,[
+	[<rockhounding_chemistry:alloy_items_tech:38>, <enderio:item_alloy_ingot:3>, <rockhounding_chemistry:alloy_items_tech:38>],
+	[<rsgauges:bistableswitch1>, <nuclearcraft:part:12>, <nuclearcraft:part:7>],
+	[<rockhounding_chemistry:alloy_items_tech:38>, <enderio:item_alloy_ingot:3>, <rockhounding_chemistry:alloy_items_tech:38>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_retriever>);
+recipes.addShaped(<nuclearcraft:salt_fission_retriever>,[
+	[<nuclearcraft:alloy:1>, <extrautils2:grocket:4>],
+	[<mekanism:basicblock:9>, <rockhounding_chemistry:pipeline_pump>],
+	[<nuclearcraft:alloy:1>, <extrautils2:grocket:4>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_distributor>);
+recipes.addShaped(<nuclearcraft:salt_fission_distributor>,[
+	[<nuclearcraft:alloy:10>, <rockhounding_chemistry:alloy_parts:25>],
+	[<rockhounding_chemistry:alloy_parts:25>, <deepresonance:valve>],
+	[<nuclearcraft:alloy:10>, <rockhounding_chemistry:alloy_parts:25>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_heater>);	//TODO:might redo some of these with GTCE items
+recipes.addShaped(<nuclearcraft:salt_fission_heater>,[
+	[null, <mekanism:basicblock:9>, null],
+	[<nuclearcraft:alloy:11>, <nuclearcraft:part:7>, <nuclearcraft:alloy:11>],
+	[null, <mekanism:basicblock:9>, null]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_moderator>);
+recipes.addShaped(<nuclearcraft:salt_fission_moderator>,[
+	[<immersiveengineering:metal:34>, <nuclearcraft:alloy:5>, <immersiveengineering:metal:34>],
+	[<rockhounding_chemistry:alloy_parts:25>, null, <rockhounding_chemistry:alloy_parts:25>],
+	[<immersiveengineering:metal:34>, <nuclearcraft:alloy:5>, <immersiveengineering:metal:34>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_vent>);	//TODO: use <gregtech:fluid_pipe_polytetrafluoroethylene:3> instead pipe
+recipes.addShaped(<nuclearcraft:salt_fission_vent>,[
+	[<rockhounding_chemistry:pipeline_valve>, <rockhounding_chemistry:machines_d:13>,],
+	[<rockhounding_chemistry:pipeline_duct>, <mekanism:controlcircuit:2>, <nuclearcraft:alloy:1>],
+	[<rockhounding_chemistry:pipeline_valve>, <rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}), <rockhounding_chemistry:pipeline_pump>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_vessel>);
+recipes.addShaped(<nuclearcraft:salt_fission_vessel>,[
+	[<nuclearcraft:part:3>, <mekanism:controlcircuit:2>, <nuclearcraft:part:3>],
+	[<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}), <rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}),
+	<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0})],
+	[<nuclearcraft:part:3>, <nuclearcraft:part:7>, <nuclearcraft:part:3>]
+]);
+
+recipes.remove(<nuclearcraft:salt_fission_controller>);
+recipes.addShaped(<nuclearcraft:salt_fission_controller>,[
+	[<techreborn:part>, <advgenerators:controller>, <techreborn:part:1>],
+	[<stevescarts:cartmodule:20>, <techreborn:part:24>, <deepresonance:radiation_sensor>],
+	[<nuclearcraft:alloy:2>, <nuclearcraft:part:12>, <rockhounding_chemistry:metal_items:13>]
+]);
+
 <nuclearcraft:solar_panel_elite>.displayName = "Celestial Solar Panel";
 recipes.remove(<nuclearcraft:solar_panel_elite>);
 mods.extendedcrafting.TableCrafting.addShaped(<nuclearcraft:solar_panel_elite>,[ 
     [<nuclearcraft:compound:1>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <nuclearcraft:compound:1>],  
     [<contenttweaker:dust4>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <contenttweaker:dust4>],  
     [<nuclearcraft:compound:1>, <biomesoplenty:crystal_shard>, <plants2:generic:7>, <biomesoplenty:crystal_shard>, <nuclearcraft:compound:1>],  
-    [<nuclearcraft:part:3>, <rockhounding_chemistry:metal_items:13>, <techreborn:solar_panel:4>, <rockhounding_chemistry:metal_items:13>, <nuclearcraft:part:3>], 
+    [<nuclearcraft:part:3>, <rockhounding_chemistry:metal_items:13>, <advanced_solar_panels:machines:5>, <rockhounding_chemistry:metal_items:13>, 
+    <nuclearcraft:part:3>], 
     [<nuclearcraft:part:3>, <techreborn:part:17>, <draconicevolution:wyvern_energy_core>, <techreborn:part:17>, <nuclearcraft:part:3>] 
 ]); 
 
 mods.techreborn.centrifuge.addRecipe(<nuclearcraft:gem_dust:1>, <techreborn:smalldust:11>, null, null, <minecraft:redstone>*16, null, 2840, 16);
 
 //Lead-Platinum Alloy also in blastFurnace
-mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:alloy:9>*4, null, <ore:dustLead>*3, <ore:dustPlatinum>, 1800, 45, 1800);
-mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:alloy:9>*4, null, <ore:ingotLead>*3, <ore:dustPlatinum>, 1800, 45, 1800);
+mods.techreborn.blastFurnace.addRecipe(<nuclearcraft:alloy:9>*4, null, <techreborn:ingot:8>*3, <rockhounding_chemistry:metal_items:6>, 1800, 45, 1800);
 
 //Rename Crushed Obsidian for its new use
 <nuclearcraft:gem_dust:3>.displayName = "Celestial Dust";
 <ore:dustObsidian>.remove(<nuclearcraft:gem_dust:3>);
 mods.nuclearcraft.pressurizer.removeRecipeWithOutput([<minecraft:obsidian>]);
+mods.nuclearcraft.melter.removeRecipeWithInput([<nuclearcraft:gem_dust:3>]);
 mods.nuclearcraft.rock_crusher.addRecipe([<biomesoplenty:crystal>, <nuclearcraft:gem_dust:3>, <techreborn:smalldust:21>, null, 2.0]);
 
 //Rename CrystalBinder for its new use

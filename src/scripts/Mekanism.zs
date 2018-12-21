@@ -27,6 +27,9 @@ mods.mekanism.infuser.addRecipe("REDSTONE", 10, <projectred-core:resource_item>,
 mods.mekanism.infuser.removeRecipe(<mekanism:enrichedalloy>, <minecraft:iron_ingot>, "REDSTONE");
 mods.mekanism.infuser.addRecipe("REDSTONE", 10, <techreborn:plates:35>, <mekanism:enrichedalloy>*2);
 
+//Atomic Alloy no longer produced at Infuser, but in Precision Assembler instead
+mods.mekanism.infuser.removeRecipe(<mekanism:atomicalloy>);
+
 recipes.remove(<mekanism:energytablet>);
 recipes.addShaped(<mekanism:energytablet>,[
 	[<minecraft:redstone>, <ore:dustLithium>, <minecraft:redstone>],
@@ -52,21 +55,21 @@ mods.extendedcrafting.TableCrafting.addShaped(<mekanism:atomicdisassembler>,[
 
 recipes.remove(<mekanism:configurator>);
 recipes.addShaped(<mekanism:configurator>,[
-	[null, <ic2:plate:3>, null],
-	[<mekanism:enrichedalloy>, <mekanism:energytablet>, <mekanism:enrichedalloy>],
-	[null, <mekanism:polyethene:3>, null]
+	[null, <techreborn:nuggets:6>, null],
+	[<projectred-core:resource_item:105>, <thermalfoundation:material:515>, <projectred-core:resource_item:105>],
+	[<ic2:crafting>, <mekanism:enrichedalloy>, <ic2:crafting>]
 ]);
 
 recipes.remove(<mekanism:networkreader>);
 recipes.addShaped(<mekanism:networkreader>,[
 	[<enderio:item_alloy_nugget>, null, <enderio:item_alloy_nugget>],
-	[<mekanism:polyethene>, <contenttweaker:part4>, <mekanism:polyethene>],
+	[<mekanism:polyethene>, <ore:nuggetGraphite>, <mekanism:polyethene>],
 	[<mekanism:polyethene>, <mekanism:energytablet>.withTag({mekData: {}}), <mekanism:polyethene>]
 ]);
 
 recipes.remove(<mekanism:walkietalkie>);
 recipes.addShaped(<mekanism:walkietalkie>,[
-	[null, <contenttweaker:part4>, null],
+	[null, <ore:nuggetGraphite>, <mekanism:polyethene>],
 	[<rockhounding_chemistry:misc_items:33>, <ic2:frequency_transmitter>.withTag({}), <ic2:casing:6>],
 	[null, <actuallyadditions:item_misc:8>, null]
 ]);
@@ -110,7 +113,7 @@ recipes.remove(<mekanism:electrolyticcore>);
 recipes.addShaped(<mekanism:electrolyticcore>,[
 	[<mekanism:enrichedalloy>, null, <mekanism:reinforcedalloy>],
 	[<techreborn:dynamiccell>, <rockhounding_chemistry:misc_items:7>, <techreborn:dynamiccell>],
-	[<techreborn:cable:5>, <ic2:re_battery:26>.withTag({}), <techreborn:cable:5>]
+	[<techreborn:cable:5>, <ore:reBattery>, <techreborn:cable:5>]
 ]);
 //Basic Bin
 recipes.remove(<mekanism:basicblock:6>.withTag({tier: 0}));
@@ -123,7 +126,7 @@ recipes.addShaped(<mekanism:basicblock:6>.withTag({tier: 0}),[
 recipes.remove(<mekanism:basicblock:8>);
 recipes.addShaped(<mekanism:basicblock:8>,[
 	[<ore:ingotSteel>, <ore:nuggetSteel>, <ore:ingotSteel>],
-	[<ore:nuggetSteel>, <mekanism:basicblock:5>, <ore:nuggetSteel>],
+	[<ore:nuggetSteel>, <ore:blockSteel>, <ore:nuggetSteel>],
 	[<ore:ingotSteel>, <ore:nuggetSteel>, <ore:ingotSteel>]
 ]);
 //Dynamic Tank
@@ -144,7 +147,7 @@ recipes.addShapeless(<mekanism:basicblock:11>,[<mekanism:basicblock:9>, <rockhou
 recipes.remove(<mekanism:basicblock:14>);
 recipes.addShaped(<mekanism:basicblock:14>,[
 	[<mekanism:basicblock2>, <techreborn:part:24>, <mekanism:basicblock2>],
-	[<stevescarts:cartmodule:20>, <advgenerators:controller>, null],
+	[<stevescarts:cartmodule:20>, <techreborn:part:30>, null],
 	[<mekanism:basicblock2>, null, <mekanism:basicblock2>]
 ]);
 
@@ -156,9 +159,9 @@ recipes.addShapeless(<mekanism:basicblock2>,[<ore:blockCopper>, <thermalexpansio
 //Induction Casing
 recipes.remove(<mekanism:basicblock2:1>);
 recipes.addShaped(<mekanism:basicblock2:1>,[
-	[<contenttweaker:plate>, <magneticraft:heavy_plates:3>, <contenttweaker:plate>],
+	[<ore:plateOsmium>, <magneticraft:heavy_plates:3>, <ore:plateOsmium>],
 	[<magneticraft:heavy_plates:3>, null, <magneticraft:heavy_plates:3>],
-	[<contenttweaker:plate>, <magneticraft:heavy_plates:3>, <contenttweaker:plate>]
+	[<ore:plateOsmium>, <magneticraft:heavy_plates:3>, <ore:plateOsmium>]
 ]);
 
 recipes.remove(<mekanism:basicblock2:3>.withTag({tier: 0, mekData: {}}));
@@ -182,6 +185,12 @@ recipes.addShaped(<mekanism:basicblock2:5>,[
 ]);
 
 recipes.remove(<mekanism:basicblock2:7>);
+recipes.addShaped(<mekanism:basicblock2:7>,[
+	[null, <techreborn:plates:31>, null],
+	[<techreborn:plates:31>, <mekanism:basicblock:9>, <techreborn:plates:31>],
+	[null, <techreborn:plates:31>, null]
+]);
+
 recipes.addShapeless(<mekanism:basicblock2:7>,[<ore:blockSteel>, <techreborn:dust:55>]);
 
 recipes.remove(<mekanism:basicblock2:8>);
@@ -194,7 +203,7 @@ recipes.remove(<mekanism:machineblock>);
 recipes.addShaped(<mekanism:machineblock>,[
 	[<immersiveengineering:metal_device1:6>, <minecraft:stained_glass_pane:7>, <immersiveengineering:metal_device1:6>],
 	[<forge:bucketfilled>.withTag({FluidName: "canolaoil", Amount: 1000}), <mekanism:basicblock:8>, <minecraft:water_bucket>],
-	[<ic2:re_battery:*>, <ic2:crafting:1>, <minecraft:redstone>]
+	[<ore:reBattery>, <ic2:crafting:1>, <minecraft:redstone>]
 ]);
 //Osmium Compressor
 recipes.remove(<mekanism:machineblock:1>);
@@ -223,9 +232,9 @@ mods.extendedcrafting.TableCrafting.addShaped(<mekanism:machineblock:4>,[
 //Metallurgic Infuser
 recipes.remove(<mekanism:machineblock:8>);
 recipes.addShaped(<mekanism:machineblock:8>,[
-	[<mekanism:nugget:1>, <techreborn:part:14>, <mekanism:nugget:1>],
-	[<thermalfoundation:material:357>, <techreborn:machine_frame:1>, <thermalfoundation:material:357>],
-	[<ic2:re_battery:26>.withTag({}), <ore:circuitBasic>, <minecraft:redstone>]
+	[<rockhounding_chemistry:misc_items:8>, <ore:circuitBasic>, <rockhounding_chemistry:misc_items:8>],
+	[<techreborn:part:14>, , <techreborn:part:14>],
+	[<ore:reBattery>, <mekanism:basicblock:8>, <minecraft:redstone>]
 ]);
 //Purification Chamber
 recipes.remove(<mekanism:machineblock:9>);
@@ -245,7 +254,7 @@ recipes.addShaped(<mekanism:machineblock:10>,[
 recipes.remove(<mekanism:machineblock:12>);
 recipes.addShaped(<mekanism:machineblock:12>,[
 	[<mekanism:energytablet>.withTag({mekData: {}}), <mekanism:enrichedalloy>, null],
-	[<mekanism:transmitter:1>.withTag({tier: 0}), <rockhounding_chemistry:pipeline_pump>, <mekanism:enrichedalloy>],
+	[<mekanism:transmitter:1>.withTag({tier: 0}), <gregtech:meta_item_1:32611>, <mekanism:enrichedalloy>],
 	[null, <immersiveengineering:metal_device1:6>, null]
 ]);
 
@@ -268,11 +277,15 @@ recipes.addShaped(<mekanism:machineblock:15>,[
 ]);
 //Rotary Condensentrator
 recipes.remove(<mekanism:machineblock2>);
-recipes.addShaped(<mekanism:machineblock2>,[
-	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "cryotheum", Amount: 1000}}), <immersiveengineering:material:9>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "lava", Amount: 1000}})],
-	[<mekanism:transmitter:2>.withTag({tier: 0}), <advgenerators:controller>, <mekanism:transmitter:1>.withTag({tier: 0})],
-	[<mekanism:gastank>.withTag({tier: 0}), <techreborn:machine_casing:2>, <mekanism:machineblock2:11>.withTag({tier: 0})]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<mekanism:machineblock2>,[
+    [null],  
+    [null, <techreborn:plates:35>, <mekanism:energytablet>.withTag({mekData: {}}), <techreborn:plates:35>, null],  
+    [<techreborn:plates:35>, <immersiveengineering:material:9>, <advgenerators:pressure_valve>, <immersiveengineering:material:9>, <techreborn:plates:35>],  
+    [<enderio:block_dark_iron_bars>, <mekanism:transmitter:2>.withTag({tier: 1}), <rockhounding_chemistry:machines_b:10>.withTag({Energy: 0, Fuel: 0}), 
+    <mekanism:transmitter:1>.withTag({tier: 1}), <enderio:block_dark_iron_bars>], 
+    [<techreborn:plates:35>, <mekanism:gastank>.withTag({tier: 1, mekData: {}}), <advgenerators:controller>, 
+    <mekanism:machineblock2:11>.withTag({tier: 1, mekData: {}}), <techreborn:plates:35>] 
+]); 
 //Chemical Oxidizer
 recipes.remove(<mekanism:machineblock2:1>);
 recipes.addShaped(<mekanism:machineblock2:1>,[
@@ -297,9 +310,9 @@ recipes.addShaped(<mekanism:machineblock2:3>,[
 //Electrolytic Separator
 recipes.remove(<mekanism:machineblock2:4>);
 recipes.addShaped(<mekanism:machineblock2:4>,[
-	[null, <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}}), null],
-	[<mekanism:basicblock:9>, <mekanism:electrolyticcore>, <mekanism:basicblock:9>],
-	[<mekanism:enrichedalloy>, <mekanism:energytablet>.withTag({mekData: {}}), <ore:circuitBasic>]
+	[<rockhounding_chemistry:misc_items:7>, <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}}), <rockhounding_chemistry:misc_items:7>],
+	[<mekanism:gastank>.withTag({tier: 0, mekData: {}}), <mekanism:electrolyticcore>, <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}})],
+	[<mekanism:enrichedalloy>, <mekanism:energytablet>, <ore:circuitBasic>]
 ]);
 //Precission Sawmill (this block should be achieved asap to automatize wood things)
 recipes.remove(<mekanism:machineblock2:5>);
@@ -341,25 +354,25 @@ recipes.remove(<mekanism:machineblock2:10>);
 mods.extendedcrafting.TableCrafting.addShaped(<mekanism:machineblock2:10>,[
     [null],  
     [null],  
-    [<ore:plateAdvancedAlloy>, <mekanism:reinforcedalloy>, <mekanism:machineblock>, <mekanism:reinforcedalloy>, <ore:plateAdvancedAlloy>],  
-    [<mekanism:controlcircuit:2>, <mekanism:transmitter:2>.withTag({tier: 0}), <advgenerators:advanced_pressure_valve>, <mekanism:transmitter:2>.withTag({tier: 0}), 
-    <mekanism:controlcircuit:2>], 
-    [<ore:plateAdvancedAlloy>, <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}}), 
-    <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <ore:plateAdvancedAlloy>] 
+    [<techreborn:plates:35>, <mekanism:reinforcedalloy>, <mekanism:machineblock>, <mekanism:reinforcedalloy>, <techreborn:plates:35>],  
+    [<ore:circuitAdvanced>, <mekanism:transmitter:2>.withTag({tier: 0}), <advgenerators:advanced_pressure_valve>, <mekanism:transmitter:2>.withTag({tier: 0}), 
+    <ore:circuitAdvanced>], 
+    [<techreborn:plates:35>, <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <mekanism:machineblock2:11>.withTag({tier: 0, mekData: {}}), 
+    <mekanism:gastank>.withTag({tier: 0, mekData: {}}), <techreborn:plates:35>] 
 ]); 
 //Tank
 recipes.remove(<mekanism:machineblock2:11>.withTag({tier: 0}));
 recipes.addShaped(<mekanism:machineblock2:11>.withTag({tier: 0}),[
-	[<minecraft:redstone>, <advgenerators:iron_frame>, <minecraft:redstone>],
-	[null, <techreborn:reinforced_glass>, null],
-	[<minecraft:redstone>, <advgenerators:iron_frame>, <minecraft:redstone>]
+	[<advgenerators:iron_frame>, <minecraft:glass_pane>, <ore:ringRubber>],
+	[<minecraft:glass_pane>, <betterwithmods:material:34>, <minecraft:glass_pane>],
+	[<advgenerators:iron_frame>, <minecraft:glass_pane>, <ore:ringRubber>]
 ]);
 //Laser
 recipes.remove(<mekanism:machineblock2:13>);	
 recipes.addShaped(<mekanism:machineblock2:13>,[
-	[<mekanism:reinforcedalloy>, <mekanism:energytablet>, <mekanism:reinforcedalloy>],
-	[<techreborn:plates:19>, <ic2:crafting:7>, <techreborn:plates:19>],
-	[null, <enderio:item_material:14>, null]
+	[<ore:plateBlackSteel>, null, null],
+	[<ore:alloyElite>, <gregtech:meta_item_1:32683>, null],
+	[<ore:circuitElite>, <ore:alloyElite>, <ore:plateBlackSteel>]
 ]);
 //Laser Amplifier
 recipes.remove(<mekanism:machineblock2:14>);
@@ -379,7 +392,7 @@ recipes.addShaped(<mekanism:machineblock3>,[
 recipes.remove(<mekanism:machineblock3:1>);
 recipes.addShaped(<mekanism:machineblock3:1>,[
 	[null, <mekanismgenerators:generator:1>, null],
-	[<mekanism:reinforcedalloy>, <techreborn:part:27>, <mekanism:reinforcedalloy>],
+	[<mekanism:reinforcedalloy>, <techreborn:part:28>, <mekanism:reinforcedalloy>],
 	[<advgenerators:controller>, <techreborn:machine_frame:2>, <techreborn:part>]
 ]);
 //Formulaic Assemblicator
@@ -393,7 +406,7 @@ recipes.addShaped(<mekanism:machineblock3:5>,[
 recipes.remove(<mekanism:energycube>);
 recipes.addShaped(<mekanism:energycube>,[
 	[<enderio:item_alloy_ingot>, <mekanism:energytablet>.withTag({mekData: {}}), <enderio:item_alloy_ingot>],
-	[<enderio:item_alloy_ingot:1>, <ic2:dust:6>, <enderio:item_alloy_ingot:1>],
+	[<enderio:item_alloy_ingot:1>, <ic2:dust:6>, <enderio:item_alloy_endergy_ingot:5>],
 	[<enderio:item_alloy_ingot>, <mekanism:energytablet>.withTag({mekData: {}}), <enderio:item_alloy_ingot>]
 ]);
 
@@ -417,49 +430,140 @@ recipes.addShaped(<mekanism:energycube>.withTag({tier: 3, mekData: {}}),[
 	[<mekanism:energycube>.withTag({tier: 2}), <mekanism:atomicalloy>, <mekanism:energycube>.withTag({tier: 2})],
 	[<techreborn:dust:10>, <mekanism:energycube>.withTag({tier: 2}), <techreborn:dust:10>]
 ]);
-
 //UniversalCable
-recipes.remove(<mekanism:transmitter>.withTag({tier: 0}));	
+recipes.remove(<mekanism:transmitter>);	
 recipes.addShaped(<mekanism:transmitter>.withTag({tier: 0})*2,[
 	[<ore:itemRubber>, <rockhounding_chemistry:misc_items:3>, <ore:itemRubber>],
 	[<immersiveengineering:material:20>, <ore:dustElectrum>, <immersiveengineering:material:20>],
 	[<ore:itemRubber>, <rockhounding_chemistry:misc_items:3>, <ore:itemRubber>]
 ]);
-//MechanicalPipe
-recipes.remove(<mekanism:transmitter:1>.withTag({tier: 0}));
-recipes.addShaped(<mekanism:transmitter:1>.withTag({tier: 0})*2,[
-	[null, <mekanism:polyethene:2>, null],
-	[<mekanism:polyethene:2>, <ore:glassReinforced>, <mekanism:polyethene:2>],
-	[null, <mekanism:polyethene:2>, null]
-]);
-//PressurizedTube
-recipes.remove(<mekanism:transmitter:2>.withTag({tier: 0}));
-recipes.addShaped(<mekanism:transmitter:2>.withTag({tier: 0})*2,[
-	[<ore:ingotSteel>, <ore:glassReinforced>, <ore:ingotSteel>],
-	[null, <techreborn:dust:10>, null],
-	[<ore:ingotSteel>, <ore:glassReinforced>, <ore:ingotSteel>]
-]);
-//LogisticalTransporter
-recipes.remove(<mekanism:transmitter:3>.withTag({tier: 0}));
-recipes.addShaped(<mekanism:transmitter:3>.withTag({tier: 0})*2,[
-	[<ore:stickSteel>, <minecraft:glass_pane>, <ore:stickSteel>],
-	[null, <ore:circuitBasic>, null],
-	[<ore:stickSteel>, <minecraft:glass_pane>, <ore:stickSteel>]
-]);
-//ThermodynamicConductor
-recipes.remove(<mekanism:transmitter:6>.withTag({tier: 0}));
-recipes.addShaped(<mekanism:transmitter:6>.withTag({tier: 0})*2,[
-	[<techreborn:ingot:4>, null, <techreborn:ingot:4>],
-	[null, <nuclearcraft:part:6>, null],
-	[<techreborn:ingot:4>, null, <techreborn:ingot:4>]
+
+recipes.addShapeless(<mekanism:transmitter>.withTag({tier: 1})*2,[<mekanism:transmitter>.withTag({tier: 0}), <mekanism:enrichedalloy>, 
+<mekanism:transmitter>.withTag({tier: 0})]);
+
+recipes.addShaped(<mekanism:transmitter>.withTag({tier: 2})*2,[
+	[<mekanism:polyethene:2>, <enderio:item_alloy_endergy_ingot:5>, <mekanism:polyethene:2>],
+	[<ic2:dust:6>, <forge:bucketfilled>.withTag({FluidName: "redstone", Amount: 1000}), <ic2:dust:6>],
+	[<mekanism:polyethene:2>, <enderio:item_alloy_endergy_ingot:5>, <mekanism:polyethene:2>]
 ]);
 
-recipes.remove(<mekanism:gastank>.withTag({tier: 0, mekData: {}}));
-mods.techreborn.rollingMachine.addShaped(<mekanism:gastank>.withTag({tier: 0, mekData: {}}), [
-	[<immersiveengineering:metal:38>, <advgenerators:pressure_valve>, <immersiveengineering:metal:38>],
-	[<immersiveengineering:metal:38>, null, <immersiveengineering:metal:38>],
-	[<immersiveengineering:metal:38>, <immersiveengineering:metal:38>, <immersiveengineering:metal:38>]
+recipes.addShaped(<mekanism:transmitter>.withTag({tier: 3})*2,[
+	[<ic2:crafting:15>, <techreborn:part:17>, <ic2:crafting:15>],
+	[<ic2:dust:6>, <thermalfoundation:material:103>, <ic2:dust:6>],
+	[<ic2:crafting:15>, <techreborn:part:17>, <ic2:crafting:15>]
 ]);
+
+
+//MechanicalPipe
+recipes.remove(<mekanism:transmitter:1>);
+recipes.addShaped(<mekanism:transmitter:1>.withTag({tier: 0})*2,[
+	[<ore:itemRubber>, <minecraft:glass_pane>, <ore:itemRubber>],
+	[<minecraft:glass_pane>, <immersiveengineering:material:9>, <minecraft:glass_pane>],
+	[<ore:itemRubber>, <minecraft:glass_pane>, <ore:itemRubber>]
+]);
+recipes.addShapeless(<mekanism:transmitter:1>.withTag({tier: 1})*2,[<mekanism:transmitter:1>.withTag({tier: 0}), <mekanism:enrichedalloy>, 
+<mekanism:transmitter:1>.withTag({tier: 0})]);
+
+recipes.addShapeless(<mekanism:transmitter:1>.withTag({tier: 2})*2,[<mekanism:transmitter:1>.withTag({tier: 1}), <mekanism:reinforcedalloy>, 
+<mekanism:transmitter:1>.withTag({tier: 1})]);
+
+recipes.remove(<mekanism:transmitter:1>);
+recipes.addShaped(<mekanism:transmitter:1>.withTag({tier: 3})*2,[
+	[<mekanism:polyethene:2>, <contenttweaker:material7>, <mekanism:polyethene:2>],
+	[<contenttweaker:material7>, <rockhounding_chemistry:pipeline_valve>, <contenttweaker:material7>],
+	[<mekanism:polyethene:2>, <contenttweaker:material7>, <mekanism:polyethene:2>]
+]);
+//PressurizedTube
+recipes.remove(<mekanism:transmitter:2>);
+recipes.addShaped(<mekanism:transmitter:2>.withTag({tier: 0})*2,[
+	[<mekanism:ingot:4>, <ore:glassReinforced>, <mekanism:ingot:4>],
+	[null, <ore:dustZinc>, null],
+	[<mekanism:ingot:4>, <ore:glassReinforced>, <mekanism:ingot:4>]
+]);
+
+recipes.addShapeless(<mekanism:transmitter:2>.withTag({tier: 1})*2,[<mekanism:transmitter:2>.withTag({tier: 0}), <mekanism:enrichedalloy>, 
+<mekanism:transmitter:2>.withTag({tier: 0})]);
+
+recipes.addShaped(<mekanism:transmitter:2>.withTag({tier: 2})*2,[
+	[<nuclearcraft:alloy:5>, <rockhounding_chemistry:misc_blocks_a:13>, <nuclearcraft:alloy:5>],
+	[null, <ore:dustChrome>, null],
+	[<nuclearcraft:alloy:5>, <rockhounding_chemistry:misc_blocks_a:13>, <nuclearcraft:alloy:5>]
+]);
+
+recipes.addShapeless(<mekanism:transmitter:2>.withTag({tier: 3})*2,[<mekanism:transmitter:2>.withTag({tier: 2}), <mekanism:atomicalloy>, 
+<mekanism:transmitter:2>.withTag({tier: 2})]);
+
+//LogisticalTransporter
+recipes.remove(<mekanism:transmitter:3>);
+recipes.addShaped(<mekanism:transmitter:3>.withTag({tier: 0})*2,[
+	[<immersiveengineering:material:2>, <minecraft:glass_pane>, <immersiveengineering:material:2>],
+	[<ore:itemRubber>, null, <ore:itemRubber>],
+	[<immersiveengineering:material:2>, <minecraft:glass_pane>, <immersiveengineering:material:2>]
+]);
+
+recipes.addShapeless(<mekanism:transmitter:3>.withTag({tier: 1})*2,[<mekanism:transmitter:3>.withTag({tier: 0}), <mekanism:enrichedalloy>, 
+<mekanism:transmitter:3>.withTag({tier: 0})]);
+
+recipes.addShaped(<mekanism:transmitter:3>.withTag({tier: 2})*2,[
+	[<immersiveengineering:material:3>, <minecraft:glass_pane>, <immersiveengineering:material:3>],
+	[<mekanism:polyethene>, null, <mekanism:polyethene>],
+	[<immersiveengineering:material:3>, <minecraft:glass_pane>, <immersiveengineering:material:3>]
+]);
+
+recipes.addShapeless(<mekanism:transmitter:3>.withTag({tier: 3})*2,[<mekanism:transmitter:3>.withTag({tier: 2}), <mekanism:atomicalloy>, 
+<mekanism:transmitter:3>.withTag({tier: 2})]);
+//ThermodynamicConductor
+recipes.remove(<mekanism:transmitter:6>);
+recipes.addShaped(<mekanism:transmitter:6>.withTag({tier: 0})*2,[
+	[<techreborn:plates:20>, <ore:dustObsidian>, <techreborn:plates:20>],
+	[null, null, null],
+	[<techreborn:plates:20>, <ore:dustObsidian>, <techreborn:plates:20>]
+]);
+
+recipes.remove(<mekanism:transmitter:4>);
+recipes.addShapeless(<mekanism:transmitter:4>.withTag({tier: 0}),[<mekanism:transmitter:3>.withTag({tier: 0}), <actuallyadditions:item_filter>]);
+
+recipes.remove(<mekanism:transmitter:5>);
+recipes.addShapeless(<mekanism:transmitter:5>.withTag({tier: 0}),[<mekanism:transmitter:3>.withTag({tier: 0}), <advgenerators:iron_wiring>]);
+
+recipes.addShapeless(<mekanism:transmitter:6>.withTag({tier: 1})*2,[<mekanism:transmitter:6>.withTag({tier: 0}), <mekanism:enrichedalloy>, 
+<mekanism:transmitter:6>.withTag({tier: 0})]);
+
+recipes.addShaped(<mekanism:transmitter:6>.withTag({tier: 2})*2,[
+	[<nuclearcraft:alloy:11>, <ore:dustDiamond>, <nuclearcraft:alloy:11>],
+	[null, null, null],
+	[<nuclearcraft:alloy:11>, <ore:dustDiamond>, <nuclearcraft:alloy:11>]
+]);
+
+recipes.addShapeless(<mekanism:transmitter:6>.withTag({tier: 3})*2,[<mekanism:transmitter:6>.withTag({tier: 2}), <mekanism:atomicalloy>, 
+<mekanism:transmitter:6>.withTag({tier: 2})]);
+
+recipes.remove(<mekanism:gastank>);
+mods.techreborn.rollingMachine.addShaped(<mekanism:gastank>.withTag({tier: 0, mekData: {}}), [
+	[null, <advgenerators:pressure_valve>, null],
+	[<mekanism:ingot:4>, null, <mekanism:ingot:4>],
+	[<mekanism:ingot:4>, <mekanism:ingot:4>, <mekanism:ingot:4>]
+]);
+
+mods.techreborn.rollingMachine.addShaped(<mekanism:gastank>.withTag({tier: 1, mekData: {}}), [
+	[null, <advgenerators:pressure_valve>, null],
+	[<rockhounding_chemistry:alloy_items_tech:22>, null, <rockhounding_chemistry:alloy_items_tech:22>],
+	[<rockhounding_chemistry:alloy_items_tech:22>, <rockhounding_chemistry:alloy_items_tech:22>, <rockhounding_chemistry:alloy_items_tech:22>]
+]);
+
+mods.techreborn.rollingMachine.addShaped(<mekanism:gastank>.withTag({tier: 2, mekData: {}}), [
+	[null, <advgenerators:advanced_pressure_valve>, null],
+	[<rockhounding_chemistry:alloy_items_tech:19>, null, <rockhounding_chemistry:alloy_items_tech:19>],
+	[<rockhounding_chemistry:alloy_items_tech:19>, <rockhounding_chemistry:alloy_items_tech:19>, <rockhounding_chemistry:alloy_items_tech:19>]
+]);
+
+mods.techreborn.rollingMachine.addShaped(<mekanism:gastank>.withTag({tier: 3, mekData: {}}), [
+	[<rockhounding_chemistry:alloy_items_tech:19>, <advgenerators:advanced_pressure_valve>, <rockhounding_chemistry:alloy_items_tech:19>],
+	[<rockhounding_chemistry:alloy_items_tech:19>, null, <rockhounding_chemistry:alloy_items_tech:19>],
+	[<rockhounding_chemistry:alloy_items_tech:19>, <rockhounding_chemistry:alloy_items_tech:19>, <rockhounding_chemistry:alloy_items_tech:19>]
+]);
+
+<mekanism:ingot:4>.displayName = "Carbon Steel Ingot";
 
 <mekanism:obsidiantnt>.displayName = "ANFO";	//Ammonium Nitrate/Fuel Oil, explosion radius 64
 recipes.remove(<mekanism:obsidiantnt>);
@@ -499,7 +603,7 @@ recipes.addShaped(<mekanismgenerators:turbineblade>,[
 recipes.remove(<mekanismgenerators:generator:1>);
 recipes.addShaped(<mekanismgenerators:generator:1>,[
 	[<mekanismgenerators:solarpanel>, <mekanismgenerators:solarpanel>, <mekanismgenerators:solarpanel>],
-	[<mekanism:enrichedalloy>, <ic2:re_battery:26>.withTag({}), <mekanism:enrichedalloy>],
+	[<mekanism:enrichedalloy>, <gregtech:meta_item_1:32518>, <mekanism:enrichedalloy>],
 	[null, <techreborn:plates:35>, null]
 ]);
 //Gas-Burning Generator
@@ -628,3 +732,4 @@ mods.jei.JEI.removeAndHide(<mekanism:basicblock:7>);		//TeleportFrame
 mods.jei.JEI.removeAndHide(<mekanism:machineblock:11>);
 mods.jei.JEI.removeAndHide(<mekanism:portableteleporter>);
 mods.jei.JEI.removeAndHide(<mekanismgenerators:generator>);	//Heat Generator is very inefficient
+mods.jei.JEI.removeAndHide(<mekanism:cardboardbox>);		//Temporarily removed Cardboard Box

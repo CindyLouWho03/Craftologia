@@ -4,6 +4,21 @@
 /////////////  		Ender Utilities       ////////////////////
 //////////////////////////////////////////////////////////////
 
+//Ender Porter
+recipes.remove(<enderutilities:enderporter>);
+mods.extendedcrafting.EnderCrafting.addShaped(<enderutilities:enderporter>,[
+	[<minecraft:ender_eye>, <enderutilities:enderpart:2>, <minecraft:ender_eye>],
+	[<enderutilities:enderpart:2>, <enderutilities:enderpart:16>, <enderutilities:enderpart:2>],
+	[<minecraft:ender_eye>, <enderutilities:enderpart:2>, <minecraft:ender_eye>]
+]);
+
+recipes.remove(<enderutilities:enderporter:1>);
+mods.extendedcrafting.EnderCrafting.addShaped(<enderutilities:enderporter:1>,[
+	[<minecraft:ender_eye>, <thermalfoundation:material:167>, <minecraft:ender_eye>],
+	[<thermalfoundation:material:167>, <enderutilities:enderpart:17>, <thermalfoundation:material:167>],
+	[<minecraft:ender_eye>, <thermalfoundation:material:167>, <minecraft:ender_eye>]
+]);
+
 //Elevator
 recipes.remove(<enderutilities:ender_elevator>);
 recipes.addShaped(<enderutilities:ender_elevator>,[
@@ -11,6 +26,7 @@ recipes.addShaped(<enderutilities:ender_elevator>,[
 	[<enderutilities:enderpart>, <minecraft:comparator>, <enderutilities:enderpart>],
 	[<enderio:item_material:39>, <minecraft:ender_eye>, <enderio:item_material:39>]
 ]);
+
 //Ender Alloys
 recipes.remove(<enderutilities:enderpart>);
 recipes.remove(<enderutilities:enderpart:1>);

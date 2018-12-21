@@ -134,8 +134,7 @@ recipes.addShaped(<stevescarts:modulecomponents:16>,[
 recipes.remove(<stevescarts:modulecomponents:18>);
 recipes.addShapeless(<stevescarts:modulecomponents:18>,[<tconstruct:broad_axe_head>.withTag({Material: "obsidian"}), <ore:dustDiamond>]);
 
-recipes.remove(<stevescarts:modulecomponents:44>);
-recipes.addShapeless(<stevescarts:modulecomponents:44>,[<mekanismgenerators:solarpanel>]);
+recipes.remove(<stevescarts:modulecomponents:20>);
 
 recipes.remove(<stevescarts:modulecomponents:21>);
 mods.rockhounding_chemistry.MetalAlloyer.add( 
@@ -176,7 +175,8 @@ recipes.remove(<stevescarts:modulecomponents:34>);
 mods.techreborn.industrialSawmill.addRecipe(<stevescarts:modulecomponents:34>*8, null, null, <techreborn:plates>, 600, 8);
 
 recipes.remove(<stevescarts:modulecomponents:40>);
-recipes.addShapeless(<stevescarts:modulecomponents:40>,[<tconstruct:binding>.withTag({Material: "electrical_steel"}), <minecraft:iron_bars>]);
+recipes.addShapeless(<stevescarts:modulecomponents:40>,[<tconstruct:binding>.withTag({Material: "electrical_steel"}), <magneticraft:crafting:5>, 
+<thermalfoundation:material:514>]);
 
 recipes.remove(<stevescarts:modulecomponents:43>);
 recipes.addShapeless(<stevescarts:modulecomponents:43>,[<betterwithmods:material:28>, <betterwithmods:material:28>, <betterwithmods:material:28>]);
@@ -186,9 +186,9 @@ recipes.addShapeless(<stevescarts:modulecomponents:44>,[<mekanismgenerators:sola
 
 recipes.remove(<stevescarts:modulecomponents:45>);
 mods.extendedcrafting.EnderCrafting.addShaped(<stevescarts:modulecomponents:45>,[
-	[<minecraft:glowstone_dust>, <minecraft:ghast_tear>, <enderzoo:witheringdust>],
-	[<minecraft:dragon_breath>, <minecraft:ender_eye>, <twilightforest:fiery_tears>],
-	[<minecraft:nether_wart>, <minecraft:fermented_spider_eye>, <betterwithmods:bat_wing>]
+	[<minecraft:glowstone_dust>, <minecraft:ghast_tear>, <enderio:item_material:63>],
+	[<minecraft:fermented_spider_eye>, <minecraft:ender_eye>, <betterwithmods:bat_wing>],
+	[<minecraft:nether_wart>, <minecraft:dragon_breath>, <betterwithmods:material:16>]
 ]);
 
 furnace.remove(<stevescarts:modulecomponents:47>);
@@ -226,7 +226,7 @@ recipes.addShaped(<stevescarts:cartmodule:14>,[
 ]);
 
 furnace.remove(<stevescarts:cartmodule:16>);
-recipes.addShapeless(<stevescarts:cartmodule:16>,[<thermalcultivation:watering_can:1>.withTag({Water: 12000, Mode: 1}), <stevescarts:modulecomponents:9>, <advgenerators:pressure_valve>]);
+recipes.addShapeless(<stevescarts:cartmodule:16>,[<extrautils2:wateringcan:1000>, <stevescarts:modulecomponents:9>, <advgenerators:pressure_valve>]);
 
 recipes.remove(<stevescarts:cartmodule:18>);
 recipes.addShaped(<stevescarts:cartmodule:18>,[

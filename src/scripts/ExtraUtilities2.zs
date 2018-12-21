@@ -47,11 +47,13 @@ recipes.addShaped(<extrautils2:redstoneclock>,[
 ]);
 
 recipes.remove(<extrautils2:ingredients>);
-recipes.addShaped(<extrautils2:ingredients>*7,[
-	[null, <thermalfoundation:material:103>, null],
-	[<thermalfoundation:material:1024>, <deepresonance:resonating_crystal>, <thermalfoundation:material:1024>],
-	[null, <thermalfoundation:material:103>, null]
+mods.extendedcrafting.EnderCrafting.addShaped(<extrautils2:ingredients>*7,[
+	[<minecraft:redstone>, <thermalfoundation:material:103>, <minecraft:redstone>],
+	[<thermalfoundation:material:1024>, <deepresonance:resonating_crystal>, <thermalfoundation:material:1025>],
+	[<minecraft:redstone>, <thermalfoundation:material:103>, <minecraft:redstone>]
 ]);
+mods.essentialcraft.MagicianTable.addRecipe([<essentialcraft:genitem:44>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>], 
+<extrautils2:ingredients>, 2000);
 
 recipes.remove(<extrautils2:ingredients:1>);
 recipes.addShaped(<extrautils2:ingredients:1>,[
@@ -85,23 +87,23 @@ mods.extendedcrafting.CompressionCrafting.addRecipe(<extrautils2:compressedcobbl
 
 recipes.remove(<extrautils2:pipe>);
 recipes.addShaped(<extrautils2:pipe>,[
-	[<ore:dustGraphite>, <mekanism:polyethene>, <ore:dustGraphite>],
-	[<mekanism:polyethene>, null, <mekanism:polyethene>],
-	[<ore:dustGraphite>, <mekanism:polyethene>, <ore:dustGraphite>]
+	[null, <ore:ringRubber>, null],
+	[<gregtech:fluid_pipe_plastic>, <gregtech:fluid_pipe_plastic>, <gregtech:fluid_pipe_plastic>],
+	[null, <ore:ringRubber>, null]
 ]);
 
 recipes.remove(<extrautils2:filter>);
 recipes.addShaped(<extrautils2:filter>,[
-	[<minecraft:redstone>, <minecraft:string>, <minecraft:redstone>],
-	[<minecraft:string>, <minecraft:item_frame>, <minecraft:string>],
-	[<minecraft:redstone>, <minecraft:string>, <minecraft:redstone>]
+	[<ore:string>, <ore:stickWood>, <ore:string>],
+	[<ore:stickWood>, <betterwithmods:material:4>, <ore:stickWood>],
+	[<ore:string>, <ore:stickWood>, <ore:string>]
 ]);
 
 recipes.remove(<extrautils2:filterfluids>);
 recipes.addShaped(<extrautils2:filterfluids>,[
-	[<minecraft:dye:4>, <minecraft:string>, <minecraft:dye:4>],
-	[<minecraft:string>, <minecraft:item_frame>, <minecraft:string>],
-	[<minecraft:dye:4>, <minecraft:string>, <minecraft:dye:4>]
+	[null, <mekanism:polyethene:3>, null],
+	[<mekanism:polyethene:3>, <deepresonance:filter>, <mekanism:polyethene:3>],
+	[null, <mekanism:polyethene:3>, null]
 ]);
 
 recipes.remove(<extrautils2:ingredients:6>);
@@ -120,10 +122,10 @@ recipes.addShaped(<extrautils2:bagofholding>,[
 	[<essentialcraft:genitem:10>, <extrautils2:decorativesolidwood:1>, <essentialcraft:genitem:10>]
 ]);
 
-recipes.remove(<extrautils2:drum>);
-mods.immersiveengineering.Blueprint.addRecipe("components", <extrautils2:drum>, 
-	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>, <tconstruct:pan_head>.withTag({Material: "stone"}), <tconstruct:pan_head>.withTag({Material: "stone"}),
-	<ic2:resource:11>]);
+recipes.remove(<extrautils2:decorativesolid:4>);
+recipes.addShapeless(<extrautils2:decorativesolid:4>*2,[<betterwithmods:sand_pile>, <ore:dustGlass>, <betterwithmods:sand_pile>, <ore:dustGlass>]);
+
+mods.jei.JEI.removeAndHide(<extrautils2:drum>);
 
 recipes.remove(<extrautils2:drum:1>);
 mods.immersiveengineering.Blueprint.addRecipe("components", <extrautils2:drum:1>, 
@@ -132,7 +134,12 @@ mods.immersiveengineering.Blueprint.addRecipe("components", <extrautils2:drum:1>
 recipes.remove(<extrautils2:drum:2>);
 mods.immersiveengineering.Blueprint.addRecipe("components", <extrautils2:drum:2>, 
 	[<rockhounding_chemistry:metal_items:2>, <rockhounding_chemistry:metal_items:2>, <rockhounding_chemistry:metal_items:2>, <ic2:crafting:3>, <ic2:crafting:3>, 
-	<immersiveengineering:storage:8>]);
+	<ore:blockSteel>]);
+
+recipes.remove(<extrautils2:drum:3>);
+mods.immersiveengineering.Blueprint.addRecipe("components", <extrautils2:drum:3>, 
+	[<tconstruct:pan_head>.withTag({Material: "xu_demonic_metal"})*2, <essentialcraft:genitem:52>, <enderutilities:enderporter:1>, 
+	<contenttweaker:ingot2>, <rockhounding_chemistry:metal_items:13>*2]);
 
 recipes.remove(<extrautils2:machine>);
 recipes.addShaped(<extrautils2:machine>,[
@@ -152,7 +159,7 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator"})
 
 recipes.remove(<extrautils2:machine>.withTag({Type: "extrautils2:generator_culinary"}));
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_culinary"}),[
-	[<terraqueous:pitchfork>, <actuallyadditions:item_knife>, <tconstruct:pan_head>.withTag({Material: "steel"})],
+	[<ore:gearSteel>, <actuallyadditions:item_knife>, <tconstruct:pan_head>.withTag({Material: "steel"})],
 	[<minecraft:iron_bars>, <minecraft:iron_bars>, <minecraft:iron_bars>],
 	[<extrautils2:ingredients>, <extrautils2:machine>.withTag({Type: "extrautils2:generator"}), <extrautils2:ingredients>]
 ]);
@@ -285,4 +292,6 @@ recipes.addShaped(<extrautils2:compoundbow>,[
 	[<enderio:item_material:71>, <enderio:item_material:14>, null]
 ]);
 
-
+//Deep Dark Portal temporarily disabled
+<extrautils2:teleporter:1>.addTooltip(format.gold("Temporarily Disabled"));
+recipes.remove(<extrautils2:teleporter:1>);

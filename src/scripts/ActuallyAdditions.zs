@@ -4,17 +4,25 @@
 /////////////      Actually Additions     ////////////////////
 //////////////////////////////////////////////////////////////
 
+//Wood Casing
+recipes.remove(<actuallyadditions:block_misc:4>);
+recipes.addShaped(<actuallyadditions:block_misc:4>,[
+	[<ore:stickWood>, <ore:plateWood>, <ore:stickWood>],
+	[<ore:plateWood>, <ore:plankWood>, <ore:plateWood>],
+	[<ore:stickWood>, <ore:plateWood>, <ore:stickWood>]
+]);
+
 //Ender Casing
 recipes.remove(<actuallyadditions:block_misc:8>);
 mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_misc:8>, <thermalfoundation:storage_alloy:7>, 
-	<mekanism:otherdust:6>, <nuclearcraft:dust:8>, <techreborn:dust:55>, <actuallyadditions:item_misc:5>, 160000, 10,[0.4,0,1]);
+	<mekanism:otherdust:5>, <quark:biotite>, <techreborn:dust:55>, <actuallyadditions:item_misc:5>, 160000, 10,[0.4,0,1]);
 
 //Iron Casing
 recipes.remove(<actuallyadditions:block_misc:9>);
 recipes.addShaped(<actuallyadditions:block_misc:9>,[
-	[<magneticraft:light_plates>, <immersiveengineering:metal:39>, <magneticraft:light_plates>],
-	[<betterwithmods:material:51>, <tconstruct:ingots>, <betterwithmods:material:51>],
-	[<magneticraft:light_plates>, <immersiveengineering:metal:39>, <magneticraft:light_plates>]
+	[<magneticraft:light_plates>, <minecraft:iron_bars>, <magneticraft:light_plates>],
+	[<minecraft:iron_ingot>, <ore:ingotCobalt>, <minecraft:iron_ingot>],
+	[<magneticraft:light_plates>, <minecraft:iron_bars>, <magneticraft:light_plates>]
 ]);
 
 recipes.remove(<actuallyadditions:item_battery>);
@@ -24,18 +32,25 @@ recipes.addShaped(<actuallyadditions:item_battery>,[
 	[<ore:ingotCobalt>, <actuallyadditions:item_crystal:5>, <ore:ingotCobalt>]
 ]);
 
+recipes.remove(<actuallyadditions:block_grinder>);
+recipes.addShaped(<actuallyadditions:block_grinder>,[
+	[null, <actuallyadditions:item_filter>, null],
+	[<rockhounding_chemistry:crushing_gear>, <actuallyadditions:block_misc:7>, <rockhounding_chemistry:crushing_gear>],
+	[<ore:stickSteel>, <magneticraft:crafting:2>, <ore:stickSteel>]
+]);
+
 recipes.remove(<actuallyadditions:block_display_stand>);
 recipes.addShaped(<actuallyadditions:block_display_stand>,[
-	[<ore:ingotSteel>, <techreborn:ingot:13>, <ore:ingotSteel>],
-	[<actuallyadditions:block_testifi_bucks_white_wall>, <actuallyadditions:block_testifi_bucks_green_wall>, <actuallyadditions:block_testifi_bucks_white_wall>],
-	[<ore:ingotSteel>, <techreborn:ingot:13>, <ore:ingotSteel>]
+	[<enderio:item_alloy_nugget>, <essentialcraft:genitem:43>, <enderio:item_alloy_nugget>],
+	[<essentialcraft:genitem:51>, <ore:plateSteel>, <essentialcraft:genitem:51>],
+	[<enderio:item_alloy_nugget>, <essentialcraft:genitem:43>, <enderio:item_alloy_nugget>]
 ]);
-//Ensure Hoanna is visited before Tech leap
+
 recipes.remove(<actuallyadditions:block_empowerer>);
 recipes.addShaped(<actuallyadditions:block_empowerer>,[
-	[null, <techreborn:ingot:13>, null],
-	[<actuallyadditions:item_crystal>, <essentialcraft:genitem:36>, <actuallyadditions:item_crystal>],
-	[<immersiveengineering:metal:38>, <immersiveengineering:storage_slab:4>, <immersiveengineering:metal:38>]
+	[<essentialcraft:genitem:44>, <enderio:item_alloy_ingot>, <essentialcraft:genitem:44>],
+	[<ore:plateSteel>, <essentialcraft:genitem:36>, <ore:plateSteel>],
+	[<essentialcraft:genitem:44>, <enderio:item_alloy_ingot:8>, <essentialcraft:genitem:44>]
 ]);
 
 recipes.remove(<actuallyadditions:block_miner>);
@@ -47,9 +62,9 @@ recipes.addShaped(<actuallyadditions:block_miner>,[
 
 recipes.remove(<actuallyadditions:block_atomic_reconstructor>);
 recipes.addShaped(<actuallyadditions:block_atomic_reconstructor>,[
-	[<ore:plateLead>, <ore:ingotSteel>, <ore:plateLead>],
-	[<techreborn:lithiumbattery>.withTag({energy: 0}), <mekanism:machineblock2:13>, <minecraft:stained_glass_pane:5>],
-	[<ore:plateLead>, <ore:ingotSteel>, <ore:plateLead>]
+	[<techreborn:plates:24>, <ore:ingotLead>, <techreborn:plates:24>],
+	[<enderio:item_material:14>, <essentialcraft:genitem:44>, <enderio:item_material:15>],
+	[<magneticraft:battery_item_medium>.withTag({}), <actuallyadditions:block_misc:7>, <betterwithmods:material:34>]
 ]);
 
 recipes.remove(<actuallyadditions:block_laser_relay>);
@@ -101,10 +116,10 @@ recipes.addShaped(<actuallyadditions:block_xp_solidifier>,[
 ]);
 
 recipes.remove(<actuallyadditions:block_misc:7>);
-recipes.addShaped(<actuallyadditions:block_misc:7>*2,[
-	[null, <actuallyadditions:item_dust:7>, null],
-	[<actuallyadditions:block_crystal:5>, <actuallyadditions:block_misc:9>, <actuallyadditions:block_crystal:5>],
-	[null, <actuallyadditions:item_dust:7>, null]
+recipes.addShaped(<actuallyadditions:block_misc:7>,[
+	[<ore:plateSteel>, <enderio:block_dark_iron_bars>, <ore:plateSteel>],
+	[<enderio:item_alloy_ingot:6>, <ore:ingotCobalt>, <enderio:item_alloy_ingot:6>],
+	[<ore:plateSteel>, <enderio:block_dark_iron_bars>, <ore:plateSteel>]
 ]);
 
 recipes.remove(<actuallyadditions:item_bag>);
@@ -113,6 +128,9 @@ recipes.addShaped(<actuallyadditions:item_bag>,[
 	[<minecraft:wool>, <minecraft:wool:14>, <minecraft:stick>],
 	[<minecraft:wool:14>, <minecraft:wool>, <minecraft:stick>]
 ]);
+
+recipes.remove(<actuallyadditions:item_misc:4>);
+recipes.addShapeless(<actuallyadditions:item_misc:4>,[<ore:foodFlour>, <ore:foodFlour>, <ore:foodFlour>, <minecraft:potion>.withTag({Potion: "minecraft:water"})]);
 
 recipes.remove(<actuallyadditions:item_misc:6>);	//Ring
 recipes.addShaped(<actuallyadditions:item_misc:6>,[
@@ -198,7 +216,7 @@ recipes.remove(<actuallyadditions:item_potion_ring:2>);	//Strength
 recipes.addShapeless(<actuallyadditions:item_potion_ring:2>,[<actuallyadditions:item_misc:6>, <forge:bucketfilled>.withTag({FluidName: "blood", Amount: 1000})]);
 
 recipes.remove(<actuallyadditions:item_potion_ring_advanced:2>);	//Strength Advanced
-recipes.addShapeless(<actuallyadditions:item_potion_ring_advanced:2>,[<actuallyadditions:item_potion_ring:2>, <twilightforest:fiery_blood>]);
+recipes.addShapeless(<actuallyadditions:item_potion_ring_advanced:2>,[<actuallyadditions:item_potion_ring:2>, <tconstruct:edible:33>]);
 
 recipes.remove(<actuallyadditions:item_potion_ring:3>);	//Jump Boost
 recipes.addShaped(<actuallyadditions:item_potion_ring:3>,[
@@ -215,7 +233,7 @@ recipes.addShaped(<actuallyadditions:item_potion_ring_advanced:3>,[
 ]);
 
 recipes.remove(<actuallyadditions:item_potion_ring_advanced:5>);
-recipes.addShapeless(<actuallyadditions:item_potion_ring_advanced:5>,[<actuallyadditions:item_misc:6>, <twilightforest:naga_scale>]);	//Resistance Advanced
+recipes.addShapeless(<actuallyadditions:item_potion_ring_advanced:5>,[<actuallyadditions:item_misc:6>, <quark:enderdragon_scale>]);	//Resistance Advanced
 
 recipes.remove(<actuallyadditions:item_potion_ring:6>);	//Fire Resistance
 recipes.addShaped(<actuallyadditions:item_potion_ring:6>,[
@@ -246,14 +264,12 @@ recipes.addShaped(<actuallyadditions:item_potion_ring_advanced:7>,[
 ]);
 
 //Ender Star
-recipes.remove(<actuallyadditions:item_misc:19>);
-recipes.addShapeless(<actuallyadditions:item_misc:19>,[<minecraft:nether_star>, <minecraft:dragon_breath>, <extrautils2:ingredients:10>, <twilightforest:fiery_blood>]);
 <actuallyadditions:item_misc:19>.displayName = "Chaos Star";
-
+recipes.remove(<actuallyadditions:item_misc:19>);
 mods.extendedcrafting.EnderCrafting.addShaped(<actuallyadditions:item_misc:19>, [
 	[null, <minecraft:dragon_breath>, null],
 	[<extrautils2:ingredients:10>, <minecraft:nether_star>, <quark:black_ash>],
-	[null, <twilightforest:fiery_blood>, null]
+	[null, <tconstruct:edible:33>, null]
 ]);
 
 mods.actuallyadditions.AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:3>);
@@ -307,6 +323,7 @@ recipes.remove(<actuallyadditions:block_item_viewer>);
 // Removed Items/Blocks //
 //----------------------//
 
+mods.jei.JEI.removeAndHide(<actuallyadditions:block_item_repairer>);	//Cheaty and EC4U provides an alternative
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_item_viewer_hopping>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_farmer>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_placer>);			//IndustrialForegoing has one alternative

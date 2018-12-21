@@ -6,9 +6,9 @@
 
 recipes.remove(<advancedrocketry:structuretower>);
 recipes.addShaped(<advancedrocketry:structuretower>,[
-	[<immersiveengineering:material:2>, null, <immersiveengineering:material:2>],
-	[<ic2:crafting:30>, <immersiveengineering:material:2>, <ic2:crafting:30>],
-	[<immersiveengineering:material:2>, null, <immersiveengineering:material:2>]
+	[<immersiveengineering:material:3>, <immersiveengineering:material:3>, <immersiveengineering:material:3>],
+	[<contenttweaker:part2>, <ic2:crafting:30>, <contenttweaker:part2>],
+	[<immersiveengineering:material:3>, <immersiveengineering:material:3>, <immersiveengineering:material:3>]
 ]);
 
 recipes.remove(<advancedrocketry:rocketbuilder>);
@@ -76,17 +76,20 @@ recipes.addShaped(<advancedrocketry:loader:6>,[
 
 recipes.remove(<advancedrocketry:precisionassemblingmachine>);
 mods.extendedcrafting.TableCrafting.addShaped(<advancedrocketry:precisionassemblingmachine>,[ 
-    [null],
-    [<enderio:item_material:2>, <libvulpes:productsheet:9>, <libvulpes:productsheet:9>, <libvulpes:productsheet:9>, <enderio:item_material:2>],    
-    [<libvulpes:productsheet:9>, null, <techreborn:machine_frame:2>, null, <libvulpes:productsheet:9>],  
-    [<libvulpes:productsheet:9>, <advgenerators:controller>, <contenttweaker:crafting5>, <techreborn:part:30>, <libvulpes:productsheet:9>], 
-    [<enderio:item_material:2>, <libvulpes:productsheet:9>, <libvulpes:productsheet:9>, <environmentaltech:diode>, <enderio:item_material:2>] 
+    [<rockhounding_chemistry:misc_items:15>, <enderio:item_material:68>, <rockhounding_chemistry:misc_items:4>, <enderio:item_material:68>, 
+    <rockhounding_chemistry:misc_items:15>],
+    [<rockhounding_chemistry:misc_items:16>, <gregtech:meta_item_1:32654>, <mekanism:machineblock2:13>, <gregtech:meta_item_1:32654>, 
+    <rockhounding_chemistry:misc_items:16>],    
+    [<mekanism:polyethene:2>, <thermalexpansion:augment:432>, <contenttweaker:crafting5>, <gregtech:meta_item_1:32634>, <mekanism:polyethene:2>],  
+    [<rockhounding_chemistry:misc_items:16>, <techreborn:part:30>, <advgenerators:controller>, <techreborn:part:30>, <rockhounding_chemistry:misc_items:16>], 
+    [<rockhounding_chemistry:misc_items:15>, <appliedenergistics2:material:53>, <environmentaltech:diode>, <enderio:item_big_advanced_item_filter>, 
+    <rockhounding_chemistry:misc_items:15>] 
 ]);
 
 recipes.remove(<advancedrocketry:blastbrick>);
-recipes.addShaped(<advancedrocketry:blastbrick>*6,[
+recipes.addShaped(<advancedrocketry:blastbrick>*4,[
 	[<minecraft:brick_block>, <minecraft:magma_cream>, <minecraft:brick_block>],
-	[<minecraft:brick_block>, <techreborn:dust:33>, <minecraft:brick_block>],
+	[<contenttweaker:dust5>, <contenttweaker:dust5>, <contenttweaker:dust5>],
 	[<minecraft:brick_block>, <minecraft:magma_cream>, <minecraft:brick_block>]
 ]);
 
@@ -168,6 +171,14 @@ recipes.addShaped(<advancedrocketry:chemicalreactor>,[
 	[<advancedrocketry:ic>, <advancedrocketry:ic:5>, <advancedrocketry:ic>]
 ]);
 
+recipes.remove(<advancedrocketry:oxygenscrubber>);
+recipes.addShaped(<advancedrocketry:oxygenscrubber>,[
+	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "sodium_hydroxide_solution", Amount: 1000}}), <ic2:te:27>, 
+	<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "potassium_hydroxide_solution", Amount: 1000}})],
+	[<rockhounding_chemistry:misc_items:7>, <advancedrocketry:liquidtank>, <rockhounding_chemistry:misc_items:7>],
+	[<stevescarts:modulecomponents:40>, <mekanism:electrolyticcore>, <stevescarts:modulecomponents:40>]
+]);
+
 recipes.remove(<advancedrocketry:warpcore>);
 recipes.addShaped(<advancedrocketry:warpcore>,[
 	[<advancedrocketry:productrod>, <nuclearcraft:compound:1>, <advancedrocketry:productrod>],
@@ -176,11 +187,22 @@ recipes.addShaped(<advancedrocketry:warpcore>,[
 ]);
 
 recipes.remove(<advancedrocketry:warpmonitor>);
-recipes.addShaped(<advancedrocketry:warpmonitor>,[
-	[<advancedrocketry:misc>, <mekanism:atomicalloy>, <advancedrocketry:misc>],
-	[<mekanism:controlcircuit:3>, <libvulpes:advstructuremachine>, <mekanism:controlcircuit:3>],
-	[<advancedrocketry:ic:2>, <libvulpes:advstructuremachine>, <advancedrocketry:ic:2>]
-]);
+mods.extendedcrafting.TableCrafting.addShaped(<advancedrocketry:warpmonitor>,[
+    [<techreborn:part:27>, <gregtech:meta_item_1:32724>, <enderio:item_material:44>, <techreborn:part:27>, 
+    <actuallyadditions:block_laser_relay_extreme>, <advancedrocketry:satelliteprimaryfunction:1>, <techreborn:part:27>], 
+    [<techreborn:plates:2>, <techreborn:part:1>, <deepresonance:radiation_module>, <rftools:computer_module>, <rftools:energyplus_module>, <techreborn:part:1>, 
+    <techreborn:plates:2>], 
+    [<techreborn:plates:2>, <projectred-transmission:wire:17>, <advancedrocketry:misc>, <techreborn:part:24>, <advancedrocketry:misc>, 
+    <projectred-transmission:wire:17>, <techreborn:plates:2>], 
+    [<techreborn:part:27>, <environmentaltech:diode>, <rftoolscontrol:interaction_module>, <contenttweaker:crafting6>, <rftoolscontrol:interaction_module>, 
+    <environmentaltech:diode>, <techreborn:part:27>],
+    [<advancedrocketry:productplate:1>, <libvulpes:battery:1>, <mekanism:controlcircuit:3>, <rftoolscontrol:cpu_core_2000>, <mekanism:controlcircuit:3>, 
+    <libvulpes:battery:1>, <advancedrocketry:productplate:1>], 
+    [<advancedrocketry:productplate:1>, <draconicevolution:ender_energy_manipulator>, <deepresonance:radiation_sensor>, <opencomputers:case2>, 
+    <enderio:block_power_monitor>, <rftoolscontrol:vectorart_module>, <advancedrocketry:productplate:1>],
+    [<techreborn:part:27>, <nuclearcraft:part:3>, <nuclearcraft:part:3>, <techreborn:part:27>, <mekanism:transmitter>.withTag({tier: 3}), 
+    <opencomputers:motionsensor>, <techreborn:part:27>]
+]); 
 
 recipes.remove(<advancedrocketry:orientationcontroller>);
 recipes.addShaped(<advancedrocketry:orientationcontroller>,[
@@ -304,6 +326,13 @@ recipes.addShaped(<advancedrocketry:satellitepowersource:1>,[
 ]);
 
 recipes.remove(<advancedrocketry:satelliteprimaryfunction>);	//Optical Sensor in Precision Assembler
+
+recipes.remove(<advancedrocketry:satelliteprimaryfunction:1>);	//Composition Sensor
+recipes.addShaped(<advancedrocketry:satelliteprimaryfunction:1>,[
+	[<ore:foilMagnalium>, <ore:foilHssg>, <advancedrocketry:satelliteprimaryfunction>],
+	[<advancedrocketry:ic:1>, <gregtech:meta_item_1:32693>, <ore:foilHssg>],
+	[<ore:plateTitanium>, <gtadditions:ga_meta_item:32035>, <ore:foilUltimet>]
+]);
 
 recipes.remove(<advancedrocketry:satelliteprimaryfunction:2>);	//Mass Detector
 mods.extendedcrafting.TableCrafting.addShaped(<advancedrocketry:satelliteprimaryfunction:2>,[
@@ -506,7 +535,8 @@ recipes.remove(<libvulpes:productrod:6>);
 recipes.remove(<libvulpes:productrod:7>);
 recipes.remove(<libvulpes:productrod:10>);
 
-//Alternative way of getting steel sheets before AdvancedRocketry Rolling Machine
+//Alternative way of getting sheets before AdvancedRocketry Rolling Machine
+mods.rockhounding_chemistry.ProfilingBench.add(<magneticraft:light_plates>, <libvulpes:productsheet:1>*2, 3);
 mods.rockhounding_chemistry.ProfilingBench.add(<techreborn:plates:28>, <libvulpes:productsheet:6>*2, 3);
 
 mods.jei.JEI.removeAndHide(<libvulpes:coalgenerator>);	//No need for this
@@ -522,7 +552,7 @@ recipes.addShaped(<libvulpes:linker>,[
 recipes.remove(<libvulpes:battery>);
 mods.extendedcrafting.TableCrafting.addShaped(<libvulpes:battery>,[
     [null],
-    [null, null, <contenttweaker:part4>, null, null],  
+    [null, null, <ore:nuggetGraphite>, null, null],  
     [null, <ore:dyeLime>, <ore:dustNickel>, <ic2:casing:6>, null],  
     [null, <ore:dustLithium>, <nuclearcraft:dust_oxide:2>, <ore:dustLithium>, null], 
     [null, <rockhounding_chemistry:misc_items:33>, <magneticraft:dusts:4>, <rockhounding_chemistry:misc_items:33>, null] 

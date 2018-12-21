@@ -24,26 +24,30 @@ mods.techreborn.rollingMachine.addShaped(<rockhounding_chemistry:misc_items>, [
 recipes.remove(<rockhounding_chemistry:misc_items:1>);
 recipes.addShaped(<rockhounding_chemistry:misc_items:1>,[
 	[<minecraft:iron_nugget>, <minecraft:gold_nugget>, <minecraft:iron_nugget>],
-	[<ore:dustCobalt>, <immersiveengineering:metal:31>, <ore:dustInvar>],
+	[<ore:dustCobalt>, <libvulpes:productsheet:9>, <ore:dustInvar>],
 	[<minecraft:iron_nugget>, <ore:itemRubber>, <minecraft:iron_nugget>]
 ]);
 //Blending Unit
 recipes.remove(<rockhounding_chemistry:misc_items:6>);
 mods.techreborn.rollingMachine.addShaped(<rockhounding_chemistry:misc_items:6>, [
-	[<rockhounding_chemistry:misc_items:3>, <techreborn:ingot:15>, <rockhounding_chemistry:misc_items:3>],
-	[<techreborn:ingot:15>, null, <techreborn:ingot:15>],
-	[<rockhounding_chemistry:misc_items:3>, <techreborn:ingot:15>, <rockhounding_chemistry:misc_items:3>]
+	[<ore:foilIron>, <ore:ingotTungsten>, <ore:foilIron>],
+	[<ore:ingotTungsten>, null, <ore:ingotTungsten>],
+	[<ore:foilIron>, <ore:ingotTungsten>, <ore:foilIron>]
 ]);
 //Glass Pipe
 recipes.remove(<rockhounding_chemistry:misc_items:7>);
 mods.rockhounding_chemistry.ProfilingBench.removeByInput(<minecraft:glass>);
 mods.tconstruct.Casting.addTableRecipe(<rockhounding_chemistry:misc_items:7>, <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"}), <liquid:glass>, 144);
-//Compressor Unit
+//Iron Coil
+mods.immersiveengineering.Blueprint.addRecipe("components", <rockhounding_chemistry:misc_items:8>, 
+	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>]);
+//Compressing Unit
 recipes.remove(<rockhounding_chemistry:misc_items:9>);
 recipes.addShaped(<rockhounding_chemistry:misc_items:9>,[
-	[<rockhounding_chemistry:misc_items:8>, <advgenerators:pressure_valve>, <rockhounding_chemistry:misc_items:8>],
-	[<minecraft:water_bucket>, <betterwithmods:material:24>, <minecraft:water_bucket>],
-	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "lava", Amount: 1000}}), <ic2:crafting:6>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "cryotheum", Amount: 1000}})]
+	[<immersiveengineering:material:9>, <ic2:crafting:6>, <rockhounding_chemistry:misc_items:20>],
+	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "lava", Amount: 1000}}), <rockhounding_chemistry:misc_items:8>, 
+	<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "ic2coolant", Amount: 1000}})],
+	[<stevescarts:modulecomponents:24>, <immersiveengineering:toolupgrade>, <stevescarts:modulecomponents:60>]
 ]);
 //Advanced Logic Chip
 recipes.remove(<rockhounding_chemistry:misc_items:10>);
@@ -125,18 +129,18 @@ recipes.addShaped(<rockhounding_chemistry:machines_a:8>,[
 	[<contenttweaker:crafting2>, <rockhounding_chemistry:misc_blocks_a>, <contenttweaker:crafting2>],
 	[<techreborn:plates:28>, <rockhounding_chemistry:misc_items:1>, <techreborn:plates:28>]
 ]);
-//Lab Blender Controller
+//Lab Blender Controller	//TODO: better GTCE steel gear than TF steel gear
 recipes.remove(<rockhounding_chemistry:machines_a:9>);
 recipes.addShaped(<rockhounding_chemistry:machines_a:9>,[
-	[null, <rockhounding_chemistry:misc_items:6>, null],
-	[<rockhounding_chemistry:misc_items:1>, <rockhounding_chemistry:misc_items:4>, null],
-	[<techreborn:grinder>, <rockhounding_chemistry:misc_blocks_a>, <rockhounding_chemistry:misc_items:5>]
+	[<techreborn:part:24>, <rockhounding_chemistry:misc_items:6>, <extrautils2:pipe>],
+	[<rockhounding_chemistry:misc_items:10>, <rockhounding_chemistry:misc_items:4>, <ic2:casing:5>],
+	[<ic2:crafting:6>, <thermalfoundation:material:288>, <mekanism:polyethene:2>]
 ]);
 //Profiling Bench
 recipes.remove(<rockhounding_chemistry:machines_a:11>);
 recipes.addShaped(<rockhounding_chemistry:machines_a:11>,[
 	[<immersiveengineering:mold>, <immersiveengineering:mold:1>, <immersiveengineering:mold:2>],
-	[<immersiveengineering:material:2>, <contenttweaker:block1>, <immersiveengineering:material:2>],
+	[<immersiveengineering:material:2>, <gregtech:meta_item_1:32643>, <immersiveengineering:material:2>],
 	[<immersiveengineering:metal:8>, <techreborn:plates:31>, <immersiveengineering:metal:8>]
 ]);
 //Evaporation Tank
@@ -205,9 +209,13 @@ recipes.addShaped(<rockhounding_chemistry:machines_b:9>,[
 //Air Compressor
 recipes.remove(<rockhounding_chemistry:machines_b:10>);
 recipes.addShaped(<rockhounding_chemistry:machines_b:10>,[
-	[<rockhounding_chemistry:gasline_duct>, <advgenerators:pressure_valve>, <rockhounding_chemistry:gasline_duct>],
-	[<techreborn:dynamiccell>.withTag({Fluid: {FluidName: "lava", Amount: 1000}}), <rockhounding_chemistry:misc_items:9>, <techreborn:dynamiccell>.withTag({Fluid: {FluidName: "ic2coolant", Amount: 1000}})],
-	[<rockhounding_chemistry:misc_items:7>, <rockhounding_chemistry:misc_blocks_a>, <rockhounding_chemistry:misc_items:7>]
+	[<advgenerators:advanced_pressure_valve>, <ic2:crafting:2>, <advgenerators:pressure_valve>],
+	[<rockhounding_chemistry:gasline_duct>, <rockhounding_chemistry:misc_items:9>, <rockhounding_chemistry:gasline_duct>],
+	[<industrialforegoing:plastic>, <rockhounding_chemistry:misc_blocks_a>, <industrialforegoing:plastic>]]);
+recipes.addShaped(<rockhounding_chemistry:machines_b:10>,[
+	[<stevescarts:modulecomponents:40>, <rockhounding_chemistry:misc_items:31>, <contenttweaker:crafting10>],
+	[<rockhounding_chemistry:gasline_pump>, <rockhounding_chemistry:gasline_duct>, <rockhounding_chemistry:machines_e:1>.withTag({Energy: 0, Fuel: 0})],
+	[<mekanism:controlcircuit:1>, <mekanism:gastank>.withTag({tier: 1, mekData: {}}), <industrialforegoing:plastic>]
 ]);
 //Heat Exchanger
 recipes.remove(<rockhounding_chemistry:machines_b:11>);
@@ -297,8 +305,8 @@ recipes.addShaped(<rockhounding_chemistry:machines_c:15>,[
 recipes.remove(<rockhounding_chemistry:machines_d>);
 mods.extendedcrafting.TableCrafting.addShaped(<rockhounding_chemistry:machines_d>,[
     [null],  
-    [null, <extrautils2:pipe>, <rockhounding_chemistry:misc_items:6>, <extrautils2:pipe>, null],  
-    [null, <extrautils2:pipe>, <mekanism:basicblock2:5>, <extrautils2:pipe>, null],  
+    [null, <gregtech:fluid_pipe_stainless_steel:1>, <rockhounding_chemistry:misc_items:6>, <gregtech:fluid_pipe_stainless_steel:1>, null],  
+    [null, <gregtech:fluid_pipe_stainless_steel:1>, <mekanism:basicblock2:5>, <gregtech:fluid_pipe_stainless_steel:1>, null],  
     [null, <techreborn:part:24>, <techreborn:machine_casing:2>, <rockhounding_chemistry:misc_items:12>, null], 
     [<ic2:casing:5>, <rockhounding_chemistry:misc_items:10>, <techreborn:plates:2>, <rockhounding_chemistry:misc_items:10>, <ic2:casing:5>] 
 ]); 
@@ -332,28 +340,28 @@ recipes.addShaped(<rockhounding_chemistry:machines_d:10>,[
 ]);
 //Transposer
 recipes.remove(<rockhounding_chemistry:machines_d:11>);
-recipes.addShapeless(<rockhounding_chemistry:machines_d:11>,[<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}),<rockhounding_chemistry:misc_items:1>, 
-<stevescarts:cartmodule:64>]);
+recipes.addShapeless(<rockhounding_chemistry:machines_d:11>,[<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}),
+<rockhounding_chemistry:misc_items:1>, <stevescarts:cartmodule:64>]);
 //Fluidpedia
 recipes.remove(<rockhounding_chemistry:machines_d:12>);
 recipes.addShaped(<rockhounding_chemistry:machines_d:12>,[
-	[<stevescarts:cartmodule:63>, <rockhounding_chemistry:misc_items:5>, <ic2:fluid_cell>],
-	[<stevescarts:cartmodule:63>, <minecraft:glass_pane>, <ic2:fluid_cell>],
-	[<stevescarts:cartmodule:63>, <rockhounding_chemistry:misc_items:5>, <ic2:fluid_cell>]
+	[<stevescarts:cartmodule:63>, <rockhounding_chemistry:misc_items:5>, <techreborn:dynamiccell>],
+	[<stevescarts:cartmodule:63>, <minecraft:glass_pane>, <techreborn:dynamiccell>],
+	[<stevescarts:cartmodule:63>, <rockhounding_chemistry:misc_items:5>, <techreborn:dynamiccell>]
 ]);
 //Chemical Dumper
 recipes.remove(<rockhounding_chemistry:machines_d:13>);
 recipes.addShaped(<rockhounding_chemistry:machines_d:13>,[
-	[<rockhounding_chemistry:misc_items:5>, <contenttweaker:plate>, <rockhounding_chemistry:misc_items:5>],
-	[<contenttweaker:plate>, null, <contenttweaker:plate>],
-	[<rockhounding_chemistry:misc_items:5>, <contenttweaker:plate>, <rockhounding_chemistry:misc_items:5>]
+	[<ore:platePolyvinylChloride>, <ore:platePolyvinylChloride>, <ore:platePolyvinylChloride>],
+	[<rockhounding_chemistry:pipeline_valve>, <gregtech:frame_0:13>, <extrautils2:pipe>],
+	[<ore:platePolyvinylChloride>, <ore:platePolyvinylChloride>, <ore:platePolyvinylChloride>]
 ]);
 //Exhaustion Valve
 recipes.remove(<rockhounding_chemistry:machines_e:1>);
 recipes.addShaped(<rockhounding_chemistry:machines_e:1>,[
-	[null, <advgenerators:advanced_pressure_valve>, null],
-	[<rockhounding_chemistry:pipeline_duct>, <rockhounding_chemistry:pipeline_duct>, <rockhounding_chemistry:pipeline_duct>],
-	[<rockhounding_chemistry:pipeline_duct>, <rockhounding_chemistry:misc_items:1>, null]
+	[<rsgauges:flatgauge3>, <advgenerators:pressure_valve>, null],
+	[<rockhounding_chemistry:misc_items:1>, <rockhounding_chemistry:gasline_duct>, <rockhounding_chemistry:gasline_duct>],
+	[null, null, <rockhounding_chemistry:gasline_duct>]
 ]);
 
 recipes.remove(<rockhounding_chemistry:ingot_pattern>);
@@ -369,14 +377,14 @@ recipes.addShaped(<rockhounding_chemistry:tile_nullifier>,[
 //Fluid Pipeline Duct
 recipes.remove(<rockhounding_chemistry:pipeline_duct>);
 mods.techreborn.rollingMachine.addShaped(<rockhounding_chemistry:pipeline_duct>*2, [
-	[<techreborn:nuggets:12>, <techreborn:ingot:12>, <techreborn:nuggets:12>],
-	[<techreborn:ingot:12>, <ore:dustZinc>, <techreborn:ingot:12>],
-	[<techreborn:nuggets:12>, <techreborn:ingot:12>, <techreborn:nuggets:12>]
+	[<immersiveengineering:metal:28>, <immersiveengineering:metal:8>, <immersiveengineering:metal:28>],
+	[<immersiveengineering:metal:8>, <ore:dustZinc>, <immersiveengineering:metal:8>],
+	[<immersiveengineering:metal:28>, <immersiveengineering:metal:8>, <immersiveengineering:metal:28>]
 ]);
 //Fluid Pump
 recipes.remove(<rockhounding_chemistry:pipeline_pump>);
 recipes.addShaped(<rockhounding_chemistry:pipeline_pump>,[
-	[null, <contenttweaker:crafting1>, null],
+	[null, <gregtech:meta_item_1:18184>, null],
 	[<ic2:mining_pipe>, <immersiveengineering:material:9>, <ic2:mining_pipe>],
 	[null, <rockhounding_chemistry:pipeline_duct>, null]
 ]);
@@ -390,23 +398,23 @@ recipes.addShaped(<rockhounding_chemistry:pipeline_valve>,[
 //Gas Pipeline Duct
 recipes.remove(<rockhounding_chemistry:gasline_duct>);
 mods.techreborn.rollingMachine.addShaped(<rockhounding_chemistry:gasline_duct>*2, [
-	[<techreborn:nuggets:12>, <techreborn:ingot:12>, <techreborn:nuggets:12>],
-	[<techreborn:ingot:12>, <techreborn:dust:35>, <techreborn:ingot:12>],
-	[<techreborn:nuggets:12>, <techreborn:ingot:12>, <techreborn:nuggets:12>]
+	[<immersiveengineering:metal:28>, <mekanism:ingot:4>, <immersiveengineering:metal:28>],
+	[<mekanism:ingot:4>, <ore:dustTin>, <mekanism:ingot:4>],
+	[<immersiveengineering:metal:28>, <mekanism:ingot:4>, <immersiveengineering:metal:28>]
 ]);
 //Gas Pump
 recipes.remove(<rockhounding_chemistry:gasline_pump>);
 recipes.addShaped(<rockhounding_chemistry:gasline_pump>,[
-	[null, <contenttweaker:crafting1>, null],
-	[null, <immersiveengineering:material:9>, null],
-	[null, <rockhounding_chemistry:gasline_duct>, null]
+	[null, <gregtech:meta_item_1:18183>, null],
+	[<gregtech:meta_item_1:18183>, <rockhounding_chemistry:gasline_duct>, <gregtech:meta_item_1:18183>],
+	[null, <immersiveengineering:material:9>, null]
 ]);
 //Heating Element
 recipes.remove(<rockhounding_chemistry:misc_items:13>);
 recipes.addShaped(<rockhounding_chemistry:misc_items:13>,[
-	[null, <rockhounding_chemistry:misc_items:14>, null],
-	[<rockhounding_chemistry:misc_items:14>, null, <rockhounding_chemistry:misc_items:14>],
-	[<ore:nuggetIron>, <enderio:item_alloy_nugget:6>, <ore:nuggetIron>]
+	[<enderio:item_material:4>, <ore:wireGtSingleNichrome>, <enderio:item_material:4>],
+	[<ore:wireGtSingleNichrome>, null, <ore:wireGtSingleNichrome>],
+	[<ore:nuggetSilver>, <enderio:item_alloy_nugget:6>, <ore:nuggetSilver>]
 ]);
 //Turbine Fan
 recipes.remove(<rockhounding_chemistry:misc_items:20>);
@@ -418,9 +426,9 @@ recipes.addShaped(<rockhounding_chemistry:misc_items:20>,[
 //Turbine Rotor
 recipes.remove(<rockhounding_chemistry:misc_items:21>);
 recipes.addShaped(<rockhounding_chemistry:misc_items:21>,[
-	[<rockhounding_chemistry:misc_items:3>, <rockhounding_chemistry:misc_items:3>, null],
-	[<magneticraft:copper_coil>, <magneticraft:crafting:3>,],
-	[<ic2:crafting:17>, <rockhounding_chemistry:alloy_parts:69>, null]
+	[<ore:platePolytetrafluoroethylene>, <ore:foilIronMagnetic>, <ore:ringStainlessSteel>],
+	[<magneticraft:copper_coil>, <ore:stickVanadiumSteel>, <magneticraft:crafting:3>],
+	[<ic2:crafting:17>, <ore:plateAluminium>, <rockhounding_chemistry:alloy_parts:69>]
 ]);
 //Turbine Stator
 recipes.remove(<rockhounding_chemistry:misc_items:22>);
@@ -429,9 +437,30 @@ recipes.addShaped(<rockhounding_chemistry:misc_items:22>,[
 	[<rockhounding_chemistry:alloy_parts:85>, <magneticraft:crafting:3>, <rockhounding_chemistry:alloy_parts:85>],
 	[null, <rockhounding_chemistry:alloy_parts:85>, null]
 ]);
+//Slurry Agitator
+recipes.remove(<rockhounding_chemistry:slurry_agitator>);
+recipes.addShaped(<rockhounding_chemistry:slurry_agitator>,[
+	[<ore:stickStainlessSteel>, <rockhounding_chemistry:misc_items:4>, <ore:stickStainlessSteel>],
+	[<ore:plateCurvedPlastic>, <gregtech:fluid_pipe_plastic:2>, <ore:plateCurvedPlastic>],
+	[<ore:plateCurvedPlastic>, <gregtech:fluid_pipe_plastic:1>, <ore:plateCurvedPlastic>]
+]);
+
+mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:misc_items:24>);
+mods.rockhounding_chemistry.ProfilingBench.add(<techreborn:ingot:4>, <rockhounding_chemistry:misc_items:24>*4, 2);
 
 mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:crushing_gear>);
 mods.rockhounding_chemistry.ProfilingBench.add(<immersiveengineering:metal:8>, <rockhounding_chemistry:crushing_gear>, 6);
+
+mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:misc_items:33>);
+mods.rockhounding_chemistry.ProfilingBench.add(<techreborn:ingot>, <rockhounding_chemistry:misc_items:33>*8, 3);
+
+mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:pt_catalyst>);
+mods.rockhounding_chemistry.ProfilingBench.add(<rockhounding_chemistry:metal_items:6>, <rockhounding_chemistry:pt_catalyst>, 8);
+
+<ore:foilIron>.add(<rockhounding_chemistry:misc_items:3>);
+<ore:foilAluminium>.add(<rockhounding_chemistry:misc_items:33>);
+<ore:whiteSand>.add(<rockhounding_surface:white_sand>);
+<ore:NiggliiteShard>.add(<rockhounding_chemistry:native_shards:5>);
 
 //----------------------//
 // Removed Blocks/Items //

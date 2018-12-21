@@ -4,6 +4,9 @@
 /////////////		Magneticraft		//////////////////////
 //////////////////////////////////////////////////////////////
 
+recipes.remove(<magneticraft:guide_book>);
+recipes.addShapeless(<magneticraft:guide_book>,[<minecraft:iron_nugget>, <minecraft:book>]);
+
 recipes.remove(<magneticraft:voltmeter>);
 recipes.addShaped(<magneticraft:voltmeter>,[
 	[<enderio:item_alloy_nugget:6>, <minecraft:paper>, <minecraft:dye>],
@@ -44,11 +47,19 @@ recipes.addShaped(<magneticraft:crafting:3>*2,[
 	[<techreborn:cable>, <techreborn:cable>, <techreborn:cable>]
 ]);
 
+recipes.remove(<magneticraft:crafting:1>);	//Alternator
+recipes.addShaped(<magneticraft:crafting:1>,[
+	[<magneticraft:copper_coil>, <ore:boltStainlessSteel>, <ore:ringStainlessSteel>],
+	[<contenttweaker:crafting7>, <magneticraft:crafting:3>, <gregtech:meta_item_1:14301>],
+	[<ic2:crafting:17>, <rockhounding_chemistry:misc_items:22>, <stevescarts:modulecomponents:40>]
+]);
+
 recipes.remove(<magneticraft:crafting:4>);
 recipes.addShapeless(<magneticraft:crafting:4>,[<enderio:item_alloy_ingot:4>, <magneticraft:ingots:4>]);
 
 recipes.remove(<magneticraft:crafting:5>);	//Iron Mesh
-recipes.addShapeless(<magneticraft:crafting:5>,[<advgenerators:iron_tubing>, <minecraft:string>, <minecraft:string>, <advgenerators:iron_tubing>]);
+mods.immersiveengineering.Blueprint.addRecipe("components", <magneticraft:crafting:5>, 
+	[<ore:wireFineIron>, <ore:wireFineIron>, <ore:wireFineIron>, <ore:wireFineIron>, <ore:wireFineIron>, <ore:wireFineIron>]);
 
 recipes.remove(<magneticraft:crafting:6>);	//Fabric Mesh
 mods.techreborn.compressor.addRecipe(<magneticraft:crafting:6>, <minecraft:wool>, 200, 8);
@@ -91,11 +102,18 @@ recipes.addShaped(<magneticraft:tube_light>,[
 	[<minecraft:iron_nugget>, <minecraft:stained_glass_pane>, <minecraft:iron_nugget>]
 ]);
 
+recipes.remove(<magneticraft:sluice_box>);
+recipes.addShaped(<magneticraft:sluice_box>,[
+	[<ore:plankWood>, <minecraft:stick>, null],
+	[<extrautils2:filter>, <ore:plankWood>, <minecraft:stick>],
+	[<minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>]
+]);
+
 recipes.remove(<magneticraft:multiblock_parts>);
 recipes.addShaped(<magneticraft:multiblock_parts>,[
-	[<magneticraft:light_plates>, <magneticraft:light_plates>, <magneticraft:light_plates>],
-	[<ore:ingotSteel>, <magneticraft:crafting:2>, <ore:ingotSteel>],
-	[<magneticraft:light_plates:3>, <magneticraft:light_plates:3>, <magneticraft:light_plates:3>]
+	[<techreborn:plates:28>, <minecraft:iron_ingot>, <techreborn:plates:28>],
+	[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>],
+	[<techreborn:plates:28>, <minecraft:iron_ingot>, <techreborn:plates:28>]
 ]);
 
 recipes.remove(<magneticraft:multiblock_parts:1>);
@@ -114,9 +132,9 @@ recipes.addShaped(<magneticraft:multiblock_parts:2>,[
 
 recipes.remove(<magneticraft:multiblock_parts:4>);
 recipes.addShaped(<magneticraft:multiblock_parts:4>,[
-	[<minecraft:iron_ingot>, <magneticraft:crafting:3>, <minecraft:iron_ingot>],
+	[<techreborn:plates:28>, <magneticraft:crafting:3>, <techreborn:plates:28>],
 	[<magneticraft:light_plates:3>, <magneticraft:crafting:3>, <magneticraft:light_plates:3>],
-	[<minecraft:iron_ingot>, <magneticraft:crafting:3>, <minecraft:iron_ingot>]
+	[<techreborn:plates:28>, <magneticraft:crafting:3>, <techreborn:plates:28>]
 ]);
 
 recipes.remove(<magneticraft:electric_furnace>);
@@ -135,9 +153,16 @@ recipes.addShaped(<magneticraft:computer>,[
 
 recipes.remove(<magneticraft:mining_robot>);
 recipes.addShaped(<magneticraft:mining_robot>,[
-	[<ic2:re_battery:26>.withTag({}), <advgenerators:controller>, null],
+	[<gregtech:meta_item_1:32518>, <advgenerators:controller>, null],
 	[<minecraft:silver_shulker_box>, <magneticraft:crafting:2>, <stevescarts:cartmodule:42>.withTag({Data: 100 as byte})],
 	[<stevescarts:modulecomponents:1>, <techreborn:plates:16>, <stevescarts:modulecomponents:1>]
+]);
+
+recipes.remove(<magneticraft:inserter>);
+recipes.addShaped(<magneticraft:inserter>,[
+	[<ore:ingotTitanium>, <contenttweaker:crafting10>, null],
+	[<techreborn:nuggets:6>, <rockhounding_chemistry:misc_items:4>, <contenttweaker:crafting10>],
+	[<magneticraft:light_plates>, <magneticraft:crafting:2>, <techreborn:plates:16>]
 ]);
 
 recipes.remove(<magneticraft:small_tank>);
@@ -174,7 +199,7 @@ recipes.addShaped(<magneticraft:electric_cable>*6,[
 recipes.remove(<magneticraft:iron_pipe>);
 recipes.addShaped(<magneticraft:iron_pipe>*2,[
 	[null, <magneticraft:light_plates>, null],
-	[<magneticraft:light_plates>, <magneticraft:dusts:14>, <magneticraft:light_plates>],
+	[<magneticraft:light_plates>, <ore:dustZinc>, <magneticraft:light_plates>],
 	[null, <magneticraft:light_plates>, null]
 ]);
 
@@ -188,20 +213,7 @@ recipes.remove(<magneticraft:inserter_upgrade:1>);
 recipes.addShapeless(<magneticraft:inserter_upgrade:1>,[<thermalfoundation:material:295>, <industrialforegoing:plastic>, <immersiveengineering:material:3>, 
 <thermalfoundation:material:514>]);
 
-mods.jei.JEI.removeAndHide(<magneticraft:light_plates:4>);	//Hide glitched texture plate
-
 mods.magneticraft.CrushingTable.addRecipe(<techreborn:ore:7>, <magneticraft:rocky_chunks:14>, true);
-
-mods.magneticraft.HydraulicPress.removeRecipe(<magneticraft:ingots:5>, 2);
-# addRecipe: Arguments:
-# 1. input: the recipe input stack
-# 2. output: The primary result of the recipe
-# 3. duration: amount of game ticks need to complete the recipe
-# 4. mode: 0 -> Plates, 1 -> Light plates, 2 -> Heavy plates
-# 5. useOreDict:  If true, it will use the oreDictionary to check if an input stack is equivalent to the recipe input
-
-# Add a new Hydraulic Press recipe to convert snow blocks into snow balls.
-mods.magneticraft.HydraulicPress.addRecipe(<techreborn:ingot:15>*2, <magneticraft:heavy_plates:5>, 500, 2, false);
 
 recipes.remove(<magneticraft:stone_hammer>);
 recipes.remove(<magneticraft:iron_hammer>);
@@ -213,4 +225,9 @@ recipes.addShapeless(<magneticraft:steel_hammer>,[<tconstruct:hammer_head>.withT
 //Two more hammers that can be used in Crushing Table
 mods.magneticraft.CrushingTable.addHammer(<ic2:forge_hammer:*>, 2, 10, 1);
 mods.magneticraft.CrushingTable.addHammer(<immersiveengineering:tool>, 4, 15, 1);
+
+
+
+
+
 

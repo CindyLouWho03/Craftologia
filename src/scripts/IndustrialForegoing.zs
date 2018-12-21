@@ -94,6 +94,13 @@ recipes.addShaped(<industrialforegoing:biofuel_generator>,[
 	[null]
 ]);
 
+recipes.remove(<industrialforegoing:dye_mixer>);
+recipes.addShaped(<industrialforegoing:dye_mixer>,[
+	[null, <enderio:item_material:19>, null],
+	[<actuallyadditions:item_crystal_empowered:5>, <thermalexpansion:frame>, <thermalfoundation:material:514>],
+	[null, <rockhounding_chemistry:misc_items:12>, null]
+]);
+
 recipes.remove(<industrialforegoing:resourceful_furnace>);
 recipes.addShapeless(<industrialforegoing:resourceful_furnace>,[<techreborn:electric_furnace>, <thermalexpansion:frame>, <minecraft:stone_slab:6>]);
 
@@ -106,8 +113,7 @@ recipes.addShaped(<industrialforegoing:energy_field_provider>,[
 
 recipes.remove(<industrialforegoing:hydrator>);
 recipes.addShaped(<industrialforegoing:hydrator>,[
-	[<thermalcultivation:watering_can:1>.withTag({Water: 12000, Mode: 1}), <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte}), 
-	<thermalcultivation:watering_can:1>.withTag({Water: 12000, Mode: 1})],
+	[<extrautils2:wateringcan:1000>, <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte}), <extrautils2:wateringcan:1000>],
 	[<thermalfoundation:material:258>, <thermalexpansion:frame>, <thermalfoundation:material:258>],
 	[<frogcraftrebirth:non_metal_dust>, null, <frogcraftrebirth:non_metal_dust:7>]
 ]);
@@ -132,9 +138,9 @@ mods.tconstruct.Casting.addTableRecipe(<industrialforegoing:plastic>, <tconstruc
 
 recipes.remove(<industrialforegoing:mob_imprisonment_tool>);
 recipes.addShaped(<industrialforegoing:mob_imprisonment_tool>,[
-	[null, <minecraft:ghast_tear>, null],
-	[<enderutilities:enderpart:2>, <essentialcraft:genitem:23>, <enderutilities:enderpart:2>],
-	[null, <enderutilities:enderpart:2>, null]
+	[null, <actuallyadditions:item_crystal:3>, null],
+	[<thermalfoundation:material:194>, <enderutilities:enderpart:15>, <thermalfoundation:material:194>],
+	[<thermalfoundation:material:194>, <thermalfoundation:material:194>, <thermalfoundation:material:194>]
 ]);
 
 recipes.remove(<industrialforegoing:conveyor>);
@@ -247,7 +253,11 @@ recipes.remove(<industrialforegoing:fertilizer>);
 recipes.addShapeless(<industrialforegoing:fertilizer>*16,[<rockhounding_surface:gypsum_items:4>, <actuallyadditions:item_misc:1>, <frogcraftrebirth:non_metal_dust:7>, 
 <rockhounding_chemistry:chemical_items:12>]);
 
-mods.jei.JEI.removeAndHide(<industrialforegoing:laser_lens:*>);
-mods.jei.JEI.removeAndHide(<industrialforegoing:laser_lens_inverted:*>);
+recipes.removeShaped(<industrialforegoing:laser_lens:*>);
+recipes.removeShaped(<industrialforegoing:laser_lens_inverted:*>);
+recipes.addShapeless(<industrialforegoing:laser_lens>,[<advancedrocketry:lens>, <ore:dyeWhite>]);
+recipes.addShapeless(<industrialforegoing:laser_lens_inverted>,[<advancedrocketry:lens>, <minecraft:glass_pane>, <ore:dyeWhite>]);
 
 <ore:itemRubber>.remove(<industrialforegoing:plastic>);	//May become plastic sheets 
+
+mods.industrialforegoing.BioReactor.add(<biomesoplenty:seaweed>);

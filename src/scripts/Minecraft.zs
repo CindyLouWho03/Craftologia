@@ -20,15 +20,23 @@ recipes.addShapeless(<minecraft:wooden_slab:3>*2,[<minecraft:planks:3>, <ore:too
 recipes.addShapeless(<minecraft:wooden_slab:4>*2,[<minecraft:planks:4>, <ore:toolAxe>.transformDamage(1)]);
 recipes.addShapeless(<minecraft:wooden_slab:5>*2,[<minecraft:planks:5>, <ore:toolAxe>.transformDamage(1)]);
 
-//Early wood work done through BetterWithMods Saw
+//Siding from slabs
+
+recipes.addShapeless(<minecraft:wooden_slab>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "oak"}, Name: "minecraft:planks"}})]);
+recipes.addShapeless(<minecraft:wooden_slab:1>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "spruce"}, Name: "minecraft:planks"}})]);
+recipes.addShapeless(<minecraft:wooden_slab:2>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "birch"}, Name: "minecraft:planks"}})]);
+recipes.addShapeless(<minecraft:wooden_slab:3>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "jungle"}, Name: "minecraft:planks"}})]);
+recipes.addShapeless(<minecraft:wooden_slab:4>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "acacia"}, Name: "minecraft:planks"}})]);
+recipes.addShapeless(<minecraft:wooden_slab:5>,[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}})]);
 mods.betterwithmods.Saw.remove(<minecraft:planks:*>);
-mods.betterwithmods.Saw.add(<minecraft:planks>, [<minecraft:wooden_slab>]);
-mods.betterwithmods.Saw.add(<minecraft:planks:1>, [<minecraft:wooden_slab:1>]);
-mods.betterwithmods.Saw.add(<minecraft:planks:2>, [<minecraft:wooden_slab:2>]);
-mods.betterwithmods.Saw.add(<minecraft:planks:3>, [<minecraft:wooden_slab:3>]);
-mods.betterwithmods.Saw.add(<minecraft:planks:4>, [<minecraft:wooden_slab:4>]);
-mods.betterwithmods.Saw.add(<minecraft:planks:5>, [<minecraft:wooden_slab:5>]);
-//recipes.remove(<minecraft:wooden_slab:*>);	until i find two feasible ways of getting slabs
+
+//Midgame recipe for slabs
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab>*2, null, null, <minecraft:planks>, null, 100, 8);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab:1>*2, null, null, <minecraft:planks:1>, null, 100, 8);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab:2>*2, null, null, <minecraft:planks:2>, null, 100, 8);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab:3>*2, null, null, <minecraft:planks:3>, null, 100, 8);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab:4>*2, null, null, <minecraft:planks:4>, null, 100, 8);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:wooden_slab:5>*2, null, null, <minecraft:planks:5>, null, 100, 8);
 //Sticks are not crafted from wood planks anymore
 recipes.remove(<minecraft:stick>);
 recipes.addShapeless(<minecraft:stick>*2, [<ore:treeLeaves>]);
@@ -96,9 +104,16 @@ recipes.addShaped(<minecraft:furnace>,[
 <minecraft:bucket>.displayName = "Steel Bucket";
 recipes.remove(<minecraft:bucket>);
 recipes.addShaped(<minecraft:bucket>,[
-	[null, null, null],
-	[<ore:ingotSteel>, <ic2:forge_hammer:*>.transformDamage(3), <ore:ingotSteel>],
-	[null, <ore:ingotSteel>, null]
+	[<ore:plateSteel>, <ic2:forge_hammer:*>.transformDamage(5), <ore:plateSteel>],
+	[<ore:plateSteel>, <immersiveengineering:metal:8>, <ore:plateSteel>],
+	[null, <ore:plateSteel>, null]]);
+mods.immersiveengineering.Blueprint.addRecipe("components", <minecraft:bucket>, 
+	[<ore:plateCurvedSteel>, <ore:plateCurvedSteel>, <ore:plateSteel>]);
+mods.techreborn.rollingMachine.removeRecipe(<minecraft:bucket>);
+mods.techreborn.rollingMachine.addShaped(<minecraft:bucket>*2, [
+	[<mekanism:ingot:4>, null, <mekanism:ingot:4>],
+	[<mekanism:ingot:4>, null, <mekanism:ingot:4>],
+	[null, <mekanism:ingot:4>, null]
 ]);
 
 recipes.remove(<minecraft:dye:15>);
@@ -112,32 +127,36 @@ recipes.addShaped(<minecraft:ladder>*2,[
 ]);
 
 recipes.remove(<minecraft:iron_helmet>);
-recipes.addShaped(<minecraft:iron_helmet>,[
-	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, <ic2:forge_hammer:*>.transformDamage(5), <minecraft:iron_ingot>],
-	[null, null, null]
-]);
+mods.betterwithmods.Anvil.addShaped(<minecraft:iron_helmet>,[
+    [null, null, null, null],  
+    [<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>, null],  
+    [<minecraft:iron_ingot>, <betterwithmods:material:31>, <minecraft:iron_ingot>, null], 
+    [null, <betterwithmods:material:3>, null, null] 
+]); 
 
 recipes.remove(<minecraft:iron_chestplate>);
-recipes.addShaped(<minecraft:iron_chestplate>,[
-	[<minecraft:iron_ingot>, <ic2:forge_hammer:*>.transformDamage(8), <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>],
-]);
+mods.betterwithmods.Anvil.addShaped(<minecraft:iron_chestplate>,[
+    [<betterwithmods:material:3>, <betterwithmods:material:31>, <betterwithmods:material:3>, null],  
+    [<minecraft:iron_ingot>, <betterwithmods:material:31>, <minecraft:iron_ingot>, null],  
+    [<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>, null], 
+    [<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>, null] 
+]); 
 
 recipes.remove(<minecraft:iron_leggings>);
-recipes.addShaped(<minecraft:iron_leggings>,[
-	[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, <ic2:forge_hammer:*>.transformDamage(7), <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>],
-]);
+mods.betterwithmods.Anvil.addShaped(<minecraft:iron_leggings>,[
+    [null, <betterwithmods:material:3>, null, null],  
+    [<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>, null],  
+    [<minecraft:iron_ingot>, <betterwithmods:material:31>, <minecraft:iron_ingot>, null], 
+    [<minecraft:iron_ingot>, null, <minecraft:iron_ingot>, null] 
+]); 
 
 recipes.remove(<minecraft:iron_boots>);
-recipes.addShaped(<minecraft:iron_boots>,[
-	[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, <ic2:forge_hammer:*>.transformDamage(4), <minecraft:iron_ingot>],
-	[null]
-]);
+mods.betterwithmods.Anvil.addShaped(<minecraft:iron_boots>,[
+    [null, null, null, null],  
+    [null, null, null, null],  
+    [<minecraft:iron_ingot>, <betterwithmods:material:31>, <minecraft:iron_ingot>, null], 
+    [<minecraft:iron_ingot>, <betterwithmods:material:3>, <minecraft:iron_ingot>, null] 
+]); 
 
 //Gold is a precious material, nobody would waste it on making armor
 mods.jei.JEI.removeAndHide(<minecraft:golden_helmet>);
@@ -163,7 +182,7 @@ mods.betterwithmods.Anvil.addShaped(<minecraft:shield>,[
 	[<minecraft:iron_ingot>, <minecraft:iron_nugget>, <minecraft:iron_nugget>, <minecraft:iron_ingot>]
 ]);
 
-mods.techreborn.implosionCompressor.addRecipe(<minecraft:clay_ball>*3, <techreborn:dust:15>, <notenoughroofs:slate>, <minecraft:tnt>*8, 200, 64);
+mods.techreborn.implosionCompressor.addRecipe(<minecraft:clay_ball>*3, <techreborn:dust:15>, <notenoughroofs:slate>, <minecraft:tnt>*4, 200, 64);
 
 //Glass bottle making in Minecraft is horrible
 recipes.remove(<minecraft:glass_bottle>);
@@ -171,9 +190,11 @@ mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:glass_bottle>, <bett
 //Glass pane is made using TConstruct casting
 recipes.remove(<minecraft:glass_pane>);
 furnace.remove(<minecraft:glass_pane>);
+mods.techreborn.industrialSawmill.addRecipe(<minecraft:glass_pane>*4, null, null, <minecraft:glass>, <liquid:water>*500, 1200, 16);
 
 recipes.remove(<minecraft:paper>);
-recipes.addShapeless(<minecraft:paper>, [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>, <ore:dustWood>, <ore:dustWood>, <minecraft:water_bucket>]);
+recipes.addShapeless(<minecraft:paper>, [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>, <ore:dustWood>, <ore:dustWood>, 
+<minecraft:water_bucket>.transformReplace(<minecraft:bucket>)]);
 mods.techreborn.compressor.addRecipe(<minecraft:paper>, <minecraft:reeds>*3, 600, 10);
 mods.techreborn.compressor.addRecipe(<minecraft:paper>, <biomesoplenty:bamboo>*3, 600, 10);
 
@@ -203,6 +224,8 @@ recipes.addShaped(<minecraft:fishing_rod>,[
 	[<minecraft:string>, null, <ore:stickWood>],
 	[<minecraft:iron_nugget>, null, <ore:stickWood>]
 ]);
+
+recipes.addShapeless(<minecraft:flint_and_steel>,[<minecraft:flint>, <ore:nuggetIron>]);
 
 recipes.remove(<minecraft:boat>);
 recipes.addShaped(<minecraft:boat>,[
@@ -241,7 +264,8 @@ recipes.addShaped(<minecraft:acacia_boat>,[
 
 recipes.remove(<minecraft:dark_oak_boat>);
 recipes.addShaped(<minecraft:dark_oak_boat>,[
-	[<minecraft:wooden_shovel>, <betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}}), <minecraft:wooden_shovel>],
+	[<minecraft:wooden_shovel>, <betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}}), 
+	<minecraft:wooden_shovel>],
 	[<betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}}), <betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}}), <betterwithmods:siding_wood>.withTag({texture: {Properties: {variant: "dark_oak"}, Name: "minecraft:planks"}})],
 	[<minecraft:wooden_slab:5>, <minecraft:wooden_slab:5>, <minecraft:wooden_slab:5>]
 ]);
@@ -274,6 +298,14 @@ recipes.removeShapeless(<minecraft:ender_pearl>);
 
 recipes.remove(<minecraft:glowstone>);
 
+recipes.remove(<minecraft:golden_apple>);
+mods.techreborn.chemicalReactorRecipe.removeRecipe(<minecraft:golden_apple>);
+mods.extendedcrafting.EnderCrafting.addShaped(<minecraft:golden_apple>,[
+	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>],
+	[<minecraft:gold_ingot>, <minecraft:apple>, <minecraft:gold_ingot>],
+	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]
+]);
+
 recipes.remove(<minecraft:golden_apple:1>);
 mods.techreborn.chemicalReactorRecipe.removeRecipe(<minecraft:golden_apple:1>);
 mods.extendedcrafting.EnderCrafting.addShaped(<minecraft:golden_apple:1>,[
@@ -297,7 +329,7 @@ recipes.addShaped(<minecraft:cauldron>,[
 
 recipes.remove(<minecraft:tnt>);
 recipes.addShaped(<minecraft:tnt>,[
-	[<immersiveengineering:material:24>, <ic2:dust:16>, <immersiveengineering:material:24>],
+	[<immersiveengineering:material:24>, <ore:dustSulfur>, <immersiveengineering:material:24>],
 	[<minecraft:gunpowder>, <minecraft:gunpowder>, <minecraft:gunpowder>],
 	[<immersiveengineering:material:24>, <minecraft:redstone>, <immersiveengineering:material:24>]
 ]);
@@ -336,9 +368,9 @@ recipes.addShaped(<minecraft:activator_rail>,[
 
 recipes.remove(<minecraft:iron_door>);
 recipes.addShaped(<minecraft:iron_door>,[
-	[<minecraft:redstone_torch>, <minecraft:iron_ingot>, <minecraft:redstone_torch>],
-	[<minecraft:redstone_torch>, <minecraft:iron_bars>, <minecraft:redstone_torch>],
-	[<minecraft:redstone_torch>, <minecraft:iron_ingot>, <minecraft:redstone_torch>]
+	[<minecraft:iron_ingot>, <magneticraft:light_plates>, <magneticraft:light_plates>],
+	[<magneticraft:light_plates>, <minecraft:iron_bars>, <magneticraft:light_plates>],
+	[<minecraft:iron_ingot>, <magneticraft:light_plates>, <magneticraft:light_plates>]
 ]);
 
 recipes.remove(<minecraft:wooden_pressure_plate>);
@@ -346,6 +378,12 @@ recipes.addShapeless(<minecraft:wooden_pressure_plate>*2,[<ore:slabWood>, <ore:t
 recipes.addShapeless(<minecraft:wooden_pressure_plate>,[<techreborn:plates:3>]);
 recipes.addShapeless(<techreborn:plates:3>,[<minecraft:wooden_pressure_plate>]);
 mods.techreborn.industrialSawmill.addRecipe(<techreborn:plates:3>*8, <mekanism:sawdust>, null, <ore:slabWood>, null, 600, 8, true);
+
+recipes.addShaped(<minecraft:torch>*4,[
+	[<minecraft:coal>],
+	[<ore:fiberHemp>],
+	[<ic2:crop_stick>]
+]);
 
 recipes.remove(<minecraft:lever>);
 recipes.addShapeless(<minecraft:lever>,[<minecraft:stick>, <techreborn:smalldust:61>, <minecraft:stone_slab:3>]);
@@ -407,6 +445,20 @@ recipes.addShaped(<minecraft:observer>, [
 	[<minecraft:stone_slab>, <minecraft:comparator>, <minecraft:stone_slab>]
 ]);
 
+recipes.remove(<minecraft:noteblock>);
+recipes.addShaped(<minecraft:noteblock>,[
+	[<extrautils2:ingredients>],
+	[<chisel:planks-acacia:6>],
+	[<extrautils2:ingredients:1>]
+]);
+
+recipes.remove(<minecraft:jukebox>);
+recipes.addShaped(<minecraft:jukebox>,[
+	[<gregtech:meta_item_1:32003>],
+	[<chisel:planks-acacia:6>],
+	[<extrautils2:ingredients:1>]
+]);
+
 recipes.remove(<minecraft:arrow>);
 recipes.addShaped(<minecraft:arrow>,[
 	[<minecraft:flint>],
@@ -430,11 +482,12 @@ recipes.addShaped(<minecraft:compass>,[
 
 recipes.remove(<minecraft:clock>);
 recipes.addShaped(<minecraft:clock>,[
-	[<minecraft:dye:4>, <terraqueous:item_main:108>, <actuallyadditions:item_misc:17>],
+	[<minecraft:dye:4>, <minecraft:glass_pane>, <actuallyadditions:item_misc:17>],
 	[<ore:nuggetCobalt>, <thermalfoundation:material:25>, <ore:nuggetInvar>],
 	[<ore:dustSulfur>, <ore:dustTinyLead>, <ore:dustSulfur>]
 ]);
 
+recipes.remove(<minecraft:end_rod>);		//Uncraftable
 recipes.remove(<minecraft:ender_pearl>);	//Ender pearl is uncraftable
 recipes.remove(<minecraft:nether_star>);
 

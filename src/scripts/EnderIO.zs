@@ -10,23 +10,25 @@ recipes.addShapeless(<enderio:block_exit_rail>,[<minecraft:detector_rail>, <mine
 recipes.remove(<enderio:item_basic_capacitor>);
 recipes.addShaped(<enderio:item_basic_capacitor>,[
 	[null, <enderio:item_material:20>, null],
-	[<rockhounding_chemistry:misc_items:33>, <minecraft:paper>, <rockhounding_chemistry:misc_items:33>],
-	[<ore:nuggetCopper>, <ic2:crafting>, <ore:nuggetCopper>]
+	[<ore:foilAluminium>, <minecraft:paper>, <ore:foilAluminium>],
+	[<ore:nuggetCopper>, <ore:itemRubber>, <ore:nuggetCopper>]
 ]);
 
 recipes.remove(<enderio:item_basic_capacitor:1>);
 recipes.addShaped(<enderio:item_basic_capacitor:1>,[
 	[<contenttweaker:dust1>, <enderio:item_material:20>, <contenttweaker:dust1>],
-	[<ore:dustNickel>, <ic2:dust:1>, <ore:dustNickel>],
-	[<ore:nuggetCopper>, null, <ore:nuggetCopper>]
+	[<ore:nuggetNickel>, <frogcraftrebirth:intermediate_product>, <ore:nuggetNickel>],
+	[<ore:nuggetCopper>, <ic2:crafting>, <ore:nuggetCopper>]
 ]);
 
 recipes.remove(<enderio:item_basic_capacitor:2>);
 recipes.addShaped(<enderio:item_basic_capacitor:2>,[
 	[<ic2:dust:6>, <enderio:item_material:20>, <ic2:dust:6>],
-	[<rockhounding_chemistry:chemical_dusts:46>, <mekanism:polyethene:2>, <ore:dustManganeseDioxide>],
-	[<enderio:item_alloy_nugget:2>, null, <enderio:item_alloy_nugget:2>]
+	[<rockhounding_chemistry:chemical_dusts:46>, <rockhounding_chemistry:alloy_items_tech:29>, <ore:dustManganeseDioxide>],
+	[<enderio:item_alloy_nugget:2>, <mekanism:polyethene>, <enderio:item_alloy_nugget:2>]
 ]);
+
+furnace.addRecipe(<enderio:item_alloy_ingot:1>, <contenttweaker:dust1>, 2);
 
 recipes.remove(<enderio:item_alloy_ball:*>);
 recipes.remove(<enderio:item_material:57>);
@@ -45,9 +47,6 @@ mods.techreborn.implosionCompressor.addRecipe(<enderio:item_material:57>*2, <tec
 mods.techreborn.implosionCompressor.addRecipe(<enderio:item_material:58>*2, <techreborn:dust:15>*2, <thermalfoundation:material:166>, <minecraft:tnt>*8, 20, 128);
 mods.techreborn.implosionCompressor.addRecipe(<enderio:item_material:59>*2, <techreborn:dust:15>*2, <thermalfoundation:material:167>, <minecraft:tnt>*8, 20, 64);
 
-recipes.remove(<enderio:item_material:2>);	//Precision Cutting Machine outputs 10 machine parts per machine frame
-recipes.addShapeless(<enderio:item_material:2>*5,[<enderio:item_material:1>, <immersiveengineering:tool:1>]);
-
 mods.jei.JEI.removeAndHide(<enderio:item_material:6>);	//Glider Wing
 
 recipes.remove(<enderio:item_material:7>);	//Glider
@@ -57,7 +56,8 @@ recipes.addShaped(<enderio:item_material:7>,[
 	[<enderio:item_alloy_nugget:6>, null, <enderio:item_alloy_nugget:6>]
 ]);
 
-recipes.remove(<enderio:item_material:9>);	//TEST IF WOODEN GEAR RECIPE IS REMOVED ALL
+<enderio:item_material:9>.addTooltip(format.gray("Only the last recipe works, the others are displayed due to a bug"));
+recipes.remove(<enderio:item_material:9>);
 recipes.addShaped(<enderio:item_material:9>,[
 	[<minecraft:wooden_button>, <minecraft:stick>, <minecraft:wooden_button>],
 	[<minecraft:stick>, <techreborn:plates:3>, <minecraft:stick>],
@@ -80,15 +80,30 @@ recipes.addShaped(<enderio:item_material:11>,[
 	[<enderio:item_material:20>, <ore:nuggetIron>, <enderio:item_material:20>]
 ]);
 
+recipes.remove(<enderio:item_material:14>);
+mods.extendedcrafting.EnderCrafting.addShaped(<enderio:item_material:14>,[
+	[null, <enderio:item_alloy_nugget:5>, null],
+	[<enderio:item_alloy_nugget:5>, <minecraft:diamond>, <enderio:item_alloy_nugget:5>],
+	[null, <enderio:item_alloy_nugget:5>, null]
+]);
+
+recipes.remove(<enderio:item_material:15>);
+mods.extendedcrafting.EnderCrafting.addShaped(<enderio:item_material:15>,[
+	[null, <enderio:item_alloy_nugget:2>, null],
+	[<enderio:item_alloy_nugget:2>, <minecraft:emerald>, <enderio:item_alloy_nugget:2>],
+	[null, <enderio:item_alloy_nugget:2>, null]
+]);
+
 recipes.remove(<enderio:item_material:22>);
-recipes.addShaped(<enderio:item_material:22>*2,[
-	[null, <minecraft:clay_ball>, null],
+recipes.addShaped(<enderio:item_material:22>*4,[
+	[null, <enderio:item_material:20>, null],
 	[<betterwithmods:sand_pile>, <minecraft:slime_ball>, <betterwithmods:sand_pile>],
-	[null, <minecraft:clay_ball>, null]
+	[<minecraft:clay_ball>, <enderio:item_material:20>, <minecraft:clay_ball>]
 ]);
 
 recipes.remove(<enderio:item_material:38>);
-recipes.addShapeless(<enderio:item_material:38>,[<techreborn:smalldust:28>*2, <enderio:item_material:5>, <ore:dustSilver>, <ore:dustCoal>]);
+recipes.addShapeless(<enderio:item_material:38>*2,[<techreborn:smalldust:28>*2, <rockhounding_chemistry:chemical_dusts:42>, <ore:dustSilver>, 
+<enderio:item_material:20>]);
 
 recipes.remove(<enderio:item_material:51>);
 recipes.addShapeless(<enderio:item_material:51>, [<ore:dustCobalt>, <ore:dustAluminum>, <ore:dustNickel>, <ore:dustTin>]);
@@ -110,12 +125,30 @@ recipes.addShaped(<enderio:item_material:65>,[
 	[<enderio:item_alloy_nugget>, <enderio:item_alloy_nugget>, null]
 ]);
 
+//Machine Parts in IC2 Metal Former
+recipes.remove(<enderio:item_material:2>);
+recipes.remove(<enderio:item_material:68>);
+recipes.remove(<enderio:item_material:69>);
+
+recipes.remove(<enderio:item_material:71>);
+mods.extendedcrafting.EnderCrafting.addShaped(<enderio:item_material:71>,[
+	[null, <enderio:item_alloy_nugget:6>, <enderio:item_material:20>],
+	[<enderio:item_alloy_nugget>, <minecraft:stick>, <enderio:item_alloy_nugget:6>],
+	[<enderio:item_material:20>, <enderio:item_alloy_nugget>, null]
+]);
+
+//Energetic Silver, my recipe idea
+mods.techreborn.alloySmelter.addRecipe(<enderio:item_alloy_endergy_ingot:5>*3, <ic2:dust:14>*2, <projectred-core:resource_item:105>, 900, 16).setUseOreDict(true);
+mods.techreborn.alloySmelter.addRecipe(<enderio:item_alloy_endergy_ingot:5>*3, <thermalfoundation:material:130>*2, <projectred-core:resource_item:105>, 900, 16);
+mods.nuclearcraft.alloy_furnace.addRecipe([<thermalfoundation:material:130>*2, <projectred-core:resource_item:105>, <enderio:item_alloy_endergy_ingot:5>*3, 1.0, 1.5, 0.0]);
+
 recipes.remove(<enderio:block_dark_iron_bars>);
 mods.techreborn.rollingMachine.addShaped(<enderio:block_dark_iron_bars>*24, [
 	[<enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>],
 	[<enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>],
-	[null, null, null]
-]);
+	[null, null, null]]);
+mods.immersiveengineering.Blueprint.addRecipe("components", <enderio:block_dark_iron_bars>*8, 
+	[<enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>]);
 
 recipes.remove(<enderio:block_end_iron_bars>);
 mods.techreborn.rollingMachine.addShaped(<enderio:block_end_iron_bars>*16, [
@@ -141,8 +174,8 @@ recipes.addShaped(<enderio:item_yeta_wrench>,[
 recipes.remove(<enderio:item_xp_transfer>);
 recipes.addShaped(<enderio:item_xp_transfer>,[
 	[null, <enderio:item_alloy_ingot:2>, null],
-	[<ic2:crafting>, <essentialcraft:genitem:23>, <enderio:item_alloy_ingot:2>],
-	[<enderio:item_alloy_ingot:8>, <ic2:crafting>, null]
+	[<ore:itemRubber>, <essentialcraft:genitem:23>, <enderio:item_alloy_ingot:2>],
+	[<enderio:item_alloy_ingot:8>, <ore:itemRubber>, null]
 ]);
 
 recipes.remove(<enderio:item_coord_selector>);
@@ -259,7 +292,7 @@ recipes.addShapeless(<enderio:item_dark_steel_shears>,
 recipes.remove(<enderio:item_end_steel_helmet>);
 mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_helmet>, [
    [<enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>],
-   [<enderio:item_alloy_ingot:8>, <twilightforest:arctic_fur>, <twilightforest:arctic_fur>, <enderio:item_alloy_ingot:8>],
+   [<enderio:item_alloy_ingot:8>, <magneticraft:crafting:6>, <magneticraft:crafting:6>, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, null, null, <enderio:item_alloy_ingot:8>],
    [null, <betterwithmods:material:8>, <betterwithmods:material:8>, null]
 ]);
@@ -267,7 +300,7 @@ mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_helmet>, [
 recipes.remove(<enderio:item_end_steel_leggings>);
 mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_leggings>, [
    [<enderio:item_alloy_ingot:8>, <betterwithmods:material:8>, <betterwithmods:material:8>, <enderio:item_alloy_ingot:8>],
-   [<enderio:item_alloy_ingot:8>, <twilightforest:arctic_fur>, <twilightforest:arctic_fur>, <enderio:item_alloy_ingot:8>],
+   [<enderio:item_alloy_ingot:8>, <magneticraft:crafting:6>, <magneticraft:crafting:6>, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, null, null, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, null, null, <enderio:item_alloy_ingot:8>]
 ]);
@@ -275,7 +308,7 @@ mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_leggings>, [
 recipes.remove(<enderio:item_end_steel_chestplate>);
 mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_chestplate>, [
    [<betterwithmods:material:8>, null, null, <betterwithmods:material:8>],
-   [<enderio:item_alloy_ingot:8>, <twilightforest:arctic_fur>, <twilightforest:arctic_fur>, <enderio:item_alloy_ingot:8>],
+   [<enderio:item_alloy_ingot:8>, <magneticraft:crafting:6>, <magneticraft:crafting:6>, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>]
 ]);
@@ -283,7 +316,7 @@ mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_chestplate>, [
 recipes.remove(<enderio:item_end_steel_boots>);
 mods.betterwithmods.Anvil.addShaped(<enderio:item_end_steel_boots>, [
    [<betterwithmods:material:8>, null, null, <betterwithmods:material:8>],
-   [<twilightforest:arctic_fur>, null, null, <twilightforest:arctic_fur>],
+   [<magneticraft:crafting:6>, null, null, <magneticraft:crafting:6>],
    [<enderio:item_alloy_ingot:8>, null, null, <enderio:item_alloy_ingot:8>],
    [<enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>, <enderio:item_alloy_ingot:8>]
 ]);
@@ -345,8 +378,7 @@ recipes.addShaped(<enderio:item_inventory_charger_vibrant>,[
 	[<enderio:item_alloy_nugget:4>, <libvulpes:battery>, <enderio:item_alloy_nugget:4>]
 ]);
 
-
-
+recipes.remove(<enderio:block_painted_pressure_plate:8>);
 mods.techreborn.compressor.addRecipe(<enderio:block_painted_pressure_plate:8>, <enderio:item_alloy_ingot:6>, 200, 32);
 
 recipes.remove(<enderio:item_item_conduit>);
@@ -386,16 +418,16 @@ recipes.addShaped(<enderio:item_power_conduit>*2,[
 
 recipes.remove(<enderio:item_power_conduit:1>);
 recipes.addShaped(<enderio:item_power_conduit:1>*2,[
-	[<enderio:item_material:4>, <enderio:item_alloy_ingot:1>, <enderio:item_material:4>],
+	[<enderio:item_material:4>, <gtadditions:ga_meta_item:32079>, <enderio:item_material:4>],
 	[<enderio:item_alloy_ingot:4>, <forge:bucketfilled>.withTag({FluidName: "redstone", Amount: 1000}), <enderio:item_alloy_ingot:4>],
-	[<enderio:item_material:4>, <enderio:item_alloy_ingot:1>, <enderio:item_material:4>]
+	[<enderio:item_material:4>, <gtadditions:ga_meta_item:32079>, <enderio:item_material:4>]
 ]);
 
-recipes.remove(<enderio:item_power_conduit:1>);
-recipes.addShaped(<enderio:item_power_conduit:1>*2,[
-	[<enderio:item_material:4>, <enderio:item_alloy_ingot:2>, <enderio:item_material:4>],
-	[<enderio:item_alloy_ingot:4>, <forge:bucketfilled>.withTag({FluidName: "redstone", Amount: 1000}), <enderio:item_alloy_ingot:4>],
-	[<enderio:item_material:4>, <enderio:item_alloy_ingot:2>, <enderio:item_material:4>]
+recipes.remove(<enderio:item_power_conduit:2>);
+recipes.addShaped(<enderio:item_power_conduit:2>*2,[
+	[<enderio:item_material:4>, <ic2:crafting:14>, <enderio:item_material:4>],
+	[<ic2:dust:6>, <forge:bucketfilled>.withTag({FluidName: "redstone", Amount: 1000}), <ic2:dust:6>],
+	[<enderio:item_material:4>, <ic2:crafting:14>, <enderio:item_material:4>]
 ]);
 
 recipes.remove(<enderio:item_redstone_conduit>);
@@ -449,7 +481,7 @@ recipes.addShaped(<enderio:block_buffer:1>,[
 
 recipes.remove(<enderio:block_enchanter>);
 recipes.addShaped(<enderio:block_enchanter>,[
-	[null, <terraqueous:item_main:109>, null],
+	[null, <bibliocraft:bigbook>, null],
 	[<enderio:item_material:14>, <enderio:item_alloy_ingot:6>, <enderio:item_material:14>],
 	[<enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>, <enderio:item_alloy_ingot:6>]
 ]);
@@ -480,7 +512,7 @@ recipes.addShaped(<enderio:block_enhanced_combustion_generator>,[
 recipes.remove(<enderio:block_electric_light>);
 recipes.addShaped(<enderio:block_electric_light>,[
 	[null, <minecraft:glass_pane>, null],
-	[<enderio:item_alloy_nugget>, <contenttweaker:part3>, <enderio:item_alloy_nugget>],
+	[<enderio:item_alloy_nugget>, <gregtech:cable_tungsten>, <enderio:item_alloy_nugget>],
 	[<enderio:item_alloy_nugget>, <enderio:item_basic_capacitor>, <enderio:item_alloy_nugget>]
 ]);
 
@@ -521,7 +553,7 @@ recipes.remove(<enderio:block_simple_alloy_smelter>);
 recipes.addShaped(<enderio:block_simple_alloy_smelter>,[
 	[<minecraft:iron_ingot>, <minecraft:stone_slab:6>, <minecraft:iron_ingot>],
 	[<minecraft:furnace>, <enderio:item_material>, <minecraft:furnace>],
-	[<tconstruct:channel>, <techreborn:part:13>, <minecraft:stone_slab:6>]
+	[<tconstruct:channel>, <betterwithmods:material:27>, <minecraft:stone_slab:6>]
 ]);
 
 recipes.remove(<enderio:block_alloy_smelter>);
@@ -540,14 +572,14 @@ recipes.addShaped(<enderio:block_enhanced_alloy_smelter>,[
 
 recipes.remove(<enderio:block_simple_sag_mill>);
 recipes.addShaped(<enderio:block_simple_sag_mill>,[
-	[<minecraft:flint>, <minecraft:diamond>, <minecraft:flint>],
+	[<minecraft:flint>, <minecraft:emerald>, <minecraft:flint>],
 	[<enderio:item_material:10>, <enderio:item_material>, <enderio:item_material:10>],
 	[<minecraft:iron_ingot>, <thermalfoundation:material:514>, <minecraft:iron_ingot>]
 ]);
 
 recipes.remove(<enderio:block_sag_mill>);
 recipes.addShaped(<enderio:block_sag_mill>,[
-	[<techreborn:part:4>, <enderio:item_alloy_ingot:6>, <techreborn:part:4>],
+	[<techreborn:part:4>, <minecraft:diamond>, <techreborn:part:4>],
 	[<enderio:item_material:12>, <enderio:item_material:1>, <enderio:item_material:12>],
 	[<enderio:item_alloy_ingot>, <thermalfoundation:material:514>, <enderio:item_alloy_ingot>]
 ]);
@@ -566,8 +598,24 @@ recipes.addShaped(<enderio:block_powered_spawner>,[
 	[<enderio:item_material:16>, <enderio:item_material:42>, <enderio:item_material:16>]
 ]);
 
+recipes.remove(<enderio:block_enhanced_vat>);
+recipes.addShaped(<enderio:block_enhanced_vat>,[
+	[<rockhounding_chemistry:metal_items:13>, <stevescarts:cartmodule:64>, <rockhounding_chemistry:metal_items:13>],
+	[<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0}), <enderio:item_material:54>, 
+	<rockhounding_chemistry:machines_d:15>.withTag({Energy: 0, Fuel: 0})],
+	[<enderio:item_alloy_ingot:6>, <ic2:te:12>, <enderio:item_alloy_ingot:6>]
+]);
+
 recipes.remove(<enderio:block_wired_charger>);
 recipes.addShapeless(<enderio:block_wired_charger>,[<enderio:item_material:1>, <techreborn:lithiumbattery>]);
+
+recipes.remove(<enderio:block_enhanced_wired_charger>);
+recipes.addShaped(<enderio:block_enhanced_wired_charger>,[
+	[<enderio:item_alloy_ingot>, null, <enderio:item_alloy_ingot>],
+	[<enderio:item_basic_capacitor:2>, <enderio:item_material:54>, <enderio:item_basic_capacitor:2>],
+	[<enderio:item_alloy_ingot>, <nuclearcraft:lithium_ion_cell>.withTag({maxReceive: 160000, maxExtract: 160000, capacity: 16000000, energy: 0}), 
+	<enderio:item_alloy_ingot>]
+]);
 
 recipes.remove(<enderio:block_wireless_charger>);
 recipes.addShaped(<enderio:block_wireless_charger>,[
@@ -585,9 +633,9 @@ recipes.addShaped(<enderio:block_transceiver>,[
 
 recipes.remove(<enderio:block_vacuum_chest>);
 recipes.addShaped(<enderio:block_vacuum_chest>,[
-	[null, <magneticraft:crafting:4>, null],
-	[<enderio:item_alloy_ingot>, <appliedenergistics2:sky_stone_chest>, <enderio:item_alloy_ingot>],
-	[null, <enderio:item_material:14>, null]
+	[null, <essentialcraft:genitem:33>, null],
+	[<enderio:item_material:2>, <forge:bucketfilled>.withTag({FluidName: "ender_distillation", Amount: 1000}), <enderio:item_material:2>],
+	[null, <actuallyadditions:item_crystal_empowered:3>, null]
 ]);
 
 recipes.remove(<enderio:block_travel_anchor>);
@@ -622,9 +670,9 @@ recipes.addShaped(<enderio:block_crafter>,[
 
 recipes.remove(<enderio:block_cap_bank:1>);
 recipes.addShaped(<enderio:block_cap_bank:1>,[
-	[<enderio:item_material:2>, <enderio:item_basic_capacitor>, <enderio:item_material:2>],
+	[<enderio:item_material:2>, <enderio:item_basic_capacitor>, <enderio:item_alloy_endergy_ingot:5>],
 	[<enderio:item_basic_capacitor>, <techreborn:lithiumbattery>, <enderio:item_basic_capacitor>],
-	[<enderio:item_material:2>, <enderio:item_basic_capacitor>, <enderio:item_material:2>]
+	[<enderio:item_alloy_endergy_ingot:5>, <enderio:item_basic_capacitor>, <enderio:item_material:2>]
 ]);
 
 recipes.remove(<enderio:block_cap_bank:2>);
@@ -646,6 +694,34 @@ recipes.addShaped(<enderio:block_advanced_power_monitor>,[
 	[null, null, null],
 	[null, <extrautils2:screen>, null],
 	[<enderio:item_basic_capacitor>, <enderio:item_material:1>, <enderio:item_basic_capacitor>]
+]);
+
+recipes.remove(<enderio:block_solar_panel>);
+recipes.addShaped(<enderio:block_solar_panel>,[
+	[null],
+	[<enderio:item_material:3>, <essentialcraft:genitem:9>, <enderio:item_material:3>],
+	[<enderio:item_basic_capacitor>, <enderio:item_alloy_ingot>, <enderio:item_basic_capacitor>]
+]);
+
+recipes.remove(<enderio:block_solar_panel:1>);
+recipes.addShaped(<enderio:block_solar_panel:1>,[
+	[null],
+	[<enderio:item_material:3>, <essentialcraft:genitem:32>, <enderio:item_material:3>],
+	[<enderio:item_basic_capacitor>, <enderio:item_alloy_ingot:1>, <enderio:item_basic_capacitor>]
+]);
+
+recipes.remove(<enderio:block_solar_panel:2>);
+recipes.addShaped(<enderio:block_solar_panel:2>,[
+	[null],
+	[<enderio:item_material:3>, <essentialcraft:genitem:32>, <enderio:item_material:3>],
+	[<enderio:item_basic_capacitor:1>, <enderio:item_alloy_ingot:5>, <enderio:item_basic_capacitor:1>]
+]);
+
+recipes.remove(<enderio:block_solar_panel:3>);
+recipes.addShaped(<enderio:block_solar_panel:3>,[
+	[null],
+	[<enderio:item_material:3>, <essentialcraft:genitem:32>, <enderio:item_material:3>],
+	[<enderio:item_basic_capacitor:2>, <enderio:item_material:35>, <enderio:item_basic_capacitor:2>]
 ]);
 
 recipes.remove(<enderio:item_soul_vial>);
@@ -672,3 +748,11 @@ mods.jei.JEI.removeAndHide(<enderio:item_material:32>);
 <ore:dustObsidian>.remove(<enderio:item_material:29>);
 <ore:dustCobalt>.remove(<enderio:item_material:31>);
 <ore:dustLapis>.remove(<enderio:item_material:32>);
+
+//Ensure Cyrstals are crafted through EnderCrafter
+mods.tconstruct.Melting.removeRecipe(<liquid:pulsating_iron>);
+mods.tconstruct.Melting.removeRecipe(<liquid:vibrant_alloy>);
+mods.nuclearcraft.alloy_furnace.removeRecipeWithOutput([<enderio:item_alloy_ingot:2>]);
+mods.nuclearcraft.alloy_furnace.removeRecipeWithOutput([<enderio:item_alloy_ingot:5>]);
+mods.nuclearcraft.alloy_furnace.removeRecipeWithOutput([<enderio:item_material:14>]);
+mods.nuclearcraft.alloy_furnace.removeRecipeWithOutput([<enderio:item_material:15>]);

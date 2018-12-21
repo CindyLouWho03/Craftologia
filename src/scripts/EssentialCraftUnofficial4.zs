@@ -4,14 +4,25 @@
 //////////////	 EssentialCraft4Unofficial	 /////////////////
 //////////////////////////////////////////////////////////////
 
+recipes.remove(<essentialcraft:research_book>.withTag({tier: 0}));
+recipes.addShaped(<essentialcraft:research_book>.withTag({tier: 0}),[
+	[<minecraft:enchanted_book>],
+	[<essentialcraft:gem_elemental:4>],
+	[<minecraft:written_book>]
+]);
+
 recipes.remove(<essentialcraft:magicplating>);
-recipes.addShapeless(<essentialcraft:magicplating>,[<essentialcraft:genitem:34>, <essentialcraft:genitem:34>, <essentialcraft:genitem:34>, <essentialcraft:genitem:34>]);
+recipes.addShapeless(<essentialcraft:magicplating>*2,[<essentialcraft:genitem:34>, <essentialcraft:genitem:34>, <essentialcraft:genitem:34>, 
+<essentialcraft:genitem:34>]);
 recipes.remove(<essentialcraft:platingpale>);
-recipes.addShapeless(<essentialcraft:platingpale>,[<essentialcraft:genitem:41>, <essentialcraft:genitem:41>, <essentialcraft:genitem:41>, <essentialcraft:genitem:41>]);
+recipes.addShapeless(<essentialcraft:platingpale>*2,[<essentialcraft:genitem:41>, <essentialcraft:genitem:41>, <essentialcraft:genitem:41>, 
+<essentialcraft:genitem:41>]);
 recipes.remove(<essentialcraft:invertedplating>);
-recipes.addShapeless(<essentialcraft:invertedplating>,[<essentialcraft:genitem:49>, <essentialcraft:genitem:49>, <essentialcraft:genitem:49>, <essentialcraft:genitem:49>]);
+recipes.addShapeless(<essentialcraft:invertedplating>*2,[<essentialcraft:genitem:49>, <essentialcraft:genitem:49>, <essentialcraft:genitem:49>, 
+<essentialcraft:genitem:49>]);
 recipes.remove(<essentialcraft:demonicplating>);
-recipes.addShapeless(<essentialcraft:demonicplating>,[<essentialcraft:genitem:54>, <essentialcraft:genitem:54>, <essentialcraft:genitem:54>, <essentialcraft:genitem:54>]);
+recipes.addShapeless(<essentialcraft:demonicplating>*2,[<essentialcraft:genitem:54>, <essentialcraft:genitem:54>, <essentialcraft:genitem:54>, 
+<essentialcraft:genitem:54>]);
 
 <essentialcraft:coldstone>.displayName = "Supercold Stone"; 
 recipes.remove(<essentialcraft:coldstone>);
@@ -70,6 +81,13 @@ recipes.addShaped(<essentialcraft:mithrilinefurnace>,[
 	[<essentialcraft:genitem:49>, <essentialcraft:efocus>, <essentialcraft:genitem:49>]
 ]);
 
+recipes.remove(<essentialcraft:crystalformer>);
+recipes.addShaped(<essentialcraft:crystalformer>,[
+	[<essentialcraft:genitem:13>, <essentialcraft:genitem:27>, <essentialcraft:genitem:13>],
+	[null, <essentialcraft:genitem:6>, null],
+	[<minecraft:obsidian>, <minecraft:bucket>, <minecraft:obsidian>]
+]);
+
 recipes.remove(<essentialcraft:magicalteleporter>);
 <essentialcraft:magicalteleporter>.addTooltip(format.aqua("Disabled"));
 
@@ -81,7 +99,11 @@ recipes.addShaped(<essentialcraft:magicwaterbottle>,[
 ]);
 
 recipes.remove(<essentialcraft:bound_gem>);
-recipes.addShapeless(<essentialcraft:bound_gem>,[<essentialcraft:gem_elemental:4>, <essentialcraft:genitem:3>, <minecraft:quartz>, <minecraft:dragon_breath>]);
+mods.betterwithmods.Cauldron.addStoked([<essentialcraft:gem_elemental:4>, <ore:dustEnderEye>, <minecraft:potion>.withTag({Potion: "minecraft:long_invisibility"}), 
+<ore:dustNetherQuartz>],
+[<essentialcraft:bound_gem>]);
+mods.betterwithmods.Cauldron.addStoked([<essentialcraft:gem_elemental:4>*4, <essentialcraft:genitem:51>, <ore:dustEnderEye>, <minecraft:dragon_breath>, 
+<ore:dustNetherQuartz>],[<essentialcraft:bound_gem>*4]);
 
 recipes.remove(<essentialcraft:genitem:1>);
 recipes.addShaped(<essentialcraft:genitem:1>,[
@@ -92,10 +114,12 @@ recipes.addShaped(<essentialcraft:genitem:1>,[
 
 recipes.remove(<essentialcraft:genitem:23>);
 recipes.addShaped(<essentialcraft:genitem:23>,[
-	[<minecraft:redstone>, <essentialcraft:gem_elemental:4>, <minecraft:redstone>],
-	[<essentialcraft:genitem:51>, <minecraft:ender_eye>, <essentialcraft:genitem:51>],
-	[<minecraft:redstone>, <essentialcraft:gem_elemental:4>, <minecraft:redstone>]
+	[<ore:dustCarbon>, <contenttweaker:dust1>, <ore:dustCarbon>],
+	[<contenttweaker:dust1>, <minecraft:ender_eye>, <contenttweaker:dust1>],
+	[<ore:dustCarbon>, <contenttweaker:dust1>, <ore:dustCarbon>]
 ]);
+mods.essentialcraft.MagicianTable.addRecipe([<minecraft:ender_eye>, <contenttweaker:dust1>, <contenttweaker:dust1>, <contenttweaker:dust1>, <contenttweaker:dust1>], 
+<essentialcraft:genitem:23>, 500);
 
 recipes.remove(<essentialcraft:genitem:25>);
 recipes.addShaped(<essentialcraft:genitem:25>,[
@@ -125,22 +149,22 @@ recipes.addShaped(<essentialcraft:genitem:28>*4,[
 
 recipes.remove(<essentialcraft:genitem:29>);
 recipes.addShaped(<essentialcraft:genitem:29>,[
-	[<immersiveengineering:metal:1>, <minecraft:gold_ingot>, <immersiveengineering:metal:1>],
-	[<essentialcraft:gem_elemental:4>, <immersiveengineering:metal:1>, <essentialcraft:gem_elemental:4>],
+	[<techreborn:plates:16>, <minecraft:gold_ingot>, <techreborn:plates:16>],
+	[<essentialcraft:gem_elemental:4>, <techreborn:ingot>, <essentialcraft:gem_elemental:4>],
 	[null, <minecraft:ender_pearl>, null]
 ]);
 recipes.addShaped(<essentialcraft:genitem:29>*4,[
-	[<immersiveengineering:metal:1>, <minecraft:gold_ingot>, <immersiveengineering:metal:1>],
-	[<essentialcraft:gem_elemental:4>, <immersiveengineering:metal:1>, <essentialcraft:gem_elemental:4>],
+	[<techreborn:plates:16>, <minecraft:gold_ingot>, <techreborn:plates:16>],
+	[<essentialcraft:gem_elemental:4>, <techreborn:ingot>, <essentialcraft:gem_elemental:4>],
 	[null, <essentialcraft:genitem:23>, null]
 ]);
 
 recipes.remove(<essentialcraft:genitem:30>);
-recipes.addShaped(<essentialcraft:genitem:30>,[
-	[null, <ore:ingotCobalt>, null],
-	[null, <essentialcraft:gem_elemental:4>, null],
-	[null, <ore:ingotSilver>, null]
-]);
+mods.essentialcraft.MagicianTable.addRecipe([<essentialcraft:genitem:43>, <essentialcraft:gem_elemental:4>, null, null, <essentialcraft:gem_elemental:4>], 
+<essentialcraft:genitem:30>, 1000);
+
+mods.essentialcraft.MagicianTable.addRecipe([<essentialcraft:genitem:9>, <ore:dustElectrum>, <ore:dustElectrum>, <ore:dustElectrum>, <ore:dustElectrum>], 
+<essentialcraft:genitem:32>, 12000);
 
 recipes.remove(<essentialcraft:genitem:33>);
 recipes.addShapeless(<essentialcraft:genitem:33>, [<essentialcraft:genitem:23>, <essentialcraft:genitem:34>, <essentialcraft:genitem:20>]);
@@ -155,6 +179,9 @@ recipes.addShaped(<essentialcraft:genitem:80>,[
 	[null, <essentialcraft:genitem>, null]
 ]);
 
+mods.essentialcraft.MagicianTable.addRecipe([<actuallyadditions:item_crystal:3>, <essentialcraft:genitem:31>, <essentialcraft:genitem:31>, <essentialcraft:genitem:31>, 
+<essentialcraft:genitem:31>], <essentialcraft:genitem:35>*4, 16000);
+
 recipes.remove(<essentialcraft:biomewand>);
 <essentialcraft:biomewand>.addTooltip(format.aqua("Disabled"));
 recipes.remove(<essentialcraft:magicalbuilder>);
@@ -163,7 +190,6 @@ recipes.remove(<essentialcraft:magicalbuilder>);
 recipes.remove(<essentialcraft:potionspreader>);
 <essentialcraft:potionspreader>.addTooltip(format.aqua("Temporarily Disabled"));
 
-mods.jei.JEI.removeAndHide(<essentialcraft:genitem:31>);
 mods.jei.JEI.removeAndHide(<essentialcraft:genitem:21>);
 mods.jei.JEI.removeAndHide(<essentialcraft:genitem:22>);
 

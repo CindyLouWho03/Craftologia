@@ -38,29 +38,13 @@ recipes.addShaped(<tconstruct:wood_rail>,[
 	[<ore:plankWood>, <ore:stickWood>, <ore:plankWood>]
 ]);
 
-recipes.remove(<tconstruct:tooltables>);
-mods.betterwithmods.Saw.add(<minecraft:crafting_table>, [<tconstruct:tooltables>, <betterwithmods:material:22>*4]);
-recipes.addShapeless(<tconstruct:tooltables>, [<minecraft:crafting_table>, <betterwithmods:steel_hacksaw:*>.transformDamage(1)]);
-
-recipes.remove(<tconstruct:tooltables:3>);
-recipes.addShaped(<tconstruct:tooltables:3>,[
-	[<techreborn:plates:3>],
-	[<tconstruct:tooltables>],
-	[null]
-]);
-
 <tconstruct:toolforge>.withTag({textureBlock: {id: "enderio:block_alloy", Count: 1 as byte, 
-Damage: 0 as short}}).addTooltip(format.gray("Just one is displayed"));
+Damage: 0 as short}}).addTooltip(format.gold("Just one table is displayed, but you can craft it using any other metal"));
 recipes.remove(<tconstruct:toolforge>.withTag({textureBlock: {id: "minecraft:iron_block", Count: 1 as byte, Damage: 0 as short}}));
 recipes.addShaped(<tconstruct:toolforge>.withTag({textureBlock: {id: "minecraft:iron_block", Count: 1 as byte, Damage: 0 as short}}),[
 	[<tconstruct:materials>, <tconstruct:materials>, <tconstruct:materials>],
 	[<minecraft:iron_ingot>, <tconstruct:tooltables:3>, <minecraft:iron_ingot>],
-	[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>]]);
-recipes.remove(<tconstruct:toolforge>.withTag({textureBlock: {id: "enderio:block_alloy", Count: 1 as byte, Damage: 0 as short}}));
-recipes.addShaped(<tconstruct:toolforge>.withTag({textureBlock: {id: "enderio:block_alloy", Count: 1 as byte, Damage: 0 as short}}),[
-	[<tconstruct:materials>, <tconstruct:materials>, <tconstruct:materials>],
-	[<enderio:item_alloy_ingot>, <tconstruct:tooltables:3>, <enderio:item_alloy_ingot>],
-	[<enderio:item_alloy_ingot>, null, <enderio:item_alloy_ingot>]
+	[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>]
 ]);
 
 recipes.remove(<tconstruct:wood_rail_trapdoor>);
@@ -86,6 +70,8 @@ recipes.addShaped(<tconstruct:slime_boots>,[
 
 //Disable crafting of congealed slimes, enforcing the use of a freezer/compactor
 recipes.remove(<tconstruct:slime_congealed:*>);
+
+recipes.addShapeless(<tconstruct:slime_congealed>,[<minecraft:slime>, <thermalfoundation:material:2049>]);
 mods.techreborn.vacuumFreezer.addRecipe(<tconstruct:slime_congealed>, <minecraft:slime_ball>*4, 1200, 50);
 
 //This is not working as expected, players can make ingot casts out of Aluminium Brass, only thing i can do is redo the alloy and rename it 
@@ -95,4 +81,13 @@ mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom>, <liquid:gold
 //Aluminium Brass new composition: 3 Brass per 1 Alu
 mods.tconstruct.Alloy.removeRecipe(<liquid:alubrass>);
 mods.tconstruct.Alloy.addRecipe(<liquid:alubrass> * 4, [<liquid:brass> * 3, <liquid:aluminum> * 1]);
+
+mods.jei.JEI.removeAndHide(<tconstruct:materials:15>);
+recipes.remove(<tconstruct:materials:16>);
+recipes.addShaped(<tconstruct:materials:16>,[
+	[null],
+	[<ore:dustGold>, <minecraft:emerald>, <ore:dustGold>],
+	[<projectred-core:resource_item:420>, <forge:bucketfilled>.withTag({FluidName: "hot_spring_water", Amount: 1000}).transformReplace(<minecraft:bucket>), 
+	<projectred-core:resource_item:420>]
+]);
 
